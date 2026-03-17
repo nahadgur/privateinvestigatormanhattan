@@ -10,7 +10,7 @@ interface LeadFormModalProps {
 }
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzPwtFtpK_ChLARoqlehndwwD_Gd6EMkiEN-NUvjp70D4753vkmnmLq5Ei9MvC__x6e/exec';
+  'https://script.google.com/macros/s/AKfycbyO96Pk25jkWPqYmbYKILz3POJm4YWNtM7IKuy_3yMKDIkHcrp7u1oI9Pu12VXkHCcT/exec';
 
 export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
