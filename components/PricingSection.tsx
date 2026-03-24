@@ -15,7 +15,7 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
   const heading = cityName && serviceName
     ? `How Much Do ${serviceName} Cost in ${cityName}?`
     : cityName
-    ? `How Much Does Installation Cost in ${cityName}?`
+    ? `How Much Do Investigation Services Cost in ${cityName}?`
     : serviceName
     ? `${serviceName} Pricing Guide`
     : 'Pricing Guide';
@@ -41,7 +41,7 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
             <tr className="bg-brand-50 text-left">
               <th className="px-5 py-3 font-bold text-gray-900">Service Type</th>
               <th className="px-5 py-3 font-bold text-gray-900">Price Range</th>
-              <th className="px-5 py-3 font-bold text-gray-900 hidden md:table-cell">Install Time</th>
+              <th className="px-5 py-3 font-bold text-gray-900 hidden md:table-cell">Timeline</th>
               <th className="px-5 py-3 font-bold text-gray-900 hidden lg:table-cell">What is Included</th>
             </tr>
           </thead>

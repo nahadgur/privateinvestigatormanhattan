@@ -47,8 +47,31 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
     ...FAQS_SERVICES,
   ];
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.title,
+    url: `${siteConfig.url}/services/${service.slug}/`,
+    description: service.description,
+    provider: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.url },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Manhattan' },
+    serviceType: service.title,
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: combinedFaqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
@@ -175,7 +198,7 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
               </section>
 
               <section className="mb-14">
-                <h2 className="text-2xl font-display font-bold text-gray-900 mb-4">Are {service.title} Right for Your Property?</h2>
+                <h2 className="text-2xl font-display font-bold text-gray-900 mb-4">Do You Need {service.title}?</h2>
                 <p className="text-gray-600 mb-4">{content.candidateIntro}</p>
                 <div className="bg-brand-50 rounded-xl p-6 border border-brand-100">
                   <ul className="space-y-3">
@@ -193,7 +216,7 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
               </section>
 
               <section className="mb-14">
-                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">The Installation Process</h2>
+                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">How the Process Works</h2>
                 <div className="space-y-4">
                   {content.process.map((step, i) => (
                     <div key={i} className="flex gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100">
@@ -214,7 +237,7 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
               </div>
 
               <section className="mb-14">
-                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">What Homeowners Say</h2>
+                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">What Manhattan Clients Say</h2>
                 <Testimonials limit={3} />
               </section>
             </div>
@@ -227,7 +250,7 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
                   <button onClick={() => setIsModalOpen(true)} className="block w-full btn-primary text-center">Get a Free Consultation</button>
                   <div className="mt-5 pt-5 border-t border-gray-100 space-y-3">
                     {[
-                      { icon: <Clock className="w-4 h-4 text-brand-500" />, text: "Surveys available this week" },
+                      { icon: <Clock className="w-4 h-4 text-brand-500" />, text: "Free consultation within 24 hours" },
                       { icon: <Shield className="w-4 h-4 text-brand-500" />, text: "NYS-licensed investigators" },
                       { icon: <Star className="w-4 h-4 text-brand-500" />, text: "4.9 average rating" },
                     ].map((item, i) => (
@@ -240,8 +263,8 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
                 </div>
 
                 <div className="bg-brand-900 text-white p-6 rounded-2xl">
-                  <h3 className="font-display font-bold mb-2">From &pound;99/month</h3>
-                  <p className="text-brand-100 text-sm mb-4">0% finance available. Spread the cost over 6 to 36 months.</p>
+                  <h3 className="font-display font-bold mb-2">From $500</h3>
+                  <p className="text-brand-100 text-sm mb-4">Confidential consultations. Flexible retainer arrangements for Manhattan investigations.</p>
                   <button onClick={() => setIsModalOpen(true)} className="block w-full bg-white text-brand-900 text-center font-bold py-3 px-6 rounded-xl hover:bg-brand-50 transition-colors text-sm">Get Free Quotes</button>
                 </div>
 

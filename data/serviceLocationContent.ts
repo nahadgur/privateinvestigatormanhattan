@@ -1,125 +1,231 @@
 // data/serviceLocationContent.ts
-export const serviceLocationContent: Record<string, {
-  intro: (city: string) => string[]; steps: (city: string) => string[]; whyPoints: (city: string) => string[];
-}> = {
-  "infidelity-investigation": {
-    intro: (city) => [
-      `Infidelity investigations in ${city} are handled by licensed New York State investigators who understand the specific surveillance challenges of Manhattan's urban environment. Evidence is documented for potential use in divorce and family court proceedings.`,
-      `Our matched investigators in ${city} conduct multi-agent surveillance operations, deliver HD-documented evidence, and treat every case with the discretion the subject matter demands.`
-    ],
-    steps: (city) => [
-      `Confidential consultation — share what you know and what you need to establish`,
-      `Matched with an investigator experienced in infidelity cases in the ${city} area`,
-      `Surveillance plan developed based on the subject's known patterns and locations`,
-      `Active multi-agent surveillance conducted over agreed time period`,
-      `Real-time updates with final written report and all documentation`,
-      `Evidence package delivered structured for attorney use if legal proceedings follow`
-    ],
-    whyPoints: (city) => [
-      `NYS-licensed investigators with specific infidelity case experience in ${city}`,
-      `Multi-agent Manhattan surveillance — not single-operative operations that get burned`,
-      `Evidence structured for New York divorce and family court admissibility`,
-      `Complete discretion from first contact through evidence delivery`
-    ],
+import { getLocationProfileByName, type LocationProfile } from './locationProfiles';
+
+function prof(city: string): LocationProfile | null { return getLocationProfileByName(city) || null; }
+function sizeLabel(p: LocationProfile): string {
+  switch (p.avgClientType) { case 'corporate': return 'corporate clients'; case 'domestic': return 'private clients'; case 'affluent': return 'high-net-worth clients'; case 'mixed': return 'local clients'; case 'legal': return 'attorneys and legal professionals'; default: return 'clients'; }
+}
+function cityHash(city: string): number { let h = 0; for (let i = 0; i < city.length; i++) h = ((h << 5) - h + city.charCodeAt(i)) | 0; return Math.abs(h); }
+function pick<T>(city: string, options: T[]): T { return options[cityHash(city) % options.length]; }
+
+export interface ServiceLocationPageContent {
+  heroDesc: (city: string) => string;
+  heroBullets: (city: string) => string[];
+  trustLine: (city: string) => string;
+  benefits: (city: string) => { title: string; desc: string }[];
+  intro: (city: string) => string[];
+  introHeading: (city: string) => string;
+  stepsHeading: (city: string) => string;
+  whyHeading: (city: string) => string;
+  steps: (city: string) => string[];
+  whyPoints: (city: string) => string[];
+  faqs: (city: string) => { question: string; answer: string }[];
+}
+
+export const serviceLocationContent: Record<string, ServiceLocationPageContent> = {
+
+"infidelity-investigation": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Infidelity Investigation in ${city}`; return pick(city, [`Infidelity Investigation in ${city}: Evidence That Holds Up in Court`, `Suspicion Is Not Evidence — Getting Proof in ${city}`, `${city} Infidelity Surveillance: Discreet, Documented, Court-Ready`, `When You Need to Know: Infidelity Investigation for ${city} Clients`, `Catching a Cheating Spouse in ${city}: What a Licensed PI Actually Does`]); },
+  stepsHeading: (city) => pick(city, [`How Infidelity Investigation Works in ${city}`, `Your ${city} Infidelity Case: From Suspicion to Evidence`, `The ${city} Investigation Process: Discreet and Professional`, `From First Call to Final Report: Infidelity Investigation in ${city}`]),
+  whyHeading: (city) => pick(city, [`Why ${city} Clients Use Our Matched Investigators`, `What Professional Infidelity Investigation Gets ${city} Clients`, `The Difference Between Suspicion and Proof in ${city}`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Licensed infidelity investigators covering ${city}. Free consultation, no obligation.`;
+    if (p.avgClientType === 'affluent') return `When millions are at stake in a ${city} divorce, suspicion is not enough. You need documented, court-admissible evidence gathered by a NYS-licensed investigator who understands how ${p.area} family courts evaluate infidelity evidence. We match you with investigators who handle high-asset cases discreetly.`;
+    if (p.avgClientType === 'corporate') return `${city} professionals suspecting a spouse's infidelity need evidence gathered with absolute discretion — your career and reputation depend on it. We match you with licensed investigators experienced in the ${p.area} area who document everything for court without exposing your investigation.`;
+    return `You deserve to know the truth. We match ${city} ${sizeLabel(p)} with NYS-licensed investigators who conduct discreet surveillance, document everything with HD video, and deliver court-admissible evidence packages. Free confidential consultation.`;
   },
-  "surveillance": {
-    intro: (city) => [
-      `Surveillance operations in ${city} require experienced teams familiar with Manhattan's unique urban environment — the density, the transit system, and the 24-hour pace that makes this city unlike any other in the country.`,
-      `Our matched investigators deploy properly resourced teams for ${city} cases, producing HD-documented evidence that meets New York court standards.`
-    ],
-    steps: (city) => [
-      `Case intake — share all known information about the subject and investigation objective`,
-      `Investigator matched based on case type and ${city} area experience`,
-      `Surveillance plan developed with team size, positioning, and operational approach`,
-      `Active surveillance with real-time documentation and client updates`,
-      `Evidence package compiled with video, photographs, and written activity log`,
-      `Final report delivered with chain of custody documentation`
-    ],
-    whyPoints: (city) => [
-      `Multi-agent operations for ${city} — single-agent surveillance fails in Manhattan's density`,
-      `Professional HD documentation at New York court evidence standards`,
-      `Investigators who know ${city}'s geography, transit routes, and building layouts`,
-      `Legally sound surveillance with full chain of custody documentation`
-    ],
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Licensed investigators covering your area', 'Discreet HD video surveillance', 'Court-admissible evidence packages']; return [
+    `NYS-licensed investigators experienced with ${p.area} infidelity cases — not amateurs with a camera phone`,
+    `HD video documentation, timestamped photography, and GPS-verified location evidence`,
+    `Court-admissible evidence packages structured for New York family court proceedings`,
+  ]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Trusted by ${sizeLabel(p)} across ${city}` : `Licensed investigators across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city);
+    if (p.avgClientType === 'affluent') return [
+      { title: "Evidence That Protects Millions", desc: `In a high-asset ${city} divorce, documented infidelity affects alimony, asset division, and custody. Your investigator gathers the evidence that your divorce attorney needs to protect your financial position — not just proof of cheating, but a complete behavioral documentation package.` },
+      { title: "Absolute Discretion", desc: `${p.demographics}. Your investigator operates with the discretion that ${city}'s ${sizeLabel(p)} demand. No surveillance vans outside your building. No obvious tailing through ${p.area}. Professional tradecraft that produces evidence without alerting the subject.` },
+      { title: "Multi-Agent Urban Surveillance", desc: `Manhattan surveillance requires multiple agents working in rotation to avoid detection in a dense urban environment. Your investigator deploys teams experienced in ${p.area} — they know the restaurants, hotels, and transit patterns that ${city} subjects use.` },
+      { title: "Attorney-Ready Reporting", desc: `Your evidence package includes timestamped HD video, photography with GPS metadata, detailed activity logs, and a sworn investigator affidavit. Your ${city} divorce attorney receives everything structured for immediate use in court filings.` },
+    ];
+    return [
+      { title: "The Truth, Documented", desc: `Suspicion keeps you awake at night. Evidence lets you make decisions. Your ${city} investigator conducts discreet surveillance that either confirms or eliminates your concerns — either way, you stop guessing and start knowing.` },
+      { title: "Court-Ready Evidence", desc: `If this leads to divorce, you need evidence that a New York judge will accept. Your investigator documents everything with HD video, timestamped photography, and detailed activity logs that meet family court evidentiary standards.` },
+      { title: "Complete Discretion", desc: `${p.investigationNeeds.split(',')[0]}. Nobody knows you hired an investigator — not your spouse, not your neighbors, not your coworkers. Professional surveillance in ${city}'s ${p.area} area requires urban tradecraft, not just a telephoto lens.` },
+      { title: "Compassionate Professionalism", desc: `This is one of the most emotionally difficult decisions you will make. Your investigator handles it with the sensitivity the situation demands while maintaining the professional objectivity that makes the evidence credible.` },
+    ];
   },
-  "background-checks": {
-    intro: (city) => [
-      `Background investigations in ${city} conducted by licensed private investigators go significantly beyond consumer services — accessing professional databases, verifying credentials through direct contact, and producing reports that carry legal weight.`,
-      `Whether for employment screening, business due diligence, or personal matters, our matched investigators in ${city} deliver comprehensive background reports within agreed timeframes.`
-    ],
-    steps: (city) => [
-      `Define the scope — subject information, investigation purpose, and jurisdictions to cover`,
-      `Matched with an investigator experienced in the type of background check required`,
-      `Comprehensive database investigation covering criminal, civil, financial, and professional records`,
-      `Credential and employment verification through direct contact`,
-      `Discrepancies identified and documented with source citations`,
-      `Complete written report delivered within 3 to 7 business days`
-    ],
-    whyPoints: (city) => [
-      `Professional database access that surfaces what consumer services miss`,
-      `Direct verification of credentials and employment claims`,
-      `Multi-jurisdiction coverage appropriate to the subject's history`,
-      `Reports structured for employment compliance or legal proceedings as required`
-    ],
+  intro: (city) => { const p = prof(city); if (!p) return ['Infidelity investigation requires licensed professionals with proper surveillance training.', 'Court-admissible evidence makes the difference between suspicion and proof.']; 
+    if (p.avgClientType === 'affluent') return [
+      `When you suspect infidelity in a ${city} marriage where the marital estate runs into millions, the evidence you gather now determines what happens in court later. New York is an equitable distribution state — documented infidelity can affect alimony awards, and in custody proceedings, a parent's conduct is directly relevant. Amateur investigation or confrontation without evidence destroys your legal position.`,
+      `${p.caseProfile}. A licensed investigator who works ${city}'s ${p.area} area knows how to conduct surveillance in high-end neighborhoods, luxury hotels, and exclusive restaurants without detection. They deliver evidence packages that your divorce attorney can use immediately — not grainy photos that a judge will dismiss.`,
+    ];
+    return [
+      `You have noticed the signs — late nights, hidden phone calls, unexplained absences, sudden changes in routine. You need to know whether your suspicion is justified. A licensed investigator in ${city} can give you that answer with documented evidence, not just more suspicion. And if it leads to divorce, the evidence is already court-ready.`,
+      `${p.investigationNeeds}. An investigator who works ${city}'s ${p.area} area conducts surveillance that produces results — HD video, timestamped photos, GPS-verified locations — while maintaining the discretion that keeps the investigation invisible to the subject.`,
+    ];
   },
-  "corporate-investigations": {
-    intro: (city) => [
-      `Corporate investigations in ${city} require investigators with genuine financial sector and New York legal experience — not general private investigators unfamiliar with the specific evidence standards and operational security requirements of business cases.`,
-      `Our matched investigators bring domain expertise to ${city} corporate matters and routinely work alongside New York law firms and in-house legal teams.`
-    ],
-    steps: (city) => [
-      `Confidential intake with client and outside counsel to define objectives and legal framework`,
-      `Investigation design covering approved methods and operational security protocols`,
-      `Background and database research phase covering relevant subjects and entities`,
-      `Surveillance and field investigation where applicable to the case`,
-      `Regular status updates to client or counsel throughout the investigation`,
-      `Comprehensive litigation-ready report and investigator availability for testimony`
-    ],
-    whyPoints: (city) => [
-      `Financial and legal sector experience specific to ${city}'s business environment`,
-      `Attorney-coordinated investigations operating within appropriate privilege frameworks`,
-      `Operational security — investigations conducted without alerting the subject`,
-      `Reports structured for New York court, arbitration, or regulatory proceedings`
-    ],
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [`Confidential consultation: discuss your concerns, the subject's patterns, and what evidence you need from your ${city} investigation`, `Investigation plan: your PI designs a surveillance strategy based on the subject's known routine, locations, and ${p.area} area geography`, `Active surveillance: licensed investigators follow the subject using professional urban tradecraft in ${city}'s environment`, `Evidence documentation: HD video, timestamped photography, GPS data, and detailed activity logs recorded in real-time`, `Interim reporting: your investigator updates you on findings throughout the case, adjusting the plan as patterns emerge`, `Final evidence package: comprehensive report with all documentation organized for your attorney and structured for New York family court`, `Attorney coordination: your investigator is available to provide sworn testimony if your ${city} case proceeds to court`]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return pick(city, [
+    [`NYS-licensed investigators with ${p.area} surveillance experience — not freelancers from Craigslist`, `HD video and timestamped evidence that New York family courts actually accept`, `Multi-agent teams for Manhattan's dense urban environment where single-agent tailing gets burned`, `Compassionate, judgment-free service that treats you with the respect this situation demands`],
+    [`Investigators matched to your specific ${city} situation and budget`, `Court-admissible evidence packages structured for immediate use by your divorce attorney`, `Absolute discretion — nobody knows you hired an investigator until you choose to reveal it`, `Free confidential consultation before any financial commitment`],
+  ]); },
+  faqs: (city) => { const p = prof(city); if (!p) return defFaqs['infidelity-investigation'](city); return [
+    { question: `How much does infidelity investigation cost in ${city}?`, answer: `Most ${city} infidelity cases cost $2,000-$8,000 depending on duration and complexity. Simple confirmation cases (subject has a known pattern) cost less. Complex cases requiring extended multi-agent surveillance in ${p.area} cost more. Your investigator provides a realistic budget estimate after the free consultation based on what you already know about the subject's behavior.` },
+    { question: `Is infidelity evidence admissible in New York court?`, answer: `Yes — properly documented evidence from a NYS-licensed investigator is admissible in New York family court. This includes video, photography, GPS data, and investigator testimony. The evidence must be gathered legally (no trespassing, no wiretapping, no hacking). Your matched ${city} investigator knows exactly what is legally permissible and what crosses the line.` },
+    { question: `How long does a ${city} infidelity investigation take?`, answer: `Most cases produce actionable results within 1-3 weeks of active surveillance. Some cases confirm infidelity on the first day. Others require patience as patterns emerge. Your investigator provides honest assessments throughout — if surveillance is not producing results, they will tell you rather than billing indefinitely.` },
+  ]; },
+},
+
+"surveillance": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Surveillance Services in ${city}`; return pick(city, [`Professional Surveillance in ${city}: Urban Tradecraft That Produces Results`, `${city} Surveillance by Licensed Investigators — Not Amateurs With Cameras`, `Covert Surveillance in ${p.area}: How Licensed PIs Operate in Manhattan's Densest Areas`, `${city} Surveillance Services: HD Documentation for Personal and Corporate Cases`]); },
+  stepsHeading: (city) => { const p = prof(city); return pick(city, [`How Professional Surveillance Works in ${city}`, `Your ${city} Surveillance Operation: From Planning to Evidence`, `Surveillance in ${p ? p.area : city}: The Professional Process`]); },
+  whyHeading: (city) => pick(city, [`Why ${city} Cases Need Professional Surveillance`, `What Licensed Surveillance Gets ${city} Clients`, `Manhattan Surveillance: Why Urban Experience Matters in ${city}`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Professional surveillance services covering ${city}. Free consultation, no obligation.`; return `Surveillance in ${city}'s ${p.area} area requires investigators who know the streets, the transit, and the urban tradecraft that keeps them invisible. We match ${sizeLabel(p)} with NYS-licensed teams who produce HD-documented evidence without detection.`; },
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Licensed surveillance teams', 'HD video documentation', 'Court-admissible evidence']; return [`Multi-agent surveillance teams experienced in ${city}'s ${p.area} urban environment`, `HD video, timestamped photography, and GPS tracking documentation for every operation`, `Court-admissible evidence packages for personal and corporate ${city} cases`]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Professional surveillance across ${city} and ${p.area}` : `Licensed surveillance across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city); return [
+    { title: "Urban Surveillance Expertise", desc: `Manhattan is the hardest surveillance environment in America — dense crowds, constant transit changes, and subjects who are naturally alert. Your ${city} team knows how to maintain visual contact in ${p.area} without getting burned.` },
+    { title: "Multi-Agent Rotation", desc: `Single-agent tailing in Manhattan fails. Your ${city} surveillance deploys 2-3 agents in rotation — fresh faces, different clothing, switching positions — so the subject never sees the same person twice.` },
+    { title: "HD Documentation", desc: `Every moment is captured in court-quality HD video with GPS-stamped metadata. Your ${city} evidence package includes timestamped video, photography, and detailed activity logs that reconstruct the subject's movements precisely.` },
+    { title: "Personal and Corporate", desc: `${p.caseProfile}. Whether you need domestic surveillance for a personal case or corporate surveillance for employee misconduct, your ${city} team delivers the same professional standard of evidence.` },
+  ]; },
+  intro: (city) => { const p = prof(city); if (!p) return ['Professional surveillance requires licensed investigators with urban experience.', 'Manhattan is the most challenging surveillance environment in America.']; return [
+    `Surveillance in ${city} is nothing like the movies. There are no parked cars with tinted windows — NYPD will tow you in 20 minutes. There is no single PI following the subject for 12 hours — they will be spotted within the first 30 minutes. Professional surveillance in ${p.area} requires multi-agent teams, foot-mobile-transit rotation, and the kind of urban tradecraft that only comes from years of operating in Manhattan's environment.`,
+    `${p.caseProfile}. For ${sizeLabel(p)} in ${city}, the evidence must be documented to court standards regardless of whether it is a personal or corporate case. Your investigator produces HD video, timestamped photography, and GPS-verified location data that holds up under cross-examination.`,
+  ]; },
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [`Consultation: discuss the subject, known patterns, objectives, and budget for your ${city} surveillance`, `Reconnaissance: your team scouts the subject's known ${p.area} locations, routes, and habits before active surveillance begins`, `Team deployment: 2-3 licensed investigators positioned for initial contact and mobile surveillance coverage`, `Active surveillance: foot, vehicle, and transit rotation maintaining visual contact through ${city}'s urban environment`, `Real-time documentation: HD video, photography, and GPS logging throughout the operation`, `Interim updates: your lead investigator communicates findings and adjusts tactics as the operation develops`, `Evidence package: comprehensive report with all documentation organized for your specific legal or personal needs`]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return [`Multi-agent teams with specific ${p.area} surveillance experience`, `HD documentation meeting New York court evidentiary standards`, `Urban tradecraft that maintains coverage without detection in Manhattan's environment`, `Flexible deployment for both personal and corporate ${city} cases`]; },
+  faqs: (city) => { const p = prof(city); if (!p) return defFaqs['surveillance'](city); return [
+    { question: `How much does surveillance cost in ${city}?`, answer: `Professional surveillance in ${city} typically costs $150-$300 per agent per hour, with most operations using 2-3 agents. A standard 8-hour surveillance day runs $2,400-$7,200 depending on team size and complexity. Multi-day operations often receive reduced rates. Your investigator provides a detailed budget estimate after the free consultation.` },
+    { question: `Can you conduct surveillance anywhere in ${city}?`, answer: `Yes — licensed investigators can conduct surveillance in any public space in ${city}'s ${p.area} area. This includes streets, restaurants, bars, hotels (public areas), parks, and transit. Private property surveillance requires specific legal authorization. Your investigator knows exactly where the legal boundaries are in New York.` },
+    { question: `How many agents does a ${city} surveillance need?`, answer: `Manhattan typically requires 2-3 agents minimum. Single-agent surveillance in dense urban areas like ${p.area} has a high detection risk — the subject sees the same face repeatedly and becomes suspicious. Multi-agent rotation with foot, vehicle, and transit switching keeps the operation covert.` },
+  ]; },
+},
+
+"background-checks": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Background Checks in ${city}`; return pick(city, [`${city} Background Checks: What a Google Search Won't Tell You`, `Beyond the Resume: Professional Background Investigation in ${city}`, `Background Checks for ${city} ${sizeLabel(p)} — Deep Screening That Protects You`, `What ${city} ${sizeLabel(p)} Need to Know Before They Trust Someone`]); },
+  stepsHeading: (city) => pick(city, [`How Background Checks Work for ${city} Clients`, `Your ${city} Background Investigation Process`, `From Request to Report: Background Screening in ${city}`]),
+  whyHeading: (city) => pick(city, [`Why ${city} ${pick(city, ['Clients', 'Employers', 'Businesses'])} Need Professional Background Checks`, `What Professional Screening Gets ${city} Clients`, `The Difference Between a Database Search and a Real Investigation in ${city}`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Professional background checks covering ${city}. Free consultation, no obligation.`;
+    if (p.avgClientType === 'corporate') return `A resume tells you what someone wants you to know. A background investigation tells you what they're hiding. We match ${city} ${sizeLabel(p)} with NYS-licensed investigators who dig deeper than any database search — criminal records, civil litigation, financial history, and the reference checks that actually call back.`;
+    return `Before you hire, invest, rent, or commit — know who you're dealing with. We match ${city} ${sizeLabel(p)} with licensed investigators who conduct thorough background checks that go far beyond what any online service can deliver.`;
   },
-  "asset-searches": {
-    intro: (city) => [
-      `Asset searches in ${city} uncover real estate holdings, financial accounts, business interests, and other assets that a party has failed to disclose — giving attorneys a roadmap for formal discovery and a basis for challenging financial affidavits.`,
-      `Our matched investigators bring specific experience with New York's complex asset structures and deliver reports that your ${city} attorney can use immediately.`
-    ],
-    steps: (city) => [
-      `Subject profile development — gather all known identifying and financial information`,
-      `Comprehensive database search across real estate, corporate, financial, and court records`,
-      `Trace corporate structures to beneficial ownership where relevant`,
-      `Identify and document all located assets with source citations`,
-      `Expand investigation into additional jurisdictions where subject history indicates`,
-      `Deliver structured asset report organized by category for attorney use`
-    ],
-    whyPoints: (city) => [
-      `Database access beyond what public records or basic searches reveal`,
-      `New York real estate and LLC structure tracing experience`,
-      `Reports formatted for immediate use by ${city} matrimonial and litigation attorneys`,
-      `Honest assessment of what is and isn't locatable before work begins`
-    ],
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Licensed background investigators', 'Criminal, civil, and financial records', 'Employment and education verification']; return [`Criminal records, civil litigation, bankruptcy, liens, and judgments across all relevant jurisdictions`, `Employment verification, education confirmation, and professional license validation`, `Social media analysis, public records research, and reference interviews that go beyond what databases show`]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Trusted background screening for ${city} ${sizeLabel(p)}` : `Professional background checks across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city);
+    if (p.avgClientType === 'corporate') return [
+      { title: "Beyond the Database", desc: `Online background check services search databases. Licensed investigators verify information. For ${city} ${sizeLabel(p)}, your investigator calls previous employers, visits listed addresses, and confirms credentials with issuing institutions — not just checks a box if a name matches a record.` },
+      { title: "Multi-Jurisdictional Search", desc: `${p.caseProfile}. Your investigator searches criminal records in every jurisdiction where the subject has lived, not just the county they listed on their application. Many criminal records only exist at the county level and won't show up in a national database search.` },
+      { title: "Civil Litigation History", desc: `Lawsuits, restraining orders, bankruptcy filings, tax liens — civil records reveal patterns that criminal checks miss. For ${city} ${sizeLabel(p)} screening executives or business partners, civil history is often more revealing than criminal records.` },
+      { title: "Social Media Intelligence", desc: `Your investigator analyzes the subject's social media presence for inconsistencies, concerning behavior, and connections that don't match their stated background. For ${city} corporate clients, this catches fabricated credentials and undisclosed conflicts of interest.` },
+    ];
+    return [
+      { title: "Know Before You Commit", desc: `Whether it's a new tenant, a business partner, a nanny, or a romantic interest — you deserve to know who you're dealing with before you commit money, trust, or your family's safety. Your ${city} investigator reveals what the subject doesn't want you to find.` },
+      { title: "Criminal and Civil Records", desc: `Criminal history, civil lawsuits, restraining orders, bankruptcy, liens, sex offender registry, and professional disciplinary actions — all searched across relevant jurisdictions for your ${city} background check.` },
+      { title: "Verification, Not Just Search", desc: `${p.investigationNeeds.split(',')[0]}. Your investigator verifies employment history, education claims, and professional credentials by contacting the actual institutions — not relying on what the subject provided.` },
+      { title: "Confidential Results", desc: `Your background check results are delivered confidentially and securely. The subject is never informed that a check has been conducted. For ${city} ${sizeLabel(p)}, discretion is standard procedure.` },
+    ];
   },
-  "child-custody-investigations": {
-    intro: (city) => [
-      `Child custody investigations in ${city} gather documented, court-admissible evidence about a parent's fitness, lifestyle, and compliance with existing custody orders — evidence that New York family courts weigh in best-interest determinations.`,
-      `Our matched investigators understand New York family court standards and produce evidence packages that your ${city} attorney can use directly in custody proceedings.`
-    ],
-    steps: (city) => [
-      `Case assessment — review existing custody arrangement, specific concerns, and court context`,
-      `Honest evaluation of what investigation is likely to produce for your situation`,
-      `Surveillance plan focused on times and locations most relevant to documented concerns`,
-      `Active documentation over sufficient period to establish behavioral patterns`,
-      `Compilation of evidence package with photographs, video, and written observations`,
-      `Family court ready report delivered with investigator available to testify if required`
-    ],
-    whyPoints: (city) => [
-      `Evidence gathered to New York family court admissibility standards`,
-      `Objective third-party documentation that carries weight judges respect`,
-      `Pattern-based surveillance — courts want consistent behavior, not isolated incidents`,
-      `Honest case assessment — investigators advise when investigation won't produce useful evidence`
-    ],
-  }
+  intro: (city) => { const p = prof(city); if (!p) return ['Professional background checks go far beyond online database searches.', 'Licensed investigators verify information that databases simply report.']; return [
+    `An online background check costs $30 and takes five minutes. A professional background investigation costs $500-$3,000 and takes a week. The difference is that the online check tells you what databases contain, while the investigation tells you what's actually true. For ${city} ${sizeLabel(p)}, that difference can mean the difference between hiring a fraud and hiring the right person.`,
+    `${p.caseProfile}. A licensed investigator who handles ${city} background checks knows which databases to search, which courthouses to visit, and how to verify information that subjects commonly fabricate — employment dates, educational credentials, reasons for leaving previous positions, and financial stability.`,
+  ]; },
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [`Consultation: discuss who you're screening, why, and what level of investigation your ${city} situation requires`, `Scope definition: your investigator recommends the appropriate depth of investigation based on the subject's role and your risk level`, `Criminal records search across all relevant jurisdictions — county, state, federal — not just a national database query`, `Civil records: lawsuits, judgments, liens, bankruptcies, and restraining orders in jurisdictions where the subject has lived`, `Employment and education verification through direct contact with institutions, not database matching`, `Social media and open source intelligence analysis for inconsistencies and undisclosed information`, `Comprehensive report delivered securely with all findings, sources, and investigator analysis`]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return [`Licensed investigators who verify information rather than simply searching databases`, `Multi-jurisdictional criminal and civil records searches catching what national databases miss`, `Direct verification of employment, education, and credentials with issuing institutions`, `Confidential, secure reporting that protects your ${city} investigation from disclosure`]; },
+  faqs: (city) => { const p = prof(city); if (!p) return defFaqs['background-checks'](city); return [
+    { question: `How much do background checks cost in ${city}?`, answer: `Basic screening (criminal records, sex offender, address history) costs $300-$800. Comprehensive investigation (criminal, civil, employment, education, financial, social media) costs $1,000-$3,000. Executive due diligence for C-suite or board positions costs $3,000-$10,000+. Your ${city} investigator recommends the appropriate level based on your specific needs and risk.` },
+    { question: `How long does a ${city} background check take?`, answer: `Basic screening returns results in 3-5 business days. Comprehensive investigation takes 1-2 weeks. Executive due diligence can take 2-4 weeks depending on international components. Some county criminal record searches require in-person courthouse visits that add time but produce records that electronic searches miss.` },
+    { question: `Can the subject find out they were investigated?`, answer: `No — a properly conducted background investigation by a licensed ${city} investigator uses public records and lawful verification methods that do not notify the subject. Unlike credit checks (which can appear on credit reports), background investigations through a PI leave no trace that the subject can discover.` },
+  ]; },
+},
+
+"corporate-investigations": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Corporate Investigations in ${city}`; return pick(city, [`Corporate Investigation in ${city}: When Your Business Has a Problem It Can't Solve Internally`, `${city} Corporate Fraud: Finding the Evidence Before It Finds You`, `Employee Misconduct in ${city}: Investigation That Protects the Company`, `${p.area} Corporate Investigation: IP Theft, Fraud, and Executive Misconduct`]); },
+  stepsHeading: (city) => pick(city, [`How Corporate Investigation Works for ${city} Businesses`, `Your ${city} Corporate Investigation Process`, `From Suspicion to Evidence: Corporate Cases in ${city}`]),
+  whyHeading: (city) => pick(city, [`Why ${city} Businesses Use Licensed Investigators`, `What Professional Investigation Gets ${city} Corporate Clients`, `The Case for External Investigation in ${city}`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Corporate investigation services covering ${city}. Free consultation, no obligation.`; return `Employee theft, IP misappropriation, expense fraud, insider threats — your ${city} business has a problem that internal resources can't investigate impartially. We match ${sizeLabel(p)} with NYS-licensed investigators who build cases that hold up in court and protect the company from wrongful termination claims.`; },
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Corporate investigation specialists', 'Employee misconduct documentation', 'Court-ready evidence packages']; return [`Licensed investigators experienced with ${p.area} corporate cases — fraud, theft, misconduct, and IP protection`, `Evidence documented to standards that survive employment litigation and criminal referral`, `Confidential investigation that protects the company's position before the subject is confronted`]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Corporate investigation for ${city} ${sizeLabel(p)}` : `Corporate investigation across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city); return [
+    { title: "Impartial External Investigation", desc: `Internal investigations invite bias claims. An external NYS-licensed investigator provides the impartiality that protects your ${city} company if the subject challenges their termination or the case is referred to law enforcement.` },
+    { title: "Evidence That Survives Litigation", desc: `${p.caseProfile}. Your investigator documents everything to standards that survive employment litigation — proper chain of custody, documented interviews, and evidence collection that doesn't violate employee privacy rights.` },
+    { title: "Corporate Confidentiality", desc: `Your investigation remains confidential until you decide to act. For ${city} ${sizeLabel(p)}, premature disclosure can alert the subject, destroy evidence, or create market-moving information leaks. Your investigator controls information flow.` },
+    { title: "Law Enforcement Coordination", desc: `If the investigation reveals criminal conduct, your evidence package is structured for seamless handoff to NYPD or the DA's office. Your ${city} investigator knows how to build a case that prosecutors can actually use.` },
+  ]; },
+  intro: (city) => { const p = prof(city); if (!p) return ['Corporate investigation requires licensed professionals who can build impartial, litigation-ready cases.', 'Internal investigation by HR invites bias claims that external investigation avoids.']; return [
+    `You suspect an employee is stealing, an executive is self-dealing, or someone is walking your IP out the door. Your HR team can't investigate impartially, your in-house counsel has a conflict, and if you handle it wrong, the subject sues you for wrongful termination before you can sue them for theft. ${city} ${sizeLabel(p)} need external investigators who build airtight cases.`,
+    `${p.caseProfile}. A licensed investigator who handles ${city} corporate cases documents everything to litigation standards from day one — because every corporate investigation has the potential to end up in court, either criminal or civil.`,
+  ]; },
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [`Confidential briefing with company counsel or management on the suspected misconduct and investigation scope`, `Investigation plan designed to gather evidence while protecting the company's legal position and maintaining confidentiality`, `Document and digital evidence review — financial records, email patterns, access logs — coordinated with your IT and legal teams`, `Witness interviews conducted professionally with proper documentation and rights advisement where required`, `Surveillance if needed — monitoring subject activities outside the workplace for evidence of misconduct`, `Comprehensive evidence package organized for your ${city} legal counsel, HR, and potential law enforcement referral`, `Investigator available for testimony if the case proceeds to litigation or criminal prosecution`]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return [`External licensed investigators providing the impartiality that protects your ${city} company from bias claims`, `Evidence documented to litigation standards from day one — protecting your position in any subsequent legal action`, `Confidential investigation that controls information flow until you are ready to act`, `Law enforcement coordination capability for cases that reveal criminal conduct`]; },
+  faqs: (city) => { const p = prof(city); if (!p) return defFaqs['corporate-investigations'](city); return [
+    { question: `How much do corporate investigations cost in ${city}?`, answer: `Corporate investigation costs depend on scope and duration. Employee misconduct cases typically run $5,000-$25,000. IP theft and complex fraud investigations can cost $25,000-$100,000+. Executive misconduct requiring financial forensics may exceed $100,000. Your ${city} investigator scopes the engagement and provides budget estimates before beginning work.` },
+    { question: `Should we tell HR about the ${city} investigation?`, answer: `That depends on whether HR is part of the problem, the solution, or neutral. Your investigator advises on information compartmentalization based on the specific case. In many ${city} corporate investigations, limiting knowledge to outside counsel and a single senior executive produces better results than involving HR early.` },
+    { question: `Can investigation evidence be used to terminate the employee?`, answer: `Yes — properly documented evidence from a licensed investigator provides the factual basis for termination that survives wrongful termination claims. Your ${city} investigator coordinates with your employment attorney to ensure the evidence supports the specific termination grounds your company will cite.` },
+  ]; },
+},
+
+"asset-searches": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Asset Searches in ${city}`; return pick(city, [`Finding Hidden Assets in ${city}: What People Don't Want You to Know About Their Money`, `${city} Asset Investigation: Bank Accounts, Real Estate, and Business Interests`, `Asset Searches for ${city} Divorce, Judgment Collection, and Business Disputes`, `Where Is the Money? Asset Investigation for ${city} ${sizeLabel(p)}`]); },
+  stepsHeading: (city) => pick(city, [`How Asset Searches Work for ${city} Cases`, `Your ${city} Asset Investigation Process`, `Locating Hidden Assets in ${city}: Step by Step`]),
+  whyHeading: (city) => pick(city, [`Why ${city} Cases Need Professional Asset Investigation`, `What Asset Searches Reveal for ${city} Clients`, `The Value of Licensed Asset Investigation in ${city}`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Professional asset searches covering ${city}. Free consultation, no obligation.`; return `People hide money — in shell companies, trusts, relatives' accounts, cryptocurrency, overseas holdings. We match ${city} ${sizeLabel(p)} with NYS-licensed investigators who find hidden assets through legal investigative methods that courts recognize and creditors can act on.`; },
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Licensed asset investigators', 'Bank accounts, real estate, business interests', 'Court-recognized methodology']; return [`Real estate holdings, business interests, bank accounts, investment accounts, and vehicle registrations across multiple jurisdictions`, `Hidden ownership through LLCs, trusts, and nominee arrangements identified through investigative research`, `Court-recognized methodology producing results that ${city} divorce attorneys and judgment creditors can act on`]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Asset investigation for ${city} ${sizeLabel(p)}` : `Asset searches across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city); return [
+    { title: "Beyond the Obvious", desc: `Anyone can search property records. Your ${city} investigator finds what people actively hide — assets held through LLCs, property in relatives' names, undisclosed business interests, and financial accounts that don't appear on sworn financial disclosures.` },
+    { title: "Multi-Jurisdictional Reach", desc: `${city} subjects don't keep all their assets in Manhattan. Your investigator searches across New York, other states, and — where indicated — international jurisdictions for real estate, business registrations, court judgments, and financial indicators.` },
+    { title: "Divorce Asset Investigation", desc: `${p.avgClientType === 'affluent' ? 'In high-asset ' + city + ' divorces, hiding assets is common and sophisticated. Your investigator identifies undisclosed accounts, undervalued businesses, and transferred assets that the subject hopes their spouse won\'t find.' : 'Your ' + city + ' divorce attorney needs to know the true marital estate before negotiating. Your investigator identifies assets the other side hasn\'t disclosed — accounts, property, business interests, and valuables that affect your settlement.'}` },
+    { title: "Judgment Collection Support", desc: `You won a judgment but the debtor claims they can't pay. Your ${city} investigator locates attachable assets — bank accounts, real estate equity, vehicle titles, business revenue — that your attorney can seize through post-judgment enforcement.` },
+  ]; },
+  intro: (city) => { const p = prof(city); if (!p) return ['Asset searches find what people are actively trying to hide.', 'Licensed investigators use legal methods that produce court-recognized results.']; return [
+    `People who owe money or face divorce get very creative about hiding it. LLCs registered in Wyoming. Property in a girlfriend's name. Business revenue diverted to a separate entity. Cryptocurrency wallets that don't appear on any financial disclosure. For ${city} ${sizeLabel(p)} trying to find what someone is hiding, a licensed investigator uses methods that databases don't offer and produces results that courts will act on.`,
+    `${p.caseProfile}. An asset investigator who works ${city} cases knows the tricks that ${p.area} subjects use to conceal wealth and the investigative techniques that uncover them — from corporate registry deep-dives to surveillance of lifestyle inconsistencies that contradict sworn poverty claims.`,
+  ]; },
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [`Consultation: discuss what you know about the subject, the legal context (divorce, judgment, business dispute), and investigation objectives`, `Public records analysis: real estate, business registrations, UCC filings, court records, and lien searches across relevant jurisdictions`, `Corporate structure investigation: identifying LLCs, partnerships, and corporate entities connected to the subject`, `Financial indicator analysis: lifestyle observation, spending patterns, and social media intelligence that reveal undisclosed wealth`, `Deep investigation: connections analysis, nominee identification, and transferred asset tracing where the initial search reveals concealment patterns`, `Comprehensive asset report organized for your ${city} attorney with sources documented for court verification`, `Attorney coordination: your investigator supports depositions, discovery, and court proceedings with testimony if needed`]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return [`Licensed investigators who find assets people are actively hiding, not just what databases show`, `Multi-jurisdictional search reaching beyond ${city} to wherever the subject may have placed assets`, `Court-recognized methodology producing results your attorney can cite in filings and enforcement`, `Lifestyle analysis revealing wealth inconsistencies that contradict sworn financial disclosures`]; },
+  faqs: (city) => { const p = prof(city); if (!p) return defFaqs['asset-searches'](city); return [
+    { question: `How much does an asset search cost in ${city}?`, answer: `Basic asset searches (real estate, business registrations, vehicle, court records) cost $1,000-$3,000. Comprehensive asset investigation including deep corporate structure analysis, nominee identification, and multi-state searches costs $3,000-$15,000. High-asset divorce or major judgment collection cases requiring international components can exceed $25,000. Your ${city} investigator scopes the work after understanding your specific situation.` },
+    { question: `Can asset searches find hidden bank accounts in ${city}?`, answer: `Licensed investigators cannot directly access bank records without a court order. However, your ${city} investigator can identify financial institutions where the subject likely holds accounts through public records analysis, corporate filings, check imaging, and other lawful investigative methods — giving your attorney the information needed to subpoena specific records.` },
+    { question: `How do people hide assets in ${city} divorce cases?`, answer: `Common methods include transferring property to relatives, creating LLCs to hold assets, undervaluing business interests, diverting income to separate accounts, purchasing cryptocurrency, and claiming assets belong to business entities rather than personally. Your ${city} investigator knows these patterns and investigates specifically for concealment indicators.` },
+  ]; },
+},
+
+"child-custody-investigations": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Child Custody Investigation in ${city}`; return pick(city, [`${city} Child Custody Investigation: Documented Evidence for Family Court`, `Protecting Your Children in ${city} Custody Disputes: What Investigators Document`, `When Your Child's Safety Is at Stake: Custody Investigation in ${city}`, `${city} Family Court Evidence: Professional Investigation for Custody Cases`]); },
+  stepsHeading: (city) => pick(city, [`How Custody Investigation Works for ${city} Cases`, `Your ${city} Custody Investigation Process`, `Gathering Evidence for ${city} Family Court`]),
+  whyHeading: (city) => pick(city, [`Why ${city} Custody Cases Need Professional Investigation`, `What Custody Investigation Gets ${city} Parents`, `The Difference Professional Evidence Makes in ${city} Family Court`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Child custody investigation services covering ${city}. Free consultation, no obligation.`; return `Your child's wellbeing is at stake. If you believe the other parent is creating an unsafe environment — substance abuse, neglect, dangerous associations, parenting plan violations — you need documented evidence that New York family court will act on. We match ${city} parents with investigators who handle custody cases with the sensitivity and professionalism the situation demands.`; },
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Licensed custody investigators', 'Documented evidence for family court', 'Sensitive, professional approach']; return [`NYS-licensed investigators experienced with ${p.area} child custody documentation for New York family court`, `Substance abuse evidence, neglect documentation, lifestyle investigation, and parenting plan violation proof`, `Compassionate, child-focused investigation that prioritizes your children's safety above all else`]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Child custody investigation for ${city} families` : `Custody investigation across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city); return [
+    { title: "Evidence Courts Act On", desc: `New York family courts make custody decisions based on the child's best interest. Judges need documented evidence, not accusations. Your ${city} investigator provides timestamped video, photography, and detailed observation reports that give the court facts to act on.` },
+    { title: "Substance Abuse Documentation", desc: `If the other parent is using drugs or alcohol around your children, your investigator documents the behavior — purchases, impaired driving with children in the car, exposure to substance use — creating an evidence trail that supports your custody modification request.` },
+    { title: "Parenting Plan Violations", desc: `Late pickups, missed visits, unauthorized caregivers, exposing children to inappropriate adults — parenting plan violations are grounds for modification. Your ${city} investigator documents every violation with timestamps and evidence that your family law attorney can present.` },
+    { title: "Lifestyle Investigation", desc: `Who is the other parent exposing your children to? Where do they go? Is the home environment safe? Your investigator documents the other parent's lifestyle as it relates to child welfare — not to create scandal, but to provide the court with relevant facts.` },
+  ]; },
+  intro: (city) => { const p = prof(city); if (!p) return ['Child custody investigation documents the other parent\'s behavior for family court.', 'Licensed investigators gather evidence that protects children\'s best interests.']; return [
+    `You believe your children are not safe with the other parent. Maybe it's substance abuse. Maybe it's neglect. Maybe they're violating the custody agreement, exposing your children to dangerous people, or creating an environment that no reasonable parent would tolerate. The problem is that family court judges don't act on beliefs — they act on evidence. Your ${city} investigator provides that evidence.`,
+    `${p.investigationNeeds}. A custody investigator who works ${city} family court cases knows exactly what judges look for, how to document it legally, and how to present it in a format that your family law attorney can use immediately. This is about protecting your children — and doing it the right way so the court can act.`,
+  ]; },
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [`Confidential consultation: discuss your concerns about the other parent, the children's situation, and what evidence would support your case`, `Investigation plan: your PI identifies the specific behaviors to document and the ${p.area} locations to monitor`, `Surveillance: discreet observation of the other parent's activities, home environment, and interactions with the children`, `Evidence documentation: HD video, timestamped photography, and detailed activity logs of concerning behavior`, `Witness identification: your investigator identifies and interviews witnesses who can corroborate your concerns`, `Evidence package: comprehensive report organized for your ${city} family law attorney and structured for New York family court`, `Court support: your investigator is available to provide sworn testimony about their observations and evidence`]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return [`Child-focused investigation that prioritizes your children's safety above all other considerations`, `Evidence documented to New York family court standards — not phone photos and text messages`, `Experienced ${p.area} investigators who know what family court judges need to see to modify custody`, `Compassionate professionalism that handles the most emotionally charged investigation with care`]; },
+  faqs: (city) => { const p = prof(city); if (!p) return defFaqs['child-custody-investigations'](city); return [
+    { question: `How much does custody investigation cost in ${city}?`, answer: `Most ${city} custody investigations cost $3,000-$15,000 depending on the duration and complexity of surveillance needed. Cases documenting a single specific concern (substance abuse at a known location) cost less than comprehensive lifestyle investigations. Your investigator provides a realistic scope and budget after the free consultation.` },
+    { question: `Is custody investigation legal in New York?`, answer: `Yes — NYS-licensed investigators can legally conduct surveillance in public places, document observable behavior, and prepare evidence for family court. They cannot enter private property without authorization, record private conversations without consent, or use any illegal investigative methods. Your ${city} investigator operates within strict legal boundaries.` },
+    { question: `Will the other parent know they're being investigated in ${city}?`, answer: `Not if the investigation is conducted properly. Your investigator uses professional surveillance techniques in ${p.area} that maintain complete covertness. The other parent learns about the investigation only when your attorney presents the evidence in court — by which point the documentation is already complete and preserved.` },
+  ]; },
+},
+
+};
+
+function defBenefits(city: string) { return [{ title: "NYS Licensed", desc: `Every investigator in our ${city} network is NYS licensed, bonded, and insured.` }, { title: "Free Consultation", desc: `Confidential consultation to discuss your case before any commitment.` }, { title: "Court-Ready Evidence", desc: `Documentation that meets New York court evidentiary standards.` }, { title: "Matched to Your Case", desc: `We match you with investigators experienced in your specific type of case.` }]; }
+function defSteps(city: string) { return [`Confidential consultation`, `Investigation plan`, `Active investigation`, `Evidence documentation`, `Interim reporting`, `Final evidence package`, `Court testimony available`]; }
+function defWhyPoints(city: string) { return [`NYS-licensed investigators covering ${city}`, `Court-admissible evidence documentation`, `Complete discretion and confidentiality`, `Free consultation before any commitment`]; }
+const defFaqs: Record<string, (city: string) => { question: string; answer: string }[]> = {
+  'infidelity-investigation': (c) => [{ question: `Cost?`, answer: `$2,000-$8,000 depending on complexity. Free consultation for estimate.` }, { question: `Admissible?`, answer: `Yes — properly documented evidence from NYS-licensed investigators.` }, { question: `How long?`, answer: `Most cases produce results in 1-3 weeks.` }],
+  'surveillance': (c) => [{ question: `Cost?`, answer: `$150-$300/hour per agent. Multi-agent teams for Manhattan.` }, { question: `Where?`, answer: `Any public space. Private property requires authorization.` }, { question: `How many agents?`, answer: `2-3 minimum for Manhattan urban surveillance.` }],
+  'background-checks': (c) => [{ question: `Cost?`, answer: `$300-$3,000+ depending on depth. Executive due diligence $3,000-$10,000+.` }, { question: `Timeline?`, answer: `3-5 days basic, 1-2 weeks comprehensive, 2-4 weeks executive.` }, { question: `Confidential?`, answer: `Yes — subject is never notified of the investigation.` }],
+  'corporate-investigations': (c) => [{ question: `Cost?`, answer: `$5,000-$100,000+ depending on scope. Scoped after briefing.` }, { question: `HR involvement?`, answer: `Depends on the case. Investigator advises on information control.` }, { question: `Termination evidence?`, answer: `Yes — documented evidence supports defensible termination decisions.` }],
+  'asset-searches': (c) => [{ question: `Cost?`, answer: `$1,000-$15,000+ depending on complexity and jurisdictions.` }, { question: `Bank accounts?`, answer: `Investigators identify likely institutions. Courts subpoena records.` }, { question: `Hidden assets?`, answer: `LLCs, nominees, transfers, crypto, undervaluation — investigators know the patterns.` }],
+  'child-custody-investigations': (c) => [{ question: `Cost?`, answer: `$3,000-$15,000 depending on scope and duration.` }, { question: `Legal?`, answer: `Yes — licensed investigators operate within strict legal boundaries.` }, { question: `Confidential?`, answer: `Subject learns only when evidence is presented in court.` }],
 };

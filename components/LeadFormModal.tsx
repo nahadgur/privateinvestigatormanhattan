@@ -40,11 +40,13 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
     try {
       const form = e.currentTarget;
       const fullName = (form.elements[0] as HTMLInputElement).value;
-      const email = (form.elements[1] as HTMLInputElement).value;
-      const location = (form.elements[2] as HTMLInputElement).value;
+      const phone = (form.elements[1] as HTMLInputElement).value;
+      const email = (form.elements[2] as HTMLInputElement).value;
+      const location = (form.elements[3] as HTMLInputElement).value;
 
       const payload = {
         fullName,
+        phone,
         email,
         location,
         page: window.location.href,
@@ -112,12 +114,13 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
                 <span className="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
                   Free Matching Service
                 </span>
-                <h2 className="text-2xl font-display font-bold text-gray-900">Find Your Installer</h2>
+                <h2 className="text-2xl font-display font-bold text-gray-900">Find Your Investigator</h2>
                 <p className="text-gray-600 text-sm mt-1">Fill in your details below and we will connect you with screened specialists.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-3">
                 <input required type="text" placeholder="Full name" className={inputClass} />
+                <input required type="tel" placeholder="Phone number" className={inputClass} />
                 <input required type="email" placeholder="Email address" className={inputClass} />
                 <input required type="text" placeholder="Town or postcode" className={inputClass} />
 
