@@ -4,38 +4,27 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          50:  '#EAEAF0',
-          100: '#C8C8D9',
-          200: '#9494B8',
-          300: '#606090',
-          400: '#3D3D66',
-          500: '#1A1A2E',
-          600: '#161628',
-          700: '#111120',
-          800: '#0C0C18',
-          900: '#080810',
-          950: '#040408',
-        },
         accent: {
-          50:  '#FDEDEC',
-          100: '#FADBD8',
-          200: '#F5B7B1',
-          300: '#F1948A',
-          400: '#EC7063',
-          500: '#C0392B',
-          600: '#A93226',
-          700: '#922B21',
-          800: '#7B241C',
-          900: '#641E16',
+          50: '#fdf1ef',
+          100: '#f9ddd8',
+          200: '#f2b9af',
+          300: '#e88f80',
+          400: '#dd6350',
+          500: '#ca4837',
+          600: '#b93729',
+          700: '#972b20',
+          800: '#7f261e',
+          900: '#6a231c',
         },
       },
       fontFamily: {
-        display: ['Georgia', 'serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        soft: '0 20px 60px rgba(15, 23, 42, 0.08)',
       },
     },
   },
   plugins: [],
-}
+};

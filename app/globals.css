@@ -1,46 +1,50 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --font-sans: var(--font-sans), Inter, ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display), "Playfair Display", Georgia, serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
 
-  --color-primary: #b93729;
-  --color-primary-deep: #8f2d22;
-  --color-primary-soft: #f2ddda;
-  --color-ink: #171412;
-  --color-paper: #fffdfa;
-  --color-shell: #ede8e4;
-  --color-panel: #f7f1ed;
-  --color-panel-strong: #f1e7e2;
-  --color-line: rgba(23, 20, 18, 0.08);
-  --color-muted: #6f6863;
-  --color-muted-soft: #a79d97;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-stone-50 font-sans text-slate-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer components {
+  .container-width {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
 
-body {
-  background:
-    radial-gradient(circle at top left, rgba(185, 55, 41, 0.1), transparent 24%),
-    linear-gradient(180deg, #ebe6e2 0%, #f4f0ec 100%);
-}
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
 
-::selection {
-  background: rgba(185, 55, 41, 0.18);
-}
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-accent-600 px-6 py-3 font-semibold text-white shadow-[0_18px_40px_rgba(185,55,41,0.22)] transition hover:bg-accent-700;
+  }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-}
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white px-6 py-3 font-semibold text-slate-900 transition hover:border-slate-300 hover:bg-slate-50;
+  }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(23, 20, 18, 0.05);
-  border-radius: 999px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(23, 20, 18, 0.16);
-  border-radius: 999px;
+  .form-input {
+    @apply w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-[16px] text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-accent-500 focus:ring-2 focus:ring-accent-100;
+  }
 }
