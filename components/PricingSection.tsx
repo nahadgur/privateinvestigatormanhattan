@@ -1,7 +1,7 @@
 'use client';
 
-import { PoundSterling, CheckCircle, CreditCard } from 'lucide-react';
-import { pricingTiers, treatmentIncludes, financeInfo, getPricingForService, type PricingTier } from '@/data/pricing';
+import { DollarSign, CheckCircle, CreditCard } from 'lucide-react';
+import { pricingTiers, treatmentIncludes, financeInfo, getPricingForService } from '@/data/pricing';
 
 interface PricingSectionProps {
   cityName?: string;
@@ -13,50 +13,52 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
   const tiers = serviceId ? getPricingForService(serviceId) : pricingTiers;
 
   const heading = cityName && serviceName
-    ? `How Much Do ${serviceName} Cost in ${cityName}?`
+    ? `How Much Does ${serviceName} Cost in ${cityName}?`
     : cityName
     ? `How Much Do Investigation Services Cost in ${cityName}?`
     : serviceName
     ? `${serviceName} Pricing Guide`
-    : 'Pricing Guide';
+    : 'Investigation Pricing Guide';
 
   const intro = cityName
-    ? `Prices in ${cityName} vary depending on case type and investigation complexity. Below are typical costs from licensed investigators in the ${cityName} area.`
-    : 'Prices vary depending on case type and complexity. Below are typical costs from licensed investigators in our network.';
+    ? `Prices in ${cityName} vary by case type and investigation complexity. Below are typical retainer and hourly ranges from licensed investigators serving the ${cityName} area.`
+    : 'Prices vary by case type and complexity. Below are typical retainer and hourly ranges from licensed investigators in our Manhattan network.';
 
   return (
-    <section className="mb-16">
+    <section className="mb-14">
       <div className="flex items-center gap-3 mb-2">
-        <div className="bg-brand-100 p-2 rounded-lg">
-          <PoundSterling className="w-5 h-5 text-brand-600" />
+        <div className="bg-primary/10 p-2 rounded-chip">
+          <DollarSign className="w-4 h-4 text-primary" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900">{heading}</h2>
+        <h2 className="text-[22px] md:text-[26px] font-extrabold tracking-tight text-ink">{heading}</h2>
       </div>
-      <p className="text-gray-600 mb-8 leading-relaxed">{intro}</p>
+      <p className="text-gray-dark text-[14px] mb-7 leading-[1.6]">{intro}</p>
 
       {/* Pricing Table */}
-      <div className="overflow-x-auto mb-8">
-        <table className="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+      <div className="overflow-x-auto mb-7">
+        <table className="w-full text-[13px] border border-gray-light rounded-tile overflow-hidden">
           <thead>
-            <tr className="bg-brand-50 text-left">
-              <th className="px-5 py-3 font-bold text-gray-900">Service Type</th>
-              <th className="px-5 py-3 font-bold text-gray-900">Price Range</th>
-              <th className="px-5 py-3 font-bold text-gray-900 hidden md:table-cell">Timeline</th>
-              <th className="px-5 py-3 font-bold text-gray-900 hidden lg:table-cell">What is Included</th>
+            <tr className="bg-gray-light text-left">
+              <th className="px-5 py-3 font-extrabold uppercase text-[11px] tracking-widest text-ink">Service Type</th>
+              <th className="px-5 py-3 font-extrabold uppercase text-[11px] tracking-widest text-ink">Price Range</th>
+              <th className="px-5 py-3 font-extrabold uppercase text-[11px] tracking-widest text-ink hidden md:table-cell">Timeline</th>
+              <th className="px-5 py-3 font-extrabold uppercase text-[11px] tracking-widest text-ink hidden lg:table-cell">What Is Included</th>
             </tr>
           </thead>
           <tbody>
             {tiers.map((tier, i) => (
-              <tr key={tier.slug} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+              <tr key={tier.slug} className={i % 2 === 0 ? 'bg-paper' : 'bg-gray-light/40'}>
                 <td className="px-5 py-4">
-                  <div className="font-bold text-gray-900">{tier.treatment}</div>
-                  <p className="text-gray-500 text-xs mt-0.5 hidden sm:block">{tier.description}</p>
+                  <div className="font-bold text-ink text-[13px]">{tier.treatment}</div>
+                  <p className="text-gray-dark text-[11px] mt-0.5 hidden sm:block leading-[1.4]">{tier.description}</p>
                 </td>
                 <td className="px-5 py-4">
-                  <span className="font-bold text-brand-600 text-base">&pound;{tier.priceFrom.toLocaleString()} to &pound;{tier.priceTo.toLocaleString()}</span>
+                  <span className="font-extrabold text-primary text-[14px]">
+                    ${tier.priceFrom.toLocaleString()} &ndash; ${tier.priceTo.toLocaleString()}
+                  </span>
                 </td>
-                <td className="px-5 py-4 text-gray-700 hidden md:table-cell">{tier.typicalDuration}</td>
-                <td className="px-5 py-4 text-gray-700 hidden lg:table-cell">{tier.serviceIncludes}</td>
+                <td className="px-5 py-4 text-ink hidden md:table-cell">{tier.typicalDuration}</td>
+                <td className="px-5 py-4 text-gray-dark hidden lg:table-cell text-[12px]">{tier.serviceIncludes}</td>
               </tr>
             ))}
           </tbody>
@@ -64,14 +66,16 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
       </div>
 
       {/* Mobile pricing cards */}
-      <div className="md:hidden space-y-3 mb-8">
-        {tiers.map(tier => (
-          <div key={tier.slug} className="bg-white border border-gray-200 rounded-xl p-4">
-            <div className="flex justify-between items-start mb-2">
-              <span className="font-bold text-gray-900 text-sm">{tier.treatment}</span>
-              <span className="font-bold text-brand-600">&pound;{tier.priceFrom.toLocaleString()} to &pound;{tier.priceTo.toLocaleString()}</span>
+      <div className="md:hidden space-y-3 mb-7">
+        {tiers.map((tier) => (
+          <div key={tier.slug} className="bg-paper border border-gray-light rounded-tile p-4">
+            <div className="flex justify-between items-start mb-2 gap-3">
+              <span className="font-bold text-ink text-[13px]">{tier.treatment}</span>
+              <span className="font-extrabold text-primary text-[13px] whitespace-nowrap">
+                ${tier.priceFrom.toLocaleString()}&ndash;${tier.priceTo.toLocaleString()}
+              </span>
             </div>
-            <div className="flex gap-4 text-xs text-gray-500">
+            <div className="flex flex-col gap-1 text-[11px] text-gray-dark">
               <span>{tier.typicalDuration}</span>
               <span>{tier.serviceIncludes}</span>
             </div>
@@ -79,40 +83,42 @@ export function PricingSection({ cityName, serviceId, serviceName }: PricingSect
         ))}
       </div>
 
-      {/* What's Included + Finance */}
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="bg-brand-50 rounded-xl p-6 border border-brand-100">
-          <h3 className="font-display font-bold text-gray-900 mb-4">What&apos;s Included in the Price</h3>
+      {/* What's Included + Billing */}
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="bg-primary/5 rounded-tile p-6 border border-primary/15">
+          <h3 className="font-extrabold text-ink text-[14px] tracking-tight mb-4 uppercase">What&apos;s Included in the Price</h3>
           <ul className="space-y-2.5">
             {treatmentIncludes.map((item, i) => (
-              <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
-                <CheckCircle className="w-4 h-4 text-brand-500 flex-shrink-0 mt-0.5" />
+              <li key={i} className="flex items-start gap-2 text-[12px] text-gray-dark">
+                <CheckCircle className="w-3.5 h-3.5 text-primary flex-shrink-0 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+        <div className="bg-gray-light/60 rounded-tile p-6 border border-gray-light">
           <div className="flex items-center gap-2 mb-4">
-            <CreditCard className="w-5 h-5 text-brand-600" />
-            <h3 className="font-display font-bold text-gray-900">0% Finance Available</h3>
+            <CreditCard className="w-4 h-4 text-primary" />
+            <h3 className="font-extrabold text-ink text-[14px] tracking-tight uppercase">Billing &amp; Retainers</h3>
           </div>
-          <p className="text-sm text-gray-600 leading-relaxed mb-3">
+          <p className="text-[12px] text-gray-dark leading-[1.6] mb-3">
             {financeInfo.description}
           </p>
-          <div className="bg-white rounded-lg p-4 border border-gray-100">
-            <div className="text-2xl font-display font-bold text-brand-600">From &pound;{financeInfo.monthlyFrom}/month</div>
-            <span className="text-xs text-gray-500">Spread over {financeInfo.spreadOver} at 0% APR representative</span>
+          <div className="bg-paper rounded-chip p-4 border border-gray-light">
+            <div className="text-[11px] font-extrabold text-ink uppercase tracking-widest mb-1">Typical Arrangement</div>
+            <span className="text-[12px] text-gray-dark">
+              Retainer against hourly billing. Staged invoicing standard for ongoing cases.
+            </span>
           </div>
         </div>
       </div>
 
       {/* SEO paragraph */}
       {cityName && (
-        <div className="mt-8 prose prose-sm max-w-none text-gray-600">
+        <div className="mt-7 text-[12px] text-gray-dark leading-[1.6]">
           <p>
-            The cost of private investigation in {cityName} depends on the case type, required hours, and team size needed. Investigators provide a transparent retainer estimate after an initial case consultation.
+            The cost of private investigation in {cityName} depends on case type, required hours, and team size. Investigators provide a transparent retainer estimate after an initial confidential consultation.
           </p>
         </div>
       )}

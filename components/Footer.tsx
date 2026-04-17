@@ -1,39 +1,39 @@
-// components/Footer.tsx
 import Link from 'next/link';
-import { MapPin } from 'lucide-react';
 import { services } from '@/data/services';
 import { siteConfig } from '@/data/site';
 import { topAreas } from '@/data/homepage';
 import { toSlug } from '@/data/locations';
 
 export function Footer() {
-  const footerLocations = topAreas.slice(0, 6);
+  const footerLocations = topAreas.slice(0, 8);
 
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
-      <div className="container-width">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+    <footer className="w-full bg-paper mt-auto">
+      {/* Main sitemap section */}
+      <div className="container-width py-8 border-t border-gray-mid/50">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-brand-500 rounded-md flex items-center justify-center text-white font-bold">LOGO</div>
-              <span className="font-display font-bold text-lg text-white">{siteConfig.name}</span>
-            </div>
-            <p className="text-sm text-gray-400 leading-relaxed mb-4">
-              Free matching service for Manhattan clients. We connect you with NYS-licensed private investigators and PI agencies.
+            <Link href="/" className="font-extrabold text-[1.2rem] tracking-[-0.5px] text-ink block mb-3">
+              P.I. <span className="text-primary">MANHATTAN</span>
+            </Link>
+            <p className="text-[12px] text-gray-dark leading-[1.5] mb-3">
+              Confidential referral service connecting clients with vetted, NYS-licensed private investigators across Manhattan.
             </p>
-            <p className="text-xs text-gray-500 italic border-l-2 border-gray-700 pl-3">
+            <p className="text-[10px] text-gray-dark/80 italic border-l-2 border-gray-mid pl-3 leading-[1.4]">
               We are a referral and matching service, not an investigative agency. All work is carried out by independent licensed investigators in our vetted network.
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm">
-              {services.map(s => (
+            <h4 className="text-[11px] font-extrabold uppercase tracking-widest text-ink mb-3">Services</h4>
+            <ul className="space-y-2 text-[12px]">
+              {services.map((s) => (
                 <li key={s.id}>
-                  <Link href={`/services/${s.slug}/`} className="hover:text-brand-400 transition-colors">{s.title}</Link>
+                  <Link href={`/services/${s.slug}/`} className="text-gray-dark hover:text-primary transition-colors">
+                    {s.title}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -41,36 +41,45 @@ export function Footer() {
 
           {/* Popular Locations */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Popular Locations</h4>
-            <ul className="space-y-2 text-sm">
-              {footerLocations.map(area => (
+            <h4 className="text-[11px] font-extrabold uppercase tracking-widest text-ink mb-3">Popular Areas</h4>
+            <ul className="space-y-2 text-[12px]">
+              {footerLocations.map((area) => (
                 <li key={area}>
-                  <Link href={`/location/${toSlug(area)}/`} className="hover:text-brand-400 transition-colors">{area}</Link>
+                  <Link href={`/location/${toSlug(area)}/`} className="text-gray-dark hover:text-primary transition-colors">
+                    {area}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Info */}
+          {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Service Area</h4>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2 text-gray-400">
-                <MapPin className="w-4 h-4 text-brand-500" /> {siteConfig.name}
-              </li>
+            <h4 className="text-[11px] font-extrabold uppercase tracking-widest text-ink mb-3">Resources</h4>
+            <ul className="space-y-2 text-[12px]">
+              <li><Link href="/services/" className="text-gray-dark hover:text-primary transition-colors">All Services</Link></li>
+              <li><Link href="/location/" className="text-gray-dark hover:text-primary transition-colors">All Locations</Link></li>
+              <li><Link href="/blog/" className="text-gray-dark hover:text-primary transition-colors">Blog</Link></li>
+              <li><Link href="/sitemap.xml" className="text-gray-dark hover:text-primary transition-colors">Sitemap</Link></li>
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Bottom */}
-        <div className="border-t border-gray-800 pt-8 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. We are a matching service, not an investigative agency.</p>
-          <div className="flex gap-6">
-            <Link href="/sitemap.xml" className="hover:text-gray-300">Sitemap</Link>
-            <Link href="/services/" className="hover:text-gray-300">Services</Link>
-            <Link href="/location/" className="hover:text-gray-300">Locations</Link>
-            <Link href="/blog/" className="hover:text-gray-300">Blog</Link>
-          </div>
+      {/* Bottom strip */}
+      <div className="container-width border-t border-gray-mid/50 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px]">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 font-bold uppercase tracking-widest text-ink text-center sm:text-left">
+          <span>Licensed Referral Service</span>
+          <span className="hidden sm:inline opacity-30">&bull;</span>
+          <span>&copy; {new Date().getFullYear()} {siteConfig.name}</span>
+        </div>
+        <div className="flex gap-2">
+          <span className="bg-gray-mid px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-chip text-ink uppercase font-bold tracking-widest shadow-sm">
+            Privacy
+          </span>
+          <span className="bg-gray-mid px-3 py-1.5 sm:px-2.5 sm:py-1 rounded-chip text-ink uppercase font-bold tracking-widest shadow-sm">
+            Terms
+          </span>
         </div>
       </div>
     </footer>

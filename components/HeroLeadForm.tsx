@@ -65,16 +65,16 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-gray-900 placeholder-gray-400 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition";
+    "w-full px-4 py-3 rounded-chip border border-gray-mid bg-gray-light text-ink placeholder-gray-dark text-[14px] focus:outline-none focus:ring-2 focus:ring-ink focus:border-transparent transition";
 
   if (isSuccess) {
     return (
-      <div className="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl border border-gray-100 flex flex-col items-center justify-center text-center gap-4 min-h-[340px]">
+      <div className="bg-paper text-ink rounded-tile p-8 shadow-2xl border border-gray-light flex flex-col items-center justify-center text-center gap-4 min-h-[340px]">
         <div className="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center">
           <CheckCircle className="w-10 h-10" />
         </div>
-        <h3 className="text-2xl font-display font-bold">Request Received!</h3>
-        <p className="text-gray-600">
+        <h3 className="text-2xl font-extrabold tracking-tight">Request Received.</h3>
+        <p className="text-gray-dark text-[13px] leading-[1.5]">
           We&apos;ve matched you with a licensed private investigator{city ? ` in ${city}` : ''}. Check your email for next steps.
         </p>
       </div>
@@ -82,16 +82,16 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   }
 
   return (
-    <div className="bg-white text-gray-900 rounded-2xl p-6 md:p-8 shadow-2xl border border-gray-100">
-      <div className="mb-6">
-        <span className="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold uppercase tracking-wider rounded-full mb-3">
+    <div className="bg-paper text-ink rounded-tile p-6 md:p-7 shadow-2xl border border-gray-light">
+      <div className="mb-5">
+        <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-[10px] font-extrabold uppercase tracking-widest rounded-chip mb-3">
           Free Matching Service
         </span>
-        <h3 className="text-2xl font-display font-bold leading-tight">
+        <h3 className="text-[20px] font-extrabold leading-tight tracking-tight">
           Get Matched{city ? ` in ${city}` : ''}
         </h3>
-        <p className="text-gray-600 text-sm mt-1">
-          A licensed investigator will contact you within 24 hours
+        <p className="text-gray-dark text-[12px] mt-1">
+          A licensed investigator will contact you within 24 hours.
         </p>
       </div>
 
@@ -117,9 +117,9 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         <button
           disabled={isSubmitting}
           type="submit"
-          className="w-full bg-brand-500 hover:bg-brand-600 disabled:opacity-60 text-white font-semibold py-3 px-6 rounded-xl transition-colors text-sm mt-1"
+          className="w-full bg-primary hover:bg-ink disabled:opacity-60 text-white font-bold uppercase tracking-widest py-3 px-6 rounded-chip transition-colors text-[12px] mt-1"
         >
-          {isSubmitting ? 'Sending...' : 'Get 3 Free Quotes'}
+          {isSubmitting ? 'Sending...' : 'Get Free Consultation'}
         </button>
 
         <div className="flex items-center justify-center gap-4 pt-1">

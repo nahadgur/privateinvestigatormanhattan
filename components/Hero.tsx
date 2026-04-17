@@ -14,48 +14,51 @@ export function Hero({ title, subtitle, image, showCta = true, showTrust = true,
   const hasImage = image && image.length > 0;
 
   return (
-    <section className="relative bg-gray-900 text-white overflow-hidden">
+    <section className="relative bg-ink text-white overflow-hidden">
       <div className="absolute inset-0">
         {hasImage ? (
           <>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt="" className="w-full h-full object-cover opacity-80" loading="eager" />
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-900/70 via-gray-900/50 to-gray-900/20" />
+            <img src={image} alt="" className="w-full h-full object-cover opacity-50" loading="eager" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/80 to-ink/30" />
           </>
         ) : (
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-800/60 via-gray-900 to-gray-900" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,55,41,0.25),transparent_60%)]" />
         )}
       </div>
 
-      <div className="relative container-width py-24 md:py-32">
+      <div className="relative container-width py-16 md:py-24">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6 text-white">
+          <h1 className="text-[2rem] md:text-[2.8rem] lg:text-[3.2rem] font-extrabold tracking-tight leading-[1.05] mb-5 text-white">
             {title}
           </h1>
-          <p className="text-xl text-gray-200 mb-8 leading-relaxed">{subtitle}</p>
+          <p className="text-[16px] md:text-[17px] text-white/80 mb-7 leading-[1.5]">{subtitle}</p>
 
           {showCta && (
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row gap-3 mb-8">
               {onOpenModal ? (
-                <button onClick={onOpenModal} className="btn-primary text-lg !px-8 !py-4 text-center">
-                  Get Free Quotes
+                <button onClick={onOpenModal} className="btn-primary">
+                  Request Consultation
                 </button>
               ) : (
-                <Link href="/services/" className="btn-primary text-lg !px-8 !py-4 text-center">
-                  Get Free Quotes
+                <Link href="/services/" className="btn-primary">
+                  Request Consultation
                 </Link>
               )}
-              <Link href="/services/" className="btn-secondary !bg-white/10 !border-white/30 !text-white hover:!bg-white/20 text-lg !px-8 !py-4 text-center">
+              <Link
+                href="/services/"
+                className="inline-flex items-center justify-center gap-2 rounded-chip border border-white/25 bg-white/5 px-5 py-3 text-[12px] font-bold uppercase tracking-widest text-white hover:bg-white/10 transition-colors"
+              >
                 View Services
               </Link>
             </div>
           )}
 
           {showTrust && (
-            <div className="flex flex-wrap gap-6 text-sm font-medium text-gray-300">
-              {['NYS-Licensed Investigators', 'Confidential Consultation', '4.9 Star Rated'].map(item => (
+            <div className="flex flex-wrap gap-5 text-[12px] font-medium text-white/75">
+              {['NYS-Licensed Investigators', 'Confidential Consultation', 'Matched Within 24 Hours'].map((item) => (
                 <div key={item} className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-brand-400" />
+                  <CheckCircle className="w-4 h-4 text-primary" />
                   <span>{item}</span>
                 </div>
               ))}

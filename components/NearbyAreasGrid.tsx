@@ -3,11 +3,21 @@ import { useState } from 'react';
 import { MapPin, ChevronDown } from 'lucide-react';
 import { getNearbyAreas } from '@/data/nearby-areas';
 
-function toSlug(name: string): string { return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''); }
+function toSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
 
-interface NearbyAreasGridProps { cityName: string; serviceSlug?: string; serviceName?: string; initialVisible?: number; }
+interface NearbyAreasGridProps {
+  cityName: string;
+  serviceSlug?: string;
+  serviceName?: string;
+  initialVisible?: number;
+}
 
-export function NearbyAreasGrid({ cityName, serviceSlug, serviceName, initialVisible = 10 }: NearbyAreasGridProps) {
+export function NearbyAreasGrid({ cityName, serviceName, initialVisible = 10 }: NearbyAreasGridProps) {
   const areas = getNearbyAreas(toSlug(cityName));
   const [showAll, setShowAll] = useState(false);
   if (areas.length === 0) return null;
@@ -16,17 +26,53 @@ export function NearbyAreasGrid({ cityName, serviceSlug, serviceName, initialVis
   const heading = serviceName ? `${serviceName}: Areas Around ${cityName}` : `Areas We Cover Around ${cityName}`;
   const description = serviceName
     ? `Looking for ${serviceName.toLowerCase()} near ${cityName}? Our licensed investigators serve clients across ${cityName} and surrounding areas.`
-    : `Our licensed investigators serve clients across the surrounding area. If you are based in any of the areas listed below, we can match you with an experienced investigator.`;
+    : 'Our licensed investigators serve clients across the surrounding area. If you are based in any of the areas listed below, we can match you with an experienced investigator.';
+
   return (
-    <section className="mb-16">
-      <div className="flex items-center gap-3 mb-2"><div className="bg-brand-100 p-2 rounded-lg"><MapPin className="w-5 h-5 text-brand-600" /></div><h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900">{heading}</h2></div>
-      <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-        {visibleAreas.map(area => (<div key={area} className="flex items-center gap-2 px-3 py-2.5 bg-gray-50 border border-gray-100 rounded-lg text-sm text-gray-700"><MapPin className="w-3 h-3 text-brand-400 flex-shrink-0" /><span className="font-medium truncate">{area}</span></div>))}
+    <section className="mb-14">
+      <div className="flex items-center gap-3 mb-2">
+        <div className="bg-primary/10 p-2 rounded-chip">
+          <MapPin className="w-4 h-4 text-primary" />
+        </div>
+        <h2 className="text-[22px] md:text-[26px] font-extrabold tracking-tight text-ink">{heading}</h2>
       </div>
-      {hiddenCount > 0 && !showAll && (<button onClick={() => setShowAll(true)} className="mt-4 flex items-center gap-2 text-brand-600 font-bold text-sm hover:underline">Show all {areas.length} areas around {cityName}<ChevronDown className="w-4 h-4" /></button>)}
-      {showAll && hiddenCount > 0 && (<button onClick={() => setShowAll(false)} className="mt-4 flex items-center gap-2 text-brand-600 font-bold text-sm hover:underline">Show fewer<ChevronDown className="w-4 h-4 rotate-180" /></button>)}
-      <div className="mt-6 prose prose-sm max-w-none text-gray-500"><p>Clients from {areas.slice(0, 4).join(', ')}, and other areas around {cityName} regularly use our service to find licensed investigators.{' '}{serviceName ? `If you need ${serviceName.toLowerCase()} in or near ${cityName}, our matched investigators can arrange a free confidential consultation.` : `All of our ${cityName} partner investigators are NYS licensed, bonded, and insured.`}</p></div>
+      <p className="text-gray-dark text-[14px] mb-6 leading-[1.6]">{description}</p>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+        {visibleAreas.map((area) => (
+          <div
+            key={area}
+            className="flex items-center gap-2 px-3 py-2.5 bg-gray-light border border-gray-light rounded-chip text-[12px] text-ink"
+          >
+            <MapPin className="w-3 h-3 text-primary flex-shrink-0" />
+            <span className="font-medium truncate">{area}</span>
+          </div>
+        ))}
+      </div>
+      {hiddenCount > 0 && !showAll && (
+        <button
+          onClick={() => setShowAll(true)}
+          className="mt-4 flex items-center gap-2 text-primary font-bold text-[12px] uppercase tracking-widest hover:underline"
+        >
+          Show all {areas.length} areas around {cityName}
+          <ChevronDown className="w-4 h-4" />
+        </button>
+      )}
+      {showAll && hiddenCount > 0 && (
+        <button
+          onClick={() => setShowAll(false)}
+          className="mt-4 flex items-center gap-2 text-primary font-bold text-[12px] uppercase tracking-widest hover:underline"
+        >
+          Show fewer <ChevronDown className="w-4 h-4 rotate-180" />
+        </button>
+      )}
+      <div className="mt-6 text-[12px] text-gray-dark leading-[1.6]">
+        <p>
+          Clients from {areas.slice(0, 4).join(', ')}, and other areas around {cityName} regularly use our service to find licensed investigators.{' '}
+          {serviceName
+            ? `If you need ${serviceName.toLowerCase()} in or near ${cityName}, our matched investigators can arrange a free confidential consultation.`
+            : `All of our ${cityName} partner investigators are NYS-licensed, bonded, and insured.`}
+        </p>
+      </div>
     </section>
   );
 }

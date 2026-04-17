@@ -1,4 +1,3 @@
-// app/location/[city]/page.tsx - TEMPLATE
 'use client';
 
 import { useState } from 'react';
@@ -46,7 +45,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: cityFaqs.map(faq => ({
+    mainEntity: cityFaqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -60,21 +59,21 @@ export default function CityPage({ params }: { params: { city: string } }) {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-
-        <section className="bg-gray-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-900/30 via-gray-900/0 to-transparent pointer-events-none" />
+        {/* Hero */}
+        <section className="bg-ink text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,55,41,0.25),transparent_60%)] pointer-events-none" />
           <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[{ label: 'Locations', href: '/location/' }, { label: cityName }]} />
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-6">
+            <Breadcrumbs items={[{ label: 'Locations', href: '/location/' }, { label: cityName }]} light />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-6">
               <div>
-                <div className="inline-flex items-center gap-2 bg-brand-500/20 text-brand-300 px-3 py-1 rounded-full text-sm font-medium mb-6 border border-brand-500/30">
-                  <MapPin className="w-4 h-4" /> {siteConfig.name.split(" ").slice(0, -1).join(" ") + " in"} {cityName}
+                <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-chip text-[11px] font-extrabold uppercase tracking-widest mb-5 border border-primary/30">
+                  <MapPin className="w-3.5 h-3.5" /> Private Investigators in {cityName}
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
-                  {siteConfig.name.split(" ").slice(0, -1).join(" ") + " in"} <span className="text-brand-400">{cityName}</span>
+                <h1 className="text-[2rem] md:text-[2.6rem] lg:text-[3rem] font-extrabold tracking-tight leading-[1.05] mb-5">
+                  Private Investigators in <span className="text-primary">{cityName}</span>
                 </h1>
-                <p className="text-xl text-gray-300 leading-relaxed">
-                  {`Find licensed private investigators in ${cityName}. Free confidential consultation, no obligation to proceed.`}
+                <p className="text-[16px] text-white/80 leading-[1.55]">
+                  Find licensed private investigators in {cityName}. Free confidential consultation, no obligation to proceed.
                 </p>
               </div>
               <div>
@@ -84,34 +83,50 @@ export default function CityPage({ params }: { params: { city: string } }) {
           </div>
         </section>
 
-        <div className="container-width py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="container-width py-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
-
-              <section className="mb-12">
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-4">
+              <section className="mb-10">
+                <h2 className="text-[24px] md:text-[28px] font-extrabold tracking-tight text-ink mb-4">
                   {cityPageContent.introHeading(cityName)}
                 </h2>
-                <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
+                <div className="max-w-none text-gray-dark text-[14px] leading-[1.7] space-y-4">
                   {introParagraphs.map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
                 </div>
               </section>
 
-              <section className="mb-16">
-                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">Services Available in {cityName}</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {services.map(service => (
-                    <Link key={service.id} href={`/services/${service.slug}/${params.city}/`} className="block group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
-                      <div className="h-36 overflow-hidden">
+              <section className="mb-12">
+                <h2 className="text-[22px] font-extrabold tracking-tight text-ink mb-5">
+                  Services Available in {cityName}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {services.map((service) => (
+                    <Link
+                      key={service.id}
+                      href={`/services/${service.slug}/${params.city}/`}
+                      className="block group bg-paper rounded-tile shadow-card hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-light hover:border-primary/30"
+                    >
+                      <div className="h-32 overflow-hidden bg-gray-light">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                        <img
+                          src={service.image}
+                          alt={service.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          loading="lazy"
+                        />
                       </div>
                       <div className="p-5">
-                        <h3 className="text-lg font-display font-bold text-gray-900 group-hover:text-brand-600 mb-1.5">{service.title} in {cityName}</h3>
-                        <p className="text-sm text-gray-500 mb-3 line-clamp-2">{service.description}</p>
-                        <span className="text-brand-600 font-medium text-sm flex items-center">Get free quotes <ArrowRight className="w-4 h-4 ml-1" /></span>
+                        <h3 className="text-[15px] font-extrabold tracking-tight text-ink group-hover:text-primary mb-1.5 transition-colors">
+                          {service.title} in {cityName}
+                        </h3>
+                        <p className="text-[12px] text-gray-dark mb-3 line-clamp-2 leading-[1.5]">
+                          {service.description}
+                        </p>
+                        <span className="text-primary font-bold uppercase tracking-widest text-[11px] flex items-center gap-1">
+                          Get Matched <ArrowRight className="w-3.5 h-3.5" />
+                        </span>
                       </div>
                     </Link>
                   ))}
@@ -120,22 +135,26 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
               <PricingSection cityName={cityName} />
 
-              <section className="mb-16">
-                <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mb-6">What You Get When We Match You in {cityName}</h2>
-                <div className="grid sm:grid-cols-2 gap-4">
+              <section className="mb-12">
+                <h2 className="text-[22px] md:text-[26px] font-extrabold tracking-tight text-ink mb-5">
+                  What You Get When We Match You in {cityName}
+                </h2>
+                <div className="grid sm:grid-cols-2 gap-3">
                   {whyCards.map((item, i) => {
                     const icons: Record<string, React.ReactNode> = {
-                      Star: <Star className="w-5 h-5" />,
-                      Shield: <Shield className="w-5 h-5" />,
-                      Clock: <Clock className="w-5 h-5" />,
-                      CheckCircle: <CheckCircle className="w-5 h-5" />,
+                      Star: <Star className="w-4 h-4" />,
+                      Shield: <Shield className="w-4 h-4" />,
+                      Clock: <Clock className="w-4 h-4" />,
+                      CheckCircle: <CheckCircle className="w-4 h-4" />,
                     };
                     return (
-                      <div key={i} className="flex gap-4 p-5 bg-gray-50 rounded-xl border border-gray-100">
-                        <div className="bg-brand-100 p-2 rounded-lg text-brand-600 flex-shrink-0 h-fit">{icons[item.iconName] || <Star className="w-5 h-5" />}</div>
+                      <div key={i} className="flex gap-4 p-5 bg-paper rounded-tile shadow-card border border-gray-light">
+                        <div className="bg-primary/10 p-2 rounded-chip text-primary flex-shrink-0 h-fit">
+                          {icons[item.iconName] || <Star className="w-4 h-4" />}
+                        </div>
                         <div>
-                          <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
-                          <p className="text-sm text-gray-600">{item.desc}</p>
+                          <h3 className="font-bold text-ink text-[14px] mb-1">{item.title}</h3>
+                          <p className="text-[12px] text-gray-dark leading-[1.5]">{item.desc}</p>
                         </div>
                       </div>
                     );
@@ -145,44 +164,73 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
               <NearbyAreasGrid cityName={cityName} />
 
-              <div className="mb-12"><FAQ faqs={cityFaqs} title={`${siteConfig.name} in ${cityName}: Common Questions`} /></div>
+              <div className="mb-10">
+                <FAQ faqs={cityFaqs} title={`${siteConfig.name} in ${cityName}: Common Questions`} />
+              </div>
 
-              <section className="mb-16">
-                <h2 className="text-2xl font-display font-bold text-gray-900 mb-6">What Manhattan Clients Are Saying</h2>
+              <section className="mb-12">
+                <h2 className="text-[22px] font-extrabold tracking-tight text-ink mb-5">What Manhattan Clients Are Saying</h2>
                 <Testimonials limit={3} />
               </section>
             </div>
 
             <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-8">
-                <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                  <h3 className="text-lg font-display font-bold text-gray-900 mb-4">{cityPageContent.sidebarCta(cityName).heading}</h3>
-                  <p className="text-gray-600 text-sm mb-6">{cityPageContent.sidebarCta(cityName).description}</p>
-                  <button onClick={() => setIsModalOpen(true)} className="block w-full btn-primary text-center">Get a Free Consultation</button>
-                  <div className="mt-6 pt-6 border-t border-gray-100 space-y-4">
+              <div className="sticky top-24 space-y-5">
+                <div className="bg-paper p-6 rounded-tile shadow-card border border-gray-light">
+                  <h3 className="text-[15px] font-extrabold tracking-tight text-ink mb-2">
+                    {cityPageContent.sidebarCta(cityName).heading}
+                  </h3>
+                  <p className="text-gray-dark text-[12px] mb-5 leading-[1.5]">
+                    {cityPageContent.sidebarCta(cityName).description}
+                  </p>
+                  <button onClick={() => setIsModalOpen(true)} className="btn-primary w-full">
+                    Request Consultation
+                  </button>
+                  <div className="mt-5 pt-5 border-t border-gray-light space-y-3">
                     {cityPageContent.sidebarTrustPoints(cityName).map((item, i) => (
                       <div key={i} className="flex items-center gap-3">
-                        <div className="bg-brand-100 p-1.5 rounded-full">
-                          {[<Clock key="c" className="w-4 h-4 text-brand-500" />, <Shield key="s" className="w-4 h-4 text-brand-500" />, <Star key="st" className="w-4 h-4 text-brand-500" />][i % 3]}
+                        <div className="bg-primary/10 p-1.5 rounded-full">
+                          {
+                            [
+                              <Clock key="c" className="w-3.5 h-3.5 text-primary" />,
+                              <Shield key="s" className="w-3.5 h-3.5 text-primary" />,
+                              <Star key="st" className="w-3.5 h-3.5 text-primary" />,
+                            ][i % 3]
+                          }
                         </div>
-                        <span className="text-sm font-medium text-gray-700">{item.text}</span>
+                        <span className="text-[12px] font-medium text-ink">{item.text}</span>
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="bg-brand-900 text-white p-6 rounded-2xl shadow-lg">
-                  <h3 className="text-lg font-display font-bold mb-3">{cityPageContent.sidebarFinance(cityName).heading}</h3>
-                  <p className="text-brand-100 text-sm mb-4">{cityPageContent.sidebarFinance(cityName).description}</p>
-                  <button onClick={() => setIsModalOpen(true)} className="block w-full bg-white text-brand-900 text-center font-bold py-3 px-6 rounded-xl hover:bg-brand-50 transition-colors text-sm">Check Eligibility</button>
+                <div className="bg-ink text-white p-6 rounded-tile">
+                  <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-2">
+                    {cityPageContent.sidebarFinance(cityName).heading}
+                  </div>
+                  <p className="text-white/70 text-[12px] mb-4 leading-[1.5]">
+                    {cityPageContent.sidebarFinance(cityName).description}
+                  </p>
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className="block w-full bg-white text-ink text-center font-bold uppercase tracking-widest py-3 px-5 rounded-chip hover:bg-primary hover:text-white transition-colors text-[12px]"
+                  >
+                    Get Free Quote
+                  </button>
                 </div>
               </div>
             </aside>
           </div>
 
-          <div className="bg-brand-900 rounded-2xl p-8 md:p-12 text-center mt-12">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-white mb-4">{cityPageContent.bottomCta(cityName).heading}</h2>
-            <p className="text-brand-200 mb-8 max-w-2xl mx-auto">{cityPageContent.bottomCta(cityName).description}</p>
-            <button onClick={() => setIsModalOpen(true)} className="bg-white text-brand-900 font-bold text-lg py-4 px-10 rounded-xl hover:bg-brand-50 transition-colors">Get Your Free Quotes</button>
+          <div className="bg-ink rounded-tile p-8 md:p-12 text-center mt-10">
+            <h2 className="text-[24px] md:text-[28px] font-extrabold tracking-tight text-white mb-3">
+              {cityPageContent.bottomCta(cityName).heading}
+            </h2>
+            <p className="text-white/70 mb-7 max-w-2xl mx-auto text-[14px] leading-[1.6]">
+              {cityPageContent.bottomCta(cityName).description}
+            </p>
+            <button onClick={() => setIsModalOpen(true)} className="btn-primary">
+              Request Free Consultation
+            </button>
           </div>
         </div>
       </main>

@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.tsx
 'use client';
 
 import { useState } from 'react';
@@ -23,19 +22,19 @@ function renderBlock(block: ContentBlock, index: number) {
   switch (block.type) {
     case 'p':
       return (
-        <p key={index} className="text-gray-600 leading-relaxed mb-5">
+        <p key={index} className="text-gray-dark text-[14px] leading-[1.7] mb-5">
           {block.text || ''}
         </p>
       );
     case 'h2':
       return (
-        <h2 key={index} className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-10 mb-4">
+        <h2 key={index} className="text-[22px] md:text-[26px] font-extrabold tracking-tight text-ink mt-10 mb-4">
           {block.text || ''}
         </h2>
       );
     case 'h3':
       return (
-        <h3 key={index} className="text-xl font-display font-bold text-gray-900 mt-8 mb-3">
+        <h3 key={index} className="text-[18px] font-extrabold tracking-tight text-ink mt-8 mb-3">
           {block.text || ''}
         </h3>
       );
@@ -43,8 +42,8 @@ function renderBlock(block: ContentBlock, index: number) {
       return (
         <ul key={index} className="space-y-2 mb-6 pl-1">
           {(block.items || []).map((item, i) => (
-            <li key={i} className="flex items-start gap-3 text-gray-600">
-              <span className="w-1.5 h-1.5 bg-brand-500 rounded-full flex-shrink-0 mt-2" />
+            <li key={i} className="flex items-start gap-3 text-gray-dark text-[14px] leading-[1.6]">
+              <span className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0 mt-2.5" />
               <span>{item}</span>
             </li>
           ))}
@@ -57,39 +56,41 @@ function renderBlock(block: ContentBlock, index: number) {
           <img
             src={block.src || ''}
             alt={block.alt || ''}
-            className="w-full rounded-xl object-cover"
+            className="w-full rounded-tile object-cover"
             loading="lazy"
           />
           {(block.alt || '') && (
-            <figcaption className="text-xs text-gray-400 mt-2 text-center">{block.alt || ''}</figcaption>
+            <figcaption className="text-[11px] text-gray-dark mt-2 text-center">{block.alt || ''}</figcaption>
           )}
         </figure>
       );
     case 'cta':
       return (
-        <div key={index} className="bg-brand-50 border border-brand-100 rounded-xl p-6 my-8 text-center">
-          <p className="font-display font-bold text-gray-900 text-lg mb-2">{block.text || 'Get Your Free Quotes'}</p>
-          <p className="text-sm text-gray-600 mb-4">Speak with a licensed Manhattan private investigator. Free confidential consultation.</p>
+        <div key={index} className="bg-primary/5 border border-primary/15 rounded-tile p-6 my-8 text-center">
+          <p className="font-extrabold text-ink text-[16px] tracking-tight mb-2">{block.text || 'Get Matched With a Manhattan PI'}</p>
+          <p className="text-[13px] text-gray-dark">
+            Speak with a licensed Manhattan private investigator. Free confidential consultation.
+          </p>
         </div>
       );
     case 'related-articles':
       return (
         <div key={index} className="my-8">
-          <h3 className="text-lg font-display font-bold text-gray-900 mb-4">Related Reading</h3>
+          <h3 className="text-[16px] font-extrabold tracking-tight text-ink mb-4">Related Reading</h3>
           <div className="grid gap-3">
             {(block.articles || []).map((rel, i) => (
               <Link
                 key={i}
                 href={`/blog/${rel.slug}/`}
-                className="flex items-center gap-4 p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-brand-200 hover:bg-brand-50 transition-all"
+                className="flex items-center gap-4 p-4 bg-paper rounded-tile border border-gray-light hover:border-primary/30 hover:bg-primary/5 transition-all"
               >
                 {(rel.image || '') && (
-                  <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                  <div className="w-14 h-14 rounded-chip overflow-hidden flex-shrink-0">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={rel.image || ''} alt={rel.title} className="w-full h-full object-cover" loading="lazy" />
                   </div>
                 )}
-                <span className="font-medium text-gray-700 text-sm">{rel.title}</span>
+                <span className="font-medium text-ink text-[13px]">{rel.title}</span>
               </Link>
             ))}
           </div>
@@ -106,7 +107,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
   if (!article) notFound();
 
   const relatedArticles = blogArticles
-    .filter(a => a.slug !== article.slug && a.category === article.category)
+    .filter((a) => a.slug !== article.slug && a.category === article.category)
     .slice(0, 3);
 
   const articleSchema = {
@@ -133,39 +134,37 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-
         {/* Hero */}
-        <section className="bg-gray-900 text-white relative overflow-hidden">
+        <section className="bg-ink text-white relative overflow-hidden">
           {article.featuredImage ? (
             <div className="absolute inset-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={article.featuredImage} alt="" className="w-full h-full object-cover opacity-30" loading="eager" />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/40" />
+              <img src={article.featuredImage} alt="" className="w-full h-full object-cover opacity-25" loading="eager" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/50" />
             </div>
           ) : (
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-900/40 via-gray-900/0 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,55,41,0.3),transparent_60%)] pointer-events-none" />
           )}
           <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[{ label: 'Blog', href: '/blog/' }, { label: article.title }]} />
+            <Breadcrumbs items={[{ label: 'Blog', href: '/blog/' }, { label: article.title }]} light />
             <div className="max-w-3xl mt-4">
               <div className="flex items-center gap-4 mb-4">
-                <span className="inline-flex items-center gap-1.5 text-sm text-brand-300">
-                  <Tag className="w-3.5 h-3.5" /> {article.category}
+                <span className="inline-flex items-center gap-1.5 text-[11px] text-primary font-bold uppercase tracking-widest">
+                  <Tag className="w-3 h-3" /> {article.category}
                 </span>
-                <span className="inline-flex items-center gap-1.5 text-sm text-gray-400">
-                  <Calendar className="w-3.5 h-3.5" /> {article.publishDate}
+                <span className="inline-flex items-center gap-1.5 text-[11px] text-white/70">
+                  <Calendar className="w-3 h-3" /> {article.publishDate}
                 </span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight">
+              <h1 className="text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] font-extrabold tracking-tight leading-[1.1]">
                 {article.title}
               </h1>
             </div>
           </div>
         </section>
 
-        <div className="container-width py-12 md:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-
+        <div className="container-width py-10 md:py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Article body */}
             <article className="lg:col-span-2 max-w-none">
               {(() => {
@@ -176,7 +175,10 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
                 for (let i = 0; i < article.content.length; i++) {
                   if (article.content[i].type === 'h2') {
                     h2Count++;
-                    if (h2Count === 2) { secondH2Index = i; break; }
+                    if (h2Count === 2) {
+                      secondH2Index = i;
+                      break;
+                    }
                   }
                 }
                 return article.content.map((block, i) => (
@@ -190,29 +192,26 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
 
             {/* Sidebar */}
             <aside className="lg:col-span-1">
-              <div className="sticky top-28 space-y-8">
-                <div className="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
-                  <h3 className="text-lg font-display font-bold text-gray-900 mb-3">Get Free Quotes</h3>
-                  <p className="text-gray-600 text-sm mb-5">
-                    Ready to get started? We will connect you with a licensed investigator at no cost for the initial consultation.
+              <div className="sticky top-24 space-y-5">
+                <div className="bg-paper p-6 rounded-tile shadow-card border border-gray-light">
+                  <h3 className="text-[15px] font-extrabold tracking-tight text-ink mb-2">Get Matched With a PI</h3>
+                  <p className="text-gray-dark text-[12px] mb-5 leading-[1.5]">
+                    Ready to get started? We will connect you with a licensed Manhattan investigator at no cost for the initial consultation.
                   </p>
-                  <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="block w-full btn-primary text-center"
-                  >
-                    Find a Property Tax Accountant
+                  <button onClick={() => setIsModalOpen(true)} className="btn-primary w-full">
+                    Find an Investigator
                   </button>
                 </div>
 
                 {relatedArticles.length > 0 && (
-                  <div className="bg-gray-50 p-5 rounded-2xl border border-gray-100">
-                    <h3 className="font-bold text-gray-900 text-sm mb-3">More Articles</h3>
+                  <div className="bg-paper p-5 rounded-tile border border-gray-light">
+                    <h3 className="text-[11px] font-extrabold text-ink uppercase tracking-widest mb-3">More Articles</h3>
                     <div className="space-y-3">
-                      {relatedArticles.map(rel => (
+                      {relatedArticles.map((rel) => (
                         <Link
                           key={rel.slug}
                           href={`/blog/${rel.slug}/`}
-                          className="block text-sm text-gray-600 hover:text-brand-600 transition-colors font-medium"
+                          className="block text-[12px] text-gray-dark hover:text-primary transition-colors font-medium leading-[1.4]"
                         >
                           {rel.title}
                         </Link>
@@ -225,9 +224,12 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
           </div>
 
           {/* Back to blog */}
-          <div className="mt-12 pt-8 border-t border-gray-100">
-            <Link href="/blog/" className="inline-flex items-center gap-2 text-brand-600 font-medium hover:underline">
-              <ArrowLeft className="w-4 h-4" /> Back to all articles
+          <div className="mt-12 pt-8 border-t border-gray-light">
+            <Link
+              href="/blog/"
+              className="inline-flex items-center gap-2 text-primary font-bold text-[12px] uppercase tracking-widest hover:underline"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" /> Back to All Articles
             </Link>
           </div>
         </div>

@@ -1,4 +1,3 @@
-// app/blog/page.tsx
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -14,13 +13,13 @@ export default function BlogIndexPage() {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const categories = useMemo(() => {
-    const cats = Array.from(new Set(blogArticles.map(a => a.category)));
+    const cats = Array.from(new Set(blogArticles.map((a) => a.category)));
     return ['All', ...cats];
   }, []);
 
   const filtered = useMemo(() => {
     if (activeCategory === 'All') return blogArticles;
-    return blogArticles.filter(a => a.category === activeCategory);
+    return blogArticles.filter((a) => a.category === activeCategory);
   }, [activeCategory]);
 
   return (
@@ -28,20 +27,19 @@ export default function BlogIndexPage() {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main className="flex-grow">
-
         {/* Hero */}
-        <section className="bg-gray-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-900/40 via-gray-900/0 to-transparent pointer-events-none" />
-          <div className="container-width py-16 md:py-24 relative z-10">
+        <section className="bg-ink text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,55,41,0.25),transparent_60%)] pointer-events-none" />
+          <div className="container-width py-16 md:py-20 relative z-10">
             <div className="max-w-2xl">
-              <span className="inline-block px-3 py-1 bg-brand-500/20 text-brand-300 text-xs font-bold uppercase tracking-wider rounded-full mb-4 border border-brand-500/30">
-                Blog
+              <span className="inline-block px-3 py-1 bg-primary/20 text-primary text-[10px] font-extrabold uppercase tracking-widest rounded-chip mb-4 border border-primary/30">
+                Resources
               </span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold tracking-tight mb-4">
+              <h1 className="text-[2rem] md:text-[2.8rem] font-extrabold tracking-tight leading-[1.05] mb-4">
                 {siteConfig.name} Blog
               </h1>
-              <p className="text-xl text-gray-300 leading-relaxed">
-                Guides and legal information for Manhattan clients considering hiring a private investigator.
+              <p className="text-[16px] text-white/80 leading-[1.55]">
+                Guides, legal information, and case insights for Manhattan clients considering hiring a private investigator.
               </p>
             </div>
           </div>
@@ -49,24 +47,23 @@ export default function BlogIndexPage() {
 
         <section className="section-padding">
           <div className="container-width">
-
             {blogArticles.length === 0 ? (
               <div className="text-center py-16">
-                <p className="text-gray-500 text-lg">No articles yet. Check back soon for helpful guides and advice.</p>
+                <p className="text-gray-dark text-[14px]">No articles yet. Check back soon for helpful guides and advice.</p>
               </div>
             ) : (
               <>
                 {/* Category filter */}
                 {categories.length > 2 && (
                   <div className="flex flex-wrap gap-2 mb-10">
-                    {categories.map(cat => (
+                    {categories.map((cat) => (
                       <button
                         key={cat}
                         onClick={() => setActiveCategory(cat)}
-                        className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                        className={`px-4 py-2 rounded-chip text-[11px] font-bold uppercase tracking-widest transition-all ${
                           activeCategory === cat
-                            ? 'bg-brand-500 text-white'
-                            : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                            ? 'bg-primary text-white shadow-sm'
+                            : 'bg-gray-light text-gray-dark hover:bg-gray-mid hover:text-ink'
                         }`}
                       >
                         {cat}
@@ -76,14 +73,14 @@ export default function BlogIndexPage() {
                 )}
 
                 {/* Article grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {filtered.map(article => (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {filtered.map((article) => (
                     <Link
                       key={article.slug}
                       href={`/blog/${article.slug}/`}
-                      className="group block bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+                      className="group block bg-paper rounded-tile overflow-hidden border border-gray-light shadow-card hover:shadow-lg hover:border-primary/20 transition-all duration-300"
                     >
-                      <div className="h-48 overflow-hidden bg-gray-100">
+                      <div className="h-44 overflow-hidden bg-gray-light">
                         {article.featuredImage ? (
                           /* eslint-disable-next-line @next/next/no-img-element */
                           <img
@@ -93,20 +90,20 @@ export default function BlogIndexPage() {
                             loading="lazy"
                           />
                         ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-brand-200 via-brand-100 to-brand-50" />
+                          <div className="w-full h-full bg-gradient-to-br from-primary/30 via-primary/10 to-gray-light" />
                         )}
                       </div>
                       <div className="p-5">
                         <div className="flex items-center gap-3 mb-3">
-                          <span className="text-xs font-semibold text-brand-600 bg-brand-50 px-2.5 py-0.5 rounded-full">
+                          <span className="text-[10px] font-extrabold text-primary bg-primary/10 px-2.5 py-0.5 rounded-chip uppercase tracking-widest">
                             {article.category}
                           </span>
-                          <span className="text-xs text-gray-400">{article.publishDate}</span>
+                          <span className="text-[11px] text-gray-dark">{article.publishDate}</span>
                         </div>
-                        <h2 className="text-lg font-display font-bold text-gray-900 group-hover:text-brand-600 mb-2 line-clamp-2">
+                        <h2 className="text-[16px] font-extrabold tracking-tight text-ink group-hover:text-primary mb-2 line-clamp-2 leading-[1.3]">
                           {article.title}
                         </h2>
-                        <p className="text-sm text-gray-500 line-clamp-3">{article.excerpt}</p>
+                        <p className="text-[12px] text-gray-dark line-clamp-3 leading-[1.55]">{article.excerpt}</p>
                       </div>
                     </Link>
                   ))}
@@ -114,12 +111,11 @@ export default function BlogIndexPage() {
 
                 {filtered.length === 0 && (
                   <div className="text-center py-12">
-                    <p className="text-gray-500">No articles in this category yet.</p>
+                    <p className="text-gray-dark text-[14px]">No articles in this category yet.</p>
                   </div>
                 )}
               </>
             )}
-
           </div>
         </section>
       </main>

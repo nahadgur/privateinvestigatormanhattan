@@ -1,12 +1,10 @@
-// components/Header.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, MapPin, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { services } from '@/data/services';
-import { siteConfig } from '@/data/site';
 
 interface HeaderProps {
   onOpenModal?: () => void;
@@ -14,100 +12,109 @@ interface HeaderProps {
 
 export function Header({ onOpenModal }: HeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => { setMobileOpen(false); }, [pathname]);
-
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+    setMobileOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
 
   return (
-    <>
-      {/* Top Bar */}
-      <div className="bg-brand-900 text-brand-50 py-2 px-4 text-sm hidden md:block">
-        <div className="container-width flex justify-between items-center">
-          <span className="flex items-center gap-2">
-            <MapPin className="w-4 h-4" /> {siteConfig.name} Specialists
-          </span>
+    <header className="sticky top-0 z-50 bg-ink text-white w-full flex flex-col justify-center items-center shadow-[0_4px_20px_rgba(0,0,0,0.3)]">
+      <div className="container-width py-3 min-h-[60px] flex justify-between items-center">
+        {/* Logo */}
+        <Link href="/" className="font-extrabold text-[1.2rem] tracking-[-0.5px] z-50 relative">
+          P.I. <span className="text-primary">MANHATTAN</span>
+        </Link>
+
+        {/* Desktop nav */}
+        <div className="hidden lg:flex items-center gap-6 text-[11px] uppercase tracking-widest font-bold">
+          <div
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <Link href="/services/" className="flex items-center gap-1 hover:text-primary transition-colors">
+              Services <ChevronDown className="w-3 h-3" />
+            </Link>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 w-72 bg-ink border border-white/10 rounded-tile shadow-xl pt-2 pb-2 z-50">
+                {services.map((s) => (
+                  <Link
+                    key={s.id}
+                    href={`/services/${s.slug}/`}
+                    className="block px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-white/85 hover:text-primary hover:bg-white/5 transition-colors"
+                  >
+                    {s.title}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+          <Link href="/location/" className="hover:text-primary transition-colors">Locations</Link>
+          <Link href="/blog/" className="hover:text-primary transition-colors">Blog</Link>
+          <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
+          <span className="text-gray-dark px-2">|</span>
+          <button
+            onClick={onOpenModal}
+            className="bg-primary text-white px-4 py-2 rounded-chip hover:bg-white hover:text-ink transition-colors shadow-sm text-[11px] uppercase tracking-widest font-bold"
+          >
+            Free Consultation
+          </button>
+        </div>
+
+        {/* Mobile controls */}
+        <div className="flex lg:hidden items-center gap-3 z-50 relative">
+          <button
+            onClick={onOpenModal}
+            className="bg-primary text-white px-3 py-1.5 rounded-chip text-[10px] font-bold uppercase tracking-widest shadow-sm"
+          >
+            Consult
+          </button>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="text-white p-1"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          >
+            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </div>
 
-      {/* Main Header */}
-      <header className={`sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b transition-shadow duration-200 ${scrolled ? 'shadow-md border-gray-200' : 'shadow-sm border-gray-100'}`}>
-        <div className="container-width">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2.5 group">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.png" alt={siteConfig.name} className="h-10 w-auto" />
-              <div className="flex flex-col">
-                <span className="font-display font-bold text-xl leading-none text-gray-900">{siteConfig.name.split(" ").slice(0, -1).join(" ")}</span>
-                <span className="text-xs text-brand-500 font-semibold tracking-widest uppercase">{siteConfig.name.split(" ").pop()}</span>
-              </div>
-            </Link>
-
-            {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-1">
-              <Link href="/" className="px-3 py-2 text-gray-600 hover:text-brand-600 font-medium transition-colors rounded-lg hover:bg-brand-50">Home</Link>
-
-              <div className="relative group">
-                <Link href="/services/" className="flex items-center gap-1 px-3 py-2 text-gray-600 group-hover:text-brand-600 font-medium transition-colors rounded-lg group-hover:bg-brand-50">
-                  Services <ChevronDown className="w-4 h-4" />
+      {/* Mobile dropdown */}
+      {mobileOpen && (
+        <div className="lg:hidden w-full bg-ink border-t border-white/10 px-4 py-4 flex flex-col gap-4 font-bold uppercase tracking-widest text-[12px] absolute top-full left-0 shadow-xl">
+          <Link href="/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary">Home</Link>
+          <div className="py-1">
+            <Link href="/services/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary block">Services</Link>
+            <div className="pl-3 mt-2 space-y-2 text-[11px] text-white/70 font-semibold tracking-wider">
+              {services.map((s) => (
+                <Link
+                  key={s.id}
+                  href={`/services/${s.slug}/`}
+                  onClick={() => setMobileOpen(false)}
+                  className="block py-1 hover:text-primary"
+                >
+                  {s.title}
                 </Link>
-                <div className="absolute top-full left-0 w-72 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all translate-y-2 group-hover:translate-y-0 p-2 z-50">
-                  {services.map(service => (
-                    <Link
-                      key={service.id}
-                      href={`/services/${service.slug}/`}
-                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-brand-50 hover:text-brand-700 rounded-lg transition-colors"
-                    >
-                      {service.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              <Link href="/location/" className="px-3 py-2 text-gray-600 hover:text-brand-600 font-medium transition-colors rounded-lg hover:bg-brand-50">Locations</Link>
-
-              <Link href="/blog/" className="px-3 py-2 text-gray-600 hover:text-brand-600 font-medium transition-colors rounded-lg hover:bg-brand-50">Blog</Link>
-
-              <button onClick={onOpenModal} className="ml-3 btn-primary text-sm !py-2.5 !px-5 rounded-full">
-                Free Consultation
-              </button>
-            </nav>
-
-            {/* Mobile Toggle */}
-            <button className="lg:hidden p-2 text-gray-600" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="lg:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl z-50 max-h-[80vh] overflow-y-auto">
-            <div className="px-4 pt-2 pb-6 space-y-1">
-              <Link href="/" className="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Home</Link>
-              <div className="px-3 py-2">
-                <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">Services</div>
-                {services.map(s => (
-                  <Link key={s.id} href={`/services/${s.slug}/`} className="block py-2 text-sm text-gray-600 hover:text-brand-600">{s.title}</Link>
-                ))}
-              </div>
-              <Link href="/location/" className="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Locations</Link>
-              <Link href="/blog/" className="block px-3 py-3 text-base font-medium text-gray-700 hover:bg-gray-50 rounded-lg">Blog</Link>
-
-              <div className="pt-4 px-3">
-                <button onClick={() => { onOpenModal?.(); setMobileOpen(false); }} className="block w-full btn-primary text-center">Free Consultation</button>
-              </div>
+              ))}
             </div>
           </div>
-        )}
-      </header>
-    </>
+          <Link href="/location/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary">Locations</Link>
+          <Link href="/blog/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary">Blog</Link>
+          <div className="h-[1px] bg-white/10 my-1 w-full" />
+          <button
+            onClick={() => {
+              onOpenModal?.();
+              setMobileOpen(false);
+            }}
+            className="py-2 text-primary font-extrabold text-lg tracking-wider text-left"
+          >
+            Free Consultation
+          </button>
+        </div>
+      )}
+    </header>
   );
 }
