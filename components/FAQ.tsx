@@ -5,22 +5,16 @@ import { ChevronDown } from 'lucide-react';
 
 type FAQItem = { question: string; answer: string };
 
+// NOTE: This component does not emit FAQPage JSON-LD. The pages that render
+// it (service, service×location, location) emit their own FAQPage schema via
+// buildFAQSchema() in data/schema-helpers.ts — emitting it here as well would
+// duplicate the schema on every page that uses this component.
+
 export function FAQ({ faqs, title = 'Frequently Asked Questions' }: { faqs: FAQItem[]; title?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer },
-    })),
-  };
-
   return (
     <section>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <h2 className="text-[22px] md:text-[26px] font-extrabold tracking-tight text-ink mb-5">{title}</h2>
       <div className="space-y-3">
         {faqs.map((faq, i) => (
