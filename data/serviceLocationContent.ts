@@ -216,6 +216,113 @@ export const serviceLocationContent: Record<string, ServiceLocationPageContent> 
   ]; },
 },
 
+"missing-persons": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Missing Persons Investigation in ${city}`; return pick(city, [`Missing Persons Investigation in ${city}: Finding People Manhattan Doesn\'t Make Easy to Find`, `Locating a Missing Person in ${city}: What a Licensed PI Does That Police Cannot`, `${city} Missing Persons Search: Professional Investigation Beyond Database Lookups`, `When Someone Goes Missing in ${city}: Experienced Investigation That Gets Results`]); },
+  stepsHeading: (city) => pick(city, [`How Missing Persons Investigation Works in ${city}`, `Your ${city} Missing Persons Case: From First Call to Reunion`, `The ${city} Missing Persons Process: Methodical, Professional, Effective`, `From Initial Search to Located Subject: Missing Persons in ${city}`]),
+  whyHeading: (city) => pick(city, [`Why ${city} Clients Use Our Matched Investigators`, `What Professional Missing Persons Investigation Delivers in ${city}`, `Licensed PI vs Online Search: Real Results in ${city}`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Licensed missing persons investigators covering ${city}. Free consultation, no obligation.`;
+    return `Finding a missing person in ${city} is rarely a database search — it is investigative work that combines professional skip-tracing tools, direct source interviews, and the local knowledge to follow a subject through ${p.area}\'s dense urban environment. We match you with NYS-licensed investigators experienced in the specific challenges of locating people in Manhattan.`;
+  },
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Licensed investigators covering your area', 'Professional investigative database access', 'Experienced missing persons specialists']; return [
+    `NYS-licensed investigators with real missing persons experience — not just online people-search tools`,
+    `Access to professional investigative databases unavailable to the public or consumer services`,
+    `${p.area} knowledge and source networks that accelerate searches in ${city}\'s specific environment`,
+  ]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Trusted by ${sizeLabel(p)} searching for missing people across ${city}` : `Licensed missing persons investigators across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city);
+    return [
+      { title: "Beyond Database Searches", desc: `Consumer people-search sites are thin public-records aggregators that fail on anyone who has moved, changed names, or deliberately reduced their digital footprint. Your ${city} investigator uses professional databases, direct source interviews, and the investigative methods that actually locate people in ${p.area}.` },
+      { title: "Manhattan-Specific Investigation", desc: `${city} missing persons searches are unlike searches anywhere else — doorman buildings, co-op confidentiality, the sheer density of people, and the layered privacy protections that Manhattan residents have all make location work uniquely demanding. Your investigator knows how to work ${p.area}\'s specific environment.` },
+      { title: "Ethical and Legal Boundaries", desc: `Licensed PIs operate within NYS legal frameworks and professional ethical standards — subjects located through improper or illegal methods produce evidence that cannot be used and can expose clients to liability. Your investigator follows the rules that protect everyone involved in the case.` },
+      { title: "Honest Assessment", desc: `Some people cannot be found — subjects who have entered witness protection, taken specific active-avoidance steps, or deliberately disappeared across jurisdictions. Your investigator will tell you honestly what is achievable before you commit, not after you\'ve spent money on an unrealistic case.` },
+    ];
+  },
+  intro: (city) => { const p = prof(city); if (!p) return ['Missing persons investigation requires licensed professionals with proper investigative training.', 'Locating people in Manhattan\'s dense environment requires specific local knowledge.']; 
+    return [
+      `Finding someone who has gone missing in ${city} is usually not simple even when the person is not actively avoiding contact — ${p.demographics}, and the specific privacy infrastructure of ${p.area} (co-op boards, doorman buildings, shared-mailroom addressing, unlisted residents) makes conventional online searches fail almost immediately. Your investigator uses the actual tools of the profession to work past these layers.`,
+      `${p.marketContext} The investigative approach depends heavily on why the subject is missing — a relative who has simply lost touch requires different methods than a debtor deliberately hiding, or a birth parent whose records are sealed. Your ${city} investigator scopes the case carefully before beginning so that the investigation is targeted to the specific situation.`,
+    ];
+  },
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [
+    `Case intake: you brief the investigator on everything known about the subject — names, dates, addresses, relationships, the reason for the search, and what you\'ve already tried`,
+    `Initial database search: your investigator runs professional-tier skip-tracing and location databases to establish a current lead in ${p.area} or elsewhere`,
+    `Source interviews: discreet contact with relatives, former employers, former neighbors, and other people likely to have current-address information`,
+    `${city} on-the-ground verification: if the subject is believed to be in ${p.area}, your investigator physically verifies address, workplace, or regular-location presence`,
+    `Case update and decision: you receive an update on what\'s been found and decide how to proceed — making contact, preserving the subject\'s privacy, or continuing the investigation`,
+    `Final report: comprehensive documentation of the search, findings, current location, and verification methods used`,
+  ]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return [
+    `Real investigative database access that goes well beyond consumer people-search tools`,
+    `${p.area} knowledge and source networks for on-the-ground verification in ${city}`,
+    `Ethical investigation that respects both your case and the subject\'s legal privacy rights`,
+    `Honest case assessment so you know what\'s achievable before you commit`,
+  ]; },
+  faqs: (city) => { const p = prof(city); if (!p) return defFaqs['missing-persons'] ? defFaqs['missing-persons'](city) : [{question: 'Cost?', answer: '$500-$5,000 depending on case complexity.'}]; return [
+    { question: `How much does a missing persons search cost in ${city}?`, answer: `Most ${city} missing persons cases cost $500-$5,000 depending on complexity. A simple search for someone who has lost touch but is not actively hiding is at the low end; cases involving deliberate avoidance, multi-jurisdiction searches, or sealed records (such as adoption cases) run substantially higher. Your investigator provides a realistic estimate after reviewing what is known.` },
+    { question: `Can a PI find someone who doesn\'t want to be found in ${city}?`, answer: `Often yes, but with caveats. Licensed investigators have access to professional databases and investigative methods that locate the vast majority of subjects who have simply moved or changed identifiers — but investigators cannot use illegal methods, and cannot locate subjects in federal witness protection or who have taken sophisticated active-avoidance steps. Your ${city} investigator will assess achievability honestly during intake.` },
+    { question: `What if I find the person — does the investigator make contact?`, answer: `That\'s entirely your decision. Most ${city} clients ask the investigator to verify the subject\'s location and wellbeing without making contact, so the client can decide how and whether to reach out themselves. Your investigator can also facilitate contact through intermediaries where the subject\'s privacy needs to be protected, or provide the information needed for your attorney or a family-reunification specialist to proceed.` },
+  ]; },
+},
+
+"skip-tracing": {
+  introHeading: (city) => { const p = prof(city); if (!p) return `Skip Tracing in ${city}`; return pick(city, [`Skip Tracing in ${city}: Locating People Who Don\'t Want to Be Found`, `Professional Skip Tracing for ${city} Attorneys and Creditors`, `${city} Skip Tracing: Service of Process, Judgment Enforcement, Witness Location`, `When Standard Address Searches Fail: Skip Tracing in ${city}`]); },
+  stepsHeading: (city) => pick(city, [`How Skip Tracing Works in ${city}`, `Your ${city} Skip Tracing Case: From File to Located Subject`, `The ${city} Skip Tracing Process: Databases, Sources, and Verification`, `From Case Intake to Service-Ready Address: Skip Tracing in ${city}`]),
+  whyHeading: (city) => pick(city, [`Why ${city} Attorneys and Creditors Use Our Matched Investigators`, `What Professional Skip Tracing Delivers in ${city}`, `Licensed Skip Tracing vs Consumer Search Services in ${city}`]),
+  heroDesc: (city) => { const p = prof(city); if (!p) return `Licensed skip tracers covering ${city}. Professional investigative database access. Free consultation.`;
+    if (p.avgClientType === 'legal') return `${city} attorneys need skip tracing when service of process has failed, a judgment debtor has gone dark, or a witness has to be located before a deposition. Our matched NYS-licensed investigators use professional-tier databases and ${p.area} source networks to produce service-ready addresses on cases that consumer people-search services cannot solve.`;
+    return `Skip tracing in ${city} is investigative work, not a database lookup. We match you with NYS-licensed investigators who combine professional-tier skip-tracing databases, ${p.area} source networks, and the investigative methods that actually produce current addresses on people who have deliberately moved without a trail.`;
+  },
+  heroBullets: (city) => { const p = prof(city); if (!p) return ['Licensed investigators covering your area', 'Professional skip-tracing database access', 'Verified current addresses']; return [
+    `NYS-licensed investigators with specific skip-tracing experience — not just consumer address-search results`,
+    `Access to professional investigative databases and proprietary data sources unavailable to the public`,
+    `${p.area}-level knowledge for the on-the-ground verification that distinguishes reliable from stale information`,
+  ]; },
+  trustLine: (city) => { const p = prof(city); return p ? `Trusted by ${sizeLabel(p)} across ${city} for skip tracing` : `Licensed skip tracers across ${city}`; },
+  benefits: (city) => { const p = prof(city); if (!p) return defBenefits(city);
+    if (p.avgClientType === 'legal') return [
+      { title: "Service-Ready Addresses", desc: `Process servers need current verified addresses, not outdated database hits. Your investigator delivers addresses that have been verified through source contact, public-records cross-reference, and where appropriate physical verification in ${p.area}.` },
+      { title: "Judgment Enforcement Support", desc: `Locating a judgment debtor is only the first step — your ${city} investigator also identifies current employer (for wage garnishment), banking relationships (for subpoena targets), and real-estate holdings (for liens). Skip tracing feeds directly into enforcement strategy.` },
+      { title: "Witness and Beneficiary Location", desc: `${city} attorneys use skip tracing to locate deposition witnesses, trial witnesses, estate beneficiaries, and trust distributees. Your investigator produces current location, confirmed reachability, and when needed a source-verified communication channel.` },
+      { title: "Multi-Jurisdiction Capability", desc: `Subjects who have left ${city} often don\'t stay in one place. Your investigator tracks across jurisdictions, coordinating with counterpart investigators in other states or countries when cases require it, and produces a coherent case narrative rather than a disconnected database pull.` },
+    ];
+    return [
+      { title: "Beyond Consumer Search Services", desc: `Online people-search sites fail on skip cases because the subject has moved specifically to defeat them. Your ${city} investigator uses professional-tier databases and the investigative methods that locate subjects who have deliberately severed their prior-address trail.` },
+      { title: "Verified Current Location", desc: `A database hit is a lead, not a verified address. Your investigator confirms current-location claims through source contact, public-records cross-reference, and where the case warrants, physical verification in ${p.area}.` },
+      { title: "Professional Database Access", desc: `Licensed investigators use databases not available to the public — proprietary skip-tracing platforms, professional credit-header and utility-trace tools, and investigative data sources developed specifically for locating difficult subjects.` },
+      { title: "Discreet and Legal", desc: `Your investigator operates within NYS legal frameworks and professional standards. The subject is not notified of the search, the methods used are defensible if challenged, and the resulting address can be used for service, enforcement, or contact without legal exposure.` },
+    ];
+  },
+  intro: (city) => { const p = prof(city); if (!p) return ['Skip tracing requires licensed professionals with access to investigative databases.', 'Locating skip subjects in Manhattan requires specific local knowledge and methods.']; 
+    if (p.avgClientType === 'legal') return [
+      `Skip tracing is among the most common investigative services ${city} attorneys need — a process server has failed twice, a judgment debtor has moved without forwarding address, or a witness has dropped out of contact weeks before deposition. The problem is almost never "can the person be found" but rather "can they be found quickly enough to matter in this case." Your ${city} investigator is structured around turnaround as much as success rate.`,
+      `${p.marketContext} Manhattan skip cases also carry specific local complications — doorman-building privacy, co-op confidentiality, unlisted residential records, and the sheer density that makes partial-address leads hard to resolve. Your investigator works ${p.area} with the specific knowledge and source networks that general skip-tracing services don\'t have.`,
+    ];
+    return [
+      `Skip tracing exists because standard address searches fail on a specific subset of people — those who have moved deliberately without updating records, who use multiple addresses simultaneously, who operate through nominees or shell LLCs, or who have actively taken steps to reduce their public footprint. Finding these subjects requires professional investigative database access and the source-interview methods that licensed investigators are trained in.`,
+      `${p.caseProfile}. Your ${city} investigator builds a case workup from whatever starting information you have, extends it through professional databases and source contact, and produces a verified current location. The result is usable for service of process, judgment enforcement, witness contact, or whatever the underlying purpose of the search requires.`,
+    ];
+  },
+  steps: (city) => { const p = prof(city); if (!p) return defSteps(city); return [
+    `Case intake: you provide starting information — name, date of birth, last known address, and the purpose of the search (service, judgment, witness, etc.)`,
+    `Database workup: your investigator runs professional-tier skip-tracing platforms, credit-header and utility-trace tools, and investigative data sources to identify current location leads`,
+    `Source contact: discreet outreach to relatives, former neighbors, former employers, and other likely-informed sources to narrow and verify current location`,
+    `${city} on-the-ground verification: where the subject is believed to be in ${p.area}, your investigator physically verifies address or workplace`,
+    `Case documentation: current address, verification method, supplementary information (employer, banking relationships, real-estate holdings if relevant), and source documentation`,
+    `Delivery: service-ready address report formatted for your process server, attorney, or enforcement team — or provided directly to you for whatever contact or enforcement purpose the case requires`,
+  ]; },
+  whyPoints: (city) => { const p = prof(city); if (!p) return defWhyPoints(city); return [
+    `Professional skip-tracing databases and investigative methods that actually locate difficult subjects`,
+    `${p.area} source networks and local verification capability for ${city}-based skip cases`,
+    `Turnaround focused — cases structured to produce service-ready addresses when the case clock is running`,
+    `Legally defensible methods that produce addresses useable for service, enforcement, or contact without exposure`,
+  ]; },
+  faqs: (city) => { const p = prof(city); if (!p) return [{question: 'Cost?', answer: '$200-$2,000 depending on case complexity.'}]; return [
+    { question: `How much does skip tracing cost in ${city}?`, answer: `Most ${city} skip tracing cases run $200-$2,000 depending on complexity. A straightforward case where the subject has simply moved recently is at the low end; cases involving active avoidance, multi-jurisdiction tracking, or significant source-interview work run higher. Your investigator gives a realistic estimate after reviewing the starting information.` },
+    { question: `How long does skip tracing take in ${city}?`, answer: `Most ${city} skip cases produce a verified current address within 3-10 business days. Simple cases can close in 24-48 hours; complex cases involving multiple jurisdictions or significant source development run 2-3 weeks. Your investigator flags turnaround concerns during intake, especially when service-of-process deadlines are at stake.` },
+    { question: `Can a skip tracer find someone using only a name?`, answer: `Rarely. Name alone is usually insufficient — there are too many people with common names. A successful skip trace typically needs at minimum date of birth or last known address, and ideally some combination of these plus additional identifiers (prior employer, relatives, phone numbers, email addresses). Your ${city} investigator will tell you honestly if the starting information is thin enough to affect the case.` },
+  ]; },
+},
+
 };
 
 function defBenefits(city: string) { return [{ title: "NYS Licensed", desc: `Every investigator in our ${city} network is NYS licensed, bonded, and insured.` }, { title: "Free Consultation", desc: `Confidential consultation to discuss your case before any commitment.` }, { title: "Court-Ready Evidence", desc: `Documentation that meets New York court evidentiary standards.` }, { title: "Matched to Your Case", desc: `We match you with investigators experienced in your specific type of case.` }]; }
@@ -228,4 +335,6 @@ const defFaqs: Record<string, (city: string) => { question: string; answer: stri
   'corporate-investigations': (c) => [{ question: `Cost?`, answer: `$5,000-$100,000+ depending on scope. Scoped after briefing.` }, { question: `HR involvement?`, answer: `Depends on the case. Investigator advises on information control.` }, { question: `Termination evidence?`, answer: `Yes — documented evidence supports defensible termination decisions.` }],
   'asset-searches': (c) => [{ question: `Cost?`, answer: `$1,000-$15,000+ depending on complexity and jurisdictions.` }, { question: `Bank accounts?`, answer: `Investigators identify likely institutions. Courts subpoena records.` }, { question: `Hidden assets?`, answer: `LLCs, nominees, transfers, crypto, undervaluation — investigators know the patterns.` }],
   'child-custody-investigations': (c) => [{ question: `Cost?`, answer: `$3,000-$15,000 depending on scope and duration.` }, { question: `Legal?`, answer: `Yes — licensed investigators operate within strict legal boundaries.` }, { question: `Confidential?`, answer: `Subject learns only when evidence is presented in court.` }],
+  'missing-persons': (c) => [{ question: `Cost?`, answer: `$500-$5,000 depending on complexity and jurisdictions.` }, { question: `Timeline?`, answer: `Days to weeks depending on how actively the subject is avoiding contact.` }, { question: `Success rate?`, answer: `Most subjects locatable; active-avoidance and sealed-record cases harder.` }],
+  'skip-tracing': (c) => [{ question: `Cost?`, answer: `$200-$2,000 depending on complexity.` }, { question: `Timeline?`, answer: `3-10 business days typical; urgent-service cases expedited.` }, { question: `What's needed?`, answer: `Name plus at minimum DOB or last known address; more identifiers help.` }],
 };

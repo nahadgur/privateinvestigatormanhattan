@@ -1847,6 +1847,588 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
     },
   },
 
+
+  // ============================================================
+  // MISSING PERSONS — All Manhattan (Sprint 3)
+  // ============================================================
+  "missing-persons": {
+    "midtown-east": {
+      casePattern: "Midtown East missing persons cases frequently involve professional-class subjects whose last known address was a corporate apartment, hotel long-stay, or doorman-building rental tied to a finance or consulting employer — meaning the conventional residential trail often goes dead at a corporate entity rather than the person. Cases involving estranged relatives of Midtown professionals, former employees who left the corridor's law and consulting firms, and old friends whose last contact was workplace-centered are regular engagement types.",
+      logistics: "Midtown East missing persons work commonly starts with employer-adjacent investigation rather than residential — confirming the employer of last record, identifying whether the subject was rotated to another city office, and using professional-network tools (LinkedIn, firm-directory archives, industry databases) as the primary lead-generation path. Residential tracing is often secondary, reached only after employment is pinned down.",
+      venue: "Located-subject information is delivered directly to the client; legal-proceeding-related searches route through New York County Supreme Court at 60 Centre Street."
+    },
+    "midtown-west": {
+      casePattern: "Midtown West missing persons cases often involve media, entertainment, and hospitality-industry subjects whose career paths create unusual geographic mobility — production tours, hospitality-industry transfers, and the project-based work that drives short-tenure residency patterns in the Theater District and adjacent corridors. Cases commonly involve former entertainment-industry contacts whose trail went cold during a career transition.",
+      logistics: "Midtown West missing persons work often uses union and professional-association records as primary leads — AEA, IATSE, SAG-AFTRA membership-and-address records, hotel-industry employment verification, and production-company project histories all produce location data that conventional people-search services don't access. the area-specific source networks are important for active-industry subjects.",
+      venue: "Located-subject information is delivered to the client; legal-proceeding-related matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "hell-s-kitchen": {
+      casePattern: "Hell's Kitchen missing persons cases reflect the neighborhood's dense service-industry workforce and its mix of long-tenure rent-stabilized residents with project-transient newer arrivals. Cases commonly involve former restaurant or bar coworkers, estranged family members of service-industry workers, and the specific subject profile where someone has moved between multiple Hell's Kitchen or Midtown West addresses without leaving a forwarding-mail trail.",
+      logistics: "Hell's Kitchen missing persons work frequently leverages the tight-knit service-industry community as a source network — former coworkers at specific restaurants, bartenders and hospitality-staff who remember patrons, and the block-level community memory that the neighborhood's older residents maintain. Standard database work supplements rather than leads the investigation.",
+      venue: "Located-subject information is delivered to the client; related legal matters proceed at New York County Supreme Court at 60 Centre Street."
+    },
+    "murray-hill": {
+      casePattern: "Murray Hill missing persons cases most commonly involve early-career-professional subjects whose young-adult residential pattern creates thin records — short-tenure rentals, roommate arrangements with mail forwarded to parents, and employer-provided temporary housing. Cases frequently involve parents searching for young-adult children who have moved away from Murray Hill to another city without staying in regular contact.",
+      logistics: "Murray Hill missing persons work starts with employer identification — the concentration of entry-level finance and consulting hiring in the corridor means most subjects have a traceable professional footprint even when residential records are thin. Social-media analysis is unusually productive for this demographic given young-professional presence on platforms like LinkedIn and Instagram.",
+      venue: "Located-subject information is delivered to the client; legal-proceeding matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "koreatown": {
+      casePattern: "Koreatown missing persons cases regularly involve cross-border dimensions — Korean community members who have returned to Korea, relatives of Korean-American Koreatown business owners, and subjects whose residential address has shifted between New York and Seoul or other Korean-community destinations (Flushing, Palisades Park, LA Koreatown). Language-capable investigation is common given community demographics.",
+      logistics: "Koreatown missing persons work routinely requires Korean-language-capable investigators and coordination with cross-border specialists who can access Korean government records (the Ministry of the Interior's address-registration system and related resources). Family-register documentation is useful where available; community-source interviews require culturally informed approach.",
+      venue: "Located-subject information is delivered to the client; legal proceedings involving international jurisdiction may route through federal court at 500 Pearl Street."
+    },
+    "turtle-bay": {
+      casePattern: "Turtle Bay missing persons cases include a distinctive diplomatic-and-UN-community component — former UN-staff, diplomatic-community-affiliated subjects who have rotated to another posting, and the specific case type where a family member has lost contact with someone working at a UN agency or foreign mission. Standard local cases arise for the neighborhood's residential population.",
+      logistics: "Turtle Bay missing persons work for UN-and-diplomatic-community subjects routinely involves working through official channels — UN Secretariat personnel records (where accessible), foreign-mission contact protocols, and the specific international-organization source networks that diplomatic-community investigation requires. Standard local work follows conventional Manhattan practice.",
+      venue: "Located-subject information is delivered to the client; international-component matters may involve coordination with federal court at 500 Pearl Street."
+    },
+    "sutton-place": {
+      casePattern: "Sutton Place missing persons cases involve high-net-worth-community dynamics — estranged adult children of affluent families, former domestic staff whose last-known employment was a Sutton Place household, and the specific case type where a family has lost contact with a relative who has relocated internationally to a second or third residence. Estate-related missing-heir searches are a recurring workstream.",
+      logistics: "Sutton Place missing persons work frequently involves international-component investigation given the resident demographic's global mobility patterns. Family-office records, trust-and-estate administrator source contact, and the specific international-residence tracing methods that high-net-worth investigation requires. Engagement timelines reflect the complexity.",
+      venue: "Located-subject information is delivered to the client; estate-related matters may involve Surrogate's Court at 31 Chambers Street."
+    },
+    "tudor-city": {
+      casePattern: "Tudor City missing persons cases are rare given the enclave's small population but commonly follow the UN-and-Midtown-East pattern — diplomatic or international-organization subjects, former corporate-housing residents, and relatives of current or former Tudor City apartment occupants. The complex's residential-management records are a useful internal source for verified-contact work.",
+      logistics: "Tudor City missing persons work frequently leverages the residential-complex management's records as an initial source. Current resident-contact, former-tenant forwarding-address archives, and the complex-maintenance source contacts all produce useful verification data that doesn't require external database work.",
+      venue: "Located-subject information is delivered to the client; related matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "kips-bay": {
+      casePattern: "Kips Bay missing persons cases often involve the medical-community workforce — former NYU Langone employees, medical-residency alumni who have rotated to another institution, and relatives of medical-professional subjects who have relocated for a fellowship or attending position. Standard local cases arise for the neighborhood's residential population.",
+      logistics: "Kips Bay missing persons work for medical-community subjects commonly uses state medical-license boards as primary leads — license records track practice locations with reliable precision, and national practitioner databases (where authorized) extend the search across all U.S. jurisdictions. Hospital-HR source contact supplements this for recent-move cases.",
+      venue: "Located-subject information is delivered to the client; related legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "gramercy-park": {
+      casePattern: "Gramercy Park missing persons cases commonly involve affluent-community estranged-relative searches — adult children who have cut contact, siblings whose relationship broke down after an estate matter, and the specific case type where a wealthy family has lost contact with a family member who declined communication. Estate-heir location work is also a recurring engagement type.",
+      logistics: "Gramercy Park missing persons investigation typically begins with family-office and trust-administrator source contact where possible, extends through private-school and private-club records (where the subject had prior affiliations), and uses the high-end social-network and philanthropic-community directory resources that affluent-community subjects commonly appear in. Discretion is a primary operational concern.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "flatiron-district": {
+      casePattern: "Flatiron District missing persons cases often involve tech and creative-industry subjects whose professional geographic mobility is high — former startup employees, creative-industry freelancers whose project-to-project movement creates thin residential records, and relatives searching for someone who worked at one of the area's concentrated tech or advertising employers. Social-media-aware subjects common; conventional database approaches sometimes underperform.",
+      logistics: "Flatiron District missing persons work is distinctive for its heavy reliance on professional and social-media-platform investigation — LinkedIn archive analysis, GitHub and developer-community traces, domain-registration records, and crypto-wallet public-activity where relevant. Tech-industry-familiar investigator resources are drawn on for substantial engagements.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "nomad": {
+      casePattern: "NoMad missing persons cases span the neighborhood's dual tech-and-hospitality tenant character — tech-industry subjects similar to the Flatiron pattern and hospitality-industry subjects tied to the flagship hotel cluster. Cases commonly involve former hotel-management staff whose career paths involve multi-property and multi-brand mobility, and tech-industry subjects whose employment history spans several of the area's concentrated employers.",
+      logistics: "NoMad missing persons work combines Flatiron-pattern tech-industry investigation methods (social-media, professional-network, GitHub) with hospitality-industry methods (union membership records for back-of-house subjects, management-career-path tracking through industry associations, brand-HR source networks). Multi-method casework is standard.",
+      venue: "Located-subject information is delivered to the client; legal matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "financial-district": {
+      casePattern: "Financial District missing persons cases commonly involve former finance-industry professionals whose career paths led to other financial centers — London, Hong Kong, Singapore, or other US cities — and the estranged-family cases where contact was lost during an international job transition. Former regulated-industry professionals (broker-dealer, advisor) maintain traceable records through regulatory-database history even after leaving specific employers.",
+      logistics: "Financial District missing persons investigation routinely uses FINRA BrokerCheck, SEC IAPD, and state securities-regulator records as primary lead-generation resources for subjects with regulated-industry career histories — these records produce verified historic address and employer sequences that consumer services cannot replicate. International-component tracing through investigator networks extends the search overseas when needed.",
+      venue: "Located-subject information is delivered to the client; international-component proceedings may involve federal court at 500 Pearl Street."
+    },
+    "tribeca": {
+      casePattern: "Tribeca missing persons cases often involve affluent-community dynamics similar to Gramercy Park — estranged adult children, siblings with broken-contact relationships, and the specific case type where a high-net-worth family has lost contact with a member who chose to sever communication. The creative-industry overlap also produces cases involving former entertainment and publishing-industry subjects.",
+      logistics: "Tribeca missing persons work frequently uses private-school and preschool records (where the subject has known historical affiliation), co-op and condo building-management archives, and the specific cultural-institution and private-club directories that affluent Tribeca residents commonly appeared in. Creative-industry overlap draws on entertainment-industry investigation methods similar to Midtown West work.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "battery-park-city": {
+      casePattern: "Battery Park City missing persons cases commonly involve former finance-industry resident subjects whose career moves took them to other financial centers, along with the specific case pattern of residents who relocated after the 9/11 period and whose contact trails went cold during the neighborhood's recovery years. Recent-residency cases for the current finance-industry tenant base are the more frequent current workstream.",
+      logistics: "Battery Park City missing persons work leverages the Battery Park City Authority's resident-records archives where authorized, the concentrated residential-tower management records, and the standard Financial District financial-industry investigation methods for working-finance-industry subjects. The neighborhood's contained geography makes historical-residency verification straightforward.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "water-street": {
+      casePattern: "Water Street missing persons cases follow the Financial District pattern for finance-industry-subject cases, with the distinct variation that Seaport-area hospitality-industry subjects (Pier 17 operators and adjacent restaurants) form a secondary workstream. Estranged-contact cases involving current or former corridor workforce — from both the office-tower and hospitality-industry populations — are regular engagement types.",
+      logistics: "Water Street missing persons work uses the same FINRA and SEC record methods as the Financial District for regulated-industry subjects, plus hospitality-industry union and professional-association records for Seaport-workforce subjects. The corridor's linear geometry simplifies on-the-ground verification when the subject is suspected to still be in the area.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "wall-street": {
+      casePattern: "Wall Street missing persons cases commonly involve the highest-seniority end of finance-industry subjects — managing directors, partners, and executives whose career-transition moves have been to specific high-end destinations (Greenwich, Palm Beach, European financial centers). Estranged-family cases involving these subjects carry distinctive international-component and high-end-destination complexity.",
+      logistics: "Wall Street missing persons investigation routinely involves specialist coordination for high-net-worth subject tracing — Greenwich and Palm Beach investigator networks, international-financial-center counterpart investigators, and the private-club and philanthropic-community directory resources that senior finance-industry subjects appear in. Engagement timelines reflect the geographic and investigative complexity.",
+      venue: "Located-subject information is delivered to the client; federal proceedings involving regulated-industry elements route to Daniel Patrick Moynihan U.S. Courthouse at 500 Pearl Street."
+    },
+    "fulton": {
+      casePattern: "Fulton missing persons cases predominantly involve Seaport-area hospitality workforce subjects — former Pier 17 and Front Street restaurant workers, hotel staff whose career paths crossed multiple Seaport and adjacent Financial District properties, and the occasional maritime-industry subject tied to the working-waterfront history of the area. Cases often involve relatives in home regions (Caribbean, Philippines, Eastern Europe) searching for family members last known to work the Seaport.",
+      logistics: "Fulton missing persons work routinely involves hospitality-industry union records, cross-border investigation coordination for international-relative cases, and the specific maritime-industry investigation methods where the subject has returned to merchant-shipping or cruise-industry employment. Language-capable investigator resources are drawn on as needed.",
+      venue: "Located-subject information is delivered to the client; international-component proceedings may involve federal court at 500 Pearl Street."
+    },
+    "civic-center": {
+      casePattern: "Civic Center missing persons cases are relatively rare given the low residential population, but occur periodically for legal-industry subjects — former court personnel, retired attorneys whose practice addresses were in the corridor, and government-employee subjects whose employment was at one of the adjacent court or municipal facilities. Cases commonly have specific official-records-resource starting points.",
+      logistics: "Civic Center missing persons work for legal-industry subjects leverages NY bar records (for attorney-subject history), court-personnel records (where authorized), and the specific legal-industry reference networks that former Civic Center workforce subjects maintain. Standard residential work follows conventional Manhattan practice.",
+      venue: "Located-subject information is delivered to the client; legal-industry-related matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "two-bridges": {
+      casePattern: "Two Bridges missing persons cases commonly involve the neighborhood's Chinese-American and Latino-American community subjects — relatives searching for family members whose contact has been lost after a move out of the neighborhood, often to Chinatown proper, to Queens, or to home-country destinations. Language-capable investigation is required for most substantive work.",
+      logistics: "Two Bridges missing persons investigation routinely involves Chinese and Spanish-language source-interview capability. Community-organization source networks (church congregations, fraternal associations, community-service organizations) commonly produce location leads that formal database work cannot, and cross-border records work is frequent for home-country-destination cases.",
+      venue: "Located-subject information is delivered to the client; international-component proceedings may route through federal court at 500 Pearl Street."
+    },
+    "chinatown": {
+      casePattern: "Chinatown missing persons cases operate through a unique family-and-fraternal-association network. The neighborhood's tongs, district associations, and family-name associations (Chinese Consolidated Benevolent Association, specific surname associations like the Lee Family Association) have informal member-contact records that conventional investigation cannot access — community-sourced through established relationships. Cases commonly involve multi-generational family searches, cross-border relative tracking, and subjects who have migrated within or out of the diaspora.",
+      logistics: "Chinatown missing persons work routinely requires Mandarin, Cantonese, and sometimes Taishanese-capable investigators, coordination with cross-border Chinese records specialists, and culturally informed community-source-interview approach. The neighborhood's community-organization network (family associations, benevolent societies, merchant associations) is a critical source-network component.",
+      venue: "Located-subject information is delivered to the client; international-component proceedings may involve federal court at 500 Pearl Street."
+    },
+    "little-italy": {
+      casePattern: "Little Italy missing persons cases often involve long-tenure Italian-American family searches — relatives in home regions (Italy, the original Italian-American community destinations of Brooklyn, Staten Island, Long Island) seeking contact with family members whose last-known Manhattan address was in the neighborhood. Generational-contact-break cases are a recurring pattern as the neighborhood's Italian-American population has dispersed.",
+      logistics: "Little Italy missing persons work frequently uses Italian-American family-network source contact, ancestry-research database access, and the specific church and fraternal-association records that long-tenure Italian-American families commonly appear in. Cross-border coordination with Italian records specialists is sometimes needed for deeper ancestry searches.",
+      venue: "Located-subject information is delivered to the client; international-component matters route through federal court at 500 Pearl Street."
+    },
+    "soho": {
+      casePattern: "SoHo missing persons cases often involve former creative-industry, fashion-industry, and art-market subjects whose career paths are geographically mobile in distinctive ways — fashion-industry relocations to Paris, Milan, or LA; art-market moves to other gallery capitals; creative-industry moves tied to project work. Estranged-family cases involving these subjects carry international-component complexity.",
+      logistics: "SoHo missing persons investigation routinely uses art-market, fashion-industry, and creative-industry professional-network sources that conventional missing-persons investigation does not. Gallery-directory archives, fashion-industry licensing records, and creative-industry union memberships all produce useful lead data. International-component tracing through sector-specialist investigator networks is common.",
+      venue: "Located-subject information is delivered to the client; international-component proceedings route through federal court at 500 Pearl Street."
+    },
+    "noho": {
+      casePattern: "NoHo missing persons cases mirror the SoHo pattern with a more concentrated creative-professional demographic — former advertising and design agency employees, creative-industry freelancers, and the specific arts-and-media community subjects whose professional networks are identifiable through industry-association records. Cases commonly involve relatives tracking creative-industry subjects through career transitions.",
+      logistics: "NoHo missing persons work uses the same creative-industry investigation methods as SoHo — industry-association records, project-history tracing, freelance-platform activity review. The small neighborhood footprint means on-the-ground verification is straightforward when the subject is believed to still be local.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "lower-east-side": {
+      casePattern: "LES missing persons cases span the neighborhood's demographic range — long-tenure family searches, hospitality-industry workforce tracing for former bar and restaurant staff, and the specific case type where a person has moved through multiple LES rentals without leaving a forwarding trail. The rapid residential turnover of the hospitality-industry workforce produces distinctive case patterns.",
+      logistics: "LES missing persons work frequently uses hospitality-industry source networks — former coworkers, venue managers, bartenders who remember specific patrons — as primary lead generation. Database work supplements but rarely leads. Rent-stabilized housing records (where authorized) produce historic-address verification for long-tenure-family cases.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "east-village": {
+      casePattern: "East Village missing persons cases commonly involve former service-industry workforce subjects, creative-community subjects whose low-profile social presence makes conventional database work difficult, and the specific generational-contact-break cases that the neighborhood's long-tenure resident community produces. Music-and-arts-community subject tracing is a recurring engagement type.",
+      logistics: "East Village missing persons investigation routinely leverages the neighborhood's tight-knit community source networks — venue staff, long-tenure residents who remember specific faces and names, and the music-and-arts community's informal contact channels. Licensed-investigator access to historic-records repositories supplements the community-source work.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City missing persons cases carry a specific rent-stabilization-related component — long-tenure tenant subjects whose succession rights, primary-residency patterns, or occupancy duration have become contested, producing missing-persons searches that are effectively residency-verification investigations. Standard family-and-contact cases continue alongside.",
+      logistics: "Alphabet City missing persons work for rent-stabilization-related cases uses housing-court record research, neighborhood source-interview work, and the specific occupancy-verification methods that housing-litigation-related investigation requires. Standard missing-persons methods apply for conventional family-contact cases.",
+      venue: "Located-subject information is delivered to the client; housing-related matters route to Manhattan Housing Court at 111 Centre Street."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town missing persons cases commonly involve former residents whose move-out timeline makes post-relocation address-tracing difficult, along with estranged-family cases for current residents. The community's stable middle-income-family character means most cases involve subjects with traceable residential histories and fairly predictable destination patterns.",
+      logistics: "Stuy Town missing persons work leverages the complex's residential-management records (where authorized), the community's distinctive continuity-of-residence records that produce detailed historical-address verification, and the standard Manhattan missing-persons investigation methods for post-relocation tracing.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village missing persons cases commonly arise from the narrower demographic slice that distinguishes it from adjacent Stuy Town — the smaller complex has a higher proportion of long-tenure single-occupant apartments (original Metropolitan Life Insurance-era lease holders and their succession-right children), and cases frequently involve elderly resident tracing where regular contact has lapsed or post-succession succession-rights documentation has created contact-break situations within extended families.",
+      logistics: "Peter Cooper Village missing persons work uses the same complex-management records methods as Stuy Town, with the smaller community size producing proportionally faster internal-records verification. Post-relocation tracing uses conventional Manhattan missing-persons methods.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "bowery": {
+      casePattern: "Bowery missing persons cases reflect the corridor's transformation — former SRO-era residents whose last-known address was a now-converted Bowery address, hospitality-industry workforce subjects tied to the current hotel and restaurant cluster, and the specific case type where a family is searching for a relative last known to have lived on the Bowery during its earlier-era housing-of-last-resort period.",
+      logistics: "Bowery missing persons work for historic-Bowery-resident cases uses city-shelter and social-services-records investigation (where authorized), specialized historical-record archives, and the specific source networks that serve homeless-or-formerly-homeless population tracing. Current-era cases use conventional hospitality-industry methods.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "nolita": {
+      casePattern: "Nolita missing persons cases commonly involve former creative-industry, fashion, and boutique-operator subjects — the small commercial community's workforce turnover produces a steady stream of former-coworker and former-neighbor tracing requests. The neighborhood's tightly networked character makes community-source work unusually productive.",
+      logistics: "Nolita missing persons investigation relies heavily on the neighborhood's boutique and restaurant operator community as a source network — the same tight networking that complicates surveillance work actually helps location work, because operators commonly know where former staff and neighbors have moved. Conventional database methods supplement.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "upper-east-side": {
+      casePattern: "UES missing persons cases frequently involve high-net-worth family dynamics — estranged adult children (often sent to distant boarding schools or abroad, with contact later lost), former domestic staff whose post-employment trail is thin, and estate-related missing-heir searches that the neighborhood's affluent-inheritance-structure character regularly generates.",
+      logistics: "UES missing persons work often begins with private-school and preschool alumni records (where authorized), affluent-community directory resources (philanthropic-donor lists, cultural-institution member records, private-club directories), and the specific domestic-staff-agency records that household-employee tracing requires. International-component tracing is frequent given resident demographics.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill missing persons cases commonly involve medical-community subjects — former Lenox Hill Hospital staff, medical-residency alumni who have moved to other institutions, and physicians whose practice locations have shifted across multiple jurisdictions. Standard UES high-net-worth cases continue alongside.",
+      logistics: "Lenox Hill missing persons work for medical-community subjects uses the same DEA-registration and state medical-license-board methods as Kips Bay engagements — license records produce reliable geographic tracking across all US jurisdictions. Standard UES affluent-community work uses private-school, philanthropic-community, and domestic-staff-agency source methods.",
+      venue: "Located-subject information is delivered to the client; related matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville missing persons cases often involve young-professional subjects similar to the Murray Hill pattern — early-career residents whose rental and employer histories are traceable through conventional methods. Historic-community cases also occur for the neighborhood's older long-tenure German-American, Hungarian-American, and Czech-American resident populations whose family-contact histories span generations.",
+      logistics: "Yorkville missing persons work for young-professional subjects uses standard Manhattan missing-persons methods with emphasis on professional-network and social-media investigation. Historic-community cases draw on ancestry-research methods, ethnic-community-organization archives, and the specific records that older Central European-American community networks have maintained.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill missing persons cases mirror the UES high-net-worth pattern with concentrated complexity — ultra-affluent-family estranged-member cases, multi-generational-trust-related missing-heir searches, and the specific case type where an international-residence-portfolio subject has become difficult to locate across multiple countries. Engagement complexity routinely exceeds standard UES scope.",
+      logistics: "Carnegie Hill missing persons investigation routinely requires the highest level of specialist coordination — international-residence tracing networks, private-aviation and yacht-registration records review (for high-end-destination verification), family-office and trust-administrator source contact. Engagement timelines are commonly measured in months.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem missing persons cases commonly involve multi-generational family searches, relatives of long-tenure community members who have moved out of the neighborhood, and the specific case type where a family has lost contact with a member who relocated to a home-region destination (Puerto Rico, Dominican Republic, or other Caribbean and Latin American locations). Mount Sinai medical-community cases are also regular.",
+      logistics: "East Harlem missing persons work routinely requires Spanish-capable investigator coverage and coordination with Caribbean and Latin American records specialists (Puerto Rico, DR, Mexico, and relevant other jurisdictions). Community-organization and church-congregation source networks produce valuable lead data for local-tracing cases.",
+      venue: "Located-subject information is delivered to the client; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem missing persons investigation relies heavily on specific El Barrio institutional anchors — La Marqueta at 115th Street, the community organizations clustered along Third Avenue, the Puerto Rican Legal Defense and Education Fund community networks, and the specific Catholic parishes (St. Cecilia's, Holy Rosary, Holy Agony) that serve as generational community-memory repositories. Cases frequently involve contact lost across decades and require genealogical depth rather than recent-relocation tracing.",
+      logistics: "Spanish Harlem missing persons work requires Spanish-capable investigator coverage and cross-border records coordination. Puerto Rico's status as a US territory with distinct records systems produces specific investigation-method complications; Dominican Republic and Mexican records require separate specialist access. Church-congregation and community-organization source networks are critical components.",
+      venue: "Located-subject information is delivered to the client; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island missing persons cases are essentially absent as a standalone engagement type — no residential population means no prior-address-based tracing. Cases that touch the island typically involve event-staff or programming-operator subjects whose last-known Manhattan activity was on the island, and are handled as standard location work targeting the subject's actual residence elsewhere.",
+      logistics: "Randalls Island-adjacent missing persons work proceeds through the subject's actual residential, employment, or community-network context rather than island-specific investigation. Event-operator and Parks Department contractor records are useful starting points where the subject's island activity was in an official-staff capacity.",
+      venue: "Located-subject information is delivered to the client; related matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "upper-west-side": {
+      casePattern: "UWS missing persons cases commonly involve academic, publishing-industry, and entertainment-industry subjects whose career paths have taken them to other cities or countries. Cases involving estranged relatives of UWS long-tenure families, former domestic staff, and the specific estate-related missing-heir searches that the neighborhood's inheritance-structure demographics produce are regular workstreams.",
+      logistics: "UWS missing persons work uses publishing-industry professional-association records (Authors Guild, PEN America, specific publishing house archives), entertainment-industry methods (union and production-company records), and academic-community methods (university alumni databases, academic-society member records) depending on subject profile. Standard affluent-community methods supplement as needed.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square missing persons cases concentrate on entertainment-industry subjects — former Lincoln Center staff, performing-arts professionals whose careers have taken them to other cultural capitals (London, Berlin, Vienna, specific US cultural centers), and relatives searching for someone whose last-known Manhattan connection was a performance or production at the Lincoln Center complex.",
+      logistics: "Lincoln Square missing persons investigation uses entertainment-industry union records (AEA, AGMA, AFM, SAG-AFTRA), cultural-institution alumni databases (Juilliard, Manhattan School of Music), and the specific international performing-arts-community network that performer-tracing commonly requires. Cross-border coordination through sector-specialist networks is common.",
+      venue: "Located-subject information is delivered to the client; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive missing persons cases mirror the UWS high-net-worth pattern with a concentrated focus on the neighborhood's long-tenure co-op-resident community — estranged adult children, former domestic staff, and multi-generational estate-related missing-heir searches. The neighborhood's publishing and academic-community overlap produces frequent sector-specific case types.",
+      logistics: "Riverside Drive missing persons work frequently involves co-op board and building-management historical-records review (where authorized), private-school alumni database searches, and the publishing and academic-community professional-network methods that UWS-resident subjects typically require.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley missing persons cases reflect the neighborhood's demographic variety — long-tenure community family searches, academic-community subjects (Columbia-affiliated spillover), and young-professional post-rental tracing for the recent-arrival demographic. Cases commonly span generational and professional boundaries.",
+      logistics: "Manhattan Valley missing persons work uses standard Manhattan methods with supplementary community-organization source work for long-tenure-family cases, academic-community methods (TIAA beneficiary records where authorized, university alumni databases) for academic-affiliated subjects, and conventional young-professional investigation methods for newer residents.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights missing persons cases are dominated by Columbia University-related subject tracing — former faculty, alumni whose post-Columbia career paths have taken them to other academic institutions, and graduate-student subjects whose academic-community networks can be traced through professional-society and publication records. Standard community cases continue alongside.",
+      logistics: "Morningside Heights missing persons investigation routinely uses university alumni databases, academic-society member records, publication-history and citation-tracking databases, and the specific methods that academic-community tracing requires. Standard residential methods apply for non-academic subjects.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights missing persons cases span the neighborhood's demographic breadth — long-tenure community family searches, CCNY-affiliated academic-community cases, and the multi-generational cases characteristic of historic Harlem and West Harlem communities. Brownstone-owner estate-related cases are a recurring workstream.",
+      logistics: "Hamilton Heights missing persons work uses CCNY alumni and personnel-records resources (where authorized) for academic-affiliated subjects, and the long-tenure-community source networks (church congregations, community organizations, historic-preservation societies) that produce reliable lead data for generational-contact-break cases.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights missing persons cases commonly involve cross-border Dominican-American family dynamics — relatives in Dominican Republic searching for Manhattan family members, or the reverse pattern where current residents have lost contact with family members who returned to DR. Columbia University Irving Medical Center-community cases are a secondary distinctive workstream.",
+      logistics: "Washington Heights missing persons work requires Spanish-capable investigator coverage and Dominican Republic records coordination. The cédula de identidad system and DR civil-registry records produce useful lead data for cross-border cases. CUIMC-community cases use the same medical-community methods as Kips Bay and Lenox Hill engagements.",
+      venue: "Located-subject information is delivered to the client; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "harlem": {
+      casePattern: "Harlem missing persons cases span the full neighborhood demographic range — multi-generational African-American family searches where contact has been lost across generations, former community-organization staff and volunteer subjects, and the specific historic-Harlem cases where a family is searching for a relative whose last-known contact was tied to a specific community institution or business from earlier Harlem Renaissance or mid-century eras.",
+      logistics: "Harlem missing persons work routinely uses community-organization and church-congregation source networks, historic-community records (where preserved by institutions like the Schomburg Center), and the specific ancestry-research methods that multi-generational African-American family tracing requires. Licensed-investigator access to professional genealogical resources supplements the community source work.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem missing persons cases frequently involve long-tenure family searches centered on the Strivers' Row and Abyssinian-church-community blocks — multi-generational contact-break cases, estate-related missing-heir searches for the neighborhood's brownstone-owner community, and the specific cases where a relative is searching for a family member whose last-known community affiliation was a historic Central Harlem church or institution.",
+      logistics: "Central Harlem missing persons investigation routinely uses Abyssinian Baptist and other historic church-congregation records (where authorized), Strivers' Row block-association historical contacts, and the specific multi-generational ancestry-research methods that African-American family tracing across decades commonly requires. Professional genealogical resources supplement the community work.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem missing persons cases combine CCNY-affiliated academic-community tracing with Manhattanville-community long-tenure cases. Cases frequently involve former CCNY staff and alumni whose post-Harlem careers have taken them to other academic or civic institutions, and multi-generational-family searches for the historic Manhattanville community.",
+      logistics: "West Harlem missing persons work uses CCNY alumni and personnel records (where authorized), Manhattanville-area historic-community source networks, and the specific multi-generational-family tracing methods that the neighborhood's long-tenure demographic requires. Academic-community methods parallel Morningside Heights and Hamilton Heights engagements.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem missing persons cases reflect the neighborhood's gentrification-era demographic mix — long-tenure family searches for the historic SoHa community, post-move tracing for the newer-arrival condo-resident demographic, and the specific case type where a rent-stabilization-related family dispute has produced a missing-contact situation. Mount Morris Park Historic District brownstone-owner estate-related cases are common.",
+      logistics: "South Harlem missing persons work uses the same Harlem-community source-network methods as Central Harlem for long-tenure-family cases, with supplementary conventional post-relocation tracing for newer-arrival subjects. Historic-preservation society records produce useful lead data for Mount Morris Park Historic District-connected estate cases.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "inwood": {
+      casePattern: "Inwood missing persons cases heavily feature Dominican-American family-reunion dynamics — relatives in DR searching for Inwood family members, current residents searching for family members who returned to DR or moved to other Dominican-American community destinations. Cross-border investigation is the dominant engagement profile.",
+      logistics: "Inwood missing persons work routinely requires Spanish-capable investigator coverage and DR records specialist coordination — cédula de identidad searches, DR civil-registry records, and the specific Santiago and Santo-Domingo community-source networks that diaspora tracing uses. Church-congregation source networks are critical local supplement components.",
+      venue: "Located-subject information is delivered to the client; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "fort-george": {
+      casePattern: "Fort George missing persons cases follow the Inwood pattern — Dominican-American cross-border family-reunion dynamics dominate the engagement mix, with secondary case types involving former apartment-building-community long-tenure residents whose post-relocation trails have gone cold. The neighborhood's Catholic-church-community institutions produce useful source-network data.",
+      logistics: "Fort George missing persons work mirrors Inwood's Spanish-capable cross-border investigation approach. Local source-network work leverages the neighborhood's Catholic-church-community networks and the specific 181st Street commercial-strip merchant community, both of which maintain informal contact records for long-tenure neighborhood families.",
+      venue: "Located-subject information is delivered to the client; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill missing persons cases are rare given the small community size but commonly involve the neighborhood's small long-tenure resident base — generational-family-contact cases, post-relocation tracing for former residents who moved to the nearby Bronx community, and the occasional specific-identity case tied to the neighborhood's unusual political-Manhattan status.",
+      logistics: "Marble Hill missing persons work typically extends as an adjacent-Bronx investigation given the geographic and demographic continuity with Kingsbridge. Standard Bronx methods and source networks apply for most engagement work, with Manhattan-jurisdictional documentation where the political-status distinction affects record-access.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street given Marble Hill's political-Manhattan status."
+    },
+    "west-village": {
+      casePattern: "West Village missing persons cases frequently involve LGBTQ+ community dynamics — family-reunion searches where contact was broken earlier in life due to sexuality or identity, generational-contact cases within chosen-family networks, and the specific AIDS-era-related historical searches that the neighborhood's community history still produces. Standard affluent-resident cases continue alongside.",
+      logistics: "West Village missing persons work for LGBTQ+ community cases routinely uses community-organization source networks (SAGE, The Center, Stonewall-affiliated resources), historic archives (NYC LGBT Historic Sites Project, LGBTQ community-history archives at the NYPL), and the specific chosen-family contact methods that community-specific investigation requires. Standard affluent-community methods apply for other engagement types.",
+      venue: "Located-subject information is delivered to the client; estate-related matters route to Surrogate's Court at 31 Chambers Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village missing persons cases are substantially NYU-anchored — former faculty, academic alumni, former student subjects whose post-NYU career paths have taken them across academic and professional institutions nationally and internationally. Standard Greenwich Village residential cases continue alongside, often with creative-industry or publishing-industry overlap.",
+      logistics: "Greenwich Village missing persons work uses NYU alumni databases, academic-society member records, and the specific methods that Morningside Heights engagements employ for Columbia-related subjects — the two neighborhoods have parallel investigation profiles for their respective university-affiliated cases. Creative-industry methods supplement for non-academic subjects.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea missing persons cases span art-market, creative-industry, LGBTQ+ community, and hospitality-industry subject categories — the neighborhood's demographic breadth produces correspondingly diverse case types. Gallery-district-related subject tracing (former gallery staff, former collectors whose contact has been lost) is a distinctive workstream.",
+      logistics: "Chelsea missing persons work uses art-market investigator resources (gallery directories, collector-association records, auction-house provenance records) for art-community subjects, LGBTQ+ community source networks for community-history cases, and creative-industry and hospitality-industry methods for other engagement types. Multi-method casework is standard.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking missing persons cases commonly involve former hospitality-industry workforce subjects — nightclub staff, promoter-network subjects whose career paths have taken them across multiple cities' nightlife industries, and the specific case type where a family is searching for a relative last known to work the Meatpacking venue scene. Celebrity-adjacent cases occur periodically given the area's public profile.",
+      logistics: "Meatpacking missing persons work for hospitality-industry subjects uses the specific promoter-and-operator network tracing methods that nightlife-industry investigation requires — career-path-across-cities tracking, multi-venue-employer history verification, and the specific source networks that serve the transient-workforce character of high-end hospitality. Discretion is an operational requirement.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards missing persons cases are still emerging as an engagement type given the neighborhood's youth as a district — most cases involve recent residents whose post-Hudson-Yards address-tracing follows conventional young-professional methods. Finance-industry subject tracing for the neighborhood's corporate-tenant workforce is the more common current pattern, paralleling Financial District missing-persons work.",
+      logistics: "Hudson Yards missing persons work uses Financial District-pattern FINRA and SEC records for finance-industry subjects, Flatiron-pattern tech-industry investigation methods for tech-tenant subjects, and standard Manhattan post-residential-relocation methods for recent-resident cases. The neighborhood's master-planned residential-tower management records are useful when authorized.",
+      venue: "Located-subject information is delivered to the client; legal proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+  },
+
+  // ============================================================
+  // SKIP TRACING — All Manhattan (Sprint 3)
+  // ============================================================
+  "skip-tracing": {
+    "midtown-east": {
+      casePattern: "Midtown East skip tracing work is heavily weighted toward commercial-litigation service-of-process and judgment-enforcement engagements — defendants who moved without updating service-addresses after commercial litigation was filed, judgment debtors relocated from finance-industry jobs, and witness-location work for depositions in Manhattan commercial cases. The corridor's law-firm density produces a steady engagement flow directly from counsel.",
+      logistics: "Midtown East skip tracing work routinely starts with employer records — the concentration of finance-industry, law-firm, and consulting employment in the corridor means most subjects have identifiable current-or-recent employer anchors. FINRA, SEC IAPD, and state bar records produce verified addresses for regulated-professional subjects that consumer services cannot access.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street for service of process and civil-enforcement proceedings."
+    },
+    "midtown-west": {
+      casePattern: "Midtown West skip tracing work often involves entertainment-industry and hospitality-industry subjects — process-service for defendants in production-company disputes, judgment enforcement against restaurant and hospitality operators, and witness location for media-industry litigation. The transient workforce character of the corridor's hospitality and entertainment sectors produces cases where subjects have moved repeatedly without updating service addresses.",
+      logistics: "Midtown West skip tracing for entertainment-industry subjects uses union-affiliation records (AEA, IATSE, SAG-AFTRA) that track membership-address changes, production-company employment history, and hospitality-industry-specific data. Standard professional-database work supplements these sector-specific resources.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street for service and civil proceedings."
+    },
+    "hell-s-kitchen": {
+      casePattern: "Hell's Kitchen skip tracing work is shaped by the neighborhood's hospitality-industry workforce turnover — judgment enforcement against restaurant and bar operators, process service on defendants who have rotated through multiple service-industry jobs, and witness location for landlord-tenant disputes in the area's rent-stabilized building stock. The dense service-industry workforce makes source-interview methods unusually productive.",
+      logistics: "Hell's Kitchen skip tracing routinely uses hospitality-industry source networks as primary lead generators — former coworkers, venue managers, and industry-network contacts commonly produce current-address leads faster than database work. Union records (HERE Local 100, Local 6) supplement for specific subject categories.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street for service of process; housing-court matters at Manhattan Housing Court, 111 Centre Street."
+    },
+    "murray-hill": {
+      casePattern: "Murray Hill skip tracing work commonly involves young-professional subjects — defendants in credit-card and consumer-debt enforcement, process service for personal-dispute matters, and witness location for early-career professional-dispute cases. The young-professional demographic commonly produces skip cases where the subject has simply moved between short-tenure rentals without updating consumer-database records.",
+      logistics: "Murray Hill skip tracing for young-professional subjects uses a combination of professional-database work, social-media investigation, and employer-identification methods. Short-tenure-rental tracing is typically straightforward once employer is pinned down, as HR records produce updated address-history faster than consumer services.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street for civil-enforcement proceedings."
+    },
+    "koreatown": {
+      casePattern: "Koreatown skip tracing work regularly involves Korean-community small-business operators — judgment enforcement against restaurant, karaoke-bar, and retail operators, process service on defendants in cross-border commercial disputes, and the specific cases where a subject has returned to Korea or relocated to another Korean-American community destination (Flushing, Palisades Park, LA).",
+      logistics: "Koreatown skip tracing routinely requires Korean-language-capable investigator coverage and cross-border coordination for Korea-based subject tracing. DMV-record and liquor-license-records access produces useful local leads; Korean-government records require specialist cross-border access.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "turtle-bay": {
+      casePattern: "Turtle Bay skip tracing work commonly involves diplomatic or international-organization subjects — process service where the defendant has rotated to another international posting, judgment enforcement against subjects whose addresses have shifted internationally, and witness location for cross-border civil or commercial matters. Diplomatic-immunity considerations occasionally affect engagement scope.",
+      logistics: "Turtle Bay skip tracing for international-organization subjects uses the same UN-and-diplomatic-community source methods as missing-persons work — the international-organization-specific records and contact protocols that sector investigation requires. Standard domestic-subject work uses conventional methods.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve federal court at 500 Pearl Street."
+    },
+    "sutton-place": {
+      casePattern: "Sutton Place skip tracing work is dominated by high-value commercial and estate-related matters — substantial judgment enforcement against affluent subjects, process service in high-asset matrimonial proceedings, and witness or beneficiary location for complex estate matters. Engagement complexity and asset-stakes routinely exceed standard Manhattan skip-tracing scope.",
+      logistics: "Sutton Place skip tracing routinely uses the private-club directory resources, family-office and trust-administrator source contact methods, and international-residence tracing networks that high-net-worth subject location requires. Engagement timelines reflect the complexity of multi-jurisdictional affluent-community investigation.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "tudor-city": {
+      casePattern: "Tudor City skip tracing work is proportionally rare given the enclave's small population. When it occurs, cases typically involve former Tudor City residents who have relocated without updating service-addresses, UN-community subjects rotated internationally, or process service on defendants in small-claims or consumer-matter proceedings.",
+      logistics: "Tudor City skip tracing work leverages the residential complex's management records (where authorized) for former-tenant forwarding-address data. Standard Manhattan skip-tracing methods apply otherwise; international-component work uses the Turtle Bay-pattern UN-community methods.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street for civil proceedings."
+    },
+    "kips-bay": {
+      casePattern: "Kips Bay skip tracing work spans a distinctive medical-campus-plus-residential engagement profile — NYU Langone workforce tracing is one component, but the neighborhood's substantial rental high-rise stock between 23rd and 34th Streets east of Third Avenue drives a young-professional-renter case type where short-tenure moves through the area's specific buildings (Manhattan Place, Kips Bay Plaza, Waterside) produce post-relocation skip situations.",
+      logistics: "Kips Bay skip tracing for medical-community subjects uses the same DEA registration, state medical-license-board, and national-practitioner-database methods as missing-persons work. License-record tracking produces verified address-and-practice-location sequences that consumer services cannot access.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street for civil proceedings."
+    },
+    "gramercy-park": {
+      casePattern: "Gramercy Park skip tracing work has a specific private-club-membership dimension unique to Manhattan practice — the National Arts Club, the Players Club, the Union Club, and Gramercy Park Hotel long-term-member records all produce lead data for subject-location work that consumer databases cannot approach. Judgment enforcement against park-key-holder subjects and matrimonial service of process for private-club-member defendants drive the engagement mix.",
+      logistics: "Gramercy Park skip tracing uses the full range of affluent-community investigation methods — private-school alumni records, philanthropic-community directories, private-club member databases, and international-residence tracing where applicable. Forensic-accounting and asset-tracing specialist coordination is common for judgment-enforcement work.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "flatiron-district": {
+      casePattern: "Flatiron District skip tracing work is distinctively tech-and-creative-industry-weighted — process service for tech-industry defendants in IP and commercial disputes, judgment enforcement against startup entities and their founders, and witness location for tech-and-creative-industry litigation. Cryptocurrency-related and cap-table-involving cases appear with some regularity.",
+      logistics: "Flatiron District skip tracing for tech-industry subjects routinely uses domain-registration records, GitHub and developer-community activity, LinkedIn and professional-network investigation, and where relevant crypto-wallet public-activity tracing. These methods commonly outperform conventional skip-tracing databases for the tech-demographic subject profile.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; IP and federal matters may involve 500 Pearl Street."
+    },
+    "nomad": {
+      casePattern: "NoMad skip tracing work combines Flatiron-pattern tech-industry engagements with hospitality-industry cases tied to the flagship hotel cluster — process service on tech-industry defendants, judgment enforcement against hospitality-industry counterparties, and witness location for both sectors' litigation. Multi-sector investigator resource pools are routine.",
+      logistics: "NoMad skip tracing draws on both the tech-industry methods used in Flatiron engagements and the hospitality-industry methods used in Midtown West and Meatpacking engagements. Multi-method casework is standard; some cases require both sector specialists to converge on a single subject.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "financial-district": {
+      casePattern: "Financial District skip tracing work handles the middle-market finance-industry engagement that Wall Street does not — broker-dealer mid-level personnel, back-office and compliance workforce tracing, and the substantial volume of routine process service and judgment enforcement against FiDi-resident finance-industry subjects whose cases don't rise to the senior-executive complexity of Wall Street matters. Residential tower tracing for BPC-adjacent finance workers is a regular workstream.",
+      logistics: "Financial District skip tracing routinely uses FINRA BrokerCheck, SEC IAPD, and state securities-regulator records as primary resources — these produce verified historic address, employer, and disclosed-event sequences that are definitive for regulated-industry subjects. International-component tracing through investigator networks extends the work when subjects have relocated abroad.",
+      venue: "Delivered addresses route to New York County Supreme Court Commercial Division at 60 Centre Street; federal matters to 500 Pearl Street."
+    },
+    "tribeca": {
+      casePattern: "Tribeca skip tracing routinely involves subjects with celebrity-adjacent profiles — entertainment-industry, finance-industry, and high-profile creative-community residents whose privacy infrastructure (holding companies, personal-assistant buffers, building-staff nondisclosure) makes conventional tracing fail. Cases typically require paparazzi-industry source networks, celebrity-residence records, and the specific entertainment-industry-adjacent investigation methods that high-profile-subject work requires.",
+      logistics: "Tribeca skip tracing uses the affluent-community investigation methods that Sutton Place and Gramercy Park engagements employ, with additional creative-industry and finance-industry sector-specific methods drawn on as subject profile requires. Engagement discretion is an operational baseline.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "battery-park-city": {
+      casePattern: "Battery Park City skip tracing work is primarily finance-industry-driven — process service and judgment enforcement for Financial-District-adjacent commercial matters involving BPC-resident defendants, witness location for finance-industry civil proceedings. The neighborhood's master-planned residential character produces particularly traceable resident histories.",
+      logistics: "Battery Park City skip tracing uses Financial District-pattern FINRA and SEC-record methods for finance-industry subjects, plus the Battery Park City Authority's resident records where authorized. The neighborhood's contained geography simplifies historical-residency verification.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "water-street": {
+      casePattern: "Water Street skip tracing work mirrors the Financial District pattern for finance-industry engagements, with secondary Seaport-area hospitality-industry cases — process service on restaurant and entertainment-operator defendants, judgment enforcement in hospitality-industry commercial disputes, and witness location for Seaport-cluster litigation. The corridor's linear geometry simplifies local on-the-ground verification.",
+      logistics: "Water Street skip tracing for finance-industry subjects uses the same FINRA and SEC methods as Financial District work; hospitality-industry subjects use union-record and professional-network methods. On-the-ground verification along the corridor is fast given the linear-geography foot-traffic pattern.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "wall-street": {
+      casePattern: "Wall Street skip tracing work is the most complex finance-industry engagement type in Manhattan investigation practice — process service and judgment enforcement at the highest-asset-value end, witness location for securities-industry regulatory and criminal proceedings. International-component tracing is routine; specialist coordination is standard.",
+      logistics: "Wall Street skip tracing routinely involves international investigator-network coordination (London, Hong Kong, Singapore, Dubai), FINRA and SEC records investigation at the full-history level, and the specific high-net-worth destination investigation methods (Greenwich, Palm Beach, European financial centers) that senior finance-industry subject tracing requires.",
+      venue: "Delivered addresses route to New York County Supreme Court Commercial Division at 60 Centre Street; federal matters to Daniel Patrick Moynihan U.S. Courthouse at 500 Pearl Street."
+    },
+    "fulton": {
+      casePattern: "Fulton skip tracing work draws on the Seaport District's mixed commercial character — Pier 17 operator-tenant workforce tracing, the specific maritime-historical-subject cases that occasionally arise from the neighborhood's working-waterfront legacy, and the Howard Hughes Corporation-affiliated development-related commercial matters that shape current engagement volume. The concentrated pedestrian-only Seaport core supports unusually fast on-the-ground verification.",
+      logistics: "Fulton skip tracing uses hospitality-industry union records and sector-specific source networks for workforce-subject tracing. Cross-border coordination is drawn on for immigrant-workforce subjects who have returned to home countries (Caribbean, Philippines, Eastern Europe are common destinations for Seaport-hospitality workforce).",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve 500 Pearl Street."
+    },
+    "civic-center": {
+      casePattern: "Civic Center skip tracing work is commonly commissioned by the legal industry in the corridor itself — attorneys engaging skip-tracers for their own matters across Manhattan, rather than Civic-Center-subject cases specifically. When cases do involve Civic-Center-resident or Civic-Center-working subjects, they typically involve former court personnel, retired attorneys, or government-employee subjects.",
+      logistics: "Civic Center skip tracing generally runs under attorney-client privilege for the law-firm clients who commission the work. Standard Manhattan methods apply for most engagements; legal-industry subject cases use bar records, court-personnel records (where authorized), and government-employment records.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street, typically within walking distance of the commissioning law firm."
+    },
+    "two-bridges": {
+      casePattern: "Two Bridges skip tracing work reflects the neighborhood's specific housing-stock composition — the NYCHA buildings (Rutgers Houses, Vladeck Houses, Smith Houses) in Two Bridges and the adjacent LES produce a distinctive public-housing-tenant skip-tracing profile where NYCHA records, succession-rights documentation, and project-level community source networks form the primary investigation approach for resident-subject cases.",
+      logistics: "Two Bridges skip tracing routinely requires Chinese and Spanish-capable investigator resources. Community-organization and church-congregation source networks supplement conventional database work, producing location leads that formal records do not. Cross-border coordination is sometimes required.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; housing matters at Manhattan Housing Court at 111 Centre Street."
+    },
+    "chinatown": {
+      casePattern: "Chinatown skip tracing work heavily features cross-border dimensions — process service in cross-border Chinese commercial disputes, judgment enforcement against subjects who have returned to China, Hong Kong, or Taiwan, and witness location for international-component civil proceedings. The community's multi-jurisdictional character defines engagement complexity.",
+      logistics: "Chinatown skip tracing routinely requires Mandarin, Cantonese, and sometimes Taishanese-capable investigator coverage, China records specialist coordination, and the family-association source networks that have historic Chinatown community contact records. Cross-border investigation extends timelines substantially.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-commerce matters may involve federal court at 500 Pearl Street."
+    },
+    "little-italy": {
+      casePattern: "Little Italy skip tracing work is heavily shaped by the neighborhood's specific restaurant-family dynastic structure — many of the Mulberry Street restaurants have been operated by the same families for three or four generations, and skip cases involving family-business partnership disputes or generational-succession litigation have their own distinctive investigation pattern. Italian-American family-network source contact produces reliable leads that general skip-tracing methods miss.",
+      logistics: "Little Italy skip tracing uses the Italian-American family-network source contact methods common in missing-persons work for the same community, combined with standard Manhattan skip-tracing database work. The small-neighborhood character makes on-the-ground verification fast when the subject is believed to be local.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "soho": {
+      casePattern: "SoHo skip tracing work is shaped by the neighborhood's fashion, creative-industry, and art-market character — process service and judgment enforcement against fashion-operator and creative-industry counterparties, witness location for art-market and fashion-industry civil matters, and the international-component cases that fashion and art-market subject mobility produces.",
+      logistics: "SoHo skip tracing uses art-market, fashion-industry, and creative-industry professional-network resources that conventional skip-tracing does not access. Gallery-directory records, fashion-industry licensing records, and creative-industry union memberships all produce lead data. International-component tracing through sector-specialist networks is regular.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve 500 Pearl Street."
+    },
+    "noho": {
+      casePattern: "NoHo skip tracing work follows the SoHo creative-industry pattern at smaller scale — process service and judgment enforcement for creative-industry subjects, witness location for advertising, design, and media-industry civil matters. The compact neighborhood produces a more concentrated but lower-volume engagement profile than SoHo.",
+      logistics: "NoHo skip tracing uses the same creative-industry investigation methods as SoHo. Small-neighborhood on-the-ground verification is fast; most engagements complete within standard turnaround windows.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "lower-east-side": {
+      casePattern: "LES skip tracing work spans hospitality-industry judgment enforcement, process service for defendants in landlord-tenant and consumer-debt matters, and witness location for the neighborhood's civil-litigation activity. The hospitality-industry workforce's geographic mobility produces a steady stream of post-relocation skip cases.",
+      logistics: "LES skip tracing uses hospitality-industry source networks as primary leads for workforce-subject tracing, supplemented with standard Manhattan database work. Rent-stabilized tenant tracing uses housing-court record research where authorized.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; housing matters at Manhattan Housing Court at 111 Centre Street."
+    },
+    "east-village": {
+      casePattern: "East Village skip tracing work is heavily hospitality-industry-weighted — process service on bar and restaurant operators, judgment enforcement for small-business commercial disputes, and witness location for landlord-tenant disputes in the neighborhood's rental stock. Creative-community subject cases provide secondary volume.",
+      logistics: "East Village skip tracing uses the tight-knit service-industry source-network methods that missing-persons work for the same community employs — former coworkers, venue managers, and long-tenure residents produce location leads that conventional databases don't capture.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City skip tracing work carries a specific housing-court component — process service and witness location for rent-stabilization-related matters, judgment enforcement in landlord-tenant disputes, and the specific investigation work that succession-rights and primary-residency-contested cases require. Standard community skip tracing continues alongside.",
+      logistics: "Alphabet City skip tracing for housing-court matters uses occupancy-verification methods, public-records review at housing-court level, and neighborhood source-interview work to establish current-location and residency-continuity data. Standard methods apply for non-housing cases.",
+      venue: "Delivered addresses route to Manhattan Housing Court at 111 Centre Street for housing matters; New York County Supreme Court at 60 Centre Street for other civil proceedings."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town skip tracing work is relatively rare given the complex's stable middle-income-community character — most cases involve former residents whose post-relocation trail requires tracing, or process service on subjects whose Stuy Town tenure is documented but current address is not. The community's internal records are a particularly useful starting resource.",
+      logistics: "Stuy Town skip tracing leverages the complex's residential-management records (where authorized), which produce detailed occupancy-history data unavailable through conventional means. Post-relocation tracing uses standard Manhattan methods.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street for civil proceedings."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village skip tracing work follows the Stuy Town pattern — rare, modest-volume, typically involving former residents or process service against current-resident subjects. The smaller complex footprint produces proportionally lower engagement volume with the same internal-records characteristics.",
+      logistics: "Peter Cooper Village skip tracing uses the same complex-management-records methods as Stuy Town. Standard methods for other engagement components.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "bowery": {
+      casePattern: "Bowery skip tracing work spans the corridor's modern luxury-hospitality tenant base (hotel and restaurant operator engagements) and legacy-community cases (former SRO-era residents, subjects with historical Bowery address history). The corridor's transformation means cases commonly cross these two eras' investigation-method requirements.",
+      logistics: "Bowery skip tracing for hospitality-industry subjects uses standard industry methods. Historic-Bowery-subject cases (people whose last-known residence was a now-converted SRO or transient hotel) use city-shelter and social-services records (where authorized), and specialized historical-record archives.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "nolita": {
+      casePattern: "Nolita skip tracing work is modest in volume and concentrated on boutique-operator-related engagements — judgment enforcement against small-business operators, process service on defendants in partnership disputes, and witness location for the area's creative-industry and hospitality-industry civil matters.",
+      logistics: "Nolita skip tracing uses the boutique and restaurant operator community source networks that missing-persons work for the same neighborhood employs. Conventional database work supplements; on-the-ground verification is rapid given the small commercial footprint.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "upper-east-side": {
+      casePattern: "Upper East Side skip tracing engagements are distinctively shaped by the neighborhood's co-op-board application-archive depth — buildings along Park and Fifth have maintained candidate and occupancy records for decades, and authorized access to these archives produces historical-address and employment sequences that are definitive for subjects of long UES residency. The private-school network (Brearley, Spence, Chapin, Dalton, Nightingale-Bamford) produces parallel parent-and-family records useful for related-subject tracing.",
+      logistics: "UES skip tracing uses the full range of affluent-community investigation methods — private-school alumni records, philanthropic-community and private-club directory resources, domestic-staff-agency records, and international-residence tracing networks. Engagement complexity and discretion requirements exceed standard practice.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street; international-component matters may involve 500 Pearl Street."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill skip tracing work has a distinctive medical-community component — process service on medical-malpractice defendants, judgment enforcement against medical-practice entities, and witness location for healthcare-related civil matters. Standard UES high-asset case types continue alongside.",
+      logistics: "Lenox Hill skip tracing for medical-community subjects uses state medical-license-board records, DEA registration, and national-practitioner-database methods — license tracking produces definitive current-practice-location data. Standard UES methods apply for non-medical subjects.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville skip tracing work is predominantly routine — process service for consumer-debt and civil matters targeting young-professional renters, judgment enforcement for standard civil proceedings. The rental-stock demographic produces cases where short-tenure moves create database-address-lag but employer-HR records quickly resolve the tracing.",
+      logistics: "Yorkville skip tracing uses standard young-professional investigation methods — employer identification, LinkedIn and social-media investigation, professional-database work. Most engagements complete within standard turnaround windows.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill skip tracing work is concentrated at the ultra-high-net-worth end — substantial judgment enforcement, complex matrimonial service of process, multi-jurisdictional estate-heir location, and the specific cases where an international-residence-portfolio subject requires tracing across multiple countries. Engagement complexity routinely involves multi-country coordination.",
+      logistics: "Carnegie Hill skip tracing uses the most complex range of investigation methods in Manhattan practice — international investigator networks, private-aviation and yacht-registration records, family-office source contacts, trust-administrator records, and the specific high-end-destination tracing methods (Palm Beach, Aspen, St. Barths, European financial capitals) that ultra-affluent-subject location requires.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street; international-component matters to 500 Pearl Street."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem skip tracing work commonly involves community-member subjects — process service where defendants have moved within the neighborhood or to other Latino-American community destinations, judgment enforcement against small-business operators, and witness location for civil-litigation matters. Cross-border dimensions are frequent given demographics.",
+      logistics: "East Harlem skip tracing routinely requires Spanish-capable investigator coverage and Caribbean / Latin American records specialist coordination for cross-border cases. Community-organization and church-congregation source networks supplement database work productively.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve 500 Pearl Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem skip tracing is defined by specific institutional-contact workflow — La Marqueta merchant records, Mt. Sinai Hospital workforce records (the hospital's east-campus is in Spanish Harlem), and the Puerto Rican community-organization networks that maintain generational contact data for El Barrio families. Judgment enforcement against small-business operators and process service for civil matters drive engagement volume alongside the cross-border component.",
+      logistics: "Spanish Harlem skip tracing requires Spanish-capable investigators and coordination with Puerto Rico, Dominican Republic, and Mexican records specialists. Cross-border coordination extends typical engagement timelines substantially; local community-organization and church-congregation source networks are primary for US-based leads.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve 500 Pearl Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island skip tracing work is essentially absent as a standalone engagement type given the absence of a residential population. Work that touches the island involves event-staff, Parks Department contractor, or programming-operator subjects whose actual residence is elsewhere — the tracing is conducted against the subject's real residential context rather than island-specific investigation.",
+      logistics: "Randalls Island-adjacent skip tracing proceeds through the subject's actual residential or employment context. Parks Department contractor records or event-operator records are useful starting resources where the subject's island connection was in an official-staff capacity.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "upper-west-side": {
+      casePattern: "UWS skip tracing work is commonly commissioned by matrimonial, estate, and civil-litigation counsel — service of process in complex divorce and estate matters, judgment enforcement against affluent commercial counterparties, and witness location for publishing, entertainment, and academic-industry litigation. Professional-sector-specific investigation methods predominate.",
+      logistics: "UWS skip tracing uses publishing-industry, entertainment-industry, and academic-community professional-network methods depending on subject profile. Standard affluent-community methods (private-school, philanthropic-community, domestic-staff-agency) supplement sector-specific work.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square skip tracing work is heavily entertainment-industry-weighted — process service and judgment enforcement for performing-arts-industry subjects, witness location for entertainment-industry civil matters, and the specific international-component cases that performer mobility produces. Union-record-and-professional-association methods predominate.",
+      logistics: "Lincoln Square skip tracing uses the same entertainment-industry union records (AEA, AGMA, AFM, SAG-AFTRA) and cultural-institution alumni resources as missing-persons work for the same subject demographic. Cross-border coordination through sector-specialist networks is common.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive skip tracing work concentrates on matrimonial, estate, and civil proceedings involving the neighborhood's high-asset co-op-resident community — service of process in complex divorce cases, judgment enforcement, estate-beneficiary location. Engagement complexity is typically high; discretion is an operational baseline.",
+      logistics: "Riverside Drive skip tracing uses co-op and condo building-management historical-records review (where authorized), along with the full range of affluent-community methods (private-school alumni records, publishing and academic-community resources, international-residence tracing).",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley skip tracing work follows a demographically varied pattern — standard consumer-debt and civil-proceeding process service for young-professional subjects, academic-community engagements for Columbia-spillover subjects, and community-member cases for long-tenure residents. Engagement complexity varies substantially with subject profile.",
+      logistics: "Manhattan Valley skip tracing uses standard Manhattan methods for most engagements, with academic-community-specific methods for Columbia-affiliated subjects. Community-source work supplements for long-tenure-family cases.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights skip tracing work carries a distinctive research-integrity-and-federal-grant-adjacent component — subjects in process service for whistleblower litigation, judgment enforcement involving research-misconduct findings, and witness location for federal grant-fraud and false-claims-act proceedings. Columbia's substantial federal research portfolio produces case types not found at other Manhattan university-adjacent locations.",
+      logistics: "Morningside Heights skip tracing uses Columbia alumni records, academic-society member databases, publication-history tracking, and the specific academic-career-path methods that sector-subject tracing requires. Standard methods apply for non-academic subjects.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; federal matters involving research or grant-related issues may route to 500 Pearl Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights skip tracing work spans CCNY-academic engagements, long-tenure-community cases (often involving generational contact-break patterns), and brownstone-owner estate-related proceedings. Historic-preservation-adjacent matters occur periodically for the neighborhood's historic-district buildings.",
+      logistics: "Hamilton Heights skip tracing uses CCNY alumni and personnel records for academic subjects, along with long-tenure-community source networks and historic-preservation society records (where relevant). Multi-generational ancestry-research methods are drawn on for generational-break cases.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights skip tracing work is distinctively bifurcated between the Columbia University Irving Medical Center medical-community and the Dominican-American community — medical-malpractice service of process on CUIMC physicians, judgment enforcement against the medical-campus workforce, and witness location for healthcare-related civil proceedings form one major engagement type, while Dominican-American cross-border work forms the parallel other. The two streams require fundamentally different investigation methods.",
+      logistics: "Washington Heights skip tracing routinely requires Spanish-capable coverage and Dominican Republic records specialist coordination. The cédula de identidad system and DR civil-registry records produce usable lead data; CUIMC-community cases use the same medical-community methods as Kips Bay and Lenox Hill engagements.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve 500 Pearl Street."
+    },
+    "harlem": {
+      casePattern: "Harlem skip tracing work spans the full neighborhood case-type range — process service for defendants in civil matters, judgment enforcement against small-business and commercial-corridor operators, witness location for community-based civil proceedings, and multi-generational cases with ancestry-research components.",
+      logistics: "Harlem skip tracing uses community-organization and church-congregation source networks extensively, supplemented with standard professional-database work. Multi-generational cases draw on ancestry-research methods and specific African-American family-history investigation resources.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem skip tracing work is distinctive for its concentration of long-tenure-family cases — multi-generational process service for estate proceedings, judgment enforcement across generations, and the specific cases where the subject's Central Harlem family history spans decades of documented community presence. Estate-heir location for brownstone properties is a recurring engagement type.",
+      logistics: "Central Harlem skip tracing uses Abyssinian Baptist and other historic church-congregation records (where authorized), Strivers' Row community historical resources, and multi-generational ancestry-research methods that produce address and relationship-chain data across decades.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem skip tracing combines CCNY-academic engagements with Manhattanville-community-resident cases — process service for academic-affiliated subjects, judgment enforcement in Manhattanville commercial proceedings, and multi-generational-community cases similar to the Central Harlem pattern.",
+      logistics: "West Harlem skip tracing uses the same CCNY-records methods as missing-persons work, along with Manhattanville-area community source networks and multi-generational family-research methods where applicable.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem skip tracing work reflects the gentrification-era demographic mix — process service for newer-arrival condo-resident subjects with conventional young-professional tracing profiles, long-tenure-community cases with multi-generational investigation requirements, and historic-district brownstone estate-heir location cases.",
+      logistics: "South Harlem skip tracing uses conventional methods for newer-arrival subjects and the same long-tenure-community methods as Central Harlem for generational-community cases. Mount Morris Park Historic District records are useful for estate-related engagements.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "inwood": {
+      casePattern: "Inwood skip tracing work is heavily cross-border — process service on defendants who have returned to DR, judgment enforcement against subjects in Dominican Republic destinations, witness location for international-component civil matters. Local cases predominantly involve hospitality-industry-workforce subjects from the Dyckman Street cluster.",
+      logistics: "Inwood skip tracing requires Spanish-capable investigator coverage and DR records specialist coordination. Dyckman Street hospitality-industry community source networks supplement database work for local-subject cases.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve 500 Pearl Street."
+    },
+    "fort-george": {
+      casePattern: "Fort George skip tracing work mirrors Inwood's cross-border Dominican-American engagement pattern. Local cases commonly involve apartment-building-community subjects where the specific pre-war-elevator-building tenant turnover has produced skip situations. Small-business operator cases along 181st Street are a secondary workstream.",
+      logistics: "Fort George skip tracing uses the same Spanish-capable and cross-border coordination as Inwood work. Local tenant-subject cases benefit from the building-management-records resources of the neighborhood's large pre-war rental stock (where authorized).",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; international-component matters may involve 500 Pearl Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill skip tracing work is rare given the small community size. Cases occur periodically for former residents who relocated without updating records, or for process service on current subjects where conventional address-verification has failed. The neighborhood's unusual political-Manhattan status occasionally affects record-access pathways.",
+      logistics: "Marble Hill skip tracing commonly runs as adjacent-Bronx investigation given the geographic continuity with Kingsbridge, with Manhattan-jurisdictional documentation where the political-status distinction affects procedure.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street given Marble Hill's political-Manhattan status."
+    },
+    "west-village": {
+      casePattern: "West Village skip tracing work commonly involves affluent-resident matrimonial, commercial, and estate proceedings — service of process in complex divorce cases, judgment enforcement against high-asset commercial counterparties, witness and beneficiary location for substantial estate matters. LGBTQ+ community cases produce a distinct secondary workstream with specific investigation-methodology considerations.",
+      logistics: "West Village skip tracing uses affluent-community investigation methods (private-school, philanthropic-community, domestic-staff-agency) for standard cases; LGBTQ+ community cases use the Center, SAGE, and community-organization source networks that missing-persons work for the same demographic employs.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; estate matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village skip tracing work is substantially NYU-anchored — process service for academic-community defendants, judgment enforcement involving university-affiliated subjects, witness location for academic-related civil proceedings. Creative and publishing-industry engagements spill over from adjacent SoHo and West Village.",
+      logistics: "Greenwich Village skip tracing uses NYU alumni and academic-society records as primary resources for academic-subject cases, paralleling Morningside Heights methods for Columbia-subject work. Creative-industry methods supplement for non-academic engagements.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea skip tracing work spans art-market, fashion-industry, creative-industry, LGBTQ+ community, and hospitality-industry case types — the demographic breadth produces correspondingly diverse engagement profiles. Gallery-district-related process service and judgment enforcement are a distinctive engagement type.",
+      logistics: "Chelsea skip tracing uses art-market investigator resources, fashion and creative-industry methods, LGBTQ+ community source networks, and hospitality-industry methods depending on subject profile. Multi-method casework is standard.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking skip tracing work concentrates on hospitality-industry engagements — process service and judgment enforcement against nightclub operators, promoters, and the transient workforce of the high-end venue cluster. Cases commonly involve subjects whose career paths have taken them across multiple cities' nightlife industries.",
+      logistics: "Meatpacking skip tracing uses the specific nightlife-industry source networks and promoter-network tracing methods that sector investigation requires. Multi-city career-path tracing through sector-specialist networks is common for transient-workforce subjects.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards skip tracing work follows Financial District and Flatiron patterns depending on subject profile — process service and judgment enforcement for finance-tenant subjects uses FINRA/SEC methods, tech-tenant subjects use cap-table-and-social-media methods, and residential-tenant cases use conventional young-professional tracing.",
+      logistics: "Hudson Yards skip tracing draws on all three sector-specific methodologies (finance-industry, tech-industry, residential) depending on engagement requirements. The neighborhood's master-planned residential-tower management records are useful when authorized.",
+      venue: "Delivered addresses route to New York County Supreme Court at 60 Centre Street; federal matters involving securities or IP elements may involve 500 Pearl Street."
+    },
+  },
 };
 
 // ============================================================
