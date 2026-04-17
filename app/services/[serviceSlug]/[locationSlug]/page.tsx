@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { CheckCircle, MapPin, Star, Clock, Shield, Award, Users } from 'lucide-react';
+import { CheckCircle, MapPin, Star } from 'lucide-react';
 import { services, getServiceBySlug } from '@/data/services';
 import { LOCATIONS, getCityBySlug } from '@/data/locations';
 import { Header } from '@/components/Header';
@@ -10,7 +10,6 @@ import { Footer } from '@/components/Footer';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
 import { FAQ } from '@/components/FAQ';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { Testimonials } from '@/components/Testimonials';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { PricingSection } from '@/components/PricingSection';
 import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
@@ -19,13 +18,6 @@ import { serviceLocationContent } from '@/data/serviceLocationContent';
 import { getCasePattern } from '@/data/locationCasePatterns';
 import { toSlug } from '@/data/locations';
 import { buildServiceLocationSchema, buildFAQSchema } from '@/data/schema-helpers';
-
-const benefitIcons = [
-  <Award key="a" className="w-5 h-5" />,
-  <Clock key="c" className="w-5 h-5" />,
-  <Shield key="s" className="w-5 h-5" />,
-  <Users key="u" className="w-5 h-5" />,
-];
 
 export default function ServiceLocationPage({ params }: { params: { serviceSlug: string; locationSlug: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,14 +30,9 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
   const heroDesc = content.heroDesc(cityName);
   const heroBullets = content.heroBullets(cityName);
   const trustLine = content.trustLine(cityName);
-  const benefits = content.benefits(cityName);
-  const intro = content.intro(cityName);
-  const introHeading = content.introHeading(cityName);
   const stepsHeading = content.stepsHeading(cityName);
-  const whyHeading = content.whyHeading(cityName);
-  const steps = content.steps(cityName);
-  const whyPoints = content.whyPoints(cityName);
-  const faqs = content.faqs(cityName);
+  const steps = content.steps(cityName).slice(0, 3);
+  const faqs = content.faqs(cityName).slice(0, 2);
   const casePattern = getCasePattern(service.slug, toSlug(cityName));
 
   const localBusinessSchema = buildServiceLocationSchema({
@@ -114,29 +101,8 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
         </section>
 
         <div className="container-width py-10">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-3 mb-10">
-            {benefits.map((benefit, idx) => (
-              <div key={idx} className="flex items-start gap-3 p-5 bg-paper rounded-tile shadow-card border border-gray-light">
-                <div className="bg-primary/10 p-2 rounded-chip text-primary">{benefitIcons[idx % benefitIcons.length]}</div>
-                <div>
-                  <h3 className="font-bold text-ink text-[13px] mb-1">{benefit.title}</h3>
-                  <p className="text-[12px] text-gray-dark leading-[1.5]">{benefit.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             <div className="lg:col-span-2">
-              <section className="mb-10">
-                <h2 className="text-[24px] md:text-[28px] font-extrabold tracking-tight text-ink mb-4">{introHeading}</h2>
-                <div className="max-w-none text-gray-dark text-[14px] leading-[1.7] space-y-4">
-                  {intro.map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
-                </div>
-              </section>
-
               {casePattern && (
                 <section className="mb-10 bg-paper rounded-tile border border-gray-light shadow-card p-6 md:p-8">
                   <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-5 flex items-center">
@@ -178,28 +144,11 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
 
               <PricingSection cityName={cityName} serviceId={service.id} serviceName={service.title} />
 
-              <section className="mb-10">
-                <h3 className="text-[22px] font-extrabold tracking-tight text-ink mb-4">{whyHeading}</h3>
-                <div className="space-y-2.5">
-                  {whyPoints.map((point, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-primary/5 p-4 rounded-tile border border-primary/15">
-                      <CheckCircle className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-ink text-[13px] leading-[1.5]">{point}</span>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
               {faqs.length > 0 && (
                 <div className="mb-10">
                   <FAQ faqs={faqs} title={`${service.title} in ${cityName}: Common Questions`} />
                 </div>
               )}
-
-              <section className="mt-10 mb-10">
-                <h2 className="text-[22px] font-extrabold tracking-tight text-ink mb-5">What Manhattan Clients Are Saying</h2>
-                <Testimonials limit={2} />
-              </section>
             </div>
 
             <aside className="lg:col-span-1">
@@ -246,20 +195,6 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
                         );
                       })}
                   </ul>
-                </div>
-
-                <div className="bg-ink text-white p-6 rounded-tile">
-                  <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-2">Starting Retainer</div>
-                  <h3 className="text-[24px] font-extrabold tracking-tight mb-2">From $1,500</h3>
-                  <p className="text-white/70 text-[12px] mb-4 leading-[1.5]">
-                    Confidential consultations. Licensed, bonded, and insured investigators serving {cityName}.
-                  </p>
-                  <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="block w-full bg-white text-ink text-center font-bold uppercase tracking-widest py-3 px-5 rounded-chip hover:bg-primary hover:text-white transition-colors text-[12px]"
-                  >
-                    Request Consultation
-                  </button>
                 </div>
               </div>
             </aside>
