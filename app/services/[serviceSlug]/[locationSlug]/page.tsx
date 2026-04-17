@@ -16,6 +16,8 @@ import { PricingSection } from '@/components/PricingSection';
 import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
 import { siteConfig } from '@/data/site';
 import { serviceLocationContent } from '@/data/serviceLocationContent';
+import { getCasePattern } from '@/data/locationCasePatterns';
+import { toSlug } from '@/data/locations';
 
 const benefitIcons = [
   <Award key="a" className="w-5 h-5" />,
@@ -43,6 +45,7 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
   const steps = content.steps(cityName);
   const whyPoints = content.whyPoints(cityName);
   const faqs = content.faqs(cityName);
+  const casePattern = getCasePattern(service.slug, toSlug(cityName));
 
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -143,6 +146,29 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
                   ))}
                 </div>
               </section>
+
+              {casePattern && (
+                <section className="mb-10 bg-paper rounded-tile border border-gray-light shadow-card p-6 md:p-8">
+                  <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-5 flex items-center">
+                    Local Case Patterns in {cityName}
+                    <div className="flex-grow h-[1px] bg-gray-mid opacity-50 ml-3" />
+                  </div>
+                  <div className="space-y-5">
+                    <div>
+                      <h3 className="text-[13px] font-bold uppercase tracking-wider text-ink mb-2">Common Case Profile</h3>
+                      <p className="text-gray-dark text-[14px] leading-[1.7]">{casePattern.casePattern}</p>
+                    </div>
+                    <div>
+                      <h3 className="text-[13px] font-bold uppercase tracking-wider text-ink mb-2">{cityName} Investigation Logistics</h3>
+                      <p className="text-gray-dark text-[14px] leading-[1.7]">{casePattern.logistics}</p>
+                    </div>
+                    <div>
+                      <h3 className="text-[13px] font-bold uppercase tracking-wider text-ink mb-2">Court Venue</h3>
+                      <p className="text-gray-dark text-[14px] leading-[1.7]">{casePattern.venue}</p>
+                    </div>
+                  </div>
+                </section>
+              )}
 
               <NearbyAreasGrid cityName={cityName} serviceSlug={service.slug} serviceName={service.title} />
 
