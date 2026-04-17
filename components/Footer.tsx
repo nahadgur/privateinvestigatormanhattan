@@ -57,6 +57,10 @@ export function Footer() {
           <div>
             <h4 className="text-[11px] font-extrabold uppercase tracking-widest text-ink mb-3">Resources</h4>
             <ul className="space-y-2 text-[12px]">
+              <li><Link href="/about/" className="text-gray-dark hover:text-primary transition-colors">About</Link></li>
+              <li><Link href="/how-it-works/" className="text-gray-dark hover:text-primary transition-colors">How It Works</Link></li>
+              <li><Link href="/faq/" className="text-gray-dark hover:text-primary transition-colors">FAQ</Link></li>
+              <li><Link href="/guides/" className="text-gray-dark hover:text-primary transition-colors">Guides</Link></li>
               <li><Link href="/services/" className="text-gray-dark hover:text-primary transition-colors">All Services</Link></li>
               <li><Link href="/location/" className="text-gray-dark hover:text-primary transition-colors">All Locations</Link></li>
               <li><Link href="/blog/" className="text-gray-dark hover:text-primary transition-colors">Blog</Link></li>

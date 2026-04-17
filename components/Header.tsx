@@ -55,7 +55,7 @@ export function Header({ onOpenModal }: HeaderProps) {
           <Link href="/location/" className="hover:text-primary transition-colors">Locations</Link>
           <Link href="/guides/" className="hover:text-primary transition-colors">Guides</Link>
           <Link href="/blog/" className="hover:text-primary transition-colors">Blog</Link>
-          <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
+          <Link href="/faq/" className="hover:text-primary transition-colors">FAQ</Link>
           <span className="text-gray-dark px-2">|</span>
           <button
             onClick={onOpenModal}
@@ -105,6 +105,7 @@ export function Header({ onOpenModal }: HeaderProps) {
           <Link href="/location/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary">Locations</Link>
           <Link href="/guides/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary">Guides</Link>
           <Link href="/blog/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary">Blog</Link>
+          <Link href="/faq/" onClick={() => setMobileOpen(false)} className="py-2 hover:text-primary">FAQ</Link>
           <div className="h-[1px] bg-white/10 my-1 w-full" />
           <button
             onClick={() => {
