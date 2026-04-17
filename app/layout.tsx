@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: siteConfig.name,
     description: siteConfig.description,
-    locale: 'en_GB',
+    locale: 'en_US',
     images: [
       {
         url: '/android-chrome-512x512.png',
@@ -75,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     },
   };
   return (
-    <html lang="en-GB">
+    <html lang="en-US">
       <head>
         <script
           type="application/ld+json"

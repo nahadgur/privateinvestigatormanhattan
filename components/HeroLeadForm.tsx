@@ -111,7 +111,7 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         </select>
 
         {!city && (
-          <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Town or postcode *" className={inputClass} />
+          <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Manhattan area or ZIP *" className={inputClass} />
         )}
 
         <button

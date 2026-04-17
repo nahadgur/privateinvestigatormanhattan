@@ -40,7 +40,7 @@ export const cityPageContent = {
       { iconName: 'CheckCircle', title: "Free Consultation", desc: `Confidential case discussion before any commitment.` }
     ];
     return [
-      { iconName: 'Star', title: `${titleCase(p.clientMix[0])} Case Expertise`, desc: `${cityName}'s investigation demand centres on ${p.clientMix.slice(0, 3).join(', ')}. We match you with investigators who handle these exact case types — not generalists learning on your budget.` },
+      { iconName: 'Star', title: `${titleCase(p.clientMix[0])} Case Expertise`, desc: `${cityName}'s investigation demand centers on ${p.clientMix.slice(0, 3).join(', ')}. We match you with investigators who handle these exact case types — not generalists learning on your budget.` },
       { iconName: 'Shield', title: "Court-Admissible Evidence", desc: `Every investigation produces evidence documented to New York court standards — HD video, timestamped photography, GPS data, and sworn investigator affidavits ready for your attorney.` },
       { iconName: 'Clock', title: `${p.area} Knowledge`, desc: `${p.caseProfile.split(',')[0]}. Your investigator knows the streets, venues, and patterns that define investigation in ${cityName}'s ${p.area} area.` },
       { iconName: 'CheckCircle', title: "Complete Confidentiality", desc: `${p.investigationNeeds.split(',')[0]}. Your investigation remains confidential until you decide to use the evidence. No leaks, no traces, no premature disclosure.` }

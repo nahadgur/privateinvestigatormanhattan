@@ -255,7 +255,7 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
               Get {service.title} Advice in {cityName}
             </h2>
             <p className="text-white/70 mb-7 max-w-2xl mx-auto text-[14px] leading-[1.6]">
-              Submit your enquiry in under two minutes. We match you with vetted {cityName} private investigators with no obligation.
+              Submit your inquiry in under two minutes. We match you with vetted {cityName} private investigators with no obligation.
             </p>
             <button onClick={() => setIsModalOpen(true)} className="btn-primary">
               Request Free Consultation
