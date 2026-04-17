@@ -192,6 +192,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Nolita surveillance works an extremely compact area where the same investigator cannot work consecutive evenings without recognition risk. The neighborhood's weekend-heavy traffic provides cover then; weekday evenings are thinner and require more careful positioning, commonly using the Elizabeth Street and Mott Street restaurant seating as observation anchors.",
       venue: "Matrimonial matters are filed at New York County Supreme Court, 60 Centre Street; custody matters at Family Court, 60 Lafayette Street."
     },
+
+    // --- Sprint 2d: Upper East Side ---
+    "upper-east-side": {
+      casePattern: "UES infidelity cases are shaped by the neighborhood's unusually stable residential pattern — many subjects have lived in the same doorman building for a decade or more, and documented conduct commonly occurs within tight geographic constraints they know well: the same three or four restaurants, the private clubs on the Avenues, the hotels around 60th Street. Private-school drop-off routines at schools like Brearley, Spence, and Dalton create predictable morning observation windows.",
+      logistics: "UES surveillance contends with the dense doorman-building network where staff routinely recognize unfamiliar foot traffic within a few passes. Investigators work from perimeter positions along Madison and Lexington rather than stationary observation near buildings, and the avenue geometry supports foot-based coverage while making vehicle surveillance largely ineffective east of Lexington.",
+      venue: "Matrimonial proceedings — often involving substantial marital estates — are filed at New York County Supreme Court, 60 Centre Street; custody components route to Family Court at 60 Lafayette Street."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill infidelity cases have a distinctive medical-community dimension given the Lenox Hill Hospital campus at 100 East 77th Street. Investigations here commonly involve subjects whose routines are structured by hospital shift patterns, attending-physician schedules, or the medical professional community's after-work venues on Lexington and Third Avenues. The surrounding residential blocks between 70th and 77th are among the UES's densest doorman-building stock.",
+      logistics: "Lenox Hill surveillance works a neighborhood with heavy medical-workforce foot traffic creating natural cover around shift-change hours. Investigators exploit these windows for observation around the hospital perimeter and nearby venues, while working doorman-building approaches on surrounding blocks with the same perimeter-only discipline required elsewhere on the UES.",
+      venue: "Divorce proceedings are heard at New York County Supreme Court, 60 Centre Street; custody matters at Family Court at 60 Lafayette Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville infidelity cases reflect the neighborhood's dual character — the dense rental-and-condo stock along Second and Third Avenues between 79th and 96th Streets producing a younger-professional case type, and the townhouse blocks of East 80s producing a more affluent case type. Documentation commonly centers on the restaurant and bar cluster along Second Avenue in the 80s, which functions as the neighborhood's primary evening social zone.",
+      logistics: "Yorkville surveillance benefits from substantially more pedestrian density than the doorman-building UES to its south — the Second Avenue bar corridor provides genuine crowd cover, and the Q-train Second Avenue subway extension has increased daytime foot traffic. Stationary observation is more feasible here than in Lenox Hill or Carnegie Hill.",
+      venue: "Matrimonial matters route to New York County Supreme Court at 60 Centre Street; Family Court at 60 Lafayette Street handles custody components."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill infidelity cases commonly involve subjects in one of Manhattan's most affluent residential communities — the townhouse and pre-war co-op stock between 86th and 96th Streets east of Fifth Avenue. Documented conduct frequently involves the private-club circuit, Museum Mile hotel venues, and the handful of fine-dining restaurants on Madison Avenue that anchor the neighborhood's evening social life.",
+      logistics: "Carnegie Hill surveillance is among the most challenging in Manhattan. Foot traffic is thin, doorman and townhouse staff recognize unfamiliar faces immediately, and the Museum Mile tourist flow along Fifth Avenue is the only block-by-block cover available. Investigators commonly work from Madison Avenue vantage points and extremely short rotations.",
+      venue: "High-asset matrimonial proceedings are heard at New York County Supreme Court, 60 Centre Street; custody matters at Family Court, 60 Lafayette Street."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem infidelity cases span the neighborhood's broad demographic range — long-tenure families, newer arrivals to the expanding residential construction along the First Avenue and Third Avenue corridors, and the workforce of the Mount Sinai hospital campus at 98th–102nd and Madison. Documented conduct commonly occurs along the 116th Street commercial strip, the Third Avenue corridor, and the venues serving the medical-campus community.",
+      logistics: "East Harlem surveillance benefits from genuinely dense pedestrian activity along the main commercial corridors, providing natural cover that's unavailable in the quieter blocks south of 96th. Investigators work the commercial strips rather than the residential interior blocks and use the medical-campus foot traffic for observation around that specific zone.",
+      venue: "Manhattan matrimonial matters are heard at New York County Supreme Court, 60 Centre Street; custody at Family Court, 60 Lafayette Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem infidelity cases commonly involve the Puerto Rican, Dominican, and broader Latino community between 96th and 125th Streets east of Fifth Avenue. Documented conduct frequently centers on the 116th Street and Third Avenue commercial corridors, the concentration of Latin-American restaurants and music venues, and community-specific gathering places. Language-capable coverage is common given neighborhood demographics.",
+      logistics: "Spanish Harlem surveillance commonly requires Spanish-capable investigators for effective venue coverage. The neighborhood's main commercial strips along 116th, 125th, and Third Avenue provide substantial natural cover from foot traffic; the interior residential blocks are quieter and more exposed for observation work.",
+      venue: "Matrimonial matters route to New York County Supreme Court at 60 Centre Street; custody to Family Court at 60 Lafayette Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island infidelity cases are unusual in Manhattan — the island's almost-entirely-recreational character means there is no residential population and few ongoing relationships to surveil. When cases arise, they typically involve meetings at the island's sports facilities, the festival-event venues, or the isolation the island offers to subjects from elsewhere in the city seeking privacy.",
+      logistics: "Randalls Island surveillance contends with near-zero ambient foot traffic outside active event windows. A stationary investigator anywhere on the island is conspicuous, and access roads and pedestrian bridges provide the only realistic observation positions. Most engagements tied to the island are identification-and-follow rather than on-island observation.",
+      venue: "Manhattan matrimonial proceedings route to New York County Supreme Court at 60 Centre Street; custody components to Family Court at 60 Lafayette Street."
+    },
   },
 
   // ============================================================
@@ -356,6 +393,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Nolita surveillance work is unusually boutique-dense — the neighborhood's retail and restaurant operators are small-scale, and investigations here commonly involve retail-theft documentation, boutique-employee misconduct, and subject surveillance tied to Nolita's distinctive restaurant scene. Matrimonial surveillance for area residents is a smaller but consistent workstream.",
       logistics: "Nolita surveillance operates in a concentrated four-block commercial area where agent recognition across consecutive days is almost unavoidable. Investigators rotate assignments aggressively, use the seasonal outdoor-dining weeks as natural cover, and commonly stage from adjacent SoHo or Little Italy for team coordination.",
       venue: "Civil and commercial matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+
+    // --- Sprint 2d: Upper East Side ---
+    "upper-east-side": {
+      casePattern: "UES surveillance assignments are disproportionately weighted toward high-net-worth matrimonial, pre-divorce documentation, and co-op-board-related investigation given the neighborhood's resident demographic. Corporate investigation volume is lower than Midtown East despite the resident C-suite concentration, because most corporate matters are staged from subjects' offices rather than residences.",
+      logistics: "UES surveillance is structurally defined by the doorman-building environment. Every residential tower on Park and Fifth Avenues maintains 24-hour staff who notice unfamiliar foot traffic; investigators rely on approach routes from the avenues east and west, use Madison Avenue's restaurant and retail density as observation anchors, and rotate teams aggressively to avoid recognition.",
+      venue: "Matrimonial and civil matters are filed at New York County Supreme Court at 60 Centre Street; Family Court at 60 Lafayette Street for custody."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill surveillance commonly includes a medical-professional case component absent from other UES neighborhoods — physician-misconduct investigation coordinated with hospital risk management, workers' compensation fraud involving hospital-employee subjects, and the pre-litigation observation that medical-malpractice matters sometimes require. Standard UES matrimonial and co-op screening work continues alongside.",
+      logistics: "Lenox Hill surveillance benefits from the hospital's foot traffic around shift-change hours — 7 am and 7 pm in particular create dense pedestrian flows that provide genuine cover near the 77th Street corridor. Investigators time operations around these windows where possible, and use the restaurant cluster along Second and Third Avenues as observation anchors.",
+      venue: "Civil and matrimonial matters proceed through New York County Supreme Court at 60 Centre Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville surveillance assignments span standard matrimonial and residential-dispute work for the neighborhood's large rental and condo population, along with the hospitality-industry investigation driven by the Second Avenue bar corridor between 79th and 89th. Insurance fraud documentation is a regular workstream given the neighborhood's high rental turnover and associated claims activity.",
+      logistics: "Yorkville surveillance operates in the densest UES pedestrian environment — the Q train entrances, Second Avenue's commercial strip, and the 86th Street transit hub all create sustained foot traffic that supports conventional observation. Vehicle surveillance is modestly effective on the east-west cross streets but rarely on the avenues.",
+      venue: "Civil and family-law matters are heard at New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill surveillance assignments are almost exclusively matrimonial and residential-dispute work for the neighborhood's ultra-affluent population. Cases commonly involve documentation of conduct at private clubs, Museum Mile benefit events, and the specific Madison Avenue venues where most neighborhood social life occurs. Executive due diligence observation for resident C-suite and financial-industry subjects is a secondary workstream.",
+      logistics: "Carnegie Hill surveillance is the most operationally demanding UES subregion. Foot traffic is thin outside Museum Mile tourist hours, townhouse and doorman staff are highly attentive, and investigator rotation must be aggressive to avoid same-day recognition. Operations typically depend on identification during the Museum Mile and Madison Avenue transit windows.",
+      venue: "High-asset matrimonial proceedings proceed at New York County Supreme Court, 60 Centre Street."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem surveillance spans a broad case-type range — the growing condominium development along First Avenue in the 110s and 120s produces new matrimonial work, while the long-tenure residential stock produces continuing insurance-fraud, family-court-adjacent, and civil litigation observation. Small-business commercial investigation for the 116th Street and Third Avenue operator community is also a regular component.",
+      logistics: "East Harlem surveillance exploits dense pedestrian activity along the main commercial corridors — 116th Street, 125th Street, and Third Avenue all support sustained observation. The residential interior blocks between the commercial strips are quieter and more exposed for stationary work.",
+      venue: "Civil and matrimonial matters route to New York County Supreme Court, 60 Centre Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem surveillance commonly combines matrimonial and domestic work for the neighborhood's residential community with the commercial-investigation matters tied to the 116th Street Latino-American business corridor and community-specific organizations. Language-capable coverage is essential for most substantial engagements.",
+      logistics: "Spanish Harlem surveillance requires Spanish-language investigator coverage for effective operation in community-specific venues. The main commercial corridors provide substantial foot traffic for observation work; community-center and church-adjacent observation requires careful handling given the tightly networked nature of the area's community organizations.",
+      venue: "Matrimonial and civil matters are filed at New York County Supreme Court, 60 Centre Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island surveillance work is narrow in scope — event-security matters tied to the island's festival and sports-facility programming, occasional insurance-fraud documentation where an injured-claim subject is observed using the island's sports fields, and the specific narrow window of cases tied to the island's youth programming operators. Standalone resident-based case types are essentially absent given there are no residents.",
+      logistics: "Randalls Island surveillance is operationally constrained by geography — the island is accessible only via the RFK Triborough Bridge pedestrian walkway or the 103rd Street footbridge, and all foot traffic passes through a small number of access points. Investigators commonly work identification at these access points, then extended observation in the relevant sports-facility or festival area.",
+      venue: "Civil and related matters are heard at New York County Supreme Court, 60 Centre Street."
     },
   },
 
@@ -522,6 +596,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Nolita background checks routinely involve candidates with creative-industry histories — freelance work, project-based employment, multi-brand hospitality careers — that standard screening databases cover unevenly. Investigator supplementation through direct reference verification is standard.",
       venue: "Commercial and employment disputes are heard at New York County Supreme Court, 60 Centre Street."
     },
+
+    // --- Sprint 2d: Upper East Side ---
+    "upper-east-side": {
+      casePattern: "UES background investigation work is anchored by co-op board screening for the neighborhood's premium pre-war residential stock. Brearley, Spence, Chapin, and Dalton family employment verification — as well as domestic-staff vetting for households employing multiple long-tenure staff — are recurring workstreams. Pre-marital asset-and-background investigation for affluent residents is also a regular engagement type.",
+      logistics: "UES background checks routinely involve candidates with multi-entity financial histories, trust structures, international-jurisdiction exposure, and the complex records that consumer-database services cannot aggregate. Investigator-conducted reference verification, SEC and FINRA records review for finance-industry candidates, and direct prior-employer contact are standard.",
+      venue: "Civil matters arising from background-based decisions route to New York County Supreme Court at 60 Centre Street."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill background investigation work is heavily shaped by the hospital campus at 77th Street — physician credential verification for Northwell Health hiring, medical-professional license and prior-practice record review, and the healthcare-sector-specific background work that a major Manhattan hospital's workforce requires. Standard UES co-op and residential screening continues alongside.",
+      logistics: "Lenox Hill background checks for medical-professional candidates routinely include DEA-registration verification, state medical-license board records across all jurisdictions of prior practice, NPDB (National Practitioner Data Bank) queries where authorized, and hospital-credentialing-committee records. Turnaround varies by credential complexity rather than standard ranges.",
+      venue: "Civil and employment disputes are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville background work covers a broader case mix than the wealthier UES neighborhoods to its south — the neighborhood's rental and condo stock drives substantial standard tenant-screening volume, while young-professional tenant demographics produce relatively predictable candidate records. Co-op screening for the pre-war buildings along Park Avenue North is the smaller but higher-complexity workstream.",
+      logistics: "Yorkville background checks follow standard Manhattan residential and employment screening practice. The young-professional candidate pool generally returns within standard turnaround windows without the specialist-scope work required for more senior-level UES engagements.",
+      venue: "Employment and civil disputes are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill background investigation work is among the highest-complexity in Manhattan — ultra-affluent co-op board screening for the pre-war buildings, multi-generational trust-structure verification, and the domestic-staff vetting that households in this neighborhood commonly require involving multi-year tenure verification, prior-principal reference interviews, and household-specific discretion considerations.",
+      logistics: "Carnegie Hill background checks routinely run weeks rather than days given the financial complexity typical of candidate and resident profiles — trust and entity structure verification, international-jurisdiction records, and multi-layer ownership structure review are standard. Discretion is treated as an operational requirement baseline.",
+      venue: "Civil matters proceed at New York County Supreme Court at 60 Centre Street; estate-related engagements may involve Surrogate's Court at 31 Chambers Street."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem background investigation work is shaped by the Mount Sinai hospital campus at 98th–102nd and Madison — medical-professional credential verification for hospital hires, healthcare-sector employee screening. The growing residential development along First Avenue generates standard tenant-screening workstream, and small-business owner vetting for the 116th and 125th Street commercial communities rounds out the engagement mix.",
+      logistics: "East Harlem background checks for medical-professional candidates tied to Mount Sinai require the same healthcare-sector specialist components as the Lenox Hill campus — DEA registration, state medical-license records, hospital-credential verification. Residential and small-business screening follows standard Manhattan practice.",
+      venue: "Civil and employment disputes are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem background work commonly serves the Latino-American small-business community along 116th Street and Third Avenue, community-organization hiring for the neighborhood's substantial nonprofit presence, and standard residential tenant screening. Immigration-related background verification is a recurring specialist component given neighborhood demographics.",
+      logistics: "Spanish Harlem background checks routinely require Spanish-capable investigator reference-contact work, and cross-border records verification (Puerto Rico, Dominican Republic, Mexico) for candidates with pre-U.S. work histories. Community-organization hiring screening follows standard nonprofit-sector practice.",
+      venue: "Civil matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island background investigation work is narrow — Parks Department and NYC Department of Health contractor screening for the island's facilities, event-staff and volunteer vetting for the major festival and sports programming, and youth-program employee screening where children's activities are involved. Residential screening is absent given there is no residential population.",
+      logistics: "Randalls Island background checks for youth-program and children's-activity staff follow the heightened-scrutiny standards that any children's-facility hiring requires — criminal-records checks across all jurisdictions, sex-offender registry verification, and prior-employer verification specifically on child-safety incidents. Engagement handling reflects these elevated standards.",
+      venue: "Civil matters arising from screening-related disputes are heard at New York County Supreme Court at 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -686,6 +797,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Nolita corporate investigation work is driven by the neighborhood's boutique-retail and restaurant operator community — counterfeit-goods investigation for the fashion boutiques, partnership-dispute work for operator partnerships, and retail-theft and employee-misconduct documentation. The scale is boutique — engagements are typically smaller than SoHo or Tribeca corporate work.",
       logistics: "Nolita corporate investigations work an operator community where everyone knows everyone — confidentiality is an operational challenge at the neighborhood-relationship level, not just within the specific investigation. Engagement discretion is treated as a primary operational requirement.",
       venue: "Commercial matters are filed at New York County Supreme Court Commercial Division, 60 Centre Street."
+    },
+
+    // --- Sprint 2d: Upper East Side ---
+    "upper-east-side": {
+      casePattern: "UES corporate investigation work commonly involves resident C-suite and financial-industry subjects whose professional matters spill into their residential neighborhood — executive due diligence for substantial commercial transactions, family-office governance matters, and the fiduciary-breach investigation that complex personal-financial structures generate. Independent UES-based enterprise investigations are rare given the residential-only character.",
+      logistics: "UES corporate investigations typically run under attorney-client privilege through Midtown and Downtown law firms, with the UES component limited to residential-address observation, domestic-staff interview work where relevant, and the social-venue documentation that family-office and estate matters sometimes require. Standard surveillance discretion applies given the doorman-building environment.",
+      venue: "Commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street; estate-adjacent matters to Surrogate's Court at 31 Chambers Street."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill corporate investigation work is dominated by the medical-industry matters surrounding the hospital campus — healthcare-billing fraud investigation, physician-group governance disputes, vendor-kickback schemes for medical-supply and pharmaceutical engagements, and the whistleblower-adjacent investigation that healthcare compliance regularly generates. Standard UES commercial work continues alongside but is a smaller component.",
+      logistics: "Lenox Hill corporate investigations for healthcare matters routinely require healthcare-industry specialist coordination — medical-billing record review, credentialing-database access, and HIPAA-compliant investigation protocols. Many matters involve both state and federal regulatory considerations, and engagement scope reflects the regulated-industry complexity.",
+      venue: "Healthcare and commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street; federal matters including False Claims Act cases at 500 Pearl Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville corporate investigation work has a distinctive commercial-real-estate component driven by the Second Avenue subway extension — property-value disputes, development-adjacent commercial matters, and the operator-turnover in the Second Avenue bar and restaurant corridor between 79th and 89th Streets. Residential-building management and governance matters for the neighborhood's large rental stock are a secondary workstream.",
+      logistics: "Yorkville corporate investigations follow standard small-scale commercial practice. Work typically combines financial-records review, reference-interview protocols, and targeted surveillance without the multi-agent operational footprint of larger Midtown engagements.",
+      venue: "Commercial matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill corporate investigation work concentrates on the family-office, trust, and private-wealth engagements characteristic of the neighborhood's ultra-affluent resident population — family-office governance investigation, fiduciary-breach matters in multi-generation trust structures, and executive-misconduct matters at the highest end of financial-industry hiring. Estate-adjacent commercial investigation is a recurring workstream.",
+      logistics: "Carnegie Hill corporate investigations routinely involve the most complex entity and trust structures in Manhattan investigation work — multi-jurisdiction records, forensic-accounting specialist coordination, and multi-generation document review are standard. Operational discretion is treated as a defining requirement given the privacy expectations of the resident community.",
+      venue: "Commercial proceedings are filed at New York County Supreme Court Commercial Division at 60 Centre Street; Surrogate's Court at 31 Chambers Street handles estate-linked matters."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem corporate investigation work is shaped by Mount Sinai's campus and by the small-business operator community along the main commercial corridors. Healthcare-sector investigations similar to the Lenox Hill pattern are a core workstream, and the 116th Street and Third Avenue commercial communities generate operator-dispute and employee-misconduct engagement volume.",
+      logistics: "East Harlem corporate investigations for Mount Sinai-related matters follow the same healthcare-industry specialist pattern as Lenox Hill. Small-business investigation follows standard Manhattan practice with Spanish-capable coordination where relevant.",
+      venue: "Commercial matters are heard at New York County Supreme Court Commercial Division at 60 Centre Street; healthcare-sector federal matters at 500 Pearl Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem corporate investigation work serves the neighborhood's Latino-American small-business community and the substantial nonprofit and community-organization ecosystem. Engagements commonly include small-business partnership disputes, nonprofit-governance matters, and the occasional cross-border commercial investigation tied to the neighborhood's strong links to Puerto Rico and the Dominican Republic.",
+      logistics: "Spanish Harlem corporate investigations routinely require Spanish-capable investigator coverage and coordination with specialists familiar with cross-border commercial records. Nonprofit-governance matters follow NY-Attorney-General-regulated-entity standards and engagement scope reflects that regulatory framework.",
+      venue: "Commercial matters proceed at New York County Supreme Court at 60 Centre Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island corporate investigation work is limited to the Parks Department and NYC-contractor relationships tied to the island's facilities — facility-contract-management investigation, event-operator-dispute work, and the sponsorship-and-partnership due diligence that major island events require. Matters involving city-government contract counterparties have specific regulatory considerations.",
+      logistics: "Randalls Island corporate investigations for city-contract matters follow the regulated-entity standards that NYC public contracting requires — transparency, document-retention, and procurement-integrity considerations shape engagement design. Event-operator investigations follow standard commercial practice.",
+      venue: "Commercial matters are heard at New York County Supreme Court Commercial Division at 60 Centre Street."
     },
   },
 
@@ -852,6 +1000,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Nolita asset searches for boutique-operator subjects commonly include IP-portfolio verification, fashion-brand-licensing position review, and multi-brand operator ownership mapping. Standard asset-search coverage applies alongside these industry-specific components.",
       venue: "Commercial and matrimonial matters route to New York County Supreme Court, 60 Centre Street."
     },
+
+    // --- Sprint 2d: Upper East Side ---
+    "upper-east-side": {
+      casePattern: "UES asset search work is among the highest-value in Manhattan — substantial-marital-estate divorce proceedings involving finance, family-office, and inherited-wealth subjects are the dominant engagement type. Trust-structure investigation, multi-jurisdiction holding verification, and the complex entity structures typical of high-net-worth UES residents drive engagement complexity above standard Manhattan scope.",
+      logistics: "UES asset searches routinely involve specialist coordination across forensic accounting, international asset tracing, and trust-and-estate-specific investigation. Resident profiles commonly include multi-country holdings, multiple trust and LLC layers, and private-investment positions that require non-public-database investigation methods. Engagement timelines reflect the complexity.",
+      venue: "Matrimonial proceedings are filed at New York County Supreme Court at 60 Centre Street; Surrogate's Court at 31 Chambers Street handles estate-adjacent matters."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill asset search work commonly involves medical-professional matrimonial proceedings — physician-practice valuation, medical-partnership equity verification, and the retirement-plan asset structures specific to hospital-employed medical professionals. Standard UES affluent-resident asset investigation continues alongside for the non-medical resident population.",
+      logistics: "Lenox Hill asset searches for medical-professional subjects require practice-valuation specialist coordination, medical-partnership equity verification, and hospital-employer retirement-plan-specific investigation that differs from standard retirement-account searches. Healthcare-sector-familiar specialists are drawn on for substantial engagements.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville asset search work serves a younger-professional demographic with simpler asset profiles than the Carnegie Hill and Park Avenue blocks to its south — matrimonial engagements for the neighborhood's rental and condo stock commonly complete within standard turnaround windows. Judgment-enforcement work for local commercial matters is a regular secondary workstream.",
+      logistics: "Yorkville asset searches for younger-professional subjects typically cover standard real-estate, financial-account, and early-career-equity holdings without the multi-jurisdiction, multi-entity specialist work required in the wealthier UES subregions. Engagement turnaround is generally standard.",
+      venue: "Matrimonial and civil matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill asset search work is the most operationally demanding in Manhattan investigation practice — multi-generation trust structures, family-office holdings, international-jurisdiction asset positions, and the private-investment vehicle and collectibles inventories characteristic of ultra-affluent residents. Engagements routinely require months of investigation time rather than weeks.",
+      logistics: "Carnegie Hill asset searches routinely involve every specialist resource relevant to high-net-worth investigation — forensic accounting, international asset tracing, cryptocurrency tracing, art-and-collectibles valuation, and multi-country records specialists. Trust-and-estate specialist coordination is standard. Engagement confidentiality is a primary operational requirement.",
+      venue: "Matrimonial proceedings route to New York County Supreme Court at 60 Centre Street; Surrogate's Court at 31 Chambers Street for estate matters."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem asset search work spans a broad case-type range — matrimonial engagements for the residential population, judgment-enforcement matters for small-business commercial disputes, and the Mount-Sinai-adjacent medical-professional asset investigation that the campus's workforce generates. The growing residential development adds newer-construction real-estate-holding investigation to the mix.",
+      logistics: "East Harlem asset searches for most residential matters follow standard Manhattan practice. Medical-professional cases require the same practice-valuation and retirement-plan specialist components as Lenox Hill engagements.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem asset search work frequently includes cross-border components tied to Puerto Rico, the Dominican Republic, and related jurisdictions. Matrimonial matters and small-business commercial disputes both commonly involve property and financial holdings in these jurisdictions, and judgment-enforcement work likewise requires cross-border investigation capability.",
+      logistics: "Spanish Harlem asset searches routinely require Spanish-capable investigator resources and coordination with Caribbean and Latin American asset-tracing specialists. Puerto Rico's specific legal framework (as a U.S. territory with distinct records systems) is a regular engagement consideration; Dominican Republic records require separate specialist access.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island asset search work is essentially absent as a standalone engagement type given there is no residential population and no independent commercial operator base. Engagements that touch the island are typically adjacent to city-contractor disputes or event-operator matters rather than island-resident-based.",
+      logistics: "Randalls Island-adjacent asset searches are conducted through standard commercial-counterparty investigation practice targeting the city-contractor or event-operator entities rather than island-specific investigation.",
+      venue: "Civil matters route to New York County Supreme Court at 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -1016,6 +1201,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Nolita custody matters are modest in volume given the neighborhood's small residential population but commonly involve affluent families with finance, creative-industry, or professional-services parent schedules. Documentation frequently covers De Salvio Playground, Petrosino Square, and the neighborhood's limited but intensively used public-space network.",
       logistics: "Nolita custody investigations work an extremely compact residential footprint where investigator recognition across consecutive days is a real operational concern. Rotation discipline and adjacent-neighborhood staging (from SoHo, Little Italy) are standard, and school-route observation commonly extends into adjacent neighborhoods where the relevant private schools are located.",
       venue: "Manhattan custody cases are heard at New York County Family Court, 60 Lafayette Street."
+    },
+
+    // --- Sprint 2d: Upper East Side ---
+    "upper-east-side": {
+      casePattern: "UES custody cases are frequently shaped by the neighborhood's dense private-school concentration — Brearley, Spence, Chapin, Dalton, Nightingale-Bamford, and Ramaz all sit within blocks of each other, and custody assessments regularly turn on which parent handles school-related logistics, whether school-admissions decisions remain joint, and the financial implications for tuition responsibility. Nanny and domestic-staff documentation is a recurring engagement component.",
+      logistics: "UES custody investigations work the predictable morning and afternoon school-route geometry — each private school has a specific 15-20 minute pickup and drop-off window during which parental compliance and caregiver-rotation patterns are observable. Investigators commonly coordinate coverage around these specific windows rather than attempting all-day observation.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street; high-asset implications may involve Supreme Court matrimonial calendars at 60 Centre Street."
+    },
+    "lenox-hill": {
+      casePattern: "Lenox Hill custody cases commonly involve medical-professional families — parents whose schedules are shaped by hospital rotation, on-call obligations, surgical schedules, or attending-physician responsibilities at the 77th Street campus. Custody-modification matters frequently turn on documentation of shift-schedule compliance with parenting-time orders structured around medical-work patterns.",
+      logistics: "Lenox Hill custody investigations structure observation around medical-work schedules — 12-hour shift transitions at the hospital, on-call callback patterns, and the specific weekly coverage rotations that medical-professional parents commonly follow. Investigators coordinate with family-law counsel on evidence scope given the complexity of medical-schedule compliance documentation.",
+      venue: "Custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "yorkville": {
+      casePattern: "Yorkville custody cases are more demographically varied than the UES subregions to its south — the rental and condo stock attracts young families without the multi-generational wealth concentration of Park Avenue or Carnegie Hill. Cases commonly involve custody-modification matters, standard parenting-time compliance verification, and the residential-environment documentation typical of middle-to-upper-middle-income family cases.",
+      logistics: "Yorkville custody investigations work the neighborhood's public-school network (P.S. 158, P.S. 290, P.S. 527, and the nearby 96th Street-area public schools) along with the few private-school options in the area. Observation anchors include Carl Schurz Park, the Second Avenue Q train stations, and the neighborhood's higher-density foot traffic along 86th Street.",
+      venue: "All Manhattan custody matters route to New York County Family Court at 60 Lafayette Street."
+    },
+    "carnegie-hill": {
+      casePattern: "Carnegie Hill custody cases commonly involve some of the highest-asset family structures in Manhattan custody practice — multi-generational wealth, trust-structured family holdings, and the complex financial arrangements characteristic of ultra-affluent families. Private-school enrollment decisions, multi-home residential arrangements, and domestic-staff documentation are recurring engagement components.",
+      logistics: "Carnegie Hill custody investigations work one of Manhattan's quietest residential environments — foot traffic is thin, townhouse and doorman staff are attentive, and observation requires short rotations and careful positioning. Private-school pickup and drop-off windows, Museum Mile benefit events, and specific Madison Avenue venues provide the primary observation anchors.",
+      venue: "High-asset custody matters are heard at New York County Family Court at 60 Lafayette Street; related matrimonial components may route to Supreme Court at 60 Centre Street."
+    },
+    "east-harlem": {
+      casePattern: "East Harlem custody cases reflect the neighborhood's demographic breadth — long-tenure residential families, newer arrivals to the expanding condominium stock, and medical-professional families tied to the Mount Sinai campus. Cases commonly involve custody-modification matters, residential-stability documentation, and the school-assignment factors that neighborhood transitions create.",
+      logistics: "East Harlem custody investigations work the neighborhood's substantial public-school network — P.S. 101, P.S. 50, P.S. 96, and the nearby middle-school options — along with the Mount Sinai-adjacent private-school options at the neighborhood's southern edge. Observation routines cover school-route compliance and after-school programming at community-center facilities.",
+      venue: "Custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "spanish-harlem": {
+      casePattern: "Spanish Harlem custody cases frequently involve multi-generational caregiving arrangements characteristic of the Latino-American community — grandparent, aunt, and extended-family caregivers play roles that affect how parenting-time compliance is assessed. Documentation commonly covers the 116th Street commercial corridor, community-organization programming, and the neighborhood's religious-institution family networks.",
+      logistics: "Spanish Harlem custody investigations routinely require Spanish-capable coverage and cultural familiarity with the community's extended-family caregiving norms. School-route observation at P.S. 38, P.S. 72, and the neighborhood's other public schools follows standard practice; community-organization and religious-institution documentation requires careful handling given tightly-networked relationships.",
+      venue: "All Manhattan custody matters route to New York County Family Court at 60 Lafayette Street."
+    },
+    "randalls-island": {
+      casePattern: "Randalls Island custody cases are essentially absent as a standalone case type — there is no residential population, so families with Randalls-Island-primary-residence custody matters do not exist. Island-adjacent custody matters occur when investigations incidentally involve the island's youth sports programming, festival-event attendance, or specific Parks Department youth-program contexts.",
+      logistics: "Randalls-Island-related custody investigation work is narrow and typically involves event-specific or program-specific observation rather than residential documentation. Investigators work the access-point geometry of the island for identification-and-follow, and conduct any substantive observation in the relevant sports-facility or programming context.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
     },
   },
 
