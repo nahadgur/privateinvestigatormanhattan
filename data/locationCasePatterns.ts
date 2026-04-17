@@ -266,6 +266,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Washington Heights surveillance requires Spanish-capable investigators for substantial parts of the neighborhood. The main commercial corridors — Broadway, St. Nicholas Avenue, Amsterdam — sustain dense foot traffic that supports observation; the residential side streets are quieter. The medical-campus area around 168th has its own distinct foot-traffic pattern shaped by hospital shift changes.",
       venue: "Matrimonial and custody proceedings route to New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
     },
+
+    // --- Sprint 2f: Harlem + North Manhattan ---
+    "harlem": {
+      casePattern: "Harlem infidelity cases most commonly center on the 125th Street corridor — the neighborhood's main commercial spine anchored by the Apollo Theater at 253 West 125th. Documented conduct frequently involves the restaurant, bar, and cultural-venue cluster between Frederick Douglass and Adam Clayton Powell Jr. Boulevards, the Red Rooster-anchored Lenox Avenue scene, and the specific hotel venues serving the business and tourist flow into the district.",
+      logistics: "Harlem surveillance benefits from one of the most consistently dense commercial-pedestrian corridors in northern Manhattan — 125th Street sustains heavy foot traffic through most of the day and into the evening, providing natural cover for observation work. Metro-North's 125th Street station and the A/B/C/D subway stop at 125th create predictable commuter flows that structure observation timing.",
+      venue: "Matrimonial proceedings are filed at New York County Supreme Court, 60 Centre Street; custody matters at Family Court at 60 Lafayette Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem infidelity cases are distinctive for concentrating on the Lenox Avenue / Malcolm X Boulevard spine between 125th and 145th — the historic Harlem Renaissance core. Documentation commonly covers the brownstone-block community around Strivers' Row (West 138th and 139th), the Abyssinian Baptist Church-adjacent community network, and the long-tenure family and social dynamics that define Central Harlem cases.",
+      logistics: "Central Harlem surveillance contends with a tightly-networked community where long-tenure residents recognize unfamiliar faces across the handful of blocks that host most neighborhood social life. Investigators work through the 125th Street commercial corridor at the neighborhood's southern edge where foot traffic provides cover, and use extremely short rotations in the interior residential blocks.",
+      venue: "Divorce and custody matters route to New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem infidelity cases commonly involve subjects tied to the Broadway corridor between 125th and 155th, the Manhattanville community at the foot of CCNY's campus, and the evolving commercial scene along St. Nicholas Avenue. Documentation frequently covers the restaurant and bar cluster along Broadway in the 130s, and the specific academic-adjacent community venues serving the CCNY and Columbia Manhattanville spillover.",
+      logistics: "West Harlem surveillance works quieter streets than Central Harlem's 125th corridor — Broadway sustains foot traffic but the surrounding residential blocks are less dense. The CCNY campus activity on the 135th-141st block range creates academic-calendar-driven foot-traffic variability useful for timing observation.",
+      venue: "Manhattan matrimonial matters are heard at New York County Supreme Court, 60 Centre Street; custody components at Family Court, 60 Lafayette Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem (SoHa) infidelity cases reflect the neighborhood's active gentrification pressure between 110th and 125th — cases involve both long-tenure community members and newer-arrival residents drawn by the brownstone stock of the Mount Morris Park Historic District. Documented conduct commonly covers the Marcus Garvey Park perimeter, the Frederick Douglass Boulevard restaurant corridor, and the small-venue music and bar scene that has developed in the area.",
+      logistics: "South Harlem surveillance works a neighborhood with distinct block-by-block character — the Mount Morris Park Historic District blocks are quiet residential, the Frederick Douglass Boulevard commercial strip is active, and the transition zones around 116th show increasing foot-traffic density toward the south. Observation planning works these contrasts.",
+      venue: "Matrimonial filings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "inwood": {
+      casePattern: "Inwood infidelity cases are shaped by the northernmost-Manhattan geography and the neighborhood's strong Dominican community. The Dyckman Street bar and restaurant corridor between Broadway and Nagle is where the vast majority of documented after-hours conduct occurs — the specific cluster of Latin-music venues, restaurants, and hookah lounges defines the neighborhood's evening social life. Inwood Hill Park provides a distinctive outdoor-location component absent elsewhere in Manhattan.",
+      logistics: "Inwood surveillance requires Spanish-capable investigator coverage for most substantive community-venue work. The Dyckman Street corridor sustains heavy foot traffic Thursday through Saturday evenings, providing observation cover; weekday evenings are substantially thinner. The 207th Street subway station and the Dyckman Street A-train station create predictable transit anchors for subject identification.",
+      venue: "Matrimonial and custody proceedings are filed at New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "fort-george": {
+      casePattern: "Fort George infidelity cases involve the neighborhood's distinctive uptown residential community — the corridor between 181st and 200th east of Broadway has its own local character, with restaurant and bar activity concentrated on the 181st Street commercial strip and the St. Nicholas Avenue corridor. Documentation frequently covers these specific blocks and the community-network dynamics of what is effectively a small-neighborhood environment.",
+      logistics: "Fort George surveillance operates in a tightly-knit residential community where investigator recognition is a persistent operational concern. The 181st Street commercial blocks between Broadway and St. Nicholas provide concentrated foot traffic; the residential side streets, particularly east of St. Nicholas, are quieter and require shorter observation rotations.",
+      venue: "Divorce and custody matters are heard at New York County Supreme Court, 60 Centre Street, and Family Court at 60 Lafayette Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill infidelity cases are unusual in Manhattan investigation work — the neighborhood is physically attached to the Bronx after the Harlem Ship Canal rerouting but remains politically part of Manhattan, creating distinctive civic-identity and jurisdictional dynamics. The small-community residential character and the specific geography around 225th Street and Broadway shape most engagement patterns.",
+      logistics: "Marble Hill surveillance works a small and geographically isolated residential pocket where any unfamiliar foot traffic is immediately visible. The 225th Street transit hub at the 1 train station provides the primary natural-cover location; the surrounding residential blocks are quiet and require careful positioning and short rotations.",
+      venue: "Manhattan matrimonial and custody matters — including those from Marble Hill given its political Manhattan status — are heard at New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
   },
 
   // ============================================================
@@ -504,6 +541,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Washington Heights surveillance handles a broad case-type range — matrimonial and custody work across the neighborhood's demographic subcommunities, medical-professional investigation tied to the Columbia University Irving Medical Center campus, and the commercial-dispute work that the Dominican-American small-business community generates. Language-capable coverage is essential for most substantial engagements.",
       logistics: "Washington Heights surveillance works three distinct commercial corridors — Broadway (busy throughout the day), St. Nicholas Avenue (dense in the evening), and the medical-campus area around 168th — each with its own foot-traffic rhythm. Spanish-capable investigator deployment is standard for substantial community-specific work; medical-campus operations time around hospital shift changes.",
       venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street."
+    },
+
+    // --- Sprint 2f: Harlem + North Manhattan ---
+    "harlem": {
+      casePattern: "Harlem surveillance assignments span a broad case-type range that reflects the neighborhood's density and economic breadth — matrimonial and custody-related work, commercial investigation tied to the 125th Street operator ecosystem, insurance fraud documentation, and the workers' compensation fraud cases common across the region. Cultural-institution-adjacent investigation appears for the Apollo and surrounding venue operators.",
+      logistics: "Harlem surveillance exploits the 125th Street commercial corridor's consistent foot-traffic density — from the Metro-North station east to Frederick Douglass Boulevard west, the corridor sustains observation cover at almost any time during operating hours. Side-street residential operations require different discipline given the quieter foot traffic just one block off the main commercial strip.",
+      venue: "Civil and family-law matters route to New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem surveillance work includes a distinctive community-organization and nonprofit-governance investigation component given the neighborhood's concentration of historic community institutions. Standard matrimonial and custody work continues alongside, and small-business commercial investigation for the Lenox Avenue and Seventh Avenue / Adam Clayton Powell Jr. Boulevard operators is regular.",
+      logistics: "Central Harlem surveillance is operationally demanding in the neighborhood's tight-knit residential core — the brownstone blocks around Strivers' Row and the Abyssinian-church-anchored community have high resident attentiveness to unfamiliar faces. Investigators typically work from the Lenox Avenue and 125th Street commercial perimeters, using short rotations when interior observation is required.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem surveillance work carries an academic-community component tied to CCNY's campus at the neighborhood's southern edge — faculty and staff investigation, academic-affiliated tenant disputes, and the workforce-matter work that a large urban university generates. Manhattanville's commercial revitalization has added hospitality-operator investigation to the engagement mix.",
+      logistics: "West Harlem surveillance benefits from the Broadway corridor's consistent foot traffic supporting observation. The CCNY campus-adjacent blocks have semester-based traffic variability useful for operation planning. St. Nicholas Avenue's commercial activity between 135th and 145th provides secondary observation infrastructure.",
+      venue: "Civil and matrimonial matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem surveillance combines established-resident-focused work — long-tenure community matrimonial and custody investigation, community-organization matters — with the newer-arrival case types driven by gentrification. Landlord-tenant-dispute documentation is a regular workstream reflecting the neighborhood's active residential-turnover pressure, and small-business investigation for the Frederick Douglass Boulevard operators is also common.",
+      logistics: "South Harlem surveillance adapts between the quieter residential blocks of the Mount Morris Park area and the livelier commercial corridors. Marcus Garvey Park provides a distinctive natural observation anchor for cases involving community outdoor activity. The neighborhood's block-by-block variation rewards tailored operation design.",
+      venue: "Matrimonial proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "inwood": {
+      casePattern: "Inwood surveillance work includes substantial matrimonial and custody engagements for the Dominican-American community, landlord-tenant dispute documentation for the neighborhood's rent-stabilized building stock, and the hospitality-industry investigation that the Dyckman Street nightlife corridor generates. Cross-border and immigration-adjacent investigation appears with regular frequency.",
+      logistics: "Inwood surveillance routinely requires Spanish-capable investigator coverage. The Dyckman Street commercial corridor and the 207th/Broadway area provide concentrated pedestrian observation zones; Inwood Hill Park's outdoor areas require different logistical approaches given the specific geography. Engagement timing commonly follows the neighborhood's weekend-heavy social calendar.",
+      venue: "Civil and family-law matters route to New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "fort-george": {
+      casePattern: "Fort George surveillance work is predominantly residential — standard matrimonial, custody, and civil-litigation-adjacent observation for the neighborhood's long-tenure families. Small-business commercial investigation for the 181st Street and St. Nicholas Avenue operators appears in modest volume. Cross-border components involving the Dominican Republic are common given neighborhood demographics.",
+      logistics: "Fort George surveillance works a community where long-tenure residents know each other well and notice unfamiliar foot traffic quickly. The 181st Street commercial strip provides the primary observation-friendly zone; investigators typically anchor at this corridor and work identification-and-follow into the surrounding residential blocks.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill surveillance work is narrow in scope given the small resident population and contained geography. Cases that occur are typically matrimonial and custody-related, with occasional civil-litigation-adjacent investigation for the neighborhood's limited commercial presence. The unique political-Manhattan-but-physically-Bronx civic situation occasionally affects engagement scope.",
+      logistics: "Marble Hill surveillance operates a geographically isolated pocket where the 225th Street transit hub and the Broadway corridor provide the only meaningful observation-cover zones. Investigators commonly stage from the adjacent Bronx side (Kingsbridge) where foot traffic is denser, and work identification at the bridge access points.",
+      venue: "Civil matters are heard at New York County Supreme Court at 60 Centre Street."
     },
   },
 
@@ -744,6 +818,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Washington Heights background checks for medical-professional candidates follow the same healthcare-sector specialist pattern as Lenox Hill and Mount Sinai engagements — DEA registration, state medical-license boards, NPDB queries where authorized, hospital-credential-committee records. Community-business screening routinely requires Spanish-capable verification work and cross-border records access (Dominican Republic primarily).",
       venue: "Employment and civil matters are heard at New York County Supreme Court at 60 Centre Street."
     },
+
+    // --- Sprint 2f: Harlem + North Manhattan ---
+    "harlem": {
+      casePattern: "Harlem background investigation work spans the full engagement mix that the neighborhood's commercial and institutional breadth generates — small-business owner vetting for operators along 125th Street and the avenue corridors, cultural-institution and nonprofit-organization hiring screening (the Apollo's own operations, the Schomburg Center, the various Harlem cultural organizations), and standard residential tenant screening for the neighborhood's large rental stock.",
+      logistics: "Harlem background checks for cultural-institution and nonprofit candidates follow sector-specific practice — reference verification across mission-aligned organizations, board-relationship disclosure review, and the specialized public-trust-related verification that cultural institutions require. Small-business and residential screening follow standard Manhattan practice.",
+      venue: "Employment and civil disputes are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem background work serves the neighborhood's long-tenure community institutions and the residential building stock. Nonprofit and community-organization hiring, faith-institution-related background verification, and the specific cultural-heritage-organization workforce vetting that the historic institutions require all appear in the engagement mix. Tenant screening for the neighborhood's rent-stabilized and newer-construction buildings is a substantial workstream.",
+      logistics: "Central Harlem background checks for community-organization candidates commonly involve tightly-networked reference-verification work — organizations share leadership and staff across institutional boundaries, and standard database work must be supplemented with careful source-interview verification to distinguish genuine from boilerplate recommendations.",
+      venue: "Civil and employment disputes route to New York County Supreme Court, 60 Centre Street."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem background investigation work is anchored by CCNY hiring screening alongside the community-organization sector and the growing Manhattanville commercial-tenant base. Academic-adjacent candidate verification, standard residential tenant screening for the neighborhood's rental stock, and small-business owner vetting for the Broadway commercial corridor round out the engagement mix.",
+      logistics: "West Harlem background checks for CCNY-affiliated candidates follow city-university-system hiring practice — multi-campus employment history review, civil-service-record verification, union-affiliation review. Commercial and residential screening follows standard Manhattan practice with no unusual complexity.",
+      venue: "Employment disputes are filed at New York County Supreme Court, 60 Centre Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem background work reflects the neighborhood's mix of long-tenure community and newer-arrival residents — rent-stabilized succession-rights tenant verification, standard rental-market screening for the growing new-construction stock, and co-op screening for the Mount Morris Park Historic District brownstone conversions. Small-business owner vetting for the Frederick Douglass Boulevard operators is regular.",
+      logistics: "South Harlem background checks often include rent-stabilization succession documentation work — occupancy duration, family-relationship verification, primary-residence confirmation. Co-op screening for the historic-district buildings follows pre-war-co-op practice with historic-district-specific considerations.",
+      venue: "Civil and employment matters route to New York County Supreme Court, 60 Centre Street."
+    },
+    "inwood": {
+      casePattern: "Inwood background work is shaped most distinctively by the Dyckman Street hospitality-industry hiring cycle — the concentrated cluster of Latin-music venues, restaurants, and hookah lounges generates a steady volume of front-of-house, kitchen, and management candidate screening. Liquor-license-holder verification for the corridor's operators and cross-border reference work for candidates with recent Dominican-Republic employment histories are standard components.",
+      logistics: "Inwood background checks routinely require Spanish-capable reference verification and cross-border records work, primarily with the Dominican Republic but also with Puerto Rico and related jurisdictions. Engagement turnaround reflects the specialist coordination required for cross-border records access.",
+      venue: "Civil matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "fort-george": {
+      casePattern: "Fort George background investigation work is primarily residential tenant screening for the neighborhood's large rental stock, with small-business owner vetting for the 181st Street and St. Nicholas Avenue commercial operators as a secondary workstream. Cross-border reference verification is common given the neighborhood's Dominican-American community composition.",
+      logistics: "Fort George background checks follow standard residential-screening practice for most engagements, with Spanish-capable reference work and cross-border records verification where the candidate profile requires it. Engagement handling is generally straightforward without specialist-scope complexity.",
+      venue: "Civil matters are filed at New York County Supreme Court, 60 Centre Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill background investigation work is narrow in volume given the small community size. Residential tenant screening for the neighborhood's limited building stock, occasional small-business employment verification, and the specific civic-jurisdictional considerations that arise from Marble Hill's unusual political-Manhattan status form the engagement mix.",
+      logistics: "Marble Hill background checks follow standard residential-screening practice. The community's small size means most engagements complete quickly without specialist-scope requirements, though cross-border records work appears periodically given neighborhood demographics.",
+      venue: "Civil matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -982,6 +1093,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Washington Heights corporate investigation work is heavily weighted toward healthcare-sector matters given the Columbia University Irving Medical Center campus — healthcare-billing fraud investigation, physician-group governance disputes, vendor-kickback and medical-supply procurement matters, and False Claims Act whistleblower-adjacent investigation. The Dominican-American small-business community and cross-border commercial matters with the Dominican Republic form a secondary concentrated workstream.",
       logistics: "Washington Heights corporate investigations for medical-campus matters require the full range of healthcare-industry specialist coordination — medical-billing records, credentialing databases, HIPAA-compliant investigation protocols. Cross-border commercial investigation routinely requires Spanish-capable coverage and coordination with Dominican Republic records specialists.",
       venue: "Healthcare-sector commercial matters are filed at New York County Supreme Court Commercial Division at 60 Centre Street; federal False Claims Act and other regulatory matters at 500 Pearl Street."
+    },
+
+    // --- Sprint 2f: Harlem + North Manhattan ---
+    "harlem": {
+      casePattern: "Harlem corporate investigation work concentrates on the 125th Street commercial corridor and the nonprofit-institutional sector — employee-misconduct investigation for restaurant, retail, and service-business operators, nonprofit-governance matters for the neighborhood's substantial cultural-institution ecosystem, and commercial-dispute investigation tied to the ongoing revitalization of the commercial corridor.",
+      logistics: "Harlem corporate investigations for nonprofit-institutional matters follow NY-Attorney-General-regulated-entity standards; cultural-institution matters carry additional reputational-sensitivity considerations given the institutions' public profiles. Small-business commercial work follows standard Manhattan practice.",
+      venue: "Commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem corporate investigation work is dominated by nonprofit and community-organization governance matters — the neighborhood's concentration of historic institutions generates a steady volume of governance disputes, fiduciary-accountability matters, and the specific public-trust-related investigation work that community-founded institutions require. Standard commercial investigation is a smaller component.",
+      logistics: "Central Harlem corporate investigations for nonprofit and community-organization matters routinely require attorney-client privilege coordination and careful handling of the community-relationship dynamics that define these institutions. Board-governance records review, fiduciary-duty documentation, and source-interview protocols are standard.",
+      venue: "Commercial matters are filed at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem corporate investigation work splits between CCNY-affiliated academic-institution matters — faculty-misconduct investigation, research-integrity questions, academic-governance matters — and the commercial investigation that the Manhattanville development has generated. Real-estate-development-adjacent commercial matters have become a regular engagement type as the area has grown.",
+      logistics: "West Harlem corporate investigations for CCNY matters follow city-university-governance practice. Manhattanville real-estate-development matters frequently involve multi-party commercial structures and require specialist coordination with real-estate investigation resources.",
+      venue: "Commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem corporate investigation work is driven by two distinct engagement types — landlord-tenant and housing-court-adjacent commercial matters reflecting the neighborhood's active gentrification pressure, and small-business and operator-dispute investigation for the growing Frederick Douglass Boulevard commercial corridor. Historic-preservation-adjacent commercial matters appear for Mount Morris Park District buildings.",
+      logistics: "South Harlem corporate investigations for housing-court matters require housing-court-evidentiary-standard familiarity. Commercial-operator matters follow standard practice; historic-preservation matters intersect with Landmarks Preservation Commission regulatory frameworks that affect investigation scope.",
+      venue: "Housing and commercial matters route to Manhattan Housing Court at 111 Centre Street and New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "inwood": {
+      casePattern: "Inwood corporate investigation work is heavily weighted toward the Dominican-American small-business community — partnership disputes, cross-border commercial matters with Dominican counterparties, hospitality-operator misconduct for the Dyckman Street venue cluster, and the immigration-adjacent commercial investigation that cross-border businesses periodically require. Counterfeit-goods and import-fraud matters appear with some regularity.",
+      logistics: "Inwood corporate investigations routinely require Spanish-capable investigator coverage and coordination with Dominican Republic commercial records specialists. Cross-border commercial matters add substantial timeline complexity; domestic matters follow standard practice.",
+      venue: "Commercial matters are heard at New York County Supreme Court Commercial Division at 60 Centre Street; international-commerce matters may involve federal court at 500 Pearl Street."
+    },
+    "fort-george": {
+      casePattern: "Fort George corporate investigation work is distinctively weighted toward landlord-and-residential-management matters for the neighborhood's unusually large pre-war elevator-building stock — building-staff misconduct, vendor-contract disputes for multi-building property management, and the fraud investigation that large residential portfolios periodically generate. Small-business commercial work along 181st Street is a smaller component of the engagement mix.",
+      logistics: "Fort George corporate investigations follow standard small-scale commercial practice. Cross-border work appears periodically and requires Spanish-capable coordination; most engagements are domestic with straightforward scope.",
+      venue: "Commercial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill corporate investigation work is essentially absent as a standalone engagement type given the small community size and residential character. When matters touch the neighborhood they commonly involve adjacent Bronx-based commercial activity spilling over the 225th Street axis, and are handled as Bronx-commercial-practice engagements with only incidental Marble Hill involvement.",
+      logistics: "Marble Hill corporate investigation work that does occur runs as standard commercial practice, with Manhattan filing jurisdiction (given the neighborhood's political status) but often Bronx-based operational handling given the physical geography.",
+      venue: "Commercial matters are filed at New York County Supreme Court at 60 Centre Street."
     },
   },
 
@@ -1222,6 +1370,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Washington Heights asset searches routinely require Spanish-capable investigator resources and coordination with Dominican Republic asset-tracing specialists. Medical-professional cases tied to the CUIMC campus require practice-valuation and hospital-employed-physician retirement-plan-specific investigation.",
       venue: "Domestic filings route to New York County Supreme Court at 60 Centre Street; federal matters with international components may involve 500 Pearl Street."
     },
+
+    // --- Sprint 2f: Harlem + North Manhattan ---
+    "harlem": {
+      casePattern: "Harlem asset search work spans matrimonial and judgment-enforcement engagements across the neighborhood's demographic range — substantial cases involving long-tenure family brownstone holdings, standard residential matrimonial matters, and commercial judgment-enforcement against 125th Street operators. Multi-generational-family asset investigation appears regularly given the neighborhood's stable residential community.",
+      logistics: "Harlem asset searches frequently involve multi-generational brownstone holdings requiring title-history research, inheritance-structure review, and family-entity-structure investigation beyond standard real-estate work. Standard asset-search coverage applies for newer residents.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem asset search work is distinctive for the multi-generational-family asset profiles characteristic of long-tenure Strivers' Row and historic-Harlem-district residents — brownstone inheritance chains, family-entity structures, and the specific cultural-institution-adjacent asset positions (foundation holdings, institutional-affiliation positions) that the neighborhood's community-institution presence generates.",
+      logistics: "Central Harlem asset searches for long-tenure family subjects commonly require extensive title-history research across multiple generations of ownership, inheritance-structure verification, and the specialist coordination that multi-generational-asset investigation requires.",
+      venue: "Matrimonial matters are heard at New York County Supreme Court at 60 Centre Street; Surrogate's Court at 31 Chambers Street handles estate-related matters."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem asset search work combines CCNY-affiliated academic-retirement-plan investigation, standard residential matrimonial matters, and the new-Manhattanville-development-adjacent asset verification that commercial-real-estate investment has generated. Engagement complexity varies substantially by candidate profile.",
+      logistics: "West Harlem asset searches for CCNY-affiliated subjects follow city-university-system retirement-plan practice — specific TRS (Teachers' Retirement System) and NYCERS (NYC Employees' Retirement System) investigation differs from private-sector retirement-plan work. Standard residential asset-search practice applies otherwise.",
+      venue: "Civil and matrimonial matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem asset search work reflects the neighborhood's gentrification-driven demographic mix — matrimonial engagements for newer-arrival residents with substantial recent real-estate investments, standard residential work for long-tenure community members, and the historic-district brownstone-conversion asset profiles that Mount Morris Park area cases commonly involve.",
+      logistics: "South Harlem asset searches for historic-district brownstone subjects routinely include Landmarks Preservation Commission records review, renovation and restoration investment verification, and the specific title-history complexity that historic-district properties commonly have.",
+      venue: "Matrimonial proceedings are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "inwood": {
+      casePattern: "Inwood asset search work is notable for its cross-border component — matrimonial matters routinely involve Dominican Republic-based real estate, business holdings, or financial accounts, and judgment-enforcement engagements similarly require cross-border investigation capability. The neighborhood's rent-stabilized housing stock also generates housing-dispute-adjacent asset-investigation work.",
+      logistics: "Inwood asset searches routinely require Dominican Republic records specialists and Spanish-capable investigator coordination. Cross-border asset tracing extends typical engagement timelines to weeks rather than days for substantial matters.",
+      venue: "Matrimonial and civil matters are heard at New York County Supreme Court at 60 Centre Street; federal matters with international components may involve 500 Pearl Street."
+    },
+    "fort-george": {
+      casePattern: "Fort George asset search work is predominantly matrimonial for the neighborhood's residential community, with cross-border components appearing regularly given Dominican-American community composition. Judgment-enforcement engagements are modest in complexity; small-business commercial asset investigation for the 181st Street operators forms a secondary workstream.",
+      logistics: "Fort George asset searches routinely include Dominican Republic records work and Spanish-capable investigator coordination for substantial engagements. Most work completes within standard turnaround ranges with the cross-border coordination adding modest additional time.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill asset search work is essentially an extension of adjacent Bronx or Inwood engagement patterns given the small neighborhood size and geographic isolation. Standalone Marble-Hill-specific asset investigation is rare; matters that touch the neighborhood usually involve commercial or residential subjects whose primary activity is elsewhere.",
+      logistics: "Marble Hill asset searches follow standard residential-asset-investigation practice, with the specific civic-jurisdictional documentation work that Marble Hill's unusual political-Manhattan status occasionally requires.",
+      venue: "Civil and matrimonial matters route to New York County Supreme Court at 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -1460,6 +1645,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Washington Heights custody cases commonly involve Dominican-American community families where multi-generational caregiving structures, extended-family child-care arrangements, and cross-border relocation proposals (primarily to the Dominican Republic) are regular engagement features. Medical-community families tied to the Columbia University Irving Medical Center campus produce a distinct subset with shift-schedule-driven parenting-time matters.",
       logistics: "Washington Heights custody investigations routinely require Spanish-capable investigator coverage and cultural familiarity with Dominican-American community norms around extended-family caregiving. Hague Convention considerations come into play for cross-border custody matters. Medical-campus-adjacent cases follow the shift-schedule-observation pattern familiar from Lenox Hill and Mount Sinai engagements.",
       venue: "Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street; international-component matters may involve separate jurisdictional proceedings."
+    },
+
+    // --- Sprint 2f: Harlem + North Manhattan ---
+    "harlem": {
+      casePattern: "Harlem custody cases span the full case-type range that the neighborhood's dense residential population generates — custody-modification matters, parenting-time compliance verification, and the multi-generational-caregiver-arrangement documentation characteristic of long-tenure community families. School-route observation covers P.S. 154, P.S. 161, the Harlem Hebrew charter network, and the private-school options (Choir Academy of Harlem, local private options).",
+      logistics: "Harlem custody investigations work the neighborhood's broad geography with observation anchors at the 125th Street Metro-North and subway complexes, the public-school pickup routines, and the after-school programming sites at community centers and the Y locations. Dense residential foot traffic supports observation across most blocks.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "central-harlem": {
+      casePattern: "Central Harlem custody cases are often anchored to a handful of specific institutional and geographic reference points — Abyssinian Baptist Church's active family-ministry programming, the P.S. 46 / P.S. 194 school network serving the Strivers' Row blocks, and the West 138th and 139th Street brownstone community. Documentation frequently turns on sustained-residence verification in rent-stabilized family units, parenting-time compliance at specific church- and cultural-institution-programmed activities, and the continuity of long-established family-tradition attendance.",
+      logistics: "Central Harlem custody investigations require cultural familiarity with the community's extended-family caregiving norms. Observation anchors include the neighborhood's churches, community centers, Strivers' Row and surrounding brownstone blocks, and the specific family-friendly venues in the Lenox Avenue corridor.",
+      venue: "Custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "west-harlem": {
+      casePattern: "West Harlem custody cases commonly involve CCNY-affiliated academic-community families — parents with academic-calendar-shaped work schedules — alongside standard community-family custody matters. Documentation frequently covers the public-school network (P.S. 125, P.S. 129, P.S. 192) and the after-school programming at CCNY-adjacent community facilities.",
+      logistics: "West Harlem custody investigations work the Broadway commercial corridor and the public-school pickup geometry. CCNY-adjacent residential blocks have semester-based foot-traffic variability affecting observation timing. The neighborhood's mix of commercial and residential character supports varied observation approaches.",
+      venue: "All Manhattan custody matters route to New York County Family Court at 60 Lafayette Street."
+    },
+    "south-harlem": {
+      casePattern: "South Harlem custody cases reflect the gentrification-driven demographic mix — long-tenure community cases with multi-generational caregiving structures alongside newer-arrival-family matters with more conventional two-parent-household structures. Documentation commonly covers Marcus Garvey Park activities, the public-school network (P.S. 30, P.S. 157, P.S. 182), and the changing commercial-corridor family amenities.",
+      logistics: "South Harlem custody investigations adapt between the quieter Mount Morris Park Historic District residential blocks and the active commercial corridors. Marcus Garvey Park provides a natural observation anchor; the Frederick Douglass Boulevard commercial strip supports evening and weekend observation work.",
+      venue: "Custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "inwood": {
+      casePattern: "Inwood custody cases frequently involve Dominican-American community families with multi-generational caregiving structures and, in a substantial subset, cross-border relocation proposals involving the Dominican Republic. Hague Convention considerations come into play with regularity. Documentation commonly covers Inwood Hill Park family use, the neighborhood's Catholic-church-based family programming, and the public-school network (P.S. 152, P.S. 18, P.S. 5).",
+      logistics: "Inwood custody investigations routinely require Spanish-capable investigator coverage and cultural familiarity with Dominican-American community caregiving norms. Cross-border custody-related investigation requires specialist coordination; standard Manhattan custody-investigation techniques apply for local-conduct documentation.",
+      venue: "All Manhattan custody matters route to New York County Family Court at 60 Lafayette Street; international-component matters may involve separate jurisdictional proceedings."
+    },
+    "fort-george": {
+      casePattern: "Fort George custody cases commonly involve Dominican-American community families similar to Inwood patterns — multi-generational caregiving structures, extended-family child-care arrangements, and occasional cross-border relocation proposals. The smaller neighborhood scale concentrates documentation more tightly on specific community venues and schools (P.S. 128, P.S. 189, Mother Cabrini High School's surrounding community).",
+      logistics: "Fort George custody investigations work the neighborhood's compact residential geography. Observation anchors include the 181st Street commercial strip, the St. Nicholas Avenue corridor, and the specific churches and community institutions that family routines commonly include.",
+      venue: "Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "marble-hill": {
+      casePattern: "Marble Hill custody cases are uncommon given the small resident population but follow standard Manhattan custody-investigation patterns when they occur. The neighborhood's unusual political-Manhattan-but-physically-Bronx status occasionally creates minor procedural considerations around school-district-identification evidence and neighborhood-environment documentation.",
+      logistics: "Marble Hill custody investigations work a contained residential pocket where observation infrastructure is limited. School-route observation typically extends to schools across the 225th Street bridge in the Bronx; residential-environment documentation covers the neighborhood's small housing stock.",
+      venue: "Manhattan custody matters — including Marble Hill given its political-Manhattan status — are heard at New York County Family Court at 60 Lafayette Street."
     },
   },
 
