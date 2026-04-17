@@ -303,6 +303,33 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Marble Hill surveillance works a small and geographically isolated residential pocket where any unfamiliar foot traffic is immediately visible. The 225th Street transit hub at the 1 train station provides the primary natural-cover location; the surrounding residential blocks are quiet and require careful positioning and short rotations.",
       venue: "Manhattan matrimonial and custody matters — including those from Marble Hill given its political Manhattan status — are heard at New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
     },
+
+    // --- Sprint 2g: West Village + Chelsea ---
+    "west-village": {
+      casePattern: "West Village infidelity cases are shaped by the neighborhood's tight residential geography — the irregular colonial street grid (Waverly, Bleecker, Christopher, Grove, Perry) produces a neighborhood where documented subjects frequently have routines compressed into a few specific blocks. Cases commonly involve the restaurant and bar cluster along Bleecker and Hudson, the LGBTQ+ community venue scene anchored around Christopher Street and the Stonewall Inn at 53 Christopher, and the boutique-hotel cluster concentrated west of Seventh Avenue South.",
+      logistics: "West Village surveillance contends with the neighborhood's unusual street geometry — the non-grid layout produces short sightlines, dead-end situations, and streets that double back on themselves, which complicates vehicle tailing and requires investigators to work on foot with detailed familiarity of the specific block patterns. The dense residential-commercial mix provides good natural cover during business hours.",
+      venue: "Matrimonial proceedings are filed at New York County Supreme Court, 60 Centre Street; custody components route to Family Court at 60 Lafayette Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village infidelity cases commonly involve subjects tied to NYU — faculty, staff, graduate students, and the broader academic-and-creative-community population that the university anchors around Washington Square Park. Documentation frequently covers the MacDougal Street and Bleecker Street restaurant corridors, the specific venues that the NYU community uses (cafes, bars, bookstores), and the hotels used by academic visitors and conference attendees.",
+      logistics: "Greenwich Village surveillance benefits from dense year-round foot traffic around Washington Square Park and along MacDougal and Bleecker, supplemented by academic-calendar-driven density peaks during the NYU school year. Investigators use the park's perimeter, the dense cafe seating along the surrounding streets, and the NYU-adjacent retail as observation anchors.",
+      venue: "Divorce and custody matters route to New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea infidelity cases span the neighborhood's breadth between 14th and 34th Streets west of Sixth Avenue — the Chelsea Market commercial cluster, the 10th and 11th Avenue gallery district (which hosts significant evening opening-reception social life), the High Line traffic corridor, and the substantial residential community in the high-rise stock along the western avenues. The LGBTQ+ community presence adds distinctive case-type patterns to engagements in specific blocks.",
+      logistics: "Chelsea surveillance works one of the most foot-traffic-varied neighborhoods in Manhattan — Chelsea Market and the High Line produce intense daytime density, while the gallery district cycles between very quiet normal hours and heavy Thursday-evening opening-reception traffic. Investigators tailor timing to these patterns rather than using standardized observation windows.",
+      venue: "Manhattan matrimonial matters are heard at New York County Supreme Court, 60 Centre Street; custody at Family Court, 60 Lafayette Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking District infidelity cases concentrate on the neighborhood's unusually small geographic footprint — roughly Gansevoort to 14th Street, Ninth Avenue to the West Side Highway. The area's nightclub and upscale-restaurant cluster, the Whitney Museum at 99 Gansevoort, and the handful of luxury boutique hotels all function as primary subject-activity anchors. Documented conduct frequently involves late-evening patterns unique to this district's club scene.",
+      logistics: "Meatpacking surveillance works a compact cobblestone-street grid where agent recognition across consecutive nights is unavoidable. Investigators rotate aggressively, use the Whitney Museum and High Line southern-terminus foot traffic as daytime natural cover, and time nightlife-related observation around the specific Thursday-Saturday club-night rhythm that defines the area's evening economy.",
+      venue: "Divorce and custody matters are heard at New York County Supreme Court, 60 Centre Street, and Family Court at 60 Lafayette Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards infidelity cases are shaped by the neighborhood's distinctive character as Manhattan's newest district — the finance and tech workforce concentrated in the office towers along Tenth and Eleventh Avenues, the luxury residential condo stock, and the hotel cluster near The Shed and the Vessel. Cases commonly involve subjects whose routines center on the 20 Hudson Yards mall, the specific restaurants in the Shops at Hudson Yards, and the office-tower-to-transit transitions that structure the neighborhood's social geometry.",
+      logistics: "Hudson Yards surveillance works a master-planned environment with highly predictable pedestrian geometry — the 7-train extension at 34th Street terminus, the High Line northern end, and the mall-to-office-tower corridors channel foot traffic through a small number of observation-friendly chokepoints. The neighborhood's newness means agent recognition risk accumulates slowly, but building security and concierge staff are uniformly attentive.",
+      venue: "Matrimonial proceedings route to New York County Supreme Court at 60 Centre Street; custody to Family Court at 60 Lafayette Street."
+    },
   },
 
   // ============================================================
@@ -578,6 +605,33 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Marble Hill surveillance work is narrow in scope given the small resident population and contained geography. Cases that occur are typically matrimonial and custody-related, with occasional civil-litigation-adjacent investigation for the neighborhood's limited commercial presence. The unique political-Manhattan-but-physically-Bronx civic situation occasionally affects engagement scope.",
       logistics: "Marble Hill surveillance operates a geographically isolated pocket where the 225th Street transit hub and the Broadway corridor provide the only meaningful observation-cover zones. Investigators commonly stage from the adjacent Bronx side (Kingsbridge) where foot traffic is denser, and work identification at the bridge access points.",
       venue: "Civil matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+
+    // --- Sprint 2g: West Village + Chelsea ---
+    "west-village": {
+      casePattern: "West Village surveillance handles a broad case-type range — matrimonial and custody investigation for the neighborhood's affluent residential population, civil-litigation-adjacent observation for creative and media-industry subjects, and the specific community-related investigation that the neighborhood's tight-knit LGBTQ+ community occasionally generates. High-profile-resident matters appear with some regularity given the neighborhood's celebrity-resident demographic.",
+      logistics: "West Village surveillance requires investigators with detailed familiarity of the non-grid street layout — Bleecker, Hudson, Greenwich Avenue, and the short cross-streets between them all require memorized patterns for effective coverage. Foot-based operations dominate; vehicle work is largely ineffective given the street geometry.",
+      venue: "Civil and family-law matters proceed at New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village surveillance is structured around Washington Square Park as a geographic center of gravity — most engagements, regardless of case type, involve observation that crosses through or anchors on the park and its surrounding blocks. The park's heavy public-space activity (chess tables, performers, NYU student flow) produces continuous natural cover, and the neighborhood's retail and cafe density along Fifth Avenue, University Place, and MacDougal supports sustained observation without agent-recognition risk accumulating quickly.",
+      logistics: "Greenwich Village surveillance operates one of the densest pedestrian environments south of Times Square — Washington Square Park, the MacDougal-Bleecker restaurant cluster, and the retail along Sixth and Eighth Streets all sustain consistent foot traffic. Academic-calendar variation affects NYU-specific case timing but not general-neighborhood observation work.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea surveillance spans matrimonial and residential-dispute work, commercial investigation for the Chelsea Market and gallery-district operators, and the creative-industry engagement types that the advertising, design, and publishing tenancy in the neighborhood's office stock generates. Hotel-industry investigation is regular given the neighborhood's concentrated boutique hotel cluster.",
+      logistics: "Chelsea surveillance adapts between intensive daytime density zones (Chelsea Market, the High Line) and the quieter evening environment that follows for most of the neighborhood. Investigators commonly plan multi-agent coverage that shifts composition across the day, matching agent count to foot-traffic cycles at specific observation anchors.",
+      venue: "Civil and matrimonial matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking surveillance work is disproportionately hospitality-industry-weighted given the nightclub and restaurant cluster — operator-misconduct investigation, employee-theft documentation, VIP-guest-privacy matters, and the specific celebrity-and-public-figure engagement types that the neighborhood's club scene generates. Matrimonial surveillance for the area's condo residents is a smaller but consistent workstream.",
+      logistics: "Meatpacking surveillance works the smallest operational footprint of any Manhattan neighborhood in this investigation practice — a few blocks of cobblestone streets where everyone in the hospitality workforce knows everyone. Investigator rotation is aggressive to the point of single-evening assignment limits in some cases; team staging commonly happens from adjacent Chelsea or West Village.",
+      venue: "Civil and commercial matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards surveillance is dominated by finance-industry and tech-industry corporate investigation — the major tenant firms at 10, 30, 50, and 55 Hudson Yards produce engagement volume similar to the Financial District's pattern. Matrimonial work for the residential condo stock is a secondary but growing workstream as the neighborhood's residential population has matured.",
+      logistics: "Hudson Yards surveillance exploits the master-planned chokepoint geometry — the 7-train terminus, the High Line entry, the Shops at Hudson Yards mall entrances, and the office-tower lobbies all function as forced-transit points where subject identification is straightforward. Building security is uniformly modern and attentive; operational discretion requirements are comparable to Midtown corporate surveillance.",
+      venue: "Civil and commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street."
     },
   },
 
@@ -855,6 +909,33 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Marble Hill background checks follow standard residential-screening practice. The community's small size means most engagements complete quickly without specialist-scope requirements, though cross-border records work appears periodically given neighborhood demographics.",
       venue: "Civil matters are heard at New York County Supreme Court, 60 Centre Street."
     },
+
+    // --- Sprint 2g: West Village + Chelsea ---
+    "west-village": {
+      casePattern: "West Village background investigation work is anchored by co-op board screening for the neighborhood's premium brownstone and pre-war building stock, executive due diligence for the high-profile creative-industry resident population, and the domestic-staff vetting that affluent West Village households commonly require. Small-business employee screening for the Bleecker Street and Hudson Street operators is a secondary workstream.",
+      logistics: "West Village background checks for creative-industry candidates routinely involve project-based employment histories, multi-entity creative-industry income structures, and the reference-contact verification that distinguishes genuine professional standing from superficial credentials. Discretion is treated as an operational requirement given the neighborhood's celebrity-resident profile.",
+      venue: "Civil disputes arising from background-based decisions are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village background work sees a near-even split between university-affiliated engagements and the neighborhood's substantial non-NYU residential and commercial footprint — pre-war co-op screening along lower Fifth Avenue and Washington Mews, small-business and restaurant employee verification for the MacDougal and Bleecker operators, and the private-school-related employment verification that the neighborhood's family demographic generates. NYU hiring screening runs as a parallel workstream.",
+      logistics: "Greenwich Village background checks for NYU candidates routinely involve multi-institution academic-career verification, publication-record review, research-integrity-related prior-employer reference work, and the specialist academic-hiring verification that universities expect. Standard residential screening applies otherwise.",
+      venue: "Employment and civil matters route to New York County Supreme Court, 60 Centre Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea background investigation work is broadly distributed — creative-industry executive screening for advertising and design firm hires in the neighborhood's office stock, hospitality-industry candidate verification for the substantial hotel and restaurant operator presence, residential tenant screening for the large condo population, and gallery-and-art-market verification for the 10th and 11th Avenue art district.",
+      logistics: "Chelsea background checks for art-market candidates commonly require specialist reference work — gallery-career provenance, art-authentication and valuation history, and the art-dealer reference networks that conventional candidate screening does not cover. Standard creative-industry, hospitality, and residential practice applies for other engagement types.",
+      venue: "Employment and civil disputes are filed at New York County Supreme Court, 60 Centre Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking background work is dominated by hospitality-industry hiring — nightclub and restaurant candidate verification, promoter and event-operator vetting, and the VIP-services-related background investigation that the area's high-end club operators routinely require. The neighborhood's tightly-networked hospitality workforce generates specific reference-verification complexity.",
+      logistics: "Meatpacking background checks for hospitality candidates frequently involve references that span multiple operator networks — candidates commonly rotate across venues rapidly, and reference work must distinguish genuine endorsement from operator-rivalry signals. Union-affiliated verification appears regularly for back-of-house candidates.",
+      venue: "Employment matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards background work reflects the neighborhood's finance-and-tech-tenant profile — pre-employment screening for analyst and trader candidates at the major finance tenants, executive due diligence for senior hires at 10 Hudson Yards' anchor tenants, and pre-deal target-company diligence for the M&A work that the corporate tenant base generates. Residential co-op screening for the luxury condo stock is a smaller but premium workstream.",
+      logistics: "Hudson Yards background checks for finance-industry candidates follow the same SEC and FINRA records verification pattern as Financial District work. Tech-industry candidates require the equity-structure and multi-employer verification common to Flatiron and NoMad engagements. Engagement complexity is typically at the high end of Manhattan practice.",
+      venue: "Commercial disputes route to New York County Supreme Court Commercial Division at 60 Centre Street; federal matters to 500 Pearl Street."
+    },
   },
 
   // ============================================================
@@ -1130,6 +1211,33 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Marble Hill corporate investigation work is essentially absent as a standalone engagement type given the small community size and residential character. When matters touch the neighborhood they commonly involve adjacent Bronx-based commercial activity spilling over the 225th Street axis, and are handled as Bronx-commercial-practice engagements with only incidental Marble Hill involvement.",
       logistics: "Marble Hill corporate investigation work that does occur runs as standard commercial practice, with Manhattan filing jurisdiction (given the neighborhood's political status) but often Bronx-based operational handling given the physical geography.",
       venue: "Commercial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+
+    // --- Sprint 2g: West Village + Chelsea ---
+    "west-village": {
+      casePattern: "West Village corporate investigation work is modest in volume given the predominantly residential character — engagements typically involve resident executives whose professional matters touch the neighborhood, creative-industry trade-secret and confidentiality-breach matters for creative professionals living in the area, and the occasional operator-dispute work for the Bleecker Street and Hudson Street hospitality cluster.",
+      logistics: "West Village corporate investigations typically run as attorney-client-privileged engagements with Midtown or Downtown counsel directing scope. The West Village component of work focuses on residential-address observation and the specific venue documentation that creative-industry matters commonly require.",
+      venue: "Commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village corporate investigation work has two distinctive threads that don't exist in other university-adjacent Manhattan neighborhoods. The first is the commercial-real-estate friction between NYU and the Village community — the university operates across roughly 170 buildings in the neighborhood, and disputes involving leases, zoning, and community-relations overflow into commercial investigation work. The second is the concentration of small independent creative-industry firms in the area's converted loft stock, which generates partnership-dispute and trade-secret engagements unrelated to university matters.",
+      logistics: "Greenwich Village corporate investigations for NYU-related matters routinely run under attorney-client privilege through university counsel or outside counsel, with strict confidentiality protocols and careful handling of the university-community-relationship dimensions. Research-integrity matters frequently carry federal regulatory considerations.",
+      venue: "Commercial matters are filed at New York County Supreme Court Commercial Division at 60 Centre Street; federal matters involving research-integrity or grant issues may route to 500 Pearl Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea corporate investigation work includes a distinctive art-market and gallery-industry component — authentication and provenance disputes, gallery-operator misconduct investigation, art-market fraud matters, and the collector-dealer-dispute work that the 10th and 11th Avenue gallery district generates. Creative-industry employer engagements for advertising and design firms round out the core engagement mix alongside hospitality matters.",
+      logistics: "Chelsea corporate investigations for art-market matters routinely require art-market forensic specialists, provenance-research coordination, and the sector-specific expertise that authentication disputes involve. Standard creative-industry and hospitality-industry investigation practice applies for other engagement types.",
+      venue: "Commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street; federal counterfeit-goods and IP matters at 500 Pearl Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking corporate investigation work is shaped by the distinctive commercial-real-estate dynamics of the neighborhood — a handful of property owners control most of the ground-floor retail frontage, and operator-versus-landlord disputes drive a specific engagement type uncommon elsewhere. Whitney Museum-adjacent hospitality matters, luxury-retail operator disputes along 14th Street, and the specific property-management investigation that the neighborhood's cobblestone-street commercial stock generates round out the engagement mix.",
+      logistics: "Meatpacking corporate investigations commonly involve the full range of nightlife-industry operational considerations — cash-handling oversight, promoter-relationship mapping, VIP-service and bottle-service-fraud investigation, and union-relationship awareness for back-of-house matters. Multi-property investigator coordination is standard for operators running multiple venues.",
+      venue: "Commercial matters are heard at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards corporate investigation work has rapidly developed into one of Manhattan's more active clusters — the finance tenants (CNN, Wells Fargo, BlackRock among others at major Hudson Yards addresses) generate substantial IP-misappropriation, pre-deal diligence, and executive-conduct engagement volume, and the tech tenants produce the characteristic Flatiron-pattern trade-secret and cap-table-adjacent investigation work.",
+      logistics: "Hudson Yards corporate investigations for finance-tenant matters follow Financial District-pattern practice — attorney-client privilege coordination, electronic-evidence preservation at high technical complexity, and regulated-records review under careful legal framework. Tech-tenant matters follow Flatiron-pattern practice with cap-table and equity-structure specialist coordination.",
+      venue: "Commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street; federal matters including securities and IP actions route to 500 Pearl Street."
     },
   },
 
@@ -1407,6 +1515,33 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Marble Hill asset searches follow standard residential-asset-investigation practice, with the specific civic-jurisdictional documentation work that Marble Hill's unusual political-Manhattan status occasionally requires.",
       venue: "Civil and matrimonial matters route to New York County Supreme Court at 60 Centre Street."
     },
+
+    // --- Sprint 2g: West Village + Chelsea ---
+    "west-village": {
+      casePattern: "West Village asset search work is dominated by affluent-resident matrimonial engagements — substantial-marital-estate cases involving creative-industry, finance-industry, and inherited-wealth subjects. The neighborhood's long-tenure residential community produces engagements with multi-generational asset structures and complex brownstone-inheritance chains that require specialist coordination beyond standard asset-investigation scope.",
+      logistics: "West Village asset searches routinely involve multi-entity and multi-generation trust structure investigation, intellectual-property-portfolio assessment for creative-industry subjects, and the forensic-accounting coordination that high-net-worth matrimonial engagements commonly require.",
+      venue: "Matrimonial matters are filed at New York County Supreme Court at 60 Centre Street; estate-related components at Surrogate's Court, 31 Chambers Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village asset search work combines NYU-faculty-retirement-plan investigation (TIAA, 403(b), university-administered plans) with substantial-asset matrimonial engagements for the neighborhood's non-academic affluent population and judgment-enforcement work tied to local commercial disputes. Intellectual-property portfolio asset investigation for research-active faculty is a specialist workstream.",
+      logistics: "Greenwich Village asset searches for NYU-affiliated subjects follow the same academic-retirement-plan specialist pattern as Morningside Heights engagements. Non-academic affluent-resident cases follow standard high-net-worth-matrimonial investigation practice.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea asset search work is distinctive for its art-market component — cases where art collections, gallery-inventory positions, or art-market-investment vehicles form material portions of the asset picture. Matrimonial engagements commonly require art-and-collectibles valuation specialist coordination alongside standard real-estate and financial-instrument coverage.",
+      logistics: "Chelsea asset searches routinely involve art-market specialist coordination — collection valuation, provenance verification, gallery-inventory assessment, and the art-world reference networks that art-investment holdings require. Standard residential asset-search practice applies alongside.",
+      venue: "Matrimonial matters are heard at New York County Supreme Court at 60 Centre Street; estate-related art matters may route to Surrogate's Court, 31 Chambers Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking asset search work is weighted toward hospitality-industry commercial matters — operator-partnership disputes, judgment-enforcement against nightlife-industry entities, and the specific ownership-structure investigation that multi-venue operator portfolios require. Matrimonial work for the area's condo residents is a smaller secondary workstream.",
+      logistics: "Meatpacking asset searches for hospitality-operator subjects require liquor-license-holder verification, nightlife-industry LLC ownership-structure review, and multi-venue asset mapping that differs from standard commercial asset-investigation scope. Promoter and event-operator asset positions require sector-specific specialist coordination.",
+      venue: "Commercial and matrimonial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards asset search work is emerging as one of Manhattan's more complex engagement patterns — finance-tenant matrimonial matters involving substantial equity-compensation structures, pre-deal counterparty asset verification for the major M&A work that the tenant base generates, and the tech-tenant cap-table and convertible-instrument investigation characteristic of high-growth-stage companies.",
+      logistics: "Hudson Yards asset searches for finance-industry subjects routinely include RSU-and-deferred-compensation verification, private-equity and hedge-fund position investigation, and multi-jurisdiction holdings characteristic of senior finance-industry compensation. Tech-tenant cases follow Flatiron-pattern cap-table and convertible-instrument practice.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street; federal matters involving securities may involve 500 Pearl Street."
+    },
   },
 
   // ============================================================
@@ -1682,6 +1817,33 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Marble Hill custody cases are uncommon given the small resident population but follow standard Manhattan custody-investigation patterns when they occur. The neighborhood's unusual political-Manhattan-but-physically-Bronx status occasionally creates minor procedural considerations around school-district-identification evidence and neighborhood-environment documentation.",
       logistics: "Marble Hill custody investigations work a contained residential pocket where observation infrastructure is limited. School-route observation typically extends to schools across the 225th Street bridge in the Bronx; residential-environment documentation covers the neighborhood's small housing stock.",
       venue: "Manhattan custody matters — including Marble Hill given its political-Manhattan status — are heard at New York County Family Court at 60 Lafayette Street."
+    },
+
+    // --- Sprint 2g: West Village + Chelsea ---
+    "west-village": {
+      casePattern: "West Village custody cases commonly involve affluent creative-industry, finance-industry, and academic-community families where private-school decisions, nanny and caregiver documentation, and the specific parenting-culture norms of the neighborhood's professional-class community all factor into engagement scope. Documented conduct frequently covers the private-school cluster (Little Red School House, Grace Church School), the Hudson River Park family areas, and the neighborhood's concentrated playground network.",
+      logistics: "West Village custody investigations work the neighborhood's non-grid geography with specialized block-by-block familiarity. Observation anchors include the private-school pickup and drop-off windows, Hudson River Park's playgrounds, the specific cafes that family routines commonly include, and the residential-entry points on the quieter side streets.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "greenwich-village": {
+      casePattern: "Greenwich Village custody cases frequently involve NYU-affiliated academic-community families — parents with academic-calendar-shaped work schedules, research-travel and conference-attendance patterns, and the specific university-housing and university-affiliated-school decisions that custody matters commonly turn on. Documentation covers Washington Square Park family use, the MacDougal-Bleecker restaurant scene for family-dinner routines, and the neighborhood's school network.",
+      logistics: "Greenwich Village custody investigations work academic-calendar-driven observation cycles similar to Morningside Heights. School-route coverage includes P.S. 41, P.S. 3, and the NYU-affiliated schools; Washington Square Park provides a central natural observation anchor for family-routine documentation.",
+      venue: "All Manhattan custody matters route to New York County Family Court at 60 Lafayette Street."
+    },
+    "chelsea": {
+      casePattern: "Chelsea custody cases span the neighborhood's demographic breadth — creative-industry, hospitality-industry, and finance-industry families all generate engagement volume. Cases commonly involve the residential-environment documentation specific to the neighborhood's high-rise condo stock, school-decision matters across the P.S. 33, P.S. 11, and private-school options, and the after-school programming at the Chelsea Piers sports complex and community facilities.",
+      logistics: "Chelsea custody investigations work the public-school pickup geometry across the neighborhood's schools and the specific after-school programming anchors at Chelsea Piers and the High Line family-friendly areas. The neighborhood's varied foot-traffic density by time of day affects observation planning.",
+      venue: "Custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "meatpacking-district": {
+      casePattern: "Meatpacking custody cases are modest in volume given the small residential population — cases that occur commonly involve creative-industry or hospitality-industry families in the area's limited condo stock. Documentation frequently covers the Hudson River Park southern access, the handful of family-friendly venues in the area, and the school-route coverage that extends into adjacent West Village and Chelsea where schools are located.",
+      logistics: "Meatpacking custody investigations work the area's tiny footprint where stationary observation is quickly visible. Investigators typically anchor at Hudson River Park access points and the 14th Street transit anchors, and coordinate coverage that extends into adjacent West Village or Chelsea where family routines commonly extend.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "hudson-yards": {
+      casePattern: "Hudson Yards custody cases have emerged as the residential population has matured — cases commonly involve finance-industry and tech-industry parents with demanding professional schedules, substantial-marital-estate custody implications, and the specific residential-environment factors of high-rise condo living. Private-school decisions are nearly universal given the neighborhood's limited public-school infrastructure; school-route coverage extends into adjacent Midtown and Chelsea.",
+      logistics: "Hudson Yards custody investigations work the neighborhood's master-planned chokepoint geometry — the 7-train terminus, the residential-tower lobbies, and the pedestrian-corridors to the Shops at Hudson Yards all provide observation anchors. School-route observation typically covers the transit to private schools in adjacent neighborhoods.",
+      venue: "All Manhattan custody matters route to New York County Family Court at 60 Lafayette Street."
     },
   },
 
