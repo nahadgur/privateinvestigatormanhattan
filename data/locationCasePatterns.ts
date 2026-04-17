@@ -59,7 +59,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Matrimonial cases are filed in New York County Supreme Court at 60 Centre Street; custody matters go to Family Court at 60 Lafayette Street."
     },
     "turtle-bay": {
-      casePattern: "Turtle Bay infidelity investigations often involve subjects in the United Nations-adjacent professional community and the residential population of the quieter blocks between 42nd and 53rd Streets east of Second Avenue. Patterns commonly involve documenting conduct around residential buildings, the restaurants of Second and Third Avenues, and the hotels serving the UN and Midtown East corridor.",
+      casePattern: "Turtle Bay infidelity cases are shaped by the neighborhood's unusually high diplomatic and UN-mission residential presence between 42nd and 53rd east of Second Avenue. Cases commonly involve subjects with diplomatic or UN-staff credentials — a factor that affects investigative approach because of immunity-related sensitivities around direct contact. Residential buildings in the area tend to have distinct security profiles, and documented conduct frequently occurs at specific Second Avenue dining establishments and East Side hotels.",
       logistics: "Turtle Bay surveillance navigates quieter streets where a stationary investigator is more visible than in higher-traffic areas. Vantage points are limited and require careful positioning at cafes, residential building entrances, and the retail on Second Avenue. Foot surveillance dominates because vehicle traffic is thin.",
       venue: "Divorce proceedings run through New York County Supreme Court at 60 Centre Street; Family Court at 60 Lafayette Street handles related custody matters."
     },
@@ -74,7 +74,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "New York County Supreme Court at 60 Centre Street handles matrimonial proceedings; Family Court at 60 Lafayette Street hears related custody matters."
     },
     "kips-bay": {
-      casePattern: "Kips Bay infidelity investigations commonly involve residents of the high-rise residential stock between 23rd and 34th Streets east of Third Avenue, and the medical-professional community tied to NYU Langone and VA Medical Center. Patterns often involve documenting conduct around medical-campus schedules and the restaurant and bar venues running along Second and Third Avenues.",
+      casePattern: "Kips Bay infidelity cases are structured by the medical-workforce reality of the neighborhood. NYU Langone and the VA Medical Center drive the area's residential mix, and investigations here commonly involve subjects whose schedules are shaped by hospital rotation, on-call rhythm, and night-shift transitions. Documentation often centers around hospital entry and exit patterns, the specific restaurants frequented by medical-campus staff, and the residential-complex density south of 34th Street.",
       logistics: "Kips Bay surveillance benefits from wide avenues with reasonable sightlines and a residential foot-traffic pattern that makes identifying subjects at building entries more reliable than in denser Midtown cores. Medical-campus adjacency means shift schedules create predictable exit windows that structure observation timing.",
       venue: "Matrimonial matters are filed at New York County Supreme Court, 60 Centre Street; Family Court at 60 Lafayette Street handles custody components."
     },
@@ -96,12 +96,12 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
 
     // --- Sprint 2b: Downtown Manhattan ---
     "financial-district": {
-      casePattern: "Financial District infidelity investigations commonly involve subjects in the banking, securities, and law firm workforce clustered between Wall Street and the World Trade Center complex. Patterns often involve documenting conduct around extended-hours work routines, post-work venues along Stone Street and the Seaport, and the hotel cluster near Battery Park and along Water Street.",
+      casePattern: "Financial District infidelity cases exploit the precinct's unusual day-night population swing. The daytime workforce of ~300,000 largely disappears by 8 pm, leaving the growing residential base — roughly 60,000 residents — and a much smaller evening hospitality cluster along Stone Street and the Seaport. Investigation timing is commonly split: office-exit observation during the rush-hour departure, then a second window covering whichever evening district the subject moves toward.",
       logistics: "Financial District surveillance contends with narrow colonial-era street geometry, constant construction, and a workforce whose routines blur the line between office hours and evening activity. Investigators work stationary observation from the district's abundant cafes and lobby-adjacent retail, and coordinate for the after-hours shift when the workforce departs en masse.",
       venue: "Matrimonial proceedings run through New York County Supreme Court at 60 Centre Street, with custody elements heard at Family Court, 60 Lafayette Street."
     },
     "tribeca": {
-      casePattern: "Tribeca infidelity investigations typically involve affluent residents of the neighborhood's loft-conversion and new-construction residential stock, often including finance, legal, and creative-industry professionals with high-profile public lives. Patterns commonly involve documenting conduct around the neighborhood's restaurant cluster south of Canal, private clubs, and West Side hotel venues.",
+      casePattern: "Tribeca infidelity cases commonly revolve around the neighborhood's small but high-profile hotel and restaurant cluster — the cluster south of Canal Street running along Greenwich and West Broadway is tightly knit, and documented conduct frequently occurs at a specific set of venues investigators know well. Residential documentation is complicated by the doorman-building density and by a resident population that is unusually aware of professional photographers and surveillance.",
       logistics: "Tribeca surveillance benefits from relatively low foot traffic and wide, quiet streets — but that same quiet makes stationary observation highly visible. Investigators use the restaurant and cafe scene along Greenwich Street and West Broadway as natural vantage points, and favor brief rotations over prolonged stationary positioning.",
       venue: "High-asset matrimonial matters are filed at New York County Supreme Court, 60 Centre Street; custody components route to Family Court, 60 Lafayette Street."
     },
@@ -111,7 +111,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Matrimonial proceedings are heard at New York County Supreme Court at 60 Centre Street, with custody matters at Family Court, 60 Lafayette Street."
     },
     "water-street": {
-      casePattern: "Water Street infidelity investigations commonly involve subjects working in the financial-services and legal offices along the corridor running from the Seaport to Battery Park. Patterns typically involve documenting conduct tied to workday routines, waterfront restaurant venues, and the hotel cluster near the South Street Seaport.",
+      casePattern: "Water Street infidelity investigations follow a distinctive linear geography — the corridor runs from the Seaport south to Battery Park, and subjects' routines map cleanly onto the office-tower entry points at specific numbered Water Street addresses. Documentation typically pairs office-exit observation with coverage of the Seaport-adjacent restaurants at the corridor's north end or the Stone Street cluster near its southern end, depending on which direction a subject moves after work.",
       logistics: "Water Street surveillance works a linear corridor where subjects move predictably between office towers, the Seaport cluster, and transit points at Broad Street and Wall Street stations. Investigators leverage the predictable foot-traffic geometry and use the Seaport restaurant density as natural observation cover.",
       venue: "Divorce proceedings run through New York County Supreme Court, 60 Centre Street, with custody components handled at Family Court, 60 Lafayette Street."
     },
@@ -121,7 +121,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Matrimonial filings proceed through New York County Supreme Court at 60 Centre Street; custody matters route to Family Court, 60 Lafayette Street."
     },
     "fulton": {
-      casePattern: "Fulton infidelity investigations commonly involve subjects tied to the Seaport and adjacent Financial District workforce. Patterns typically involve documenting conduct around the Pier 17 entertainment complex, the restaurants and bars concentrated along Front and Fulton Streets, and the hotel venues serving the Seaport and Downtown hospitality corridor.",
+      casePattern: "Fulton infidelity cases are anchored by the Seaport's entertainment complex. Pier 17's rooftop and restaurant venues, the street-level cluster along Front Street, and the Peck Slip corridor define where documented conduct occurs. Many cases involve subjects whose work is in the Financial District but whose after-work patterns shift to the Seaport's more social environment, and investigators plan coverage around this west-to-east evening migration.",
       logistics: "Fulton surveillance works a dense and tourist-heavy environment with natural cover but high ambient noise and motion. Investigators favor multi-agent rotations through the Seaport's pedestrianized blocks and use the Pier 17 and Front Street restaurant density to maintain extended observation without drawing attention.",
       venue: "Manhattan matrimonial matters are heard at New York County Supreme Court, 60 Centre Street, with related custody proceedings at Family Court, 60 Lafayette Street."
     },
@@ -146,7 +146,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Matrimonial matters are heard at New York County Supreme Court, 60 Centre Street, with custody components routed to Family Court, 60 Lafayette Street."
     },
     "soho": {
-      casePattern: "SoHo infidelity investigations commonly involve subjects in the creative, fashion, and media industries who live or work in the neighborhood's loft-conversion residential stock or the adjacent office and studio spaces. Patterns typically involve documenting conduct around the restaurant cluster on West Broadway and Broome Street, the boutique-hotel venues, and the art-gallery after-hours circuit.",
+      casePattern: "SoHo infidelity cases work the neighborhood's split character — the weekend tourist density that dominates West Broadway contrasts with the weekday-morning quiet of the residential loft blocks to the east. Subjects in the creative-industry professional class commonly use the boutique-hotel cluster along Crosby, Mercer, and Lafayette, and documented conduct frequently occurs at specific restaurants whose patterns investigators can schedule around.",
       logistics: "SoHo surveillance contends with constant tourist and shopper density that varies sharply by time of day and season. Cast-iron building geometry creates useful vantage points but also highly visible stationary positions. Investigators use the neighborhood's dense restaurant and cafe seating and favor foot rotations over fixed observation.",
       venue: "New York County Supreme Court matrimonial filings are handled at 60 Centre Street; Family Court at 60 Lafayette Street hears custody matters."
     },
@@ -154,6 +154,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "NoHo infidelity investigations commonly involve subjects in the creative-professional and long-term residential community in the compact district between Houston and 8th Streets. Patterns typically involve documenting conduct around the restaurant and bar cluster near Bowery and Broadway, and the venue circuit running into Greenwich Village and the East Village.",
       logistics: "NoHo surveillance works a small, architecturally distinctive neighborhood with limited primary commercial streets — Broadway, Lafayette, and Bowery carry most foot traffic. Investigators use the restaurant and cafe density along these corridors and follow subjects into the more anonymous crowd flows of adjacent Greenwich Village and Soho.",
       venue: "Divorce and custody matters are handled at New York County Supreme Court, 60 Centre Street, and Family Court, 60 Lafayette Street, respectively."
+    },
+
+    // --- Sprint 2c: Lower East Side + East Village ---
+    "lower-east-side": {
+      casePattern: "The Lower East Side's bar-and-restaurant corridor along Ludlow, Orchard, Rivington, and Stanton is one of the most concentrated nightlife zones in Manhattan, and LES infidelity cases frequently turn on documenting conduct in this compact grid. The neighborhood's rapid weekend turnover between different crowd types — early-evening residents, late-night visitors, after-hours industry workers — means pattern identification often takes several sessions to stabilize.",
+      logistics: "LES surveillance works a tightly packed venue-to-venue environment where subjects transit in foot-only distances between three or four bars in a single evening. Investigators typically station one agent at the likely destination cluster and rotate another in the approach blocks. Weekend crowds provide cover; weekday evenings are markedly thinner and require more careful positioning.",
+      venue: "Matrimonial proceedings are filed at New York County Supreme Court, 60 Centre Street; custody elements route to Family Court at 60 Lafayette Street."
+    },
+    "east-village": {
+      casePattern: "East Village infidelity cases commonly involve subjects in the creative, music, and service-industry community anchored between Avenue A and Third Avenue. Documentation frequently centers on the restaurant and bar cluster along First and Second Avenues and the specific late-night venues — many of them long-standing neighborhood institutions — where the same subjects appear repeatedly.",
+      logistics: "East Village surveillance benefits from dense residential-commercial mixing that makes foot-based observation relatively unexposed, but the tight-knit nature of the service-industry community means venue-staff recognition is a real operational concern. Investigators rotate assignments across agents more aggressively here than in most Manhattan neighborhoods.",
+      venue: "Divorce proceedings are heard at New York County Supreme Court, 60 Centre Street; custody matters at Family Court, 60 Lafayette Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City's gentrification over the past two decades has produced an unusual resident mix — long-tenure rent-stabilized tenants alongside market-rate condo buyers — and infidelity cases here frequently span the two demographics in ways that affect investigation approach. Documentation commonly covers the Avenue B and C bar corridors and the Tompkins Square Park perimeter.",
+      logistics: "Alphabet City surveillance works quieter streets than the adjacent East Village, meaning stationary observation is more exposed. Investigators rely on the handful of busy corners — Avenue A at St. Marks, Avenue B at 7th Street — as natural anchor points and work shorter rotations through the residential blocks.",
+      venue: "Manhattan matrimonial filings route to New York County Supreme Court at 60 Centre Street; custody components to Family Court at 60 Lafayette Street."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town infidelity investigations are shaped by one of the most unusual residential environments in Manhattan — a private middle-income superblock community with its own interior street grid, security perimeter, and community structure. Documented conduct rarely occurs inside the complex itself; investigation commonly focuses on the exterior — First Avenue, 14th Street, 20th Street — where subjects enter and exit.",
+      logistics: "Stuy Town surveillance is essentially impossible inside the complex given resident security awareness and the semi-private character of the interior pathways. Investigators work exclusively at the perimeter access points, identifying subjects as they cross First Avenue or 14th Street, and follow into the adjacent East Village or Kips Bay venues where documentation can occur naturally.",
+      venue: "Matrimonial matters are heard at New York County Supreme Court, 60 Centre Street; Family Court at 60 Lafayette Street handles custody components."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village shares Stuy Town's superblock layout and middle-income-community character, and infidelity cases typically follow similar dynamics — but the complex's tighter footprint (between 20th and 23rd Streets east of First Avenue) means subjects more often transit directly into Gramercy Park and NoMad rather than the East Village. Documented conduct commonly occurs in these adjacent neighborhoods.",
+      logistics: "Peter Cooper Village surveillance operates the same way as Stuy Town — perimeter-only, with subject identification at the First Avenue and 23rd Street access points. The complex's smaller size means repeat surveillance passes become recognizable faster, and investigators commonly plan a single identification session followed by pursuit surveillance once subject routines are known.",
+      venue: "New York County Supreme Court matrimonial filings are handled at 60 Centre Street; custody elements at Family Court, 60 Lafayette Street."
+    },
+    "bowery": {
+      casePattern: "The Bowery's historic transition from Skid Row to a luxury residential and hospitality strip is the defining fact of infidelity cases in this area. The hotel cluster — the Bowery Hotel, Sixty LES, the Standard East Village nearby — drives much of the documented conduct, and the specific arrival-and-departure patterns at these hotels structure most investigation timelines.",
+      logistics: "Bowery surveillance works a main-street corridor with heavy vehicle traffic and uneven pedestrian density by block. Lobby observation is the primary work product at the luxury hotels, and investigators coordinate entry-and-exit timing documentation at specific addresses — 335 Bowery for the Bowery Hotel, 190 Bowery for other venues — where the hotel staff has no reason to recognize an investigator over a single-evening operation.",
+      venue: "Divorce and custody matters route to New York County Supreme Court and Family Court, at 60 Centre Street and 60 Lafayette Street respectively."
+    },
+    "nolita": {
+      casePattern: "Nolita's small residential footprint and boutique-retail character produce a distinctive infidelity-case pattern: subjects are commonly not residents but visitors from adjacent neighborhoods using Nolita's concentrated restaurant scene along Mulberry, Mott, and Elizabeth Streets as a meeting zone. Documentation frequently covers the cluster of small restaurants between Prince and Houston.",
+      logistics: "Nolita surveillance works an extremely compact area where the same investigator cannot work consecutive evenings without recognition risk. The neighborhood's weekend-heavy traffic provides cover then; weekday evenings are thinner and require more careful positioning, commonly using the Elizabeth Street and Mott Street restaurant seating as observation anchors.",
+      venue: "Matrimonial matters are filed at New York County Supreme Court, 60 Centre Street; custody matters at Family Court, 60 Lafayette Street."
     },
   },
 
@@ -212,12 +249,12 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Matrimonial and civil cases proceed through New York County Supreme Court, 60 Centre Street; custody components route to Family Court at 60 Lafayette Street."
     },
     "flatiron-district": {
-      casePattern: "Flatiron District surveillance commonly covers the technology, advertising, and media professional community working in the loft-office stock around Madison Square Park. Case types include executive due diligence, employee-misconduct documentation for the district's creative and tech employers, and domestic investigations tied to the neighborhood's residential population.",
+      casePattern: "Flatiron surveillance assignments are distinctive for their concentration around the Fifth Avenue and Broadway convergence at 23rd Street, where the district's signature diagonal street geometry creates unusual visual lines — the Flatiron Building itself sits at an intersection where six streets meet, which investigators use for rare multi-axis observation. Advertising, design, and tech employers occupy most of the loft-office stock, and case types lean toward executive and IP-related matters rather than standard residential surveillance.",
       logistics: "Flatiron District surveillance exploits the district's unusual diagonal street geometry — the Fifth Avenue/Broadway intersection at the Flatiron Building creates sightlines across three streets at once, and Madison Square Park provides natural stationary cover. High daytime density supports foot surveillance; evening coverage is thinner.",
       venue: "Corporate and matrimonial matters are filed at New York County Supreme Court, 60 Centre Street; Family Court at 60 Lafayette Street handles custody."
     },
     "nomad": {
-      casePattern: "NoMad surveillance commonly covers the technology and media professional community, hotel-based business subjects using the area's flagship hotels, and residential cases tied to the high-end residential stock between Madison and Fifth Avenues. Case types include domestic investigations, executive due diligence, and hospitality-industry misconduct documentation.",
+      casePattern: "NoMad surveillance is built around the district's hotel-centric character. Several flagship hotels — the NoMad Hotel, the Ace, the Gansevoort-family properties — function as primary subject venues, and case planning frequently centers on the lobby bar, rooftop, and restaurant patterns of these specific properties. Tech and media employer presence is lighter than adjacent Flatiron; matters here skew more toward hospitality-executive conduct and high-end residential surveillance for the area's condo stock.",
       logistics: "NoMad surveillance centers on the area's major hotel lobbies, bars, and rooftop venues where subject activity concentrates. Investigators work multi-hotel coverage when patterns are unclear, using short walks between venues and the natural density of hotel guest traffic as cover for foot rotation.",
       venue: "Evidence for matrimonial, custody, or civil proceedings is prepared for New York County Supreme Court at 60 Centre Street and Family Court, 60 Lafayette Street."
     },
@@ -249,7 +286,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Commercial and securities matters route to New York County Supreme Court, 60 Centre Street, or Thurgood Marshall U.S. Courthouse at 40 Centre Street for federal proceedings."
     },
     "fulton": {
-      casePattern: "Fulton surveillance commonly covers Seaport-area hospitality and tourism industry subjects along with the adjacent Financial District workforce. Case types include employee-theft documentation for Seaport-cluster operators, hospitality-industry misconduct investigation, and matrimonial cases for area residents. Tourist-density variation affects surveillance planning seasonally.",
+      casePattern: "Fulton surveillance operations concentrate around the Seaport's unique pedestrianized environment — Front Street, Fulton Street, and the Pier 17 complex have no vehicle traffic, which eliminates vehicle-tailing but creates distinctive pedestrian-flow patterns that investigators exploit. Tourist-density variation is extreme between Sunday-afternoon peaks and weekday mornings, and operation timing is planned around these cycles. Hospitality-industry case mix dominates; maritime-and-festival event programming creates one-off high-density coverage needs.",
       logistics: "Fulton surveillance works the heavily pedestrianized Pier 17 and Front Street cluster where tourist density provides natural cover but also high ambient movement that complicates target tracking. Investigators use the restaurant and retail density, and structure coverage around the Seaport's evening entertainment schedules.",
       venue: "Civil and matrimonial proceedings are heard at New York County Supreme Court, 60 Centre Street."
     },
@@ -269,7 +306,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Civil and matrimonial matters are handled at New York County Supreme Court, 60 Centre Street; international-commerce components may involve federal court at 500 Pearl Street."
     },
     "little-italy": {
-      casePattern: "Little Italy surveillance commonly covers restaurant-industry subjects for the area's compact hospitality cluster, along with residential subjects in the neighborhood's small residential footprint. Case types include employee-theft documentation for restaurant operators, vendor-relationship investigations, and matrimonial work for area residents.",
+      casePattern: "Little Italy surveillance works a tightly bounded four-block commercial spine along Mulberry Street from Canal to Broome. The restaurant operators and families in this compact area know each other professionally and personally, and agent recognition is the single biggest operational risk — investigators commonly cannot return to the same block within a week. The seasonality of San Gennaro and the summer-long sidewalk-cafe season fundamentally changes what surveillance is possible.",
       logistics: "Little Italy surveillance works a highly compact geography where repeated observation by the same agent risks recognition within days. Investigators rotate frequently, use the high seasonal tourist density for natural cover when in season, and work the adjacent SoHo and Nolita corridors during quieter periods.",
       venue: "Civil and matrimonial proceedings route to New York County Supreme Court, 60 Centre Street."
     },
@@ -283,6 +320,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "NoHo surveillance works a small district with limited primary commercial streets; investigators typically cover Broadway, Lafayette Street, and Bowery as the core movement corridors. The adjacent higher-density crowd flows of Greenwich Village, the East Village, and SoHo provide natural transition points for extended coverage.",
       venue: "Civil and family-law matters are heard at New York County Supreme Court, 60 Centre Street, and Family Court, 60 Lafayette Street."
     },
+
+    // --- Sprint 2c: Lower East Side + East Village ---
+    "lower-east-side": {
+      casePattern: "LES surveillance spans a wide case-type range — the neighborhood's nightlife economy drives hospitality-industry investigation, while the growing residential high-rise stock along Essex and Delancey produces standard domestic and civil-proceeding work. The neighborhood's 24-hour activity profile means operations commonly extend into early-morning hours in ways standard Manhattan surveillance does not.",
+      logistics: "LES surveillance's defining operational challenge is the sheer number of venue destinations within a few blocks — a single evening can see a subject visit five or six locations. Investigators plan multi-agent coverage with one mobile and one stationary at predictable destination clusters, and use the neighborhood's pedestrianized weekend streets to maintain extended observation.",
+      venue: "Civil and family-law matters proceed through New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "east-village": {
+      casePattern: "East Village surveillance work is dominated by cases tied to the neighborhood's service-industry and creative-professional residents. Investigations here commonly involve hospitality-industry misconduct for the bar and restaurant operators on First and Second Avenues, matrimonial surveillance, and the civil-litigation-adjacent observation that the neighborhood's landlord-tenant dispute density generates.",
+      logistics: "East Village surveillance benefits from consistent street-level density from afternoon through late night, which supports extended foot-based observation. The neighborhood's concentration of bars and restaurants makes hospitality-industry case coordination unusually tight — multi-location operations are common and require careful scheduling.",
+      venue: "Manhattan civil and family-law matters are heard at New York County Supreme Court, 60 Centre Street, and Family Court, 60 Lafayette Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City surveillance work includes a distinctive landlord-tenant-dispute component driven by the neighborhood's ongoing gentrification pressure on rent-stabilized housing. Investigations here commonly document illegal-conversion evidence, harassment patterns, and tenant-fraud matters alongside more standard domestic and civil-litigation surveillance.",
+      logistics: "Alphabet City surveillance works quiet residential blocks where agent presence is conspicuous. Investigators generally anchor positions at the Tompkins Square Park perimeter, the Avenue A and Avenue B commercial strips, and work short observation windows rather than sustained stationary coverage in the interior residential blocks.",
+      venue: "Civil and housing-court matters route to Manhattan Civil Court at 111 Centre Street; broader civil and matrimonial matters to New York County Supreme Court, 60 Centre Street."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town surveillance is almost entirely residential-perimeter work — matrimonial cases, custody-adjacent observation, and the occasional insurance-fraud matter where a resident's claimed disability conflicts with observed conduct. The private-superblock character of the complex means most documented conduct occurs outside Stuy Town itself, in adjacent neighborhoods where subjects move after exiting the gates.",
+      logistics: "Stuy Town surveillance operates exclusively at the complex's perimeter — the gates at First Avenue, 14th Street, and 23rd Street are the only subject-identification points. Investigators station at these access points for identification, then follow subjects into whichever adjacent neighborhood they enter. Interior observation is essentially ruled out by the community's security profile.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court, 60 Centre Street."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village surveillance follows the same perimeter-work pattern as Stuy Town but with a tighter footprint — only three main access points rather than Stuy Town's larger set. Case types include matrimonial, residential-environment documentation for family-law proceedings, and community-association-adjacent investigation where the building's management becomes involved in resident disputes.",
+      logistics: "Peter Cooper Village surveillance works the three main gate access points on 20th, 23rd, and First Avenue. Interior work is harder here than at Stuy Town due to the smaller size — an agent visible inside the complex is quickly noticed by residents. Operations are concentrated at identification-and-follow rather than extended on-site observation.",
+      venue: "Matrimonial and civil matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "bowery": {
+      casePattern: "Bowery surveillance spans the neighborhood's hospitality workforce — hotel staff investigation, restaurant misconduct, and hotel-guest-subject surveillance for both matrimonial and civil matters. The corridor's transformation into a luxury residential and hospitality strip has also driven higher-end domestic investigation volume than existed a decade ago.",
+      logistics: "Bowery surveillance works a long linear corridor with unusual vehicle-and-pedestrian mix — the main street carries significant vehicle traffic unusual for Manhattan nightlife districts. Investigators typically station at specific hotel entrances or restaurant destinations and work short rotations given the relatively exposed sidewalk environment.",
+      venue: "Civil and matrimonial proceedings route to New York County Supreme Court, 60 Centre Street."
+    },
+    "nolita": {
+      casePattern: "Nolita surveillance work is unusually boutique-dense — the neighborhood's retail and restaurant operators are small-scale, and investigations here commonly involve retail-theft documentation, boutique-employee misconduct, and subject surveillance tied to Nolita's distinctive restaurant scene. Matrimonial surveillance for area residents is a smaller but consistent workstream.",
+      logistics: "Nolita surveillance operates in a concentrated four-block commercial area where agent recognition across consecutive days is almost unavoidable. Investigators rotate assignments aggressively, use the seasonal outdoor-dining weeks as natural cover, and commonly stage from adjacent SoHo or Little Italy for team coordination.",
+      venue: "Civil and commercial matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -290,7 +364,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
   // ============================================================
   "background-checks": {
     "midtown-east": {
-      casePattern: "Midtown East background investigation work is dominated by corporate and financial-services use cases — pre-employment screening for the office corridors between Park and Third Avenues, pre-deal executive due diligence for M&A and financing transactions, and business-partner vetting tied to the area's high concentration of law firms, banks, and private equity offices.",
+      casePattern: "Midtown East background work serves the corridor's concentration of biglaw, management consulting, and corporate in-house hiring rather than regulated finance per se. Typical engagements include partner-level lateral vetting for the law firms along Park Avenue, board-level appointments for the area's multinational office stock, and candidate screening for the concentrated consulting and professional-services firm presence along Madison.",
       logistics: "Midtown East background investigations typically involve subjects with significant professional and public footprints requiring multi-database verification, SEC and FINRA record review for finance-industry candidates, and jurisdiction checks beyond New York. Many engagements are managed under attorney-client privilege through law firm referrals.",
       venue: "Civil findings arising from background investigations are filed at New York County Supreme Court, 60 Centre Street, where the bulk of Manhattan commercial and employment-dispute litigation proceeds."
     },
@@ -320,7 +394,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Matters proceeding to Manhattan civil litigation are filed at New York County Supreme Court, 60 Centre Street."
     },
     "sutton-place": {
-      casePattern: "Sutton Place background investigation work is dominated by co-op board screening for the neighborhood's premium residential buildings, executive due diligence at the highest end of Midtown East hiring, and domestic-staff vetting for affluent households. Financial-industry executive screening is also a regular workstream given resident demographics.",
+      casePattern: "Sutton Place background work centers on one of the most concentrated co-op-screening markets in Manhattan. The neighborhood's pre-war white-glove buildings east of First Avenue maintain some of the most demanding application review processes in the city, and investigators frequently work directly with managing agents on financial-verification, employment-continuity, and reputational-review components that go well beyond standard co-op-application screening.",
       logistics: "Sutton Place background checks routinely involve subjects with substantial financial histories, trust and entity structures, and significant professional records — multi-jurisdiction database work, SEC and FINRA record review, and source-interview verification are standard. Discretion is treated as an operational requirement given resident profile.",
       venue: "Commercial and civil proceedings arising from background findings route to New York County Supreme Court, 60 Centre Street."
     },
@@ -335,7 +409,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Civil and employment disputes arising from background findings are heard at New York County Supreme Court, 60 Centre Street."
     },
     "gramercy-park": {
-      casePattern: "Gramercy Park background investigation work is dominated by co-op board screening for the neighborhood's premium residential stock, private-club member vetting, and executive and business-partner due diligence for affluent residents. Estate and trust-related background work is also a regular component of the engagement mix.",
+      casePattern: "Gramercy Park background work has a distinctive private-club dimension — the Gramercy Park Hotel (reopened and reconverted), the National Arts Club, the Players, and park-key-holder vetting all drive engagement volume that exists nowhere else in Manhattan. Residential co-op screening for the park-facing buildings is also demanding given the building stock's historic character and the park-key privilege that accompanies some residences.",
       logistics: "Gramercy Park background checks commonly involve multi-entity and trust-structure verification, significant financial-industry history review, and source-interview work that goes beyond standard database checks. Engagement discretion is standard given the neighborhood's privacy expectations.",
       venue: "Commercial and civil proceedings are filed at New York County Supreme Court, 60 Centre Street; Surrogate's Court at 31 Chambers Street handles estate-related matters."
     },
@@ -352,12 +426,12 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
 
     // --- Sprint 2b: Downtown Manhattan ---
     "financial-district": {
-      casePattern: "Financial District background investigation work is dominated by the finance-industry hiring and due-diligence engagement mix — broker-dealer and hedge fund candidate screening, pre-deal executive due diligence for M&A and financing transactions, and business-partner vetting for the precinct's high concentration of financial-services counterparties.",
+      casePattern: "Financial District background work spans the full finance-industry hiring funnel, but the precinct's distinct profile is the sheer density of compliance-sensitive roles — broker-dealer registrations, FINRA-regulated positions, and licensed finance professionals requiring Form U4 disclosure verification. Background engagements here routinely pair candidate screening with regulatory-record reconciliation that consumer services cannot perform.",
       logistics: "Financial District background investigations routinely include SEC and FINRA record review, multi-jurisdiction civil-records coverage given finance-industry mobility, and source-interview verification for senior executive candidates. Attorney-client privilege coordination is standard for substantial engagements.",
       venue: "Commercial and employment disputes arising from background findings route to New York County Supreme Court Commercial Division, 60 Centre Street; federal regulatory matters to 500 Pearl Street."
     },
     "tribeca": {
-      casePattern: "Tribeca background investigation work commonly covers affluent residential co-op and condo screening for the neighborhood's premium residential stock, executive due diligence for the area's substantial financial-services and legal resident population, and domestic-staff vetting for high-net-worth households.",
+      casePattern: "Tribeca background investigations are shaped by the neighborhood's mix of converted-loft co-ops, new-construction condos, and the distinct screening cultures of each. Co-op boards in the converted historic buildings typically demand more exhaustive financial documentation than comparable condos; celebrity-resident buildings often have additional privacy-and-paparazzi-history review layers. Estate-planning and family-office-adjacent engagements also form a regular workstream given resident demographics.",
       logistics: "Tribeca background checks routinely involve subjects with complex financial histories, multi-entity structures, and significant professional records requiring database work beyond standard consumer-service scope. Discretion is treated as operational requirement given resident profile.",
       venue: "Civil proceedings arising from background findings are filed at New York County Supreme Court, 60 Centre Street."
     },
@@ -372,7 +446,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Commercial and employment disputes are filed at New York County Supreme Court, 60 Centre Street; federal matters route to 500 Pearl Street."
     },
     "wall-street": {
-      casePattern: "Wall Street background investigation work is dominated by senior finance-industry hiring and transaction due diligence — investment bank and hedge fund executive screening, pre-deal target-company management diligence, and business-partner vetting for substantial commercial transactions.",
+      casePattern: "Wall Street-specific background work concentrates at the highest seniority end — managing director, partner-track, and C-suite finance candidates where pre-deal diligence, reputational risk, and disclosure-obligation review drive the engagement scope. Many matters originate not from HR but from outside counsel handling employment agreements, and the investigator's output commonly feeds directly into counsel's risk memo rather than a hiring decision.",
       logistics: "Wall Street background investigations are typically the most complex in Manhattan — substantial financial records, multi-jurisdiction regulatory histories, trust and entity structures, and often international exposure all require specialist coordination. Engagement turnaround reflects complexity rather than standard ranges.",
       venue: "Commercial disputes arising from background findings route to Commercial Division, 60 Centre Street; federal regulatory matters to 500 Pearl Street."
     },
@@ -410,6 +484,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "NoHo background investigation work covers creative-professional employer screening for the area's advertising and media operators, loft-stock co-op screening, and tenant verification for the rental residential stock. Engagement volume is moderate given the compact neighborhood footprint.",
       logistics: "NoHo background checks follow creative-industry and residential screening practice — freelance and project-employment verification for candidates, and standard residential screening for rental and co-op evaluations.",
       venue: "Civil and employment matters are filed at New York County Supreme Court, 60 Centre Street."
+    },
+
+    // --- Sprint 2c: Lower East Side + East Village ---
+    "lower-east-side": {
+      casePattern: "LES background investigation work serves a dual client base: the hospitality-industry operators along the nightlife corridor screening bar, restaurant, and club staff; and the new-construction residential building managers screening tenants for the Essex Crossing, Ludlow, and Orchard high-rise stock. The two workstreams have fundamentally different verification requirements and timelines.",
+      logistics: "LES background checks for hospitality candidates commonly involve multi-employer, tips-income histories that consumer-database services cover unevenly. Investigator supplementation through prior-employer interviews and industry-reference verification is standard. Residential tenant-screening follows standard Manhattan rental-market practice.",
+      venue: "Civil and commercial disputes arising from background findings route to New York County Supreme Court, 60 Centre Street."
+    },
+    "east-village": {
+      casePattern: "East Village background work is dominated by the neighborhood's long-established restaurant and bar operators — pre-employment screening for front-of-house and kitchen staff across the dense First and Second Avenue hospitality corridor. Small-business owner vetting for the neighborhood's concentrated operator community is also a recurring workstream.",
+      logistics: "East Village background checks for hospitality candidates frequently require verification across overlapping employer networks — the neighborhood's operators share staff regularly, and reference-contact verification has to distinguish signal from boilerplate recommendation. Standard database work applies alongside this industry-specific layer.",
+      venue: "Employment disputes arising from hiring decisions are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City background investigation work is anchored by landlord screening for the area's rent-stabilized building stock — tenant verification where succession rights, subletting compliance, and long-tenure-occupancy factors are material. Small-business screening for the Avenue A and Avenue B commercial strips is a secondary workstream.",
+      logistics: "Alphabet City background checks for tenant matters routinely involve verification of rent-stabilization succession-rights claims — occupancy-duration documentation, family-relationship verification, and primary-residence confirmation that goes beyond standard tenant-screening database work. Engagement turnaround reflects the evidence-gathering complexity.",
+      venue: "Housing and civil matters route to Manhattan Civil Court at 111 Centre Street and New York County Supreme Court at 60 Centre Street."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town background work is dominated by the complex's own tenant-screening requirements for the middle-income apartment inventory. The community's middle-income-community character drives a specific candidate profile with predictable records coverage, and engagements are typically tenant-screening rather than employment-screening focused.",
+      logistics: "Stuy Town background checks follow the complex's established screening-package expectations with investigators familiar with the community's requirements. Engagement turnaround is generally standard given the relatively predictable candidate profile.",
+      venue: "Civil matters arising from tenant-screening decisions route to New York County Supreme Court, 60 Centre Street."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village background work aligns closely with Stuy Town's pattern — tenant-screening for the complex's middle-income apartment inventory, with candidate profiles similar to the adjacent larger complex. The smaller footprint means engagement volume is proportionally lower but the work type is nearly identical.",
+      logistics: "Peter Cooper Village background checks follow the same screening-package expectations as Stuy Town, with coordination through the complex's management. Engagement handling is standard with no unusual specialist requirements.",
+      venue: "Civil matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "bowery": {
+      casePattern: "Bowery background investigation work serves the hotel and luxury-hospitality operators along the corridor — general manager, F&B director, and senior-hospitality hiring for the Bowery Hotel, Sixty LES, and adjacent properties. Residential background work for the corridor's new luxury condo buyers is a secondary but growing workstream.",
+      logistics: "Bowery background checks for senior hospitality hiring routinely involve multi-property and multi-brand employment histories that standard databases don't aggregate well. Investigator-conducted reference verification and industry cross-referencing is standard practice. Luxury condo purchaser screening follows standard Manhattan high-end residential screening practice.",
+      venue: "Employment and commercial matters route to New York County Supreme Court, 60 Centre Street."
+    },
+    "nolita": {
+      casePattern: "Nolita background work is driven by the neighborhood's concentrated boutique-retail and restaurant operator community — small-business owner vetting, boutique-manager hiring, and partnership-diligence work for the neighborhood's operator ecosystem. Residential tenant screening occurs for the small residential population but is a modest workstream.",
+      logistics: "Nolita background checks routinely involve candidates with creative-industry histories — freelance work, project-based employment, multi-brand hospitality careers — that standard screening databases cover unevenly. Investigator supplementation through direct reference verification is standard.",
+      venue: "Commercial and employment disputes are heard at New York County Supreme Court, 60 Centre Street."
     },
   },
 
@@ -539,6 +650,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "NoHo corporate investigations commonly involve creative-industry-specific considerations — project-based employment complicates electronic-evidence scope, and industry inter-relationships mean careful conflicts-of-interest screening is needed before engagement.",
       venue: "Commercial matters are filed at New York County Supreme Court, 60 Centre Street."
     },
+
+    // --- Sprint 2c: Lower East Side + East Village ---
+    "lower-east-side": {
+      casePattern: "LES corporate investigation work concentrates on hospitality-industry matters for the nightlife-corridor operators — employee-theft schemes, cash-handling fraud, and vendor-kickback arrangements across the bar, restaurant, and club ecosystem. The neighborhood's operator concentration means cross-location investigation is a regular engagement feature.",
+      logistics: "LES corporate investigations commonly require coordinated surveillance across multiple related venues operated by the same parent group, with point-of-sale data review, covert staff-conduct observation, and vendor-relationship mapping. Evening and late-night operations are routine given the industry's business hours.",
+      venue: "Commercial matters are filed at New York County Supreme Court Commercial Division, 60 Centre Street."
+    },
+    "east-village": {
+      casePattern: "East Village corporate investigation work serves the bar and restaurant operators along First and Second Avenues — cash-handling and employee-theft investigations, vendor-kickback schemes, and the liquor-license-compliance-adjacent investigation that some operator disputes require. Small-business partnership disputes are also a regular workstream.",
+      logistics: "East Village corporate investigations contend with the tight-knit character of the neighborhood's operator community — many operators know each other and their staff overlap across venues, which shapes investigation-design to minimize cross-venue information leakage. Standard commercial-investigation methods apply alongside this relational-sensitivity component.",
+      venue: "Commercial matters proceed through the Commercial Division, 60 Centre Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City corporate investigation work is specifically shaped by the landlord-tenant commercial dispute patterns common in the neighborhood — illegal-conversion documentation, tenant-fraud investigation for landlord clients, harassment-documentation work for tenant-side counsel. Small-business operator disputes along the commercial strips form a secondary workstream.",
+      logistics: "Alphabet City corporate investigations for housing-court matters require specialized surveillance and documentation approaches — evidence has to meet housing-court evidentiary standards, which differ in some respects from general civil-court requirements. Investigator familiarity with these standards is material to case outcome.",
+      venue: "Housing-court matters route to Manhattan Housing Court at 111 Centre Street; broader commercial matters to New York County Supreme Court Commercial Division, 60 Centre Street."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town corporate investigation work is limited given the predominantly residential character of the complex. When it occurs, engagements commonly involve the complex's own management disputes, vendor-relationship investigation for the community's service providers, and occasional resident-employer-level commercial matters that happen to overlap with the complex.",
+      logistics: "Stuy Town corporate investigations generally run as standard commercial-investigation engagements without specific Stuy Town-related operational considerations. Investigation work is typically conducted off-site with only tangential reference to the complex itself.",
+      venue: "Commercial matters are filed at New York County Supreme Court Commercial Division, 60 Centre Street."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village corporate investigations, when they occur, most often involve disputes internal to the complex's own property-management structure — vendor-contract matters, building-staff misconduct allegations, and the construction-defect and renovation-related investigation that a complex of this age routinely generates. Independent operator or tenant-business engagements are rare given the residential-only zoning.",
+      logistics: "Peter Cooper Village corporate investigations run as standard commercial-investigation engagements. Community-specific operational considerations are minimal given most work is conducted off-site from the complex itself.",
+      venue: "Commercial matters proceed through the Commercial Division at 60 Centre Street."
+    },
+    "bowery": {
+      casePattern: "Bowery corporate investigation work is concentrated on the hotel and hospitality operators along the corridor — hotel-management misconduct, hospitality-vendor investigation, and the employee-fraud matters that hotel F&B operations consistently generate. Restaurant-operator commercial disputes are also a regular workstream given the corridor's restaurant density.",
+      logistics: "Bowery corporate investigations for hotel matters commonly involve the full range of hospitality-industry operational concerns — union considerations, guest-privacy constraints, brand-reputation sensitivities, and cross-property evidence patterns. Multi-property investigator coordination is standard for brand-level engagements.",
+      venue: "Commercial matters are heard at New York County Supreme Court Commercial Division, 60 Centre Street."
+    },
+    "nolita": {
+      casePattern: "Nolita corporate investigation work is driven by the neighborhood's boutique-retail and restaurant operator community — counterfeit-goods investigation for the fashion boutiques, partnership-dispute work for operator partnerships, and retail-theft and employee-misconduct documentation. The scale is boutique — engagements are typically smaller than SoHo or Tribeca corporate work.",
+      logistics: "Nolita corporate investigations work an operator community where everyone knows everyone — confidentiality is an operational challenge at the neighborhood-relationship level, not just within the specific investigation. Engagement discretion is treated as a primary operational requirement.",
+      venue: "Commercial matters are filed at New York County Supreme Court Commercial Division, 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -667,6 +815,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "NoHo asset searches for creative-industry subjects routinely include royalty-stream and project-equity investigation beyond standard asset-search scope, requiring industry-familiar specialist coordination. Standard coverage applies otherwise.",
       venue: "Civil and matrimonial matters are heard at New York County Supreme Court, 60 Centre Street."
     },
+
+    // --- Sprint 2c: Lower East Side + East Village ---
+    "lower-east-side": {
+      casePattern: "LES asset search work is shaped by the wealth transition the neighborhood has undergone — matrimonial engagements commonly involve one or both parties with substantial newly-acquired real estate or business assets tied to the neighborhood's nightlife-economy boom. Judgment-enforcement work for commercial creditors against hospitality operators is also a regular engagement type.",
+      logistics: "LES asset searches for nightlife-operator subjects commonly require liquor-license-holder records review, point-of-sale-data-derived revenue verification, and multi-venue ownership-structure mapping. Standard real-estate and financial-account coverage applies alongside these industry-specific components.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court, 60 Centre Street."
+    },
+    "east-village": {
+      casePattern: "East Village asset search work commonly serves small-business commercial disputes and matrimonial engagements for the neighborhood's long-tenure resident community. Restaurant and bar operator ownership-structure verification is a recurring engagement component given the concentration of hospitality businesses.",
+      logistics: "East Village asset searches for hospitality-operator subjects require liquor-license-holder verification, hospitality-LLC ownership-structure review, and multi-venue asset mapping. Residential-asset work follows standard Manhattan practice with no unusual complexity.",
+      venue: "Civil and matrimonial matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City asset search work has a distinctive housing-court-related component — cases where landlord or tenant parties need asset verification tied to housing-court litigation over rent-stabilized units, succession rights, or harassment claims. Standard matrimonial and civil asset investigation occurs for the neighborhood's residential population alongside this.",
+      logistics: "Alphabet City asset searches for housing-court matters follow a narrower evidentiary scope than general civil asset investigation — the specific financial-position elements the housing court considers drive engagement design. Standard civil asset-search coverage applies for broader engagements.",
+      venue: "Housing matters proceed at Manhattan Housing Court at 111 Centre Street; civil and matrimonial matters at New York County Supreme Court, 60 Centre Street."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town asset search work is primarily matrimonial for the complex's resident community — middle-income family divorce engagements with relatively standard asset profiles (primary residence, retirement accounts, standard investment vehicles). Judgment-enforcement engagements occur but are modest in complexity.",
+      logistics: "Stuy Town asset searches follow standard middle-income residential practice. Engagements typically complete within standard turnaround windows without specialist-scope components.",
+      venue: "Civil and matrimonial matters route to New York County Supreme Court, 60 Centre Street."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village asset search work aligns with Stuy Town's pattern — matrimonial engagements for the complex's resident community with relatively standard asset profiles. Engagement volume is proportionally lower given the smaller community size but the work type is nearly identical.",
+      logistics: "Peter Cooper Village asset searches follow standard middle-income residential practice with no unusual specialist requirements.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court, 60 Centre Street."
+    },
+    "bowery": {
+      casePattern: "Bowery asset search work frequently involves higher-asset matrimonial engagements for the corridor's luxury-condo residents, along with commercial asset investigation tied to the hotel and hospitality operators. Hotel-brand ownership-structure diligence is a specialist workstream given the corridor's hospitality concentration.",
+      logistics: "Bowery asset searches for hotel-related matters require hospitality-industry specific verification — management-agreement positions, royalty-interest verification, and brand-and-franchise ownership structures. Standard residential asset-search coverage applies for condo-resident matrimonial engagements.",
+      venue: "Matrimonial and civil matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+    "nolita": {
+      casePattern: "Nolita asset search work is a mix of small-business commercial matters — partnership disputes, judgment enforcement against operators — and matrimonial engagements for the neighborhood's affluent residential population. Intellectual-property and fashion-brand asset verification is a recurring specialist component for boutique-operator matters.",
+      logistics: "Nolita asset searches for boutique-operator subjects commonly include IP-portfolio verification, fashion-brand-licensing position review, and multi-brand operator ownership mapping. Standard asset-search coverage applies alongside these industry-specific components.",
+      venue: "Commercial and matrimonial matters route to New York County Supreme Court, 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -684,7 +869,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "All custody matters are heard at New York County Family Court, 60 Lafayette Street."
     },
     "hell-s-kitchen": {
-      casePattern: "Hell's Kitchen child custody investigations commonly involve families across the neighborhood's mixed-income residential stock — custody-modification matters, parenting-time compliance verification, and residential-environment documentation. Cases frequently involve attorneys working with community legal services alongside private counsel.",
+      casePattern: "Hell's Kitchen custody matters are distinctive for the neighborhood's dense mix of rent-stabilized families, market-rate renters, and condo owners — cases commonly involve documentation of stability-of-residence when one parent is in rent-stabilized housing facing succession-rights issues. Proximity to Port Authority and the theatre district also shapes cases with performing-arts-industry parents whose schedules and travel patterns are routinely contested.",
       logistics: "Hell's Kitchen custody investigations navigate the neighborhood's dense mixed-use geography — apartment-entry observation, playground and school-route coverage, and after-school-activity tracking all structure investigation planning. Foot surveillance dominates; vehicle work is usually ineffective in the district's street geometry.",
       venue: "All Manhattan custody proceedings are heard at New York County Family Court, 60 Lafayette Street."
     },
@@ -704,7 +889,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Domestic Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street; international-component matters may involve separate jurisdictional processes."
     },
     "sutton-place": {
-      casePattern: "Sutton Place child custody investigations typically involve high-net-worth families where custody matters intersect with substantial financial implications — relocation proposals affecting support orders, private-school decisions, and documentation of parenting conduct in affluent residential environments. Engagements commonly run for extended durations given complexity.",
+      casePattern: "Sutton Place custody cases commonly turn on a narrow and neighborhood-specific set of facts — which co-op board approved which parent's post-separation residence, whether concierge and building-staff testimony is available, and how international travel schedules tied to family-office or financial-industry roles affect parenting time. Investigators coordinate with family-law counsel on which elements are worth documenting given the court's evidentiary focus.",
       logistics: "Sutton Place custody investigations work doorman-building residential environments where observation is challenging and scrutiny of unfamiliar foot traffic is immediate. Investigators rely on approach-route coverage, private-school and activity-venue observation, and multi-day pattern establishment rather than point-in-time documentation.",
       venue: "High-asset custody proceedings are heard at New York County Family Court, 60 Lafayette Street, with substantial-estate implications sometimes routed through Supreme Court matrimonial calendars at 60 Centre Street."
     },
@@ -714,7 +899,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "All Manhattan custody matters proceed through New York County Family Court, 60 Lafayette Street."
     },
     "kips-bay": {
-      casePattern: "Kips Bay child custody investigations commonly involve medical-professional families — cases shaped by shift-based parental schedules, on-call obligations affecting parenting time, and healthcare-workforce relocation proposals. Documentation of compliance with shift-structured parenting-time orders is a recurring engagement component.",
+      casePattern: "Kips Bay custody cases are shaped by the medical-campus reality of the neighborhood. Shift-based parenting time — 12-hour hospital rotations, overnight call, weekend coverage obligations — drives many custody modifications, and investigators commonly document compliance with orders structured around specific on-call schedules rather than standard evening-and-weekend parenting time. Healthcare-workforce relocation for fellowship or residency transitions is also a recurring factor.",
       logistics: "Kips Bay custody investigations work medical-campus shift schedules as a structuring variable. NYU Langone and VA Medical Center shift changes create predictable parental availability windows that investigators use to time observation. Standard residential-environment and caregiver-exposure documentation applies alongside the scheduling considerations.",
       venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street."
     },
@@ -729,39 +914,39 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "All Manhattan custody matters route to New York County Family Court, 60 Lafayette Street."
     },
     "nomad": {
-      casePattern: "NoMad child custody investigations combine technology-professional families from the area's overflow from Flatiron and hospitality-industry parents working in the flagship hotels. Case types include custody-modification matters, parenting-time compliance, and residential-environment documentation across the neighborhood's hotel-adjacent residential stock.",
+      casePattern: "NoMad custody cases commonly involve parents working in the district's hotel ecosystem — general managers, F&B directors, hotel executives whose shift patterns and property-to-property mobility shape parenting availability. The residential demographic skews toward high-end condos between Madison and Broadway in the upper 20s, and school assignments frequently pull between Midtown public schools and the private options further north or south.",
       logistics: "NoMad custody investigations work a mixed-use environment where hotel-industry parental schedules and tech-industry patterns both require tailored observation planning. Investigators adapt between residential-area coverage and hotel-adjacent observation based on case specifics.",
       venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street."
     },
 
     // --- Sprint 2b: Downtown Manhattan ---
     "financial-district": {
-      casePattern: "Financial District child custody investigations commonly involve finance-industry-professional families — custody matters shaped by extraordinary work-hour demands, travel schedules, and income-implications on support orders. Documentation of caregiver exposure during parental work hours is a recurring engagement component.",
+      casePattern: "Financial District custody cases commonly turn on the daily reality of the neighborhood's school-drop-off corridors — P.S. 276 in Battery Park City, P.S. 343 The Peck Slip School, and the private Léman Manhattan just west of the district. Investigators document the specific morning and afternoon routines on these routes, alongside the after-school programming (Pier 16, the Seaport's children's programming, park use at The Battery) that defines Downtown family life.",
       logistics: "Financial District custody investigations work around finance-industry schedules — early-morning and late-evening observation is routine given the extended workday of finance-industry parents. Investigators document residential-environment conditions in the area's growing residential stock, nanny and caregiver exposure patterns, and compliance with parenting-time orders.",
       venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street; evidence is prepared to meet the court's admissibility and chain-of-custody standards."
     },
     "tribeca": {
-      casePattern: "Tribeca child custody investigations commonly involve high-net-worth families where custody matters intersect with substantial financial implications — private-school decisions, caregiver exposure documentation, and residential-environment quality assessment. Nanny-related matters are a recurring engagement component given neighborhood demographics.",
+      casePattern: "Tribeca custody matters frequently involve the neighborhood's dense concentration of private pre-K through grade 12 schools, with custody assessments turning on school-pickup reliability, after-school program attendance, and who manages the complex logistics between school, home, and extracurriculars. Nanny-employment documentation is routine given the residential demographic; creative-industry travel schedules and the neighborhood's production-adjacent work patterns also factor in.",
       logistics: "Tribeca custody investigations work the neighborhood's low-traffic residential streets where observation is exposed. Investigators use the restaurant and cafe footprint along Greenwich Street and West Broadway for structuring coverage, and private-school pickup routines as observation anchors.",
       venue: "All Manhattan custody matters proceed through New York County Family Court, 60 Lafayette Street."
     },
     "battery-park-city": {
-      casePattern: "Battery Park City child custody investigations commonly involve finance-industry families — custody matters shaped by extended-hour work schedules, international travel patterns, and the specific residential-environment conditions of high-rise waterfront living. Public-school vs. private-school decisions are a recurring factor in custody matters.",
+      casePattern: "Battery Park City custody matters frequently turn on the neighborhood's distinctive residential structure. Most families live in a small number of doorman high-rise complexes between Rector Place and the World Financial Center, and custody assessments often focus on whether the enclosed, amenity-rich environment adequately supports the children's activity needs. Finance-industry work schedules and the school-assignment pull between P.S. 89, the international schools, and private downtown options are also routine factors.",
       logistics: "Battery Park City custody investigations work a master-planned residential environment with limited natural cover. Investigators use waterfront promenade positioning, school-route observation, and the transit-point geometry at the World Financial Center complex as structuring observation elements.",
       venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street."
     },
     "water-street": {
-      casePattern: "Water Street child custody investigations commonly involve finance-industry and legal-professional families living in the corridor's growing residential stock. Case types include custody-modification matters shaped by professional-schedule demands, caregiver verification, and residential-environment documentation.",
+      casePattern: "Water Street custody matters frequently involve the specific residential growth of the past decade — new-construction high-rises between the Seaport and Battery that drew young finance-industry families. Custody assessments commonly turn on building-amenity-space access (playrooms, outdoor decks) as part of parenting environment, and on the public-school-district assignment to P.S. 276 and 89 that shapes school-decision disputes.",
       logistics: "Water Street custody investigations work the linear corridor with observation anchored at transit-point and residential-building entry locations. The Seaport cluster provides end-of-day observation cover; school-route coverage is straightforward given the predictable morning and afternoon foot patterns.",
       venue: "All Manhattan custody matters route to New York County Family Court, 60 Lafayette Street."
     },
     "wall-street": {
-      casePattern: "Wall Street child custody investigations are shaped by the extreme demands of finance-industry professional schedules — custody matters commonly involve documentation of caregiver-exposure patterns during extended work hours, nanny and caregiver vetting, and residential-environment quality during parental time. High-asset custody matters are routine.",
+      casePattern: "Wall Street custody cases have become more common as the Financial District's residential conversion has progressed — former office towers like 20 Exchange Place now house substantial finance-industry family populations. Custody matters here routinely involve documentation of the extreme work-hour asymmetry between the finance-industry parent and any caregiver arrangements covering the non-working parent's time, with caregiver credentialing and stability commonly contested.",
       logistics: "Wall Street custody investigations work around the intensely scheduled finance-industry workday — early-morning and evening observation windows structure investigation planning. Investigators document residential-environment conditions in the increasingly residential Wall Street corridor and coordinate closely with family-law counsel on evidence scope.",
       venue: "High-asset custody proceedings are heard at New York County Family Court, 60 Lafayette Street."
     },
     "fulton": {
-      casePattern: "Fulton child custody investigations commonly involve Seaport-area hospitality-industry families — custody matters shaped by nonstandard work-hour patterns, shift-based caregiver rotation, and the specific residential-environment conditions of the hospitality-heavy neighborhood. Public-school-district factors are a recurring engagement element.",
+      casePattern: "Fulton custody cases often involve the specific residential-environment contrast of the Seaport district — mixed historic low-rise stock, new high-rise development, and the pedestrianized Front Street corridor. Hospitality-industry parent schedules are common, along with cases where school assignment pulls between the Financial District public schools and downtown private options becomes material. Weekend-custody documentation commonly covers the Seaport's family-facing programming.",
       logistics: "Fulton custody investigations work around hospitality-industry schedules. Investigators document caregiver exposure during parental work hours, residential-environment conditions, and school-route and after-school activity compliance with parenting-time structures.",
       venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street."
     },
@@ -771,7 +956,7 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "Custody matters are filed at New York County Family Court, 60 Lafayette Street, steps from most Civic Center residences."
     },
     "two-bridges": {
-      casePattern: "Two Bridges child custody investigations commonly involve cross-cultural families and mixed-demographic residential situations. Case types include custody-modification matters, residential-environment quality documentation, and caregiver-exposure verification. Language-capable coverage is common given neighborhood demographics.",
+      casePattern: "Two Bridges custody matters are shaped by the neighborhood's concentrated Chinese-American and Latino-American demographics and the language-capable coverage that most cases require. Residential-environment documentation frequently covers the public-housing stock between the Manhattan and Brooklyn Bridges, and cases commonly involve multi-generational caregiving arrangements that affect how parenting-time compliance is assessed. Cross-jurisdictional elements are common.",
       logistics: "Two Bridges custody investigations work the neighborhood's geographically constrained environment. Observation coverage focuses on school-route, playground, and residential-entry documentation, with language-capable investigator deployment for culturally specific engagements.",
       venue: "All Manhattan custody matters route to New York County Family Court, 60 Lafayette Street."
     },
@@ -786,14 +971,51 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       venue: "All Manhattan custody matters route to New York County Family Court, 60 Lafayette Street."
     },
     "soho": {
-      casePattern: "SoHo child custody investigations commonly involve creative-industry families — custody matters shaped by project-based work schedules, international travel patterns, and the specific residential-environment considerations of the neighborhood's loft stock. Private-school and enrichment-activity decisions are a recurring factor.",
+      casePattern: "SoHo custody matters are shaped by the neighborhood's loft-housing reality — open-plan residences with few interior walls, which becomes material in cases where the physical environment is contested. Investigators also commonly document the neighborhood's pedestrian environment during school pickup and drop-off, the reliance on taxis and rideshare for after-school transit, and parental conduct in the restaurant-heavy Broadway and West Broadway corridors where many residents spend evenings.",
       logistics: "SoHo custody investigations work the neighborhood's variable foot-traffic density — weekend tourist crowds provide cover but weekday mornings in the residential-loft blocks are exposed. Private-school pickup and drop-off routines are commonly used as observation anchors.",
       venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street."
     },
     "noho": {
-      casePattern: "NoHo child custody investigations commonly involve creative-professional families where nonstandard schedules, industry-event travel, and residential-environment quality in the area's loft and rental stock all factor into case planning. Private-school and extracurricular-program considerations are recurring engagement elements.",
+      casePattern: "NoHo custody matters are shaped by the district's small-residential-footprint reality. Most families live in a limited number of converted cast-iron loft buildings, which means custody investigations often focus on specific building-level facts — elevator patterns, package-delivery records, doorman logs where buildings maintain them. Creative-industry work with irregular hours is common; the concentrated restaurant cluster along Bowery and Bond Street commonly appears in conduct documentation.",
       logistics: "NoHo custody investigations work a compact district where Broadway, Lafayette, and Bowery form the primary movement corridors. Investigators use these corridors and the adjacent Greenwich Village and East Village foot traffic for coverage staging.",
       venue: "All Manhattan custody matters route to New York County Family Court, 60 Lafayette Street."
+    },
+
+    // --- Sprint 2c: Lower East Side + East Village ---
+    "lower-east-side": {
+      casePattern: "LES custody cases are commonly shaped by the neighborhood's dual character — newer-construction luxury residents and long-tenure rent-stabilized families — producing a broad case-type mix from high-conflict divorce matters to modest-means modification cases. Documentation frequently covers the Seward Park, Hamilton Fish Park, and East River Park play spaces and after-school program attendance.",
+      logistics: "LES custody investigations work a neighborhood with a dense public-school network — P.S. 110, P.S. 140, P.S. 134 — and investigators commonly coordinate school-route observation around these specific locations. After-school programming documentation at community centers and parks supplements the school-route work.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street."
+    },
+    "east-village": {
+      casePattern: "East Village custody matters commonly involve creative-industry and service-industry parent schedules — nonstandard work hours that affect parenting-time reliability, and custody-modification matters tied to the work-pattern asymmetries between co-parents. Documentation frequently covers the Tompkins Square Park area and the dense residential blocks west of Avenue A.",
+      logistics: "East Village custody investigations commonly work around public-school pickup and drop-off routines for P.S. 19, P.S. 61, and the nearby Neighborhood School. Investigators document school-route compliance, after-school care arrangements, and residential-environment conditions in the area's mix of walk-up and elevator building stock.",
+      venue: "Manhattan custody cases proceed through New York County Family Court, 60 Lafayette Street."
+    },
+    "alphabet-city": {
+      casePattern: "Alphabet City custody cases commonly involve one parent in rent-stabilized housing and one parent in market-rate housing — a specific residential-instability concern when the rent-stabilized party faces succession-rights issues affecting custody-environment stability. Documentation frequently covers Tompkins Square Park and the Avenue B playgrounds.",
+      logistics: "Alphabet City custody investigations routinely include residential-stability documentation where rent-stabilization status is contested — occupancy-duration evidence, primary-residence verification — alongside standard custody-matter observation. The neighborhood's public-school network (P.S. 15, P.S. 34) provides standard school-route observation anchors.",
+      venue: "Custody matters are heard at New York County Family Court, 60 Lafayette Street; related housing-court matters at 111 Centre Street."
+    },
+    "stuy-town": {
+      casePattern: "Stuy Town custody cases commonly involve the specific residential-environment features of the complex — access to the interior playgrounds and recreation facilities, the community center programming, and the walk-to-school arrangements for the surrounding public schools. Documentation frequently focuses on how effectively each parent utilizes the community's family amenities during their parenting time.",
+      logistics: "Stuy Town custody investigations contend with the complex's semi-private character — interior observation is limited by the community's security awareness. Investigators commonly work with cooperative parent-side testimony and documentation of observed patterns from the perimeter streets, supplementing with school-route coverage at the surrounding public schools.",
+      venue: "Custody matters are heard at New York County Family Court, 60 Lafayette Street."
+    },
+    "peter-cooper-village": {
+      casePattern: "Peter Cooper Village custody cases are proportionally fewer than Stuy Town's but follow similar patterns — residential-environment documentation focused on the complex's amenities, community-programming participation, and walk-to-school arrangements. The smaller footprint concentrates observation more tightly than in Stuy Town.",
+      logistics: "Peter Cooper Village custody investigations work the same perimeter-plus-cooperative-parent-testimony pattern as Stuy Town. Interior observation is particularly limited given the smaller footprint, and investigators commonly rely more heavily on school-route and external-location coverage than in larger complexes.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court, 60 Lafayette Street."
+    },
+    "bowery": {
+      casePattern: "Bowery custody cases are a relatively recent development given the corridor's residential transition — most cases involve young families in the luxury condo stock, often with finance-industry, creative-industry, or hospitality-industry parent schedules. Documentation frequently includes the neighborhood's limited public-school options and the private-school decisions that most Bowery families face.",
+      logistics: "Bowery custody investigations work a corridor with heavy street-level traffic and limited residential foot-traffic patterns. Investigators commonly rely on building-entry and school-route observation rather than neighborhood-interior coverage, and use the restaurant and retail cluster along the corridor as natural observation anchors.",
+      venue: "Manhattan custody matters proceed at New York County Family Court, 60 Lafayette Street."
+    },
+    "nolita": {
+      casePattern: "Nolita custody matters are modest in volume given the neighborhood's small residential population but commonly involve affluent families with finance, creative-industry, or professional-services parent schedules. Documentation frequently covers De Salvio Playground, Petrosino Square, and the neighborhood's limited but intensively used public-space network.",
+      logistics: "Nolita custody investigations work an extremely compact residential footprint where investigator recognition across consecutive days is a real operational concern. Rotation discipline and adjacent-neighborhood staging (from SoHo, Little Italy) are standard, and school-route observation commonly extends into adjacent neighborhoods where the relevant private schools are located.",
+      venue: "Manhattan custody cases are heard at New York County Family Court, 60 Lafayette Street."
     },
   },
 
