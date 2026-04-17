@@ -229,6 +229,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Randalls Island surveillance contends with near-zero ambient foot traffic outside active event windows. A stationary investigator anywhere on the island is conspicuous, and access roads and pedestrian bridges provide the only realistic observation positions. Most engagements tied to the island are identification-and-follow rather than on-island observation.",
       venue: "Manhattan matrimonial proceedings route to New York County Supreme Court at 60 Centre Street; custody components to Family Court at 60 Lafayette Street."
     },
+
+    // --- Sprint 2e: Upper West Side ---
+    "upper-west-side": {
+      casePattern: "UWS infidelity cases are shaped by a residential demographic that skews older, longer-tenure, and more professional-class than the Upper East Side. Documented conduct commonly centers on the Broadway and Amsterdam restaurant corridors between 72nd and 86th, the Lincoln Square cultural venues, and the specific hotels along Central Park West. Columbia affiliations, publishing-industry ties, and entertainment-industry subjects are recurring case profiles.",
+      logistics: "UWS surveillance works a neighborhood with substantially higher pedestrian density than the UES — the Broadway and Amsterdam commercial corridors sustain foot traffic through late evening, and the Central Park West residential blocks have consistent pedestrian flow from park access. Doorman-building discipline still applies on Central Park West and West End Avenue, but observation cover is easier to maintain than on Park and Fifth.",
+      venue: "Matrimonial proceedings are filed at New York County Supreme Court, 60 Centre Street; custody components route to Family Court at 60 Lafayette Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square infidelity cases are distinctively anchored by the Lincoln Center performing-arts complex and the entertainment-industry workforce that orbits it. Documented conduct frequently involves performance-night routines — pre-show dinners at the cluster of restaurants around 65th and Columbus, post-performance patterns at specific venues, and the hotel cluster near 59th and Columbus Circle. Time-Warner Center retail and restaurant venues are another recurring case component.",
+      logistics: "Lincoln Square surveillance operates the highest-traffic pedestrian environment on the UWS — Columbus Circle, Broadway at 65th, and the Lincoln Center plaza itself all sustain dense foot traffic from roughly 6 pm through late evening on performance days. Tourist and commuter flows provide natural cover; Thursdays through Saturdays when Lincoln Center is most active are structurally easier for observation than quieter weekday evenings.",
+      venue: "Divorce and custody matters route to New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive infidelity cases commonly involve affluent residents of the pre-war co-ops lining the park side of the avenue — many of them long-tenure families with deep West Side social networks. Documented conduct frequently occurs in the restaurant cluster along Broadway between 95th and 116th, the specific private-club and cultural-institution venues West Side residents use, and the hotels closer to Lincoln Square where subjects commonly travel.",
+      logistics: "Riverside Drive surveillance works quiet residential blocks where pedestrian traffic is thin and doorman staff at the co-op buildings are attentive to unfamiliar faces. Riverside Park access points create natural foot-traffic cover at specific transit moments; otherwise observation work relies on the busier Broadway corridor one block east for anchoring positions.",
+      venue: "Matrimonial matters are heard at New York County Supreme Court, 60 Centre Street; custody at Family Court, 60 Lafayette Street."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley infidelity cases reflect the neighborhood's demographic breadth between 96th and 110th Streets west of Central Park West — a mix of long-tenure families in the rent-stabilized stock, newer arrivals in the renovated pre-war condos, and the Columbia-adjacent academic and medical-professional community spilling over from Morningside Heights. Documentation commonly covers the Amsterdam and Columbus restaurant strips and the specific neighborhood venues serving this mixed resident base.",
+      logistics: "Manhattan Valley surveillance benefits from genuinely active pedestrian corridors along Amsterdam and Columbus — the neighborhood's commercial blocks sustain afternoon-through-evening foot traffic that supports conventional observation work. The Central Park West-adjacent residential blocks are quieter and follow standard UWS doorman-building approach disciplines.",
+      venue: "Manhattan matrimonial filings route to New York County Supreme Court at 60 Centre Street; custody to Family Court at 60 Lafayette Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights infidelity cases are overwhelmingly shaped by the Columbia University campus between 114th and 120th west of Morningside Drive. Documented subjects frequently include academic-community members — faculty, graduate students, administrators — whose routines center on campus facilities, the surrounding Broadway restaurant strip, and the specific academic-affiliated housing stock. Faculty-staff relationship investigations carry their own specific evidentiary considerations.",
+      logistics: "Morningside Heights surveillance works around an academic-calendar rhythm — semester peaks produce dense pedestrian environments, while summer and academic-break periods see substantially lighter foot traffic that changes observation logistics. The Broadway and Amsterdam corridors between 110th and 120th are the primary observation anchors; campus interior is not accessible for standard investigation work.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court, 60 Centre Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights infidelity cases commonly involve the neighborhood's mixed residential community between 135th and 155th Streets west of St. Nicholas Avenue — long-tenure families, City College-affiliated academic community, and newer arrivals drawn by the historic brownstone stock. Documentation frequently covers the Broadway restaurant strip, the neighborhood's cultural-institution venues, and the West Harlem-adjacent bar and music corridor.",
+      logistics: "Hamilton Heights surveillance works a neighborhood with varied block-by-block character — some commercial-heavy corridors (Broadway, Amsterdam) support foot-based observation, while the residential interior streets between them are quieter and more exposed. CCNY campus activity creates semester-based foot-traffic variability similar to Morningside Heights.",
+      venue: "Matrimonial matters are heard at New York County Supreme Court, 60 Centre Street; custody components at Family Court, 60 Lafayette Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights infidelity cases span the neighborhood's broad demographic range — the Dominican-American community anchored between 155th and 200th Streets west of Amsterdam, the Columbia University Irving Medical Center workforce clustered around 168th and Broadway, and the orthodox Jewish community concentrated in specific blocks. Language-capable coverage is routinely required given neighborhood demographics, and case types vary substantially by subcommunity.",
+      logistics: "Washington Heights surveillance requires Spanish-capable investigators for substantial parts of the neighborhood. The main commercial corridors — Broadway, St. Nicholas Avenue, Amsterdam — sustain dense foot traffic that supports observation; the residential side streets are quieter. The medical-campus area around 168th has its own distinct foot-traffic pattern shaped by hospital shift changes.",
+      venue: "Matrimonial and custody proceedings route to New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
   },
 
   // ============================================================
@@ -430,6 +467,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Randalls Island surveillance work is narrow in scope — event-security matters tied to the island's festival and sports-facility programming, occasional insurance-fraud documentation where an injured-claim subject is observed using the island's sports fields, and the specific narrow window of cases tied to the island's youth programming operators. Standalone resident-based case types are essentially absent given there are no residents.",
       logistics: "Randalls Island surveillance is operationally constrained by geography — the island is accessible only via the RFK Triborough Bridge pedestrian walkway or the 103rd Street footbridge, and all foot traffic passes through a small number of access points. Investigators commonly work identification at these access points, then extended observation in the relevant sports-facility or festival area.",
       venue: "Civil and related matters are heard at New York County Supreme Court, 60 Centre Street."
+    },
+
+    // --- Sprint 2e: Upper West Side ---
+    "upper-west-side": {
+      casePattern: "UWS surveillance assignments span matrimonial, co-op-board-related, and civil-litigation-adjacent work across the neighborhood's predominantly residential character. Entertainment-industry and publishing-industry case types are more common than elsewhere on the West Side given the resident demographic — executive due diligence observation, creative-industry misconduct documentation, and the occasional high-profile talent-related engagement all appear in the UWS caseload.",
+      logistics: "UWS surveillance benefits from two genuinely active commercial corridors — Broadway and Amsterdam — that sustain foot traffic through evening hours and support extended stationary observation. Central Park West residential blocks require standard doorman-building perimeter discipline; West End Avenue's co-op stock similarly. Vehicle surveillance is modestly effective on east-west cross streets.",
+      venue: "Civil and family-law matters are heard at New York County Supreme Court at 60 Centre Street and Family Court at 60 Lafayette Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square surveillance work is distinctively entertainment-industry-weighted — talent-misconduct observation for the Lincoln Center-adjacent production and performance ecosystem, backstage-related investigation for theatre operators, and the hospitality-industry workforce investigation that the area's concentrated hotel cluster generates. Standard residential and civil-matter work continues alongside.",
+      logistics: "Lincoln Square surveillance operations center on the Lincoln Center plaza and its immediate surroundings — the plaza itself sustains high-density foot traffic during and after performance windows, Time-Warner Center at Columbus Circle provides vertical and lateral observation geometry, and the restaurant cluster on Columbus Avenue between 65th and 72nd sustains evening activity. Agents rotate through multiple vantage points to avoid recognition across a compact operational zone.",
+      venue: "Civil and matrimonial matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive surveillance assignments are heavily matrimonial and residential-dispute-weighted given the neighborhood's predominantly residential character. High-asset engagements are common given the co-op demographic. Cases frequently involve investigation of long-tenure family dynamics, multi-generational resident relationships, and the specific West Side social-network investigation that the neighborhood's tight social structure generates.",
+      logistics: "Riverside Drive surveillance contends with one of the quieter pedestrian environments on the UWS — the west-side residential blocks between West End Avenue and Riverside Drive have genuinely thin foot traffic, and stationary investigators are quickly conspicuous. Operations typically rely on the busier Broadway corridor one block east, with brief rotations into the residential interior only when necessary.",
+      venue: "High-asset matrimonial proceedings are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley surveillance work reflects the neighborhood's socioeconomic breadth — matrimonial and custody-related work for both the long-tenure rent-stabilized community and the newer condo-resident demographic, landlord-tenant dispute documentation, and the occasional academic-community investigation spilling over from Morningside Heights. Insurance-fraud and civil-litigation observation are also regular workstreams.",
+      logistics: "Manhattan Valley surveillance operates effectively along the Amsterdam and Columbus commercial corridors, which sustain foot traffic through most of the day and evening. Central Park West-adjacent blocks follow standard doorman-building discipline; the residential interior between the commercial avenues supports shorter observation windows with routine rotation.",
+      venue: "Civil and matrimonial matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights surveillance work is academic-community-weighted — Columbia University-affiliated misconduct investigation (coordinated with university counsel where appropriate), faculty-staff-relationship documentation, and the intellectual-property and research-integrity adjacent investigation that major university environments generate. Standard residential and family-law surveillance continues for the non-academic community.",
+      logistics: "Morningside Heights surveillance timing follows the academic calendar — September through early May produces dense pedestrian environments supporting extended observation, while summer semesters see substantially lighter traffic. Campus interior is off-limits for standard investigation work; observation focuses on the Broadway and Amsterdam perimeter and the faculty-housing stock across the neighborhood.",
+      venue: "Civil and matrimonial proceedings are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights surveillance work includes a distinctive CCNY-related academic component alongside standard residential-matter work — city-university-employee investigation, academic-community matrimonial matters, and the civil-litigation observation that the neighborhood's active community organizations generate. Historic preservation and real-estate-dispute investigation for the brownstone-block area is a regular niche workstream.",
+      logistics: "Hamilton Heights surveillance benefits from genuinely mixed commercial-residential geography — Broadway and Amsterdam provide observation-friendly foot traffic, and the residential interior blocks between them are quiet enough that investigators can work short rotations. CCNY semester activity affects foot-traffic patterns on the specific blocks near the campus.",
+      venue: "Civil and matrimonial matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights surveillance handles a broad case-type range — matrimonial and custody work across the neighborhood's demographic subcommunities, medical-professional investigation tied to the Columbia University Irving Medical Center campus, and the commercial-dispute work that the Dominican-American small-business community generates. Language-capable coverage is essential for most substantial engagements.",
+      logistics: "Washington Heights surveillance works three distinct commercial corridors — Broadway (busy throughout the day), St. Nicholas Avenue (dense in the evening), and the medical-campus area around 168th — each with its own foot-traffic rhythm. Spanish-capable investigator deployment is standard for substantial community-specific work; medical-campus operations time around hospital shift changes.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street."
     },
   },
 
@@ -633,6 +707,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Randalls Island background checks for youth-program and children's-activity staff follow the heightened-scrutiny standards that any children's-facility hiring requires — criminal-records checks across all jurisdictions, sex-offender registry verification, and prior-employer verification specifically on child-safety incidents. Engagement handling reflects these elevated standards.",
       venue: "Civil matters arising from screening-related disputes are heard at New York County Supreme Court at 60 Centre Street."
     },
+
+    // --- Sprint 2e: Upper West Side ---
+    "upper-west-side": {
+      casePattern: "UWS background investigation work is anchored by co-op board screening for the neighborhood's substantial pre-war building stock along Central Park West, West End Avenue, and Riverside Drive. Domestic-staff vetting for affluent households, publishing-industry and entertainment-industry executive screening, and the academic-community-adjacent hiring that flows from nearby Columbia are all recurring workstreams.",
+      logistics: "UWS background checks routinely involve candidates and residents with multi-entity financial histories, complex tenure-based compensation structures typical of entertainment and publishing industries, and the reference-verification work that long-tenure West Side professional networks require. Standard database work is supplemented with direct reference-interview verification.",
+      venue: "Civil disputes arising from background-based decisions route to New York County Supreme Court at 60 Centre Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square background investigation work is distinctively entertainment-industry-concentrated — talent vetting for production companies and performing-arts organizations at Lincoln Center, performing-arts employer hiring screening, and the union-affiliated verification that entertainment-industry hiring commonly requires. Residential background work for the high-end condo stock around Columbus Circle is a secondary workstream.",
+      logistics: "Lincoln Square background checks for entertainment-industry candidates routinely involve union-membership verification (AEA, SAG-AFTRA, AFM, AGMA depending on discipline), project-based employment history verification, and the reference-interview work that talent hiring requires beyond standard database coverage.",
+      venue: "Employment and civil matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive background work is dominated by co-op board screening for the neighborhood's premium pre-war co-ops — some of the most demanding application review processes on the West Side. Domestic-staff vetting, pre-marital asset-and-background investigation for affluent residents, and the estate-adjacent background work that multi-generational resident families generate round out the engagement mix.",
+      logistics: "Riverside Drive co-op board screening routinely involves review of candidate financial positions, employment stability, prior-residence references, and the specific financial-depth verification that the buildings' co-op boards require. Engagement handling prioritizes discretion given the long-tenure community nature of the buildings.",
+      venue: "Civil matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley background work splits between co-op screening for the renovated pre-war condo stock along the avenues, standard rental-market tenant screening for the neighborhood's substantial rental inventory, and small-business employee screening for operators along the Amsterdam and Columbus corridors. Candidate demographics vary widely from young-professional renters to long-tenure community members.",
+      logistics: "Manhattan Valley background checks follow standard Manhattan residential and small-business screening practice. The candidate-pool breadth means engagement complexity varies significantly — some close in standard windows, others require specialist-scope work for rent-stabilization succession verification or other niche components.",
+      venue: "Civil matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights background investigation work is substantially Columbia-University-anchored — faculty hiring screening, academic-administrator background verification, Columbia-affiliated housing tenant verification, and the academic-research-integrity-adjacent background work that high-research-profile universities require. Residential tenant screening for the non-Columbia community is a smaller workstream.",
+      logistics: "Morningside Heights background checks for academic candidates routinely involve multi-jurisdiction records across academic-career geography, publication-record verification, prior-institution reference work, and the specialist academic-hiring verification that university employers expect. Standard residential screening applies for non-academic engagements.",
+      venue: "Employment and civil disputes route to New York County Supreme Court at 60 Centre Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights background investigation work is anchored by CCNY-affiliated academic hiring, the community-organization workforce that the neighborhood's nonprofit presence generates, and standard residential tenant screening. Historic-preservation-adjacent engagements occur for the brownstone-block community. Diversity of candidate demographics drives variable engagement complexity.",
+      logistics: "Hamilton Heights background checks for academic and nonprofit candidates follow sector-specific practice — academic-career verification for CCNY-related hires, nonprofit-sector reference verification for community-organization hiring. Standard residential and small-business screening applies otherwise.",
+      venue: "Civil matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights background investigation work is dominated by the Columbia University Irving Medical Center campus — physician credential verification, medical-professional license and prior-practice records, and hospital-credentialing-committee-adjacent background work for NewYork-Presbyterian hires. Small-business owner screening for the Broadway and St. Nicholas commercial corridors is a secondary workstream with Spanish-capable reference-verification requirements.",
+      logistics: "Washington Heights background checks for medical-professional candidates follow the same healthcare-sector specialist pattern as Lenox Hill and Mount Sinai engagements — DEA registration, state medical-license boards, NPDB queries where authorized, hospital-credential-committee records. Community-business screening routinely requires Spanish-capable verification work and cross-border records access (Dominican Republic primarily).",
+      venue: "Employment and civil matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
   },
 
   // ============================================================
@@ -834,6 +945,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Randalls Island corporate investigation work is limited to the Parks Department and NYC-contractor relationships tied to the island's facilities — facility-contract-management investigation, event-operator-dispute work, and the sponsorship-and-partnership due diligence that major island events require. Matters involving city-government contract counterparties have specific regulatory considerations.",
       logistics: "Randalls Island corporate investigations for city-contract matters follow the regulated-entity standards that NYC public contracting requires — transparency, document-retention, and procurement-integrity considerations shape engagement design. Event-operator investigations follow standard commercial practice.",
       venue: "Commercial matters are heard at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+
+    // --- Sprint 2e: Upper West Side ---
+    "upper-west-side": {
+      casePattern: "UWS corporate investigation work is lighter in volume than Midtown or the East Side given the neighborhood's residential character, but carries a distinctive entertainment-industry and publishing-industry skew. Executive misconduct investigation for publishing-industry and entertainment-industry senior hires, executive due diligence, and the occasional creative-industry trade-secret matter appear in the engagement mix. Standard UWS cases are residential-adjacent.",
+      logistics: "UWS corporate investigations typically run under attorney-client privilege with Midtown or Downtown counsel directing scope. Investigation components in the UWS itself focus on residential-address observation, social-network documentation, and the specific venue observation that entertainment and publishing-industry matters commonly require.",
+      venue: "Commercial matters proceed at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square corporate investigation work centers on the performing-arts ecosystem at Lincoln Center — executive-misconduct investigation for arts-organization senior staff, talent-contract and performer-conduct matters, union-adjacent investigation for entertainment-industry employers, and the high-profile-talent matters that the ecosystem periodically generates. Hotel-industry and hospitality-industry commercial investigation is a secondary workstream.",
+      logistics: "Lincoln Square corporate investigations for entertainment-industry matters routinely require industry-specific operational handling — press-exposure sensitivity, union-relationship awareness, and the public-facing nature of talent-related matters all shape investigation design. Attorney-client privilege coordination is standard.",
+      venue: "Commercial matters are filed at New York County Supreme Court Commercial Division at 60 Centre Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive corporate investigation work is modest given the residential character — engagements typically involve resident executives whose professional matters incidentally touch the neighborhood, estate-and-trust-adjacent commercial investigation, and the family-office governance work characteristic of multi-generational-wealth resident families. Publishing and entertainment-industry matters spill over from adjacent UWS subregions.",
+      logistics: "Riverside Drive corporate investigations generally run as standard attorney-client-privileged engagements with the residential component limited to observation, domestic-staff interview where relevant, and the social-venue documentation that family-office matters sometimes require.",
+      venue: "Commercial matters route to New York County Supreme Court Commercial Division at 60 Centre Street; Surrogate's Court at 31 Chambers Street handles estate-linked matters."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley corporate investigation work is limited in volume given the residential character of the neighborhood. When engagements occur, they commonly involve small-business commercial disputes tied to the Amsterdam and Columbus operators, residential-building management and governance matters for the area's large rental stock, and the occasional spillover investigation from Morningside Heights academic-community matters.",
+      logistics: "Manhattan Valley corporate investigations follow standard small-scale commercial practice. Work typically combines financial-records review and targeted surveillance without the multi-agent footprint required for larger Midtown or Downtown engagements.",
+      venue: "Commercial matters route to New York County Supreme Court at 60 Centre Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights corporate investigation work is defined by Columbia University — faculty-misconduct investigation coordinated with university counsel, research-integrity matters with potential federal-grant implications, intellectual-property and technology-transfer disputes, and the major-university compliance-adjacent investigation that the institution routinely generates. Standard commercial-investigation work is a small portion of the engagement mix.",
+      logistics: "Morningside Heights corporate investigations for Columbia-related matters routinely run under attorney-client privilege through university counsel or outside counsel engaged by the university, with strict confidentiality protocols and careful handling of the university-community-relationship dimensions. Research-integrity matters frequently carry federal regulatory considerations.",
+      venue: "Commercial matters are heard at New York County Supreme Court Commercial Division at 60 Centre Street; federal matters involving grant or research-integrity issues may route to 500 Pearl Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights corporate investigation work spans CCNY-affiliated academic matters, nonprofit-governance investigation for the neighborhood's substantial community-organization presence, and occasional historic-preservation-related commercial disputes involving the brownstone-stock community. Engagement volume is modest compared with the denser-commercial UWS subregions.",
+      logistics: "Hamilton Heights corporate investigations for CCNY-related matters carry city-university-governance considerations, and nonprofit-governance work follows NY-Attorney-General-regulated-entity standards. Historic-preservation matters intersect with Landmarks Preservation Commission regulatory frameworks.",
+      venue: "Commercial matters proceed at New York County Supreme Court at 60 Centre Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights corporate investigation work is heavily weighted toward healthcare-sector matters given the Columbia University Irving Medical Center campus — healthcare-billing fraud investigation, physician-group governance disputes, vendor-kickback and medical-supply procurement matters, and False Claims Act whistleblower-adjacent investigation. The Dominican-American small-business community and cross-border commercial matters with the Dominican Republic form a secondary concentrated workstream.",
+      logistics: "Washington Heights corporate investigations for medical-campus matters require the full range of healthcare-industry specialist coordination — medical-billing records, credentialing databases, HIPAA-compliant investigation protocols. Cross-border commercial investigation routinely requires Spanish-capable coverage and coordination with Dominican Republic records specialists.",
+      venue: "Healthcare-sector commercial matters are filed at New York County Supreme Court Commercial Division at 60 Centre Street; federal False Claims Act and other regulatory matters at 500 Pearl Street."
     },
   },
 
@@ -1037,6 +1185,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       logistics: "Randalls Island-adjacent asset searches are conducted through standard commercial-counterparty investigation practice targeting the city-contractor or event-operator entities rather than island-specific investigation.",
       venue: "Civil matters route to New York County Supreme Court at 60 Centre Street."
     },
+
+    // --- Sprint 2e: Upper West Side ---
+    "upper-west-side": {
+      casePattern: "UWS asset search work is commonly anchored by matrimonial engagements involving publishing-industry, entertainment-industry, and academic-community subjects — case types where royalty streams, intellectual-property portfolios, and deferred-compensation structures drive engagement complexity beyond standard real-estate-and-banks coverage. Judgment-enforcement engagements and co-op-related asset verification are regular secondary workstreams.",
+      logistics: "UWS asset searches for entertainment and publishing-industry subjects routinely require royalty-stream investigation, intellectual-property portfolio assessment, and project-equity position verification that consumer asset-search services cannot perform. Industry-familiar specialist coordination is standard for substantial engagements.",
+      venue: "Matrimonial and civil matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square asset search work commonly involves entertainment-industry matrimonial proceedings where royalty interests, performance-contract asset positions, and talent-management compensation structures drive investigation scope. Judgment-enforcement against performance-industry and hospitality-operator entities also generates regular workstream volume.",
+      logistics: "Lincoln Square asset searches for performing-arts-industry subjects routinely include union-pension-fund holdings verification, royalty-interest-distribution investigation, and the entertainment-industry-specific compensation-structure review that conventional asset-search services cover unevenly.",
+      venue: "Matrimonial and civil matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive asset search work is dominated by high-asset matrimonial engagements for the co-op-resident demographic — substantial-marital-estate cases involving multi-entity structures, trust arrangements, and the inherited-wealth components characteristic of long-tenure UWS families. Estate-adjacent asset investigation is a recurring workstream.",
+      logistics: "Riverside Drive asset searches routinely require the full range of high-net-worth investigation specialist coordination — forensic accounting, trust-structure review, multi-jurisdiction records, and the family-office-dynamics investigation that multi-generational wealth requires. Engagement timelines reflect complexity rather than standard ranges.",
+      venue: "Matrimonial and civil matters route to New York County Supreme Court at 60 Centre Street; Surrogate's Court at 31 Chambers Street handles estate-linked matters."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley asset search work serves a demographically varied resident population — matrimonial engagements for long-tenure community members with modest asset profiles, and higher-complexity matters for the newer-arrival condo demographic and the academic-community families with Columbia-related deferred compensation structures.",
+      logistics: "Manhattan Valley asset searches vary substantially in complexity based on candidate profile. Standard residential asset work applies for the long-tenure community; academic-adjacent subjects require TIAA and academic-retirement-plan specialist verification that differs from conventional retirement-account investigation.",
+      venue: "Civil and matrimonial matters are filed at New York County Supreme Court at 60 Centre Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights asset search work is shaped by the academic-community resident profile — matrimonial engagements involving academic-deferred-compensation structures (TIAA, 403(b), university retirement plans), faculty-consulting-income verification, and the intellectual-property-portfolio asset investigation that research-active faculty cases commonly require. Judgment-enforcement engagements are less common given the academic-demographic.",
+      logistics: "Morningside Heights asset searches routinely require academic-retirement-plan specialist coordination — TIAA systems differ from consumer-retirement-account access, and university-administered plans commonly require specialist verification. Intellectual-property portfolio asset investigation for research-faculty requires technology-transfer-office records and patent-portfolio review.",
+      venue: "Matrimonial proceedings route to New York County Supreme Court at 60 Centre Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights asset search work spans matrimonial engagements across the neighborhood's demographic range, CCNY-affiliated academic retirement-plan investigation, and judgment-enforcement engagements tied to the local commercial and community-organization ecosystem. Engagement complexity varies significantly with candidate profile.",
+      logistics: "Hamilton Heights asset searches for CCNY-affiliated subjects follow the same academic-retirement-plan specialist pattern as Morningside Heights engagements. Community-member cases typically follow standard residential asset-investigation practice without specialist-scope requirements.",
+      venue: "Matrimonial and civil matters are heard at New York County Supreme Court at 60 Centre Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights asset search work includes substantial cross-border components — matrimonial engagements where one or both parties have Dominican Republic-based real-estate holdings, business interests, or financial accounts. Medical-professional matrimonial matters tied to the Columbia University Irving Medical Center campus require practice-valuation and hospital-retirement-plan specialist coordination.",
+      logistics: "Washington Heights asset searches routinely require Spanish-capable investigator resources and coordination with Dominican Republic asset-tracing specialists. Medical-professional cases tied to the CUIMC campus require practice-valuation and hospital-employed-physician retirement-plan-specific investigation.",
+      venue: "Domestic filings route to New York County Supreme Court at 60 Centre Street; federal matters with international components may involve 500 Pearl Street."
+    },
   },
 
   // ============================================================
@@ -1238,6 +1423,43 @@ export const LOCATION_CASE_PATTERNS: Record<string, Record<string, CasePattern>>
       casePattern: "Randalls Island custody cases are essentially absent as a standalone case type — there is no residential population, so families with Randalls-Island-primary-residence custody matters do not exist. Island-adjacent custody matters occur when investigations incidentally involve the island's youth sports programming, festival-event attendance, or specific Parks Department youth-program contexts.",
       logistics: "Randalls-Island-related custody investigation work is narrow and typically involves event-specific or program-specific observation rather than residential documentation. Investigators work the access-point geometry of the island for identification-and-follow, and conduct any substantive observation in the relevant sports-facility or programming context.",
       venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+
+    // --- Sprint 2e: Upper West Side ---
+    "upper-west-side": {
+      casePattern: "UWS custody cases commonly involve the neighborhood's private-school cluster — Trinity, Collegiate, Ethical Culture Fieldston, Calhoun, and the Dalton Lower School — and custody-modification matters frequently turn on school-related factors, tuition responsibility, and after-school programming attendance. The UWS's academic-and-creative resident demographic produces custody cases shaped by nonstandard work schedules and the specific parenting-culture norms of the professional-class West Side.",
+      logistics: "UWS custody investigations work the private-school pickup and drop-off geometry similarly to the UES, with additional anchor points at public-school sites including P.S. 87, P.S. 9, and the nearby middle schools. Observation routines commonly cover Riverside Park and Central Park West playground use, the Broadway restaurant-and-cafe strip for family-dinner routines, and after-school program sites at the Y and community centers.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "lincoln-square": {
+      casePattern: "Lincoln Square custody cases commonly involve performing-arts-industry parents whose work schedules are shaped by performance calendars — evening shows, weekend matinees, and tour schedules all create parenting-time compliance complexities specific to the performing-arts community. Custody documentation frequently includes performance-calendar verification, tour-schedule observation, and the specific union-rule compliance that entertainment-industry custody matters involve.",
+      logistics: "Lincoln Square custody investigations work the area's concentrated cultural-institution geography. Observation anchors include the Lincoln Center plaza, the Time-Warner Center retail area, the P.S. 199 school zone, and the specific family-friendly venues at the Columbus Circle-adjacent area. Performance-schedule-based observation windows are a distinctive feature.",
+      venue: "Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "riverside-drive": {
+      casePattern: "Riverside Drive custody cases commonly involve high-asset family structures where private-school decisions, multi-home residential arrangements, and complex tuition-and-support structures all factor into custody matters. Long-tenure West Side family networks mean cases frequently intersect with community-reference considerations that investigators handle with specific discretion.",
+      logistics: "Riverside Drive custody investigations work the neighborhood's quiet residential blocks with short rotations and perimeter-only observation. Riverside Park access points create structured observation windows, and the private-school clusters on the UWS (Trinity on 91st, Collegiate on 77th, Ethical Culture Fieldston) drive school-route-based coverage.",
+      venue: "High-asset custody matters proceed at New York County Family Court at 60 Lafayette Street."
+    },
+    "manhattan-valley": {
+      casePattern: "Manhattan Valley custody cases reflect the neighborhood's demographic variety — standard modification matters for the long-tenure community, custody-environment documentation for rent-stabilization-adjacent housing disputes, and newer-arrival family matters involving the academic-community spillover from Morningside Heights. School-assignment factors across public, charter, and private options are a recurring engagement component.",
+      logistics: "Manhattan Valley custody investigations work a mix of public-school (P.S. 165, P.S. 145, P.S. 163) and charter-school pickup routines. Central Park West perimeter observation and the Amsterdam-Columbus commercial-corridor evening foot-traffic patterns provide standard observation infrastructure.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "morningside-heights": {
+      casePattern: "Morningside Heights custody cases commonly involve Columbia-University-affiliated academic-community parents — faculty, administrators, graduate-student parents — whose work schedules follow academic-calendar rhythms and whose parenting-time matters frequently involve university-related travel, conference attendance, and the specific academic-calendar-driven residential-stability considerations of university-affiliated housing.",
+      logistics: "Morningside Heights custody investigations work academic-calendar-driven observation cycles — the neighborhood is substantially quieter during summer and academic breaks, and observation windows tied to semester activity are more productive than off-season work. School-route coverage includes the Columbia-affiliated schools (Bank Street School nearby) and the neighborhood's public schools.",
+      venue: "Custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "hamilton-heights": {
+      casePattern: "Hamilton Heights custody cases span the neighborhood's demographic breadth — long-tenure community families with multi-generational caregiving structures, CCNY-affiliated academic-community families, and newer-arrival brownstone-block residents. Case types commonly include standard custody-modification matters, residential-environment documentation, and the multi-generational-caregiver-verification work characteristic of the community.",
+      logistics: "Hamilton Heights custody investigations work the neighborhood's public-school network (P.S. 161, P.S. 192, and the nearby middle schools), the CCNY campus-adjacent residential blocks, and the specific community-centers and church-based programming that neighborhood family routines commonly include.",
+      venue: "All Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street."
+    },
+    "washington-heights": {
+      casePattern: "Washington Heights custody cases commonly involve Dominican-American community families where multi-generational caregiving structures, extended-family child-care arrangements, and cross-border relocation proposals (primarily to the Dominican Republic) are regular engagement features. Medical-community families tied to the Columbia University Irving Medical Center campus produce a distinct subset with shift-schedule-driven parenting-time matters.",
+      logistics: "Washington Heights custody investigations routinely require Spanish-capable investigator coverage and cultural familiarity with Dominican-American community norms around extended-family caregiving. Hague Convention considerations come into play for cross-border custody matters. Medical-campus-adjacent cases follow the shift-schedule-observation pattern familiar from Lenox Hill and Mount Sinai engagements.",
+      venue: "Manhattan custody matters are heard at New York County Family Court at 60 Lafayette Street; international-component matters may involve separate jurisdictional proceedings."
     },
   },
 
