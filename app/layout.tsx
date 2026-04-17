@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 import './globals.css';
 import { siteConfig } from '@/data/site';
+import { buildWebsiteSchema, buildOrganizationSchema } from '@/data/schema-helpers';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -49,31 +50,8 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const websiteSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: siteConfig.name,
-    alternateName: siteConfig.tagline,
-    url: siteConfig.url,
-  };
-  const organizationSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: siteConfig.name,
-    url: siteConfig.url,
-    logo: `${siteConfig.url}/android-chrome-512x512.png`,
-    description: siteConfig.description,
-    areaServed: {
-      '@type': 'AdministrativeArea',
-      name: 'Manhattan',
-      containedInPlace: { '@type': 'Country', name: 'United States' },
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      availableLanguage: 'English',
-    },
-  };
+  const websiteSchema = buildWebsiteSchema();
+  const organizationSchema = buildOrganizationSchema();
   return (
     <html lang="en-US">
       <head>

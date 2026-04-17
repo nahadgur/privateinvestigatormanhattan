@@ -17,6 +17,7 @@ import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
 import { Testimonials } from '@/components/Testimonials';
 import { siteConfig } from '@/data/site';
 import { cityPageContent } from '@/data/cityContent';
+import { buildLocationPageSchema, buildFAQSchema } from '@/data/schema-helpers';
 
 export default function CityPage({ params }: { params: { city: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -27,30 +28,13 @@ export default function CityPage({ params }: { params: { city: string } }) {
   const whyCards = cityPageContent.matchingCards(cityName);
   const introParagraphs = cityPageContent.introParagraphs(cityName);
 
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: `${siteConfig.name} in ${cityName}`,
-    url: `${siteConfig.url}/location/${params.city}/`,
+  const localBusinessSchema = buildLocationPageSchema({
+    cityName,
+    citySlug: params.city,
     description: `Find licensed private investigators in ${cityName}. Free confidential consultation, no obligation.`,
-    areaServed: {
-      '@type': 'City',
-      name: cityName,
-      containedInPlace: { '@type': 'AdministrativeArea', name: 'Manhattan' },
-    },
-    serviceType: cityPageContent.schemaServiceTypes,
-    priceRange: '$$',
-  };
+  });
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: cityFaqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  };
+  const faqSchema = buildFAQSchema(cityFaqs);
 
   return (
     <>

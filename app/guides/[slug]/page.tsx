@@ -8,7 +8,9 @@ import { getServiceBySlug } from '@/data/services';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { siteConfig } from '@/data/site';
+import { buildGuideSchema } from '@/data/schema-helpers';
 
 function formatDate(iso: string): string {
   const d = new Date(iso);
@@ -116,24 +118,13 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     .map(slug => getServiceBySlug(slug))
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: guide.title,
+  const articleSchema = buildGuideSchema({
+    title: guide.title,
     description: guide.metaDescription,
-    datePublished: guide.publishDate,
-    dateModified: guide.lastUpdated,
-    author: { '@type': 'Organization', name: 'P.I. Manhattan Team' },
-    publisher: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      url: siteConfig.url,
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${siteConfig.url}/guides/${guide.slug}/`,
-    },
-  };
+    slug: guide.slug,
+    publishDate: guide.publishDate,
+    updatedDate: guide.lastUpdated,
+  });
 
   return (
     <>
@@ -144,7 +135,8 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       {/* Hero */}
       <section className="bg-ink text-white py-12 md:py-16">
         <div className="container-width">
-          <div className="max-w-3xl">
+          <Breadcrumbs items={[{ label: 'Guides', href: '/guides/' }, { label: guide.title }]} light />
+          <div className="max-w-3xl mt-3">
             <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-3">{guide.heroEyebrow}</div>
             <h1 className="text-[32px] md:text-[42px] font-extrabold tracking-tight leading-[1.1] mb-5">{guide.title}</h1>
             <p className="text-[16px] md:text-[18px] text-white/80 leading-[1.55] mb-6">{guide.heroDescription}</p>

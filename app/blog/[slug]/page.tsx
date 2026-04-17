@@ -12,6 +12,7 @@ import { ServiceBanner } from '@/components/ServiceBanner';
 import { getArticleBySlug, blogArticles } from '@/data/blog';
 import { services, getServiceBySlug } from '@/data/services';
 import { siteConfig } from '@/data/site';
+import { buildBlogPostSchema } from '@/data/schema-helpers';
 import type { ContentBlock } from '@/data/blog';
 
 const categoryServiceMap: Record<string, string> = {
@@ -110,23 +111,13 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
     .filter((a) => a.slug !== article.slug && a.category === article.category)
     .slice(0, 3);
 
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: article.metaTitle,
+  const articleSchema = buildBlogPostSchema({
+    title: article.metaTitle,
     description: article.metaDescription,
-    image: article.featuredImage || undefined,
-    datePublished: article.publishDate,
-    publisher: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      url: siteConfig.url,
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${siteConfig.url}/blog/${article.slug}/`,
-    },
-  };
+    slug: article.slug,
+    publishDate: article.publishDate,
+    imageUrl: article.featuredImage || undefined,
+  });
 
   return (
     <>

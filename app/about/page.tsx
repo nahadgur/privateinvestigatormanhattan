@@ -5,6 +5,7 @@ import { ShieldCheck, UserCheck, Award, Clock, CheckCircle } from 'lucide-react'
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { services } from '@/data/services';
 
 export default function AboutPage() {
@@ -18,7 +19,8 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="bg-ink text-white py-12 md:py-16">
         <div className="container-width">
-          <div className="max-w-3xl">
+          <Breadcrumbs items={[{ label: 'About' }]} light />
+          <div className="max-w-3xl mt-3">
             <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-3">About</div>
             <h1 className="text-[32px] md:text-[42px] font-extrabold tracking-tight leading-[1.1] mb-5">
               About P.I. Manhattan

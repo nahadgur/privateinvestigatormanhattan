@@ -18,6 +18,7 @@ import { siteConfig } from '@/data/site';
 import { serviceLocationContent } from '@/data/serviceLocationContent';
 import { getCasePattern } from '@/data/locationCasePatterns';
 import { toSlug } from '@/data/locations';
+import { buildServiceLocationSchema, buildFAQSchema } from '@/data/schema-helpers';
 
 const benefitIcons = [
   <Award key="a" className="w-5 h-5" />,
@@ -47,25 +48,14 @@ export default function ServiceLocationPage({ params }: { params: { serviceSlug:
   const faqs = content.faqs(cityName);
   const casePattern = getCasePattern(service.slug, toSlug(cityName));
 
-  const localBusinessSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    name: `${service.title} in ${cityName}`,
-    url: `${siteConfig.url}/services/${service.slug}/${params.locationSlug}/`,
+  const localBusinessSchema = buildServiceLocationSchema({
+    serviceName: service.title,
+    serviceSlug: service.slug,
+    cityName,
+    citySlug: params.locationSlug,
     description: heroDesc,
-    areaServed: { '@type': 'City', name: cityName, containedInPlace: { '@type': 'AdministrativeArea', name: 'Manhattan' } },
-    serviceType: service.title,
-    priceRange: '$$',
-  };
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer },
-    })),
-  };
+  });
+  const faqSchema = buildFAQSchema(faqs);
 
   return (
     <>

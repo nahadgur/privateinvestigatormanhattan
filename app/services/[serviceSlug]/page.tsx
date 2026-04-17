@@ -18,6 +18,7 @@ import { HeroLeadForm } from '@/components/HeroLeadForm';
 import { PricingSection } from '@/components/PricingSection';
 import { serviceContent } from '@/data/serviceContent';
 import { siteConfig } from '@/data/site';
+import { buildServicePageSchema, buildFAQSchema } from '@/data/schema-helpers';
 
 export default function ServicePage({ params }: { params: { serviceSlug: string } }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,26 +44,14 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
 
   const combinedFaqs = [...(service.faqs || []), ...FAQS_SERVICES];
 
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.title,
-    url: `${siteConfig.url}/services/${service.slug}/`,
+  const serviceSchema = buildServicePageSchema({
+    serviceName: service.title,
+    serviceSlug: service.slug,
     description: service.description,
-    provider: { '@type': 'Organization', name: siteConfig.name, url: siteConfig.url },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Manhattan' },
-    serviceType: service.title,
-  };
+    faqs: combinedFaqs,
+  });
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: combinedFaqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  };
+  const faqSchema = buildFAQSchema(combinedFaqs);
 
   return (
     <>

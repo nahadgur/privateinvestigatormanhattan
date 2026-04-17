@@ -6,6 +6,7 @@ import { getPublishedGuides } from '@/data/guides';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
+import { Breadcrumbs } from '@/components/Breadcrumbs';
 
 function formatDate(iso: string): string {
   const d = new Date(iso);
@@ -23,7 +24,8 @@ export default function GuidesIndexPage() {
 
       <section className="bg-ink text-white py-12 md:py-16">
         <div className="container-width">
-          <div className="max-w-3xl">
+          <Breadcrumbs items={[{ label: 'Guides' }]} light />
+          <div className="max-w-3xl mt-3">
             <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-3">Pillar Guides</div>
             <h1 className="text-[32px] md:text-[42px] font-extrabold tracking-tight leading-[1.1] mb-5">
               Manhattan Private Investigator Guides
