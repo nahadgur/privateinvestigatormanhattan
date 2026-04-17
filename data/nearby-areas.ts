@@ -32,7 +32,7 @@ export const NEARBY_AREAS: Record<string, string[]> = {
   "morningside-heights": ["West Harlem", "Manhattan Valley", "Upper West Side", "Hamilton Heights", "Central Harlem"],
   "inwood": ["Fort George", "Washington Heights", "Marble Hill", "Hamilton Heights"],
   "fort-george": ["Inwood", "Washington Heights", "Hamilton Heights", "Marble Hill"],
-  "marble-hill": ["Inwood", "Fort George", "Washington Heights", "Bronx"],
+  "marble-hill": ["Inwood", "Fort George", "Washington Heights", "Hamilton Heights"],
   "manhattan-valley": ["Upper West Side", "Morningside Heights", "Lincoln Square", "Riverside Drive", "South Harlem"],
   "riverside-drive": ["Upper West Side", "Lincoln Square", "Manhattan Valley", "Morningside Heights"],
   "battery-park-city": ["Financial District", "Tribeca", "Wall Street", "Civic Center", "Fulton"],
@@ -55,18 +55,8 @@ export const NEARBY_AREAS: Record<string, string[]> = {
   "turtle-bay": ["Midtown East", "Sutton Place", "Tudor City", "Murray Hill", "Upper East Side"],
   "yorkville": ["Upper East Side", "Lenox Hill", "Carnegie Hill", "East Harlem", "Spanish Harlem"],
   "carnegie-hill": ["Upper East Side", "Yorkville", "Lenox Hill", "East Harlem", "Randalls Island"],
-  "randalls-island": ["East Harlem", "Carnegie Hill", "Upper East Side", "Astoria", "Bronx"],
+  "randalls-island": ["East Harlem", "Carnegie Hill", "Upper East Side", "Yorkville", "Spanish Harlem"],
   "alphabet-city": ["East Village", "Lower East Side", "Stuy Town", "NoHo", "Bowery"],
-  "bronx": ["Marble Hill", "Inwood", "Fort George", "Washington Heights", "Randalls Island"],
-  "brooklyn-heights": ["Park Slope", "Williamsburg", "Financial District", "Civic Center", "Fulton"],
-  "park-slope": ["Brooklyn Heights", "Williamsburg", "Greenwich Village", "Cobble Hill"],
-  "williamsburg": ["Brooklyn Heights", "Park Slope", "Greenpoint", "East Village", "Lower East Side"],
-  "long-island-city": ["Astoria", "Midtown East", "Williamsburg", "Greenpoint"],
-  "astoria": ["Long Island City", "Flushing", "Forest Hills", "Jamaica", "Randalls Island"],
-  "flushing": ["Astoria", "Forest Hills", "Jamaica", "Long Island City"],
-  "forest-hills": ["Flushing", "Jamaica", "Astoria", "Long Island City", "Park Slope"],
-  "jamaica": ["Flushing", "Forest Hills", "Astoria", "Long Island City"],
-  "staten-island": ["Financial District", "Brooklyn Heights", "Battery Park City", "Bayonne"],
 };
 
 export function getNearbyAreas(citySlug: string): string[] {
