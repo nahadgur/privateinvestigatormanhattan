@@ -26,7 +26,7 @@ export function BlogIndexClient() {
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow">
         {/* Hero */}
         <section className="bg-ink text-white relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,55,41,0.25),transparent_60%)] pointer-events-none" />

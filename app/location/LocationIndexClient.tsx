@@ -30,7 +30,7 @@ export function LocationIndexClient() {
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow">
         <Hero
           title={`${siteConfig.name} by Location`}
           subtitle="We cover neighborhoods across Manhattan. Search your area to see which licensed investigators serve it."

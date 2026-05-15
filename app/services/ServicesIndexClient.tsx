@@ -18,7 +18,7 @@ export function ServicesIndexClient() {
     <>
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow">
         <Hero
           title={`${siteConfig.name} Services`}
           subtitle="Browse our specialist investigation categories. Select the service that matches your situation and we will connect you with vetted, NYS-licensed Manhattan investigators."

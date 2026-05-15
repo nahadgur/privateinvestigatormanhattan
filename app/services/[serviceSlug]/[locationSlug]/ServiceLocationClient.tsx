@@ -54,7 +54,7 @@ export function ServiceLocationClient({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
-      <main className="flex-grow">
+      <main id="main-content" className="flex-grow">
         {/* Hero */}
         <section className="bg-ink text-white relative overflow-hidden">
           <div className="absolute inset-0">

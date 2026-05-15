@@ -68,6 +68,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        {/* Skip-to-content link — first focusable element on every
+            page so keyboard users can jump past the nav. */}
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         {/* First-touch attribution into sessionStorage. Captures UTM
             params + referrer that are already exposed to the page —
             no analytics cookies, fires before consent. */}

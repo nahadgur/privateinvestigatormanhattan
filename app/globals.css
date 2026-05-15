@@ -6,6 +6,56 @@
    render-blocking <link> request. The --font-inter CSS variable
    is set on <html> and consumed by Tailwind's fontFamily config. */
 
+/* Focus ring — visible only for keyboard nav, not mouse clicks.
+   WCAG 2.4.7. */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid #B93729;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip-to-content link. Visually hidden until focused. First
+   focusable element on every page so keyboard users can jump past
+   the nav. WCAG 2.4.1. */
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -100px;
+  z-index: 100;
+  background: #1A1A1A;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: top 0.15s ease-out;
+}
+.skip-link:focus {
+  top: 12px;
+  outline: 2px solid #B93729;
+  outline-offset: 2px;
+}
+
+/* Respect reduced-motion preference. framer-motion + custom
+   keyframes both honor this via the CSS-side cut. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

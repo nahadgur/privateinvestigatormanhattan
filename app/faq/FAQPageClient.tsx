@@ -186,6 +186,7 @@ export function FAQPageClient() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <div id="main-content" tabIndex={-1} />
 
       {/* Hero */}
       <section className="bg-ink text-white py-12 md:py-16">

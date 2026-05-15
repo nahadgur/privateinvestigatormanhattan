@@ -21,6 +21,7 @@ export function GuidesIndexClient() {
     <>
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      <div id="main-content" tabIndex={-1} />
 
       <section className="bg-ink text-white py-12 md:py-16">
         <div className="container-width">

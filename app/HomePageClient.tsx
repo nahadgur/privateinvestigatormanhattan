@@ -32,7 +32,7 @@ export function HomePageClient() {
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
 
-      <main className="container-width grid grid-cols-1 lg:grid-cols-12 gap-3 flex-grow my-3">
+      <main id="main-content" className="container-width grid grid-cols-1 lg:grid-cols-12 gap-3 flex-grow my-3">
         {/* 1. HERO + FORM */}
         <motion.section
           variants={itemVariants}
