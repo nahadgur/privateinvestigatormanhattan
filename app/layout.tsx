@@ -40,20 +40,14 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     locale: 'en_US',
-    images: [
-      {
-        url: '/android-chrome-512x512.png',
-        width: 512,
-        height: 512,
-        alt: siteConfig.name,
-      },
-    ],
+    // og:image supplied by opengraph-image.tsx file convention
+    // (homepage default + per-route overrides under services + location).
   },
   twitter: {
     card: 'summary_large_image',
     title: siteConfig.name,
     description: siteConfig.description,
-    images: ['/android-chrome-512x512.png'],
+    // twitter falls back to og:image from the file convention.
   },
 };
 
