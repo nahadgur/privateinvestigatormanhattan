@@ -1,27 +1,28 @@
 'use client';
 
-import { siteConfig } from '@/data/site';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CheckCircle, X } from 'lucide-react';
+import { readAttribution } from './AttributionCapture';
 
 interface LeadFormModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyO96Pk25jkWPqYmbYKILz3POJm4YWNtM7IKuy_3yMKDIkHcrp7u1oI9Pu12VXkHCcT/exec';
-
 export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
   const [shouldRender, setShouldRender] = useState(isOpen);
   const [animationState, setAnimationState] = useState<'idle' | 'entering' | 'exiting'>('idle');
+  const startedRef = useRef<number>(Date.now());
 
   useEffect(() => {
     if (isOpen) {
       setShouldRender(true);
       setAnimationState('entering');
+      setError('');
+      startedRef.current = Date.now();
     } else if (shouldRender) {
       setAnimationState('exiting');
       const timer = setTimeout(() => {
@@ -37,32 +38,40 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
     try {
       const form = e.currentTarget;
-      const fullName = (form.elements[0] as HTMLInputElement).value;
-      const phone = (form.elements[1] as HTMLInputElement).value;
-      const email = (form.elements[2] as HTMLInputElement).value;
-      const location = (form.elements[3] as HTMLInputElement).value;
+      const fd = new FormData(form);
+      const fullName = String(fd.get('fullName') ?? '');
+      const phone = String(fd.get('phone') ?? '');
+      const email = String(fd.get('email') ?? '');
+      const location = String(fd.get('location') ?? '');
+      const hp = String(fd.get('_hp_company') ?? '');
+      const att = readAttribution();
 
       const payload = {
         fullName,
         phone,
         email,
         location,
-        page: window.location.href,
-        source: siteConfig.name,
+        page: window.location.pathname,
+        source: 'modal',
+        _hp_company: hp,
+        _form_started: startedRef.current,
+        ...att,
       };
 
-      const res = await fetch(GOOGLE_SCRIPT_URL, {
+      const res = await fetch('/api/lead', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-
-      const text = await res.text();
-      let data: any = {};
-      try { data = JSON.parse(text); } catch {}
-
-      if (data && data.ok === false) throw new Error(data.error || 'Submission failed');
+      const data = await res.json().catch(() => ({ ok: false }));
+      if (!res.ok || !data?.ok) {
+        setError('Something went wrong. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
 
       setIsSubmitting(false);
       setIsSuccess(true);
@@ -70,7 +79,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
     } catch (err) {
       console.error(err);
       setIsSubmitting(false);
-      alert('Something went wrong. Please try again.');
+      setError('Something went wrong. Please try again.');
     }
   };
 
@@ -119,10 +128,19 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
               </div>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                <input required type="text" placeholder="Full name" className={inputClass} />
-                <input required type="tel" placeholder="Phone number" className={inputClass} />
-                <input required type="email" placeholder="Email address" className={inputClass} />
-                <input required type="text" placeholder="Manhattan area / neighborhood" className={inputClass} />
+                {/* Honeypot — hidden from real users, bots fill it */}
+                <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', top: 'auto', width: 1, height: 1, overflow: 'hidden' }}>
+                  <label htmlFor="m-hp">Company name (leave blank)</label>
+                  <input id="m-hp" name="_hp_company" type="text" tabIndex={-1} autoComplete="off" />
+                </div>
+                <input required name="fullName" type="text" placeholder="Full name" className={inputClass} />
+                <input required name="phone" type="tel" placeholder="Phone number" className={inputClass} />
+                <input required name="email" type="email" placeholder="Email address" className={inputClass} />
+                <input required name="location" type="text" placeholder="Manhattan area / neighborhood" className={inputClass} />
+
+                {error && (
+                  <p className="text-[12px] text-red-600 font-medium" role="alert">{error}</p>
+                )}
 
                 <button
                   type="submit"

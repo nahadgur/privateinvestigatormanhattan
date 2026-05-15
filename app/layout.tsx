@@ -1,10 +1,11 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/data/site';
 import { buildWebsiteSchema, buildOrganizationSchema } from '@/data/schema-helpers';
+import { ConsentBanner } from '@/components/ConsentBanner';
+import { AttributionCapture } from '@/components/AttributionCapture';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -67,18 +68,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen flex flex-col">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-4E5K6WPYT9"
-          strategy="afterInteractive"
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-4E5K6WPYT9');
-          `}
-        </Script>
+        {/* First-touch attribution into sessionStorage. Captures UTM
+            params + referrer that are already exposed to the page —
+            no analytics cookies, fires before consent. */}
+        <AttributionCapture />
+        {/* GA4 only loads after the visitor accepts the cookie banner.
+            CCPA: visitor can reject analytics entirely. */}
+        <ConsentBanner gaId="G-4E5K6WPYT9" />
         {children}
       </body>
     </html>

@@ -1,29 +1,27 @@
 'use client';
 
-import { siteConfig } from '@/data/site';
 import { services } from '@/data/services';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { CheckCircle } from 'lucide-react';
+import { readAttribution } from './AttributionCapture';
 
 interface HeroLeadFormProps {
   city?: string;
   service?: string;
 }
 
-
-
-const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyO96Pk25jkWPqYmbYKILz3POJm4YWNtM7IKuy_3yMKDIkHcrp7u1oI9Pu12VXkHCcT/exec';
-
 export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState('');
+  const startedRef = useRef<number>(Date.now());
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
     phone: '',
     location: city || '',
     treatment: service || '',
+    _hp_company: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -33,6 +31,8 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
+    const att = readAttribution();
     try {
       const payload = {
         fullName: formData.fullName,
@@ -40,27 +40,30 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         phone: formData.phone,
         location: formData.location || city || '',
         treatment: formData.treatment || service || '',
-        page: window.location.href,
-        source: siteConfig.name,
+        page: window.location.pathname,
+        source: 'hero-form',
+        _hp_company: formData._hp_company,
+        _form_started: startedRef.current,
+        ...att,
       };
 
-      const res = await fetch(GOOGLE_SCRIPT_URL, {
+      const res = await fetch('/api/lead', {
         method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-
-      const text = await res.text();
-      let data: { ok?: boolean; error?: string } = {};
-      try { data = JSON.parse(text); } catch {}
-
-      if (data && data.ok === false) throw new Error(data.error || 'Submission failed');
-
+      const data = await res.json().catch(() => ({ ok: false }));
+      if (!res.ok || !data?.ok) {
+        setError('Something went wrong. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
       setIsSubmitting(false);
       setIsSuccess(true);
     } catch (err) {
       console.error(err);
       setIsSubmitting(false);
-      alert('Something went wrong. Please try again.');
+      setError('Something went wrong. Please try again.');
     }
   };
 
@@ -96,6 +99,12 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
       </div>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        {/* Honeypot — hidden from real users, bots fill it */}
+        <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', top: 'auto', width: 1, height: 1, overflow: 'hidden' }}>
+          <label htmlFor="hlf-hp">Company name (leave blank)</label>
+          <input id="hlf-hp" name="_hp_company" type="text" tabIndex={-1} autoComplete="off" value={formData._hp_company} onChange={handleChange} />
+        </div>
+
         <input required name="fullName" type="text" value={formData.fullName} onChange={handleChange} placeholder="Full Name *" className={inputClass} />
 
         <div className="grid grid-cols-2 gap-3">
@@ -112,6 +121,10 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
 
         {!city && (
           <input required name="location" type="text" value={formData.location} onChange={handleChange} placeholder="Manhattan area or ZIP *" className={inputClass} />
+        )}
+
+        {error && (
+          <p className="text-[12px] text-red-600 font-medium" role="alert">{error}</p>
         )}
 
         <button
