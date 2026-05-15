@@ -14,7 +14,6 @@ import { HeroLeadForm } from '@/components/HeroLeadForm';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { PricingSection } from '@/components/PricingSection';
 import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
-import { Testimonials } from '@/components/Testimonials';
 import { siteConfig } from '@/data/site';
 import { cityPageContent } from '@/data/cityContent';
 import { buildLocationPageSchema, buildFAQSchema } from '@/data/schema-helpers';
@@ -152,10 +151,6 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 <FAQ faqs={cityFaqs} title={`${siteConfig.name} in ${cityName}: Common Questions`} />
               </div>
 
-              <section className="mb-12">
-                <h2 className="text-[22px] font-extrabold tracking-tight text-ink mb-5">What Manhattan Clients Are Saying</h2>
-                <Testimonials limit={3} />
-              </section>
             </div>
 
             <aside className="lg:col-span-1">

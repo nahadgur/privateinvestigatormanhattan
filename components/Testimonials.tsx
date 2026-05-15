@@ -4,6 +4,9 @@ import { cn } from '@/lib/utils';
 
 export function Testimonials({ limit = 3, className }: { limit?: number; className?: string }) {
   const items = TESTIMONIALS.slice(0, limit);
+  // Render nothing when there are no real testimonials yet — keeps
+  // consumer pages clean without per-page conditional logic.
+  if (items.length === 0) return null;
   return (
     <div className={cn('grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5', className)}>
       {items.map((t) => (

@@ -5,13 +5,19 @@ export const siteConfig = {
   "url": "https://www.privateinvestigatormanhattan.com",
   "description": "Connect with licensed private investigators in Manhattan. Expert infidelity investigations, surveillance, background checks, corporate investigations, asset searches, and child custody cases. Free confidential consultation."
 };
-export const TESTIMONIALS = [
-  { "id": "testimonial-1", "name": "Rebecca T.", "location": "Upper East Side", "service": "Infidelity Investigation", "rating": 5, "text": "I had suspicions for months but no proof. The investigator they matched me with handled everything with complete discretion and delivered documented evidence within a week. I finally had the answers I needed to move forward. Professional from start to finish." },
-  { "id": "testimonial-2", "name": "Jonathan M.", "location": "Midtown", "service": "Corporate Investigation", "rating": 5, "text": "We suspected a senior employee was sharing proprietary information with a competitor. The PI they connected us with had a financial crimes background and built an airtight case. The evidence was fully admissible and the matter was resolved decisively." },
-  { "id": "testimonial-3", "name": "Diana L.", "location": "Tribeca", "service": "Background Check", "rating": 5, "text": "I was about to enter a significant business partnership and needed due diligence on my potential partner. The investigator uncovered a prior bankruptcy and two undisclosed lawsuits that completely changed my decision. Worth every cent." },
-  { "id": "testimonial-4", "name": "Marcus R.", "location": "Financial District", "service": "Asset Search", "rating": 5, "text": "My ex-spouse had hidden assets during our divorce proceedings. The PI they matched me with traced accounts and real estate holdings I had no idea existed. My attorney said it was the most thorough asset report she had seen in years." },
-  { "id": "testimonial-5", "name": "Christine B.", "location": "Chelsea", "service": "Child Custody Investigation", "rating": 5, "text": "I needed documented evidence about my ex's lifestyle for our custody modification hearing. The investigator was methodical, discreet, and understood exactly what the family court would need to see. The evidence made a decisive difference in our case." }
-];
+// Real testimonials only. FTC Endorsement Guides (16 CFR Part 255)
+// prohibit fabricated reviews on US lead-gen sites — and Google's
+// review-snippet policy explicitly bans review schema for fabricated
+// or unverifiable testimonials. Collect real client feedback and add
+// items in this format (id, name, location, service, rating, text).
+export const TESTIMONIALS: {
+  id: string;
+  name: string;
+  location: string;
+  service: string;
+  rating: number;
+  text: string;
+}[] = [];
 export const TRUST_BADGES = [
   { "icon": "Award", "title": "NYS Licensed Investigators", "description": "Every PI in our network holds a current New York State license under Article 7 of the General Business Law — non-negotiable for court-admissible evidence." },
   { "icon": "ShieldCheck", "title": "Fully Insured and Bonded", "description": "All investigators carry comprehensive liability insurance and are bonded, protecting you and ensuring your case is handled to professional legal standards." },

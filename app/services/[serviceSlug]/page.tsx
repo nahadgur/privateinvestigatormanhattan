@@ -10,7 +10,6 @@ import { FAQS_SERVICES } from '@/data/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { TrustBadges } from '@/components/TrustBadges';
-import { Testimonials } from '@/components/Testimonials';
 import { FAQ } from '@/components/FAQ';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
@@ -243,10 +242,6 @@ export default function ServicePage({ params }: { params: { serviceSlug: string 
                 <FAQ faqs={combinedFaqs} title={`${service.title} FAQs`} />
               </div>
 
-              <section className="mb-12">
-                <h2 className="text-[22px] font-extrabold tracking-tight text-ink mb-5">What Manhattan Clients Say</h2>
-                <Testimonials limit={3} />
-              </section>
             </div>
 
             <aside className="lg:col-span-1">
