@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* Inter is loaded via next/font in layout.tsx — self-hosted, no
+   render-blocking <link> request. The --font-inter CSS variable
+   is set on <html> and consumed by Tailwind's fontFamily config. */
 
 @layer base {
   html {

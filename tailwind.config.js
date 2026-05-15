@@ -41,8 +41,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['Inter', 'system-ui', 'sans-serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
         soft: '0 20px 60px rgba(15, 23, 42, 0.08)',

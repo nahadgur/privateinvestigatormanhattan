@@ -1,9 +1,17 @@
 // app/layout.tsx
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/data/site';
 import { buildWebsiteSchema, buildOrganizationSchema } from '@/data/schema-helpers';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-inter',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -53,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const websiteSchema = buildWebsiteSchema();
   const organizationSchema = buildOrganizationSchema();
   return (
-    <html lang="en-US">
+    <html lang="en-US" className={inter.variable}>
       <head>
         <script
           type="application/ld+json"
