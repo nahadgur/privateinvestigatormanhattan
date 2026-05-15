@@ -147,6 +147,10 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
                 <Calendar className="w-3.5 h-3.5" />
                 <span>Updated {formatDate(guide.lastUpdated)}</span>
               </div>
+              <div className="flex items-center gap-1.5">
+                <CheckCircle className="w-3.5 h-3.5" />
+                <span>Reviewed by the Private Investigator Manhattan editorial team</span>
+              </div>
             </div>
           </div>
         </div>

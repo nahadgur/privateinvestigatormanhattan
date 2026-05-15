@@ -343,6 +343,11 @@ export function buildBlogPostSchema(p: BlogPostSchemaParams) {
         url: `${siteConfig.url}/android-chrome-512x512.png`,
       },
     },
+    reviewedBy: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}#organization`,
+      name: `${siteConfig.name} editorial team`,
+    },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteConfig.url}/blog/${p.slug}/`,
@@ -385,6 +390,14 @@ export function buildGuideSchema(p: GuideSchemaParams) {
         '@type': 'ImageObject',
         url: `${siteConfig.url}/android-chrome-512x512.png`,
       },
+    },
+    // YMYL guide — explicit reviewer entity points back to the same
+    // site Organization (no fabricated named reviewer with credentials,
+    // per the fleet no-fabricated-authors rule).
+    reviewedBy: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}#organization`,
+      name: `${siteConfig.name} editorial team`,
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
