@@ -84,7 +84,7 @@ export function CityPageClient({ cityName, citySlug }: { cityName: string; cityS
                   {services.map((service) => (
                     <Link
                       key={service.id}
-                      href={`/services/${service.slug}/${citySlug}/`}
+                      href={`/services/${service.slug}/`}
                       className="block group bg-paper rounded-tile shadow-card hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-light hover:border-primary/30"
                     >
                       <div className="h-32 overflow-hidden bg-gray-light">

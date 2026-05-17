@@ -1,28 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-// Removed borough locations (Sprint 1 - 2026-04-17)
-// Redirecting to /location/ index so backlinks are preserved and no 404s on crawl.
-const REMOVED_LOCATIONS = [
-  'astoria',
-  'long-island-city',
-  'flushing',
-  'brooklyn-heights',
-  'williamsburg',
-  'park-slope',
-  'bronx',
-  'staten-island',
-  'jamaica',
-  'forest-hills',
-];
-
-const SERVICE_SLUGS = [
-  'infidelity-investigation',
-  'surveillance',
-  'background-checks',
-  'corporate-investigations',
-  'asset-searches',
-  'child-custody-investigations',
-];
+// Retired URLs are handled in middleware.ts with a 410 Gone response
+// (correct signal for permanently deleted pages). Previously these were
+// 308 redirects to the hub — moved to middleware on 2026-05-17 along
+// with the neighborhood cull, so that boroughs, dropped Manhattan
+// neighborhoods, and combo URLs all share one source of truth.
 
 const nextConfig = {
   trailingSlash: true,
@@ -51,26 +33,6 @@ const nextConfig = {
         ],
       },
     ];
-  },
-  async redirects() {
-    const locationRedirects = REMOVED_LOCATIONS.map((loc) => ({
-      source: `/location/${loc}/`,
-      destination: '/location/',
-      permanent: true,
-    }));
-
-    const serviceLocationRedirects = [];
-    for (const service of SERVICE_SLUGS) {
-      for (const loc of REMOVED_LOCATIONS) {
-        serviceLocationRedirects.push({
-          source: `/services/${service}/${loc}/`,
-          destination: `/services/${service}/`,
-          permanent: true,
-        });
-      }
-    }
-
-    return [...locationRedirects, ...serviceLocationRedirects];
   },
 };
 

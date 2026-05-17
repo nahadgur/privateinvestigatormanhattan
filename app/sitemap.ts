@@ -47,12 +47,6 @@ const SERVICES_MTIME = newestOf(
   'app/services/[serviceSlug]/page.tsx',
   'app/services/[serviceSlug]/ServiceDetailClient.tsx',
 );
-const SERVICE_LOCATION_MTIME = newestOf(
-  'data/services.ts',
-  'data/serviceLocationContent.ts',
-  'data/locationCasePatterns.ts',
-  'app/services/[serviceSlug]/[locationSlug]/page.tsx',
-);
 const SERVICES_HUB_MTIME = newestOf('data/services.ts', 'app/services/page.tsx', 'app/services/ServicesIndexClient.tsx');
 const LOCATIONS_MTIME = newestOf(
   'data/locations.ts',
@@ -120,17 +114,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  const serviceLocationPages: MetadataRoute.Sitemap = [];
-  for (const service of services) {
-    for (const city of allCities) {
-      serviceLocationPages.push({
-        url: `${base}/services/${service.slug}/${toSlug(city)}/`,
-        lastModified: SERVICE_LOCATION_MTIME,
-        changeFrequency: 'monthly' as const,
-        priority: 0.9,
-      });
-    }
-  }
-
-  return [...staticPages, ...blogPages, ...guidePages, ...servicePages, ...locationPages, ...serviceLocationPages];
+  return [...staticPages, ...blogPages, ...guidePages, ...servicePages, ...locationPages];
 }

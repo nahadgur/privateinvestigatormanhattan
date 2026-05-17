@@ -1,12 +1,14 @@
 // data/locations.ts
+//
+// Manhattan neighborhood anchors. Trimmed 2026-05-17 from 57 fine-
+// grained neighborhoods to 10 high-demand zones to kill sitemap bloat
+// and concentrate ranking authority on pages that actually get searched.
+// Retired neighborhood + combo URLs are 410'd in middleware.ts.
 export const LOCATIONS: Record<string, string[]> = {
-  "Midtown Manhattan": ["Midtown East","Midtown West","Hell's Kitchen","Murray Hill","Koreatown","Turtle Bay","Sutton Place","Tudor City","Kips Bay","Gramercy Park","Flatiron District","NoMad"],
-  "Downtown Manhattan": ["Financial District","Tribeca","Battery Park City","Water Street","Wall Street","Fulton","Civic Center","Two Bridges","Chinatown","Little Italy","SoHo","NoHo"],
-  "Lower East Side and East Village": ["Lower East Side","East Village","Alphabet City","Stuy Town","Peter Cooper Village","Bowery","Nolita"],
-  "Upper East Side": ["Upper East Side","Lenox Hill","Yorkville","Carnegie Hill","East Harlem","Spanish Harlem","Randalls Island"],
-  "Upper West Side": ["Upper West Side","Lincoln Square","Riverside Drive","Manhattan Valley","Morningside Heights","Hamilton Heights","Washington Heights"],
-  "Harlem and North Manhattan": ["Harlem","West Harlem","Central Harlem","South Harlem","Inwood","Fort George","Marble Hill"],
-  "West Village and Chelsea": ["West Village","Greenwich Village","Chelsea","Meatpacking District","Hudson Yards"]
+  "Midtown": ["Midtown East", "Midtown West"],
+  "Downtown": ["Financial District", "Tribeca", "SoHo"],
+  "West Side": ["Greenwich Village", "Chelsea"],
+  "Uptown": ["Upper East Side", "Upper West Side", "Harlem"],
 };
 export function getCityBySlug(slug: string): string | undefined {
   const all = Object.values(LOCATIONS).flat();

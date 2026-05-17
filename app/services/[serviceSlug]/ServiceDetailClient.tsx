@@ -172,7 +172,7 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                           {cities.map((city) => (
                             <Link
                               key={city}
-                              href={`/services/${service.slug}/${toSlug(city)}/`}
+                              href={`/location/${toSlug(city)}/`}
                               className="group flex items-center gap-2 p-2.5 bg-gray-light rounded-chip hover:bg-primary/10 transition-all border border-gray-light hover:border-primary/30"
                             >
                               <MapPin className="w-3 h-3 text-primary flex-shrink-0" />

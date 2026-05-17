@@ -1,5 +1,5 @@
 // data/homepage.ts
-export const topAreas = ["Midtown Manhattan","Upper East Side","Upper West Side","Financial District","Tribeca","SoHo","Chelsea","Hell's Kitchen","Harlem","Greenwich Village","Murray Hill","Battery Park City"];
+export const topAreas = ["Financial District","Tribeca","SoHo","Greenwich Village","Chelsea","Midtown East","Midtown West","Upper East Side","Upper West Side","Harlem"];
 export const heroContent = { title: "Private Investigator Manhattan — Licensed, Discreet, Proven", subtitle: "We connect you with NYS-licensed private investigators who know Manhattan and deliver court-admissible evidence. Confidential consultation. Matched within 24 hours.", image: '/images/hero-main.png' };
 export const problemFraming = { heading: "Why the Right Private Investigator in Manhattan Changes Everything", paragraphs: [
   "In Manhattan, hiring the wrong investigator isn't just a waste of money — it can compromise your case. Unlicensed operators, outdated methods, and investigators unfamiliar with New York evidence law produce results that can't be used in court and may even expose you to legal risk. The New York Department of State licenses approximately 2,500 investigative agencies, but their quality varies dramatically.",
