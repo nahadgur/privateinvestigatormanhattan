@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/data/site';
+import { buildEditorialAuthor } from '@/data/schema-helpers';
 import { AboutPageClient } from './AboutPageClient';
 
 export const metadata: Metadata = {
@@ -19,5 +20,10 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  return <AboutPageClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(buildEditorialAuthor()) }} />
+      <AboutPageClient />
+    </>
+  );
 }

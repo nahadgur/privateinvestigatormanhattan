@@ -16,8 +16,11 @@ import path from 'node:path';
 import { services } from '@/data/services';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
-import { blogArticles } from '@/data/blog';
+import { getPublishedArticles } from '@/data/blog';
 import { getPublishedGuides } from '@/data/guides';
+
+// Draft spokes are excluded from the sitemap until the publisher flips them live.
+const blogArticles = getPublishedArticles();
 
 const ROOT = process.cwd();
 const FALLBACK = new Date().toISOString();

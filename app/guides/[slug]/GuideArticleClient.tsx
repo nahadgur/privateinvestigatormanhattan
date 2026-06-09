@@ -2,14 +2,15 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Clock, Calendar, AlertTriangle, Info, CheckCircle } from 'lucide-react';
-import { type Guide, type GuideBlock } from '@/data/guides';
+import { type Guide, type GuideBlock, getGuideBySlug } from '@/data/guides';
 import { getServiceBySlug } from '@/data/services';
+import { getArticlesByHub } from '@/data/blog';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { siteConfig } from '@/data/site';
-import { buildGuideSchema } from '@/data/schema-helpers';
+import { buildGuideSchema, buildBreadcrumbSchema, buildFAQSchema, buildEditorialAuthor } from '@/data/schema-helpers';
 
 function formatDate(iso: string): string {
   const d = new Date(iso);
@@ -115,17 +116,39 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
     .map(slug => getServiceBySlug(slug))
     .filter((s): s is NonNullable<typeof s> => s !== undefined);
 
-  const articleSchema = buildGuideSchema({
-    title: guide.title,
-    description: guide.metaDescription,
-    slug: guide.slug,
-    publishDate: guide.publishDate,
-    updatedDate: guide.lastUpdated,
-  });
+  // Live child spokes of this hub (drafts excluded).
+  const spokes = getArticlesByHub(guide.slug);
+
+  const relatedGuideLinks = (guide.relatedGuides ?? [])
+    .map(s => getGuideBySlug(s))
+    .filter((g): g is NonNullable<typeof g> => g !== undefined)
+    .map(g => ({ slug: g.slug, title: g.title }));
+
+  const url = `${siteConfig.url}/guides/${guide.slug}/`;
+  // YMYL schema: Article + BreadcrumbList + FAQPage, author/reviewer @id to the
+  // PIM editorial entity (emitted below). No fabricated named investigator.
+  const schemas: object[] = [
+    buildEditorialAuthor(),
+    buildBreadcrumbSchema([
+      { name: 'Home', url: siteConfig.url },
+      { name: 'Guides', url: `${siteConfig.url}/guides/` },
+      { name: guide.title, url },
+    ]),
+    buildGuideSchema({
+      title: guide.title,
+      description: guide.metaDescription,
+      slug: guide.slug,
+      publishDate: guide.publishDate,
+      updatedDate: guide.lastUpdated,
+    }),
+  ];
+  if (guide.faqs && guide.faqs.length > 0) schemas.push(buildFAQSchema(guide.faqs));
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      {schemas.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <div id="main-content" tabIndex={-1} />
@@ -203,6 +226,40 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
                 </section>
               ))}
 
+              {/* FAQ */}
+              {guide.faqs && guide.faqs.length > 0 && (
+                <section className="mt-12 pt-8 border-t border-gray-mid">
+                  <h2 className="text-[22px] md:text-[26px] font-extrabold tracking-tight text-ink mb-5">Frequently Asked Questions</h2>
+                  <div className="space-y-4">
+                    {guide.faqs.map((f, i) => (
+                      <div key={i} className="bg-paper border border-gray-mid rounded-tile p-5">
+                        <h3 className="font-extrabold text-ink text-[15px] mb-2">{f.question}</h3>
+                        <p className="text-[14px] text-gray-dark leading-[1.6]">{f.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Child spokes in this hub (drafts excluded) */}
+              {spokes.length > 0 && (
+                <section className="mt-12 pt-8 border-t border-gray-mid">
+                  <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-4">More on This Topic</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {spokes.map(sp => (
+                      <Link
+                        key={sp.slug}
+                        href={`/blog/${sp.slug}/`}
+                        className="block p-4 bg-paper border border-gray-mid rounded-tile hover:border-primary hover:shadow-card transition-all"
+                      >
+                        <div className="font-extrabold text-ink text-[13px] mb-1">{sp.title}</div>
+                        <div className="text-[12px] text-gray-dark leading-[1.5] line-clamp-2">{sp.excerpt}</div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
               {/* Related services */}
               {relatedServices.length > 0 && (
                 <section className="mt-12 pt-8 border-t border-gray-mid">
@@ -216,6 +273,24 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
                       >
                         <div className="font-extrabold text-ink text-[13px] mb-1">{service.title}</div>
                         <div className="text-[12px] text-gray-dark leading-[1.5] line-clamp-2">{service.description}</div>
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Related guides (sideways) */}
+              {relatedGuideLinks.length > 0 && (
+                <section className="mt-10 pt-8 border-t border-gray-mid">
+                  <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-4">Related Guides</div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {relatedGuideLinks.map(g => (
+                      <Link
+                        key={g.slug}
+                        href={`/guides/${g.slug}/`}
+                        className="block p-4 bg-paper border border-gray-mid rounded-tile hover:border-primary hover:shadow-card transition-all"
+                      >
+                        <div className="font-extrabold text-ink text-[13px]">{g.title}</div>
                       </Link>
                     ))}
                   </div>

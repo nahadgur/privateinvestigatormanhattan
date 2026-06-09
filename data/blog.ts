@@ -6,11 +6,17 @@ export interface ContentBlock {
 export interface BlogArticle {
   slug: string; title: string; metaTitle: string; metaDescription: string;
   category: string; publishDate: string; featuredImage: string; excerpt: string;
+  hub: string;
+  draft: boolean;
+  dateModified?: string;
+  faqs?: { question: string; answer: string }[];
   content: ContentBlock[];
 }
 export const blogArticles: BlogArticle[] = [
   {
     slug: 'what-does-a-private-investigator-in-manhattan-actually-do',
+    hub: 'hire-a-pi-manhattan',
+    draft: false,
     title: 'What does a private investigator in Manhattan actually do',
     metaTitle: 'Manhattan PI Daily Duties: Surveillance & More',
     metaDescription: 'Discover what a private investigator in Manhattan actually does: client consultations, urban surveillance techniques, high-tech tools, interviews, and evidence collection. Uncover the real PI life in NYC\'s urban maze today.',
@@ -413,6 +419,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-to-hire-a-private-investigator-in-manhattan',
+    hub: 'hire-a-pi-manhattan',
+    draft: false,
     title: 'How to hire a private investigator in Manhattan',
     metaTitle: 'Hire Top PI in Manhattan: Expert Guide',
     metaDescription: 'Learn how to hire a private investigator in Manhattan. Discover when to use a PI, verify NY licenses, research firms via reviews, evaluate credentials, compare costs, and secure contracts for reliable results.',
@@ -772,6 +780,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'when-to-hire-a-cheating-spouse-investigator-in-manhattan',
+    hub: 'infidelity-investigations-manhattan',
+    draft: false,
     title: 'When to hire a cheating spouse investigator in Manhattan',
     metaTitle: 'Hire Cheating Spouse Investigator in Manhattan: Key Signs',
     metaDescription: 'Spot infidelity red flags like behavioral changes, digital clues, and financial anomalies in Manhattan. Learn when to hire a local investigator for discreet surveillance, court-ready evidence, and asset protection. Discover benefits, costs, and selection tips now.',
@@ -1398,6 +1408,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'signs-you-may-need-an-infidelity-investigator-in-manhattan',
+    hub: 'infidelity-investigations-manhattan',
+    draft: false,
     title: 'Signs you may need an infidelity investigator in Manhattan',
     metaTitle: 'Spot Infidelity Signs: Hire Investigator in Manhattan',
     metaDescription: 'Notice sudden device secrecy, late nights, emotional distance, or mysterious expenses? These are key signs you may need an infidelity investigator in Manhattan. Learn the red flags and take action to uncover the truth now.',
@@ -1963,6 +1975,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-background-checks-work-with-a-private-investigator-in-manhattan',
+    hub: 'background-checks-due-diligence-manhattan',
+    draft: false,
     title: 'How background checks work with a private investigator in Manhattan',
     metaTitle: 'Manhattan PI Background Checks: How They Work',
     metaDescription: 'Uncover how background checks work with a licensed private investigator in Manhattan. Explore criminal searches, employment verification, public records, surveillance, and consultation processes. Ensure due diligence with expert guidance today.',
@@ -2500,6 +2514,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'can-a-private-investigator-help-with-a-child-custody-case-in-manhattan',
+    hub: 'family-custody-investigations-manhattan',
+    draft: false,
     title: 'Can a private investigator help with a child custody case in Manhattan',
     metaTitle: 'PI Help for Child Custody Cases in Manhattan',
     metaDescription: 'Uncover if a private investigator can help with a child custody case in Manhattan. Learn about legal scope in NY, surveillance, background checks, court-admissible evidence, costs, risks, and hiring tips for your advantage.',
@@ -3028,6 +3044,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'what-to-know-before-hiring-a-surveillance-investigator-in-manhattan',
+    hub: 'surveillance-investigations-manhattan',
+    draft: false,
     title: 'What to know before hiring a surveillance investigator in Manhattan',
     metaTitle: 'Hiring Surveillance Investigator in Manhattan: Key Tips',
     metaDescription: 'What to know before hiring a surveillance investigator in Manhattan: licensing, experience, case success rates, and services for infidelity or insurance fraud. Navigate NYC challenges with local experts. Get proven tips for discretion and results now.',
@@ -3528,6 +3546,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'can-a-private-investigator-find-a-missing-person-in-new-york',
+    hub: 'skip-tracing-locating-people-manhattan',
+    draft: false,
     title: 'Can a private investigator find a missing person in New York',
     metaTitle: 'NY PI Find Missing Person: Success Rates & Methods',
     metaDescription: 'Can a private investigator find a missing person in New York? Explore their legal limits, NYC success rates, surveillance tactics, digital searches, challenges, costs, and timelines. Learn when to hire a PI over police for real results.',
@@ -3842,6 +3862,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'when-businesses-in-manhattan-hire-private-investigators',
+    hub: 'corporate-fraud-investigations-manhattan',
+    draft: false,
     title: 'When businesses in Manhattan hire private investigators',
     metaTitle: 'Manhattan Businesses Hire PIs: Key Reasons',
     metaDescription: 'Discover when businesses in Manhattan hire private investigators for corporate espionage, employee theft, and competitive intelligence. Learn investigation types, NYC regulations, compliance checklists, and real case studies to protect your firm today.',
@@ -4365,6 +4387,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-private-investigators-handle-employee-theft-cases-in-nyc',
+    hub: 'corporate-fraud-investigations-manhattan',
+    draft: false,
     title: 'How private investigators handle employee theft cases in NYC',
     metaTitle: 'NYC PIs: Handling Employee Theft Cases Expertly',
     metaDescription: 'Uncover how private investigators handle employee theft cases in NYC, from initial consultations and legal frameworks to strategic planning with risk matrices, timelines, budgets, and success metrics. Protect your business now.',
@@ -4921,6 +4945,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'what-skip-tracing-means-and-when-you-might-need-it',
+    hub: 'skip-tracing-locating-people-manhattan',
+    draft: false,
     title: 'What skip tracing means and when you might need it',
     metaTitle: 'Skip Tracing Explained: Meaning & When to Use It',
     metaDescription: 'Uncover what skip tracing means and when you need it for debt recovery, legal cases, or finding elusive people. Learn how it works with public records, databases, and advanced tools to locate anyone fast. Discover key use cases now.',
@@ -5282,6 +5308,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-fraud-investigations-work-in-manhattan',
+    hub: 'corporate-fraud-investigations-manhattan',
+    draft: false,
     title: 'How fraud investigations work in Manhattan',
     metaTitle: 'Manhattan Fraud Investigations: Full Process Guide',
     metaDescription: 'Discover how fraud investigations work in Manhattan, from NYPD and DA involvement to reporting hotlines, victim interviews, and evidence gathering in identity theft cases. Learn the key steps to protect yourself today.',
@@ -5813,6 +5841,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-much-does-a-private-investigator-cost-in-manhattan',
+    hub: 'investigator-costs-manhattan',
+    draft: false,
     title: 'How much does a private investigator cost in Manhattan',
     metaTitle: 'Manhattan PI Costs: Hourly Rates & Investigation Fees',
     metaDescription: 'Discover how much a private investigator costs in Manhattan. Get average hourly rates for entry-level to pros, pricing for surveillance, infidelity, corporate cases, flat fees vs. hourly, and real budget breakdowns. Plan your hire confidently today.',
@@ -6276,6 +6306,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'is-it-legal-to-hire-a-private-investigator-in-new-york',
+    hub: 'pi-licensing-new-york',
+    draft: false,
     title: 'Is it legal to hire a private investigator in New York',
     metaTitle: 'Legal to Hire PI in New York? Rules Explained',
     metaDescription: 'Wondering if it\'s legal to hire a private investigator in New York? Clients need no license, but PIs must meet strict state qualifications for surveillance and background checks. Learn permissible activities, prohibitions, and best practices to stay compliant and protect your investigation.',
@@ -6831,6 +6863,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'what-kind-of-evidence-can-a-private-investigator-collect-in-manhattan',
+    hub: 'pi-licensing-new-york',
+    draft: false,
     title: 'What kind of evidence can a private investigator collect in Manhattan',
     metaTitle: 'Legal Evidence Private Investigators Collect in Manhattan',
     metaDescription: 'Uncover what evidence private investigators in Manhattan can legally collect, from surveillance footage and digital monitoring to witness statements. Learn NY licensing rules, constitutional limits, and admissible proof for cases like infidelity. Discover key insights now.',
@@ -7290,6 +7324,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-a-private-investigator-can-help-during-a-divorce-case-in-manhattan',
+    hub: 'family-custody-investigations-manhattan',
+    draft: false,
     title: 'How a private investigator can help during a divorce case in Manhattan',
     metaTitle: 'PI Help in Manhattan Divorce: Assets, Custody, Evidence',
     metaDescription: 'Learn how a private investigator can help during a divorce case in Manhattan by uncovering hidden assets, tracing offshore holdings, gathering infidelity evidence through surveillance, and documenting parental fitness for custody battles. Get expert insights now.',
@@ -7717,6 +7753,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'can-a-private-investigator-help-with-stalking-or-harassment-cases-in-nyc',
+    hub: 'skip-tracing-locating-people-manhattan',
+    draft: false,
     title: 'Can a private investigator help with stalking or harassment cases in NYC',
     metaTitle: 'NYC PI Help for Stalking & Harassment Cases',
     metaDescription: 'Can a private investigator help with stalking or harassment cases in NYC? Learn NY legal definitions, PI surveillance techniques, digital evidence gathering, licensing rules, costs, and when to hire one over police for solid proof.',
@@ -8144,6 +8182,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'what-to-look-for-in-a-manhattan-private-investigator',
+    hub: 'hire-a-pi-manhattan',
+    draft: false,
     title: 'What to look for in a Manhattan private investigator',
     metaTitle: 'Key Traits for Top Manhattan Private Investigators',
     metaDescription: 'Uncover what to look for in a Manhattan private investigator: NY licensing, local expertise, surveillance skills, client reviews, and transparent pricing. Hire wisely and solve your case confidently today.',
@@ -8568,6 +8608,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-due-diligence-investigations-help-individuals-and-businesses-in-manhattan',
+    hub: 'background-checks-due-diligence-manhattan',
+    draft: false,
     title: 'How due diligence investigations help individuals and businesses in Manhattan',
     metaTitle: 'Due Diligence: Protect Manhattan Businesses & Individuals',
     metaDescription: 'Discover how due diligence investigations help individuals and businesses in Manhattan mitigate risks in high-stakes deals, vet partners, and conduct personal background checks. Uncover hidden liabilities in the dense financial ecosystem and safeguard your interests today.',
@@ -9049,6 +9091,8 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'how-to-choose-the-right-private-investigator-in-manhattan',
+    hub: 'hire-a-pi-manhattan',
+    draft: false,
     title: 'How to choose the right private investigator in Manhattan',
     metaTitle: 'Choose Top Private Investigator in Manhattan Guide',
     metaDescription: 'Discover how to choose the right private investigator in Manhattan. Learn to define case objectives, verify NY licensing, check Manhattan expertise, and review testimonials. Follow our step-by-step process with real examples to hire confidently.',
@@ -9613,4 +9657,14 @@ export const blogArticles: BlogArticle[] = [
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
   return blogArticles.find(a => a.slug === slug);
+}
+
+// Draft gate: draft spokes 404 and are excluded from /blog, hub spoke-grids and
+// the sitemap until the publisher flips them live.
+export function getPublishedArticles(): BlogArticle[] {
+  return blogArticles.filter(a => !a.draft);
+}
+
+export function getArticlesByHub(hub: string): BlogArticle[] {
+  return blogArticles.filter(a => a.hub === hub && !a.draft);
 }

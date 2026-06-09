@@ -5,8 +5,11 @@ import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
-import { blogArticles } from '@/data/blog';
+import { getPublishedArticles } from '@/data/blog';
 import { siteConfig } from '@/data/site';
+
+// Draft spokes are excluded from the index until the publisher flips them live.
+const blogArticles = getPublishedArticles();
 
 export function BlogIndexClient() {
   const [isModalOpen, setIsModalOpen] = useState(false);

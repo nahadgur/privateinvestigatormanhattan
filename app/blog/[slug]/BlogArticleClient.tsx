@@ -8,11 +8,33 @@ import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { ServiceBanner } from '@/components/ServiceBanner';
-import { blogArticles } from '@/data/blog';
+import { getArticlesByHub } from '@/data/blog';
+import { getGuideBySlug } from '@/data/guides';
 import { services, getServiceBySlug } from '@/data/services';
 import { siteConfig } from '@/data/site';
-import { buildBlogPostSchema } from '@/data/schema-helpers';
+import { buildBlogPostSchema, buildBreadcrumbSchema, buildFAQSchema, buildEditorialAuthor } from '@/data/schema-helpers';
 import type { BlogArticle, ContentBlock } from '@/data/blog';
+
+// Extract a FAQ list from content (the "Frequently Asked Questions" h2 followed
+// by h3/p pairs) for FAQPage schema. Falls back to an explicit faqs field.
+function extractFaqs(content: ContentBlock[]): { question: string; answer: string }[] {
+  for (let i = 0; i < content.length; i++) {
+    const b = content[i];
+    if (b.type === 'h2' && (b.text || '').includes('Frequently Asked Questions')) {
+      const faqs: { question: string; answer: string }[] = [];
+      let j = i + 1;
+      while (j < content.length) {
+        const q = content[j];
+        const a = content[j + 1];
+        if (q && q.type === 'h3' && a && a.type === 'p') { faqs.push({ question: q.text || '', answer: a.text || '' }); j += 2; }
+        else if (q && q.type === 'h3') { j += 1; }
+        else break;
+      }
+      return faqs;
+    }
+  }
+  return [];
+}
 
 const categoryServiceMap: Record<string, string> = {
   'Private Investigator': 'surveillance',
@@ -104,21 +126,37 @@ function renderBlock(block: ContentBlock, index: number) {
 export function BlogArticleClient({ article }: { article: BlogArticle }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const relatedArticles = blogArticles
-    .filter((a) => a.slug !== article.slug && a.category === article.category)
+  // Related = live spokes in the same hub (tighter than category).
+  const hubGuide = getGuideBySlug(article.hub);
+  const relatedArticles = getArticlesByHub(article.hub)
+    .filter((a) => a.slug !== article.slug)
     .slice(0, 3);
 
-  const articleSchema = buildBlogPostSchema({
-    title: article.metaTitle,
-    description: article.metaDescription,
-    slug: article.slug,
-    publishDate: article.publishDate,
-    imageUrl: article.featuredImage || undefined,
-  });
+  const url = `${siteConfig.url}/blog/${article.slug}/`;
+  const faqs = article.faqs && article.faqs.length > 0 ? article.faqs : extractFaqs(article.content);
+  const schemas: object[] = [
+    buildEditorialAuthor(),
+    buildBreadcrumbSchema([
+      { name: 'Home', url: siteConfig.url },
+      { name: 'Blog', url: `${siteConfig.url}/blog/` },
+      { name: article.title, url },
+    ]),
+    buildBlogPostSchema({
+      title: article.metaTitle,
+      description: article.metaDescription,
+      slug: article.slug,
+      publishDate: article.publishDate,
+      updatedDate: article.dateModified || article.publishDate,
+      imageUrl: article.featuredImage || undefined,
+    }),
+  ];
+  if (faqs.length > 0) schemas.push(buildFAQSchema(faqs));
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      {schemas.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
       <LeadFormModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main id="main-content" className="flex-grow">
@@ -143,6 +181,7 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
                 <span className="inline-flex items-center gap-1.5 text-[11px] text-white/70">
                   <Calendar className="w-3 h-3" /> {article.publishDate}
                 </span>
+                <span className="inline-flex items-center gap-1.5 text-[11px] text-white/70">By PIM</span>
               </div>
               <h1 className="text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] font-extrabold tracking-tight leading-[1.1]">
                 {article.title}
@@ -155,6 +194,12 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Article body */}
             <article className="lg:col-span-2 max-w-none">
+              {hubGuide && (
+                <p className="text-[13px] text-gray-dark mb-6">
+                  Part of our guide:{' '}
+                  <Link href={`/guides/${hubGuide.slug}/`} className="text-primary font-semibold hover:underline">{hubGuide.title}</Link>
+                </p>
+              )}
               {(() => {
                 const serviceSlug = categoryServiceMap[article.category] || 'surveillance';
                 const matchedService = getServiceBySlug(serviceSlug) || services[0];

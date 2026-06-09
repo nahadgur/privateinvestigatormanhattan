@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { siteConfig } from '@/data/site';
-import { blogArticles } from '@/data/blog';
+import { getPublishedArticles } from '@/data/blog';
 import { BlogIndexClient } from './BlogIndexClient';
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default function BlogIndexPage() {
     description: 'Field reports and case patterns from licensed Manhattan investigators.',
     url: `${siteConfig.url}/blog/`,
     publisher: { '@id': `${siteConfig.url}#organization` },
-    blogPost: blogArticles.slice(0, 10).map(a => ({
+    blogPost: getPublishedArticles().slice(0, 10).map(a => ({
       '@type': 'BlogPosting',
       headline: a.title,
       url: `${siteConfig.url}/blog/${a.slug}/`,

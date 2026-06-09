@@ -22,7 +22,7 @@ export const TRUST_BADGES = [
   { "icon": "Award", "title": "NYS Licensed Investigators", "description": "Every PI in our network holds a current New York State license under Article 7 of the General Business Law — non-negotiable for court-admissible evidence." },
   { "icon": "ShieldCheck", "title": "Fully Insured and Bonded", "description": "All investigators carry comprehensive liability insurance and are bonded, protecting you and ensuring your case is handled to professional legal standards." },
   { "icon": "UserCheck", "title": "Former Law Enforcement", "description": "Our network includes investigators with NYPD, FBI, and federal agency backgrounds — professionals who understand evidence standards and New York court requirements." },
-  { "icon": "PoundSterling", "title": "Confidential Consultation", "description": "All initial consultations are strictly confidential. We discuss your situation and match you with the right investigator before any commitment is required." }
+  { "icon": "DollarSign", "title": "Confidential Consultation", "description": "All initial consultations are strictly confidential. We discuss your situation and match you with the right investigator before any commitment is required." }
 ];
 export const FAQS_HOME = [
   { "question": "How does the Private Investigator Manhattan matching service work?", "answer": "Tell us about your case — the type of investigation, what you know, and your objective. We connect you with licensed investigators from our vetted Manhattan network who have handled similar cases. The consultation is confidential and there's no obligation until you choose to proceed." },

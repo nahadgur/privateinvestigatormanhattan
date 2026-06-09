@@ -36,6 +36,8 @@ export interface Guide {
   intro: string[];           // intro paragraphs shown above TOC
   sections: GuideSection[];
   relatedServices: string[]; // service slugs to link at bottom
+  faqs?: { question: string; answer: string }[]; // optional FAQ block + FAQPage schema
+  relatedGuides?: string[];  // sideways links to adjacent hub slugs
 }
 
 export const guides: Guide[] = [
@@ -184,6 +186,7 @@ export const guides: Guide[] = [
       },
     ],
     relatedServices: ['infidelity-investigation', 'surveillance', 'background-checks', 'corporate-investigations', 'asset-searches', 'child-custody-investigations'],
+    relatedGuides: ['hire-a-pi-manhattan', 'pi-licensing-new-york'],
   },
 
   // ============================================================
@@ -397,6 +400,7 @@ export const guides: Guide[] = [
       },
     ],
     relatedServices: ['infidelity-investigation', 'corporate-investigations', 'background-checks', 'surveillance', 'asset-searches', 'child-custody-investigations'],
+    relatedGuides: ['investigator-costs-manhattan', 'pi-licensing-new-york'],
   },
 
   // ============================================================
@@ -579,6 +583,385 @@ export const guides: Guide[] = [
       },
     ],
     relatedServices: ['infidelity-investigation', 'surveillance', 'background-checks', 'corporate-investigations', 'asset-searches', 'child-custody-investigations'],
+    relatedGuides: ['hire-a-pi-manhattan', 'surveillance-investigations-manhattan'],
+  },
+
+  // ─── H4. Infidelity and cheating-spouse investigations ────────────────────
+  {
+    slug: 'infidelity-investigations-manhattan',
+    title: 'Infidelity and Cheating-Spouse Investigations in Manhattan',
+    metaTitle: 'Infidelity Investigations in Manhattan: What to Know | PIM',
+    metaDescription: 'How infidelity and cheating-spouse investigations work in Manhattan: what licensed investigators can legally document, what proof is admissible in New York, and typical cost.',
+    publishDate: '2026-02-04',
+    lastUpdated: '2026-04-20',
+    readingTimeMinutes: 11,
+    heroEyebrow: 'Infidelity',
+    heroDescription: 'If you suspect a partner is cheating, a licensed investigator can document the facts discreetly and lawfully. This guide explains how infidelity investigations work in Manhattan, what evidence holds up, and what to expect on cost and timeline.',
+    intro: [
+      'An infidelity investigation is one of the most emotionally difficult reasons to hire a private investigator, and one of the most common. The goal is rarely confrontation. It is clarity: knowing the facts so you can make decisions about your relationship, your finances, and, where children are involved, your family.',
+      'This guide explains what a licensed Manhattan investigator can and cannot do, how surveillance evidence is documented for New York proceedings, and what an infidelity investigation typically costs. We are a matching service and do not investigate ourselves; we connect you with NYS-licensed investigators who handle these cases discreetly.',
+    ],
+    sections: [
+      {
+        id: 'how-it-works',
+        heading: 'How an Infidelity Investigation Works',
+        content: [
+          { type: 'p', text: 'A licensed investigator starts by reviewing what you already know: routines, locations, times of unexplained absence, and any specific concerns. From there they build a surveillance plan. Manhattan density means most infidelity work is foot surveillance by a small team rather than a single agent in a car, because a parked vehicle is conspicuous and the subject moves on foot, by subway, or by rideshare.' },
+          { type: 'p', text: 'Surveillance is documented with time-stamped photography and video and a written log of movements. The investigator records what happens in public view: who the subject meets, where they go, and how long they stay. The output is a factual report, not an interpretation, structured so it can be handed to a matrimonial attorney if the matter moves toward divorce.' },
+          { type: 'callout', variant: 'note', heading: 'Discretion first', text: 'A competent investigator prioritizes not being detected. If a subject becomes aware they are being watched, behavior changes and the evidentiary value of the operation drops. This is a core reason to use a licensed professional rather than attempting it yourself.' },
+        ],
+      },
+      {
+        id: 'what-is-legal',
+        heading: 'What Is Legal in New York',
+        content: [
+          { type: 'p', text: 'Surveillance and photography in public spaces are fully legal in New York. A licensed investigator can follow and document a person anywhere the public can be. What they cannot do is also clear, and a reputable investigator will tell you so before you hire them.' },
+          { type: 'ul', items: [
+            'No trespassing onto private property to observe or photograph.',
+            'No intercepting phone calls, texts, or email (this implicates the federal Wiretap Act and New York eavesdropping law).',
+            'No accessing private accounts, devices, or financial records without authorization.',
+            'GPS tracking is restricted: placing a tracker on a vehicle you do not own or jointly own raises legal exposure, so investigators handle tracking conservatively and within the law.',
+          ] },
+          { type: 'p', text: 'Evidence gathered legally and documented with a chain of custody is regularly accepted in New York matrimonial proceedings. New York is a no-fault divorce state, so proof of infidelity is rarely needed to obtain a divorce itself, but it can be relevant to issues like the dissipation of marital assets or, in some cases, custody and parenting decisions.' },
+        ],
+      },
+      {
+        id: 'cost-timeline',
+        heading: 'Cost and Timeline',
+        content: [
+          { type: 'p', text: 'Most Manhattan infidelity investigations run between $2,000 and $8,000, covering one to three weeks of active surveillance plus the evidence package. Surveillance is usually billed per hour per agent, with Manhattan cases commonly requiring two agents for reliable coverage. A retainer of $2,000 to $3,500 is typical.' },
+          { type: 'p', text: 'Timeline depends on how often the subject is active and how quickly patterns establish. A subject with a predictable routine can be documented in days; an irregular schedule takes longer. A good investigator gives you a realistic estimate after reviewing what you know, and will tell you honestly if the facts you have do not yet justify the spend.' },
+        ],
+      },
+    ],
+    relatedServices: ['infidelity-investigation', 'surveillance'],
+    relatedGuides: ['family-custody-investigations-manhattan', 'surveillance-investigations-manhattan'],
+    faqs: [
+      { question: 'Is it legal to investigate my spouse in New York?', answer: 'Yes. Surveillance and photography in public spaces are legal in New York. A licensed investigator cannot trespass, intercept communications, or access private accounts, but they can document everything that happens in public view, which is usually enough to establish the facts.' },
+      { question: 'Do I need proof of cheating to get divorced in New York?', answer: 'No. New York allows no-fault divorce, so you do not need to prove infidelity to end a marriage. Evidence can still matter for related issues such as dissipation of marital assets or, in some situations, custody and parenting decisions. An attorney can advise on relevance to your case.' },
+      { question: 'How much does an infidelity investigation cost in Manhattan?', answer: 'Most cases run $2,000 to $8,000 for one to three weeks of surveillance plus the evidence package, with a retainer of $2,000 to $3,500. The range reflects how often the subject is active and how many agents the case requires.' },
+    ],
+  },
+
+  // ─── H5. Surveillance investigations ──────────────────────────────────────
+  {
+    slug: 'surveillance-investigations-manhattan',
+    title: 'Surveillance Investigations in Manhattan',
+    metaTitle: 'Surveillance Investigations in Manhattan: A Practical Guide | PIM',
+    metaDescription: 'How professional surveillance works in Manhattan: covert versus overt methods, what is legal under New York law, GPS rules, and how surveillance evidence holds up in court.',
+    publishDate: '2026-02-06',
+    lastUpdated: '2026-04-20',
+    readingTimeMinutes: 10,
+    heroEyebrow: 'Surveillance',
+    heroDescription: 'Surveillance is the backbone of most private investigations. This guide explains how it works in a dense city, what New York law allows, and how the resulting evidence is documented to hold up if your case reaches court.',
+    intro: [
+      'Surveillance is the documented observation of a person or location over time. It supports infidelity cases, custody disputes, insurance and workers compensation claims, and corporate matters. In Manhattan, surveillance is a specialized skill because the environment is unlike anywhere else: vertical, crowded, and constantly moving.',
+      'This guide covers the methods professional investigators use, the legal lines under New York law, and what makes surveillance evidence admissible. We match you with NYS-licensed investigators who run these operations; we do not conduct surveillance ourselves.',
+    ],
+    sections: [
+      {
+        id: 'methods',
+        heading: 'How Surveillance Works in Manhattan',
+        content: [
+          { type: 'p', text: 'Outside dense cities, surveillance often means an investigator in a vehicle watching a driveway. Manhattan rarely works that way. Subjects move on foot, by subway, and by rideshare, and a stationary vehicle stands out. Effective Manhattan surveillance is usually a coordinated foot operation by two or more agents who rotate position so no single face is seen too often.' },
+          { type: 'p', text: 'Investigators use cameras capable of clear capture from a distance and maintain a written log alongside the footage. The deliverable is a report with timestamped entries, photographs and video, and, where relevant, a record of locations and durations, packaged so an attorney can use it.' },
+          { type: 'h3', text: 'Covert versus overt' },
+          { type: 'p', text: 'Most investigative surveillance is covert: the subject does not know they are being observed, which preserves natural behavior. Overt surveillance, where a visible presence is intended to deter or to prompt a reaction, is occasional and case-specific. Your investigator will recommend the approach that fits your objective.' },
+        ],
+      },
+      {
+        id: 'legal',
+        heading: 'What New York Law Allows',
+        content: [
+          { type: 'p', text: 'The governing principle is the reasonable expectation of privacy. There is no such expectation in a public place, so observing and recording someone on a sidewalk, in a park, or in a publicly accessible business is lawful. There is an expectation of privacy inside a home, a private office, or a bathroom, and recording there is not.' },
+          { type: 'ul', items: [
+            'Public-space observation and photography: legal.',
+            'Audio recording of conversations: New York is a one-party-consent state for recording a conversation you are part of, but a third party recording others without consent can violate eavesdropping law. Investigators handle audio conservatively.',
+            'GPS tracking: placing a tracker on a vehicle you do not own raises real legal exposure, so investigators apply it only where lawful.',
+            'Trespass: never. Evidence from a trespass is both unlawful and likely inadmissible.',
+          ] },
+        ],
+      },
+      {
+        id: 'court',
+        heading: 'How Surveillance Evidence Holds Up',
+        content: [
+          { type: 'p', text: 'Surveillance evidence is admitted in New York courts routinely when three things are true: it was gathered legally, it is documented with a clear chain of custody, and the investigator who gathered it is prepared to testify to its authenticity. Footage with gaps, no logs, or an unlicensed source is far easier for opposing counsel to challenge.' },
+          { type: 'p', text: 'This is the practical case for using a licensed investigator rather than gathering material yourself. A professional builds the record to evidentiary standards from the first hour, which is difficult to reconstruct after the fact.' },
+        ],
+      },
+    ],
+    relatedServices: ['surveillance', 'infidelity-investigation'],
+    relatedGuides: ['infidelity-investigations-manhattan', 'pi-licensing-new-york'],
+    faqs: [
+      { question: 'Is surveillance legal in New York?', answer: 'Yes, in public spaces. There is no reasonable expectation of privacy on a sidewalk, in a park, or in a publicly accessible business, so observation and photography there are lawful. Recording inside a home or other private space, or trespassing to observe, is not.' },
+      { question: 'Can an investigator put a GPS tracker on a car?', answer: 'It depends on ownership. Placing a tracker on a vehicle you do not own or jointly own raises legal exposure under New York and federal law, so licensed investigators use tracking only where it is clearly lawful and advise against it where it is not.' },
+      { question: 'How many investigators does Manhattan surveillance need?', answer: 'Most Manhattan surveillance needs at least two agents so coverage continues if one is spotted. Busy commercial areas or complex movements can require three or four to maintain a seamless watch without detection.' },
+    ],
+  },
+
+  // ─── H6. Background checks and due diligence ──────────────────────────────
+  {
+    slug: 'background-checks-due-diligence-manhattan',
+    title: 'Background Checks and Due Diligence in Manhattan',
+    metaTitle: 'Background Checks and Due Diligence in Manhattan | PIM',
+    metaDescription: 'What a professional background check covers, how it differs from an online service, and what the FCRA requires. Pre-employment, tenant, and pre-relationship due diligence in Manhattan.',
+    publishDate: '2026-02-09',
+    lastUpdated: '2026-04-20',
+    readingTimeMinutes: 11,
+    heroEyebrow: 'Background and Due Diligence',
+    heroDescription: 'A professional background investigation goes far beyond a database lookup. This guide explains what a licensed investigator verifies, where the FCRA applies, and when due diligence is worth it for individuals and businesses.',
+    intro: [
+      'Background checks and due diligence answer one question: is this person or business who they say they are? The stakes vary from a new hire to a tenant to a romantic partner to a business acquisition, but the discipline is the same: verify claims against primary sources rather than trusting a profile.',
+      'This guide explains what a licensed investigator actually checks, how that differs from a consumer people-search site, and the legal rules that govern certain checks. We match you with NYS-licensed investigators; we do not run the checks ourselves.',
+    ],
+    sections: [
+      {
+        id: 'what-covered',
+        heading: 'What a Professional Check Covers',
+        content: [
+          { type: 'p', text: 'A professional background investigation combines database access with verification work that consumer services do not perform. Depending on the purpose, it can include criminal history across multiple jurisdictions, civil litigation records, bankruptcies and liens, address and employment history, professional license verification, and analysis of public social media.' },
+          { type: 'p', text: 'The difference that matters is verification. A licensed investigator can confirm a claim through direct contact and source interviews, not just report what a database returned. For high-stakes decisions, that distinction is the whole point.' },
+        ],
+      },
+      {
+        id: 'fcra',
+        heading: 'When the FCRA Applies',
+        content: [
+          { type: 'p', text: 'The Fair Credit Reporting Act (FCRA) governs background checks used for employment, tenancy, and credit. When a check is run for one of those purposes, specific rules apply: the subject must consent, and if an adverse decision is based on the report, the subject is entitled to notice and a copy. This is federal law, and New York layers on additional protections, including limits on the use of criminal history in hiring.' },
+          { type: 'callout', variant: 'warning', heading: 'Purpose drives the rules', text: 'A pre-employment or tenant-screening check is FCRA-regulated and requires consent and disclosure. A personal pre-relationship check on someone you are dating is not an FCRA purpose, but it still cannot rely on unlawful access to private records. A reputable investigator scopes the check to the purpose and stays inside the rules.' },
+        ],
+      },
+      {
+        id: 'when-worth-it',
+        heading: 'When Due Diligence Is Worth It',
+        content: [
+          { type: 'p', text: 'Due diligence pays for itself when the downside of being wrong is large: hiring an executive with financial authority, signing a lease with a high-value tenant, entering a business partnership, or committing to a relationship that involves shared finances or children. In each case the cost of a check is small against the cost of the risk it surfaces.' },
+          { type: 'p', text: 'A standard background check is often completed in three to seven business days. Multi-jurisdiction or executive-level due diligence, including source interviews and regulatory records, takes longer and is scoped individually.' },
+        ],
+      },
+    ],
+    relatedServices: ['background-checks', 'corporate-investigations'],
+    relatedGuides: ['corporate-fraud-investigations-manhattan', 'hire-a-pi-manhattan'],
+    faqs: [
+      { question: 'How is a PI background check different from an online service?', answer: 'Consumer services pull limited, often outdated public records. A licensed investigator has access to professional databases, can verify information through direct contact and source interviews, and produces a report that carries evidentiary weight. The difference is verification, which matters most in high-stakes decisions.' },
+      { question: 'Do I need someone\'s consent to run a background check?', answer: 'For employment, tenant, or credit purposes the FCRA requires the subject\'s consent and disclosure if an adverse decision follows. A personal pre-relationship check is not an FCRA purpose and does not require consent, but it still cannot use unlawful access to private records.' },
+      { question: 'How long does a background check take?', answer: 'A standard check is usually completed in three to seven business days. Multi-jurisdiction or executive due diligence involving source interviews and regulatory records takes longer and is scoped to the specific case.' },
+    ],
+  },
+
+  // ─── H7. Corporate and fraud investigations ───────────────────────────────
+  {
+    slug: 'corporate-fraud-investigations-manhattan',
+    title: 'Corporate and Fraud Investigations in Manhattan',
+    metaTitle: 'Corporate and Fraud Investigations in Manhattan | PIM',
+    metaDescription: 'How corporate and fraud investigations work for Manhattan businesses: employee theft, IP loss, partner due diligence, and insurance fraud, handled within a legal and privileged framework.',
+    publishDate: '2026-02-11',
+    lastUpdated: '2026-04-20',
+    readingTimeMinutes: 12,
+    heroEyebrow: 'Corporate and Fraud',
+    heroDescription: 'When a business suspects theft, fraud, or misconduct, a licensed investigator gathers the facts in a way that protects the company legally. This guide explains the common case types and how investigators work alongside counsel.',
+    intro: [
+      'Corporate investigations cover the matters a business cannot afford to get wrong: employee theft of money or information, intellectual property loss, vendor and procurement fraud, insurance fraud, and due diligence on a partner or acquisition target. Manhattan\'s concentration of finance, media, and professional services makes it one of the busiest corporate-investigation markets in the country.',
+      'This guide explains the common case types, how investigators coordinate with attorneys to keep work within a privileged framework, and what to expect on scope and cost. We connect businesses with NYS-licensed investigators experienced in corporate matters; we do not investigate ourselves.',
+    ],
+    sections: [
+      {
+        id: 'case-types',
+        heading: 'Common Corporate Case Types',
+        content: [
+          { type: 'p', text: 'Most Manhattan corporate engagements fall into a few categories. The investigator scopes each to the evidence the business actually needs, not a fishing expedition.' },
+          { type: 'ul', items: [
+            'Employee theft and embezzlement, including diversion of funds and inventory.',
+            'Intellectual property and trade-secret loss, often when a departing employee takes proprietary information.',
+            'Vendor, procurement, and kickback fraud.',
+            'Insurance fraud, including exaggerated or staged claims.',
+            'Pre-deal due diligence on executives, partners, or acquisition targets.',
+          ] },
+        ],
+      },
+      {
+        id: 'legal-framework',
+        heading: 'Working Within a Legal Framework',
+        content: [
+          { type: 'p', text: 'Corporate investigations carry legal risk if handled poorly. An employer has legitimate grounds to investigate suspected misconduct, but the work must comply with New York labor law and cannot involve unlawful surveillance or access. The safest path is for the investigation to be directed by counsel.' },
+          { type: 'p', text: 'When an attorney directs the engagement, the work can often be conducted under attorney-client privilege or as attorney work product, which protects the findings and keeps them aligned with any litigation strategy. Investigators in our network routinely work this way with New York firms and understand courtroom evidence standards.' },
+          { type: 'callout', variant: 'note', heading: 'Investigating a current employee', text: 'Employers can investigate an employee where there is reasonable suspicion of misconduct, using lawful methods: surveillance of public activity, authorized document review, and interviews. The investigator advises on the legal boundaries before any work begins.' },
+        ],
+      },
+      {
+        id: 'cost',
+        heading: 'Scope and Cost',
+        content: [
+          { type: 'p', text: 'Corporate work is the widest cost range in the field because scope varies so much. A focused single-issue inquiry can run a few thousand dollars; a complex fraud or IP investigation with forensic and multi-jurisdiction elements can reach the tens of thousands or more. Most M&A diligence and IP-theft matters land in a mid five-figure range.' },
+          { type: 'p', text: 'A capable investigator scopes the engagement to a defined objective with a budget and a reporting cadence, so the business controls spend against the value of the evidence sought.' },
+        ],
+      },
+    ],
+    relatedServices: ['corporate-investigations', 'background-checks'],
+    relatedGuides: ['background-checks-due-diligence-manhattan', 'asset-searches-manhattan'],
+    faqs: [
+      { question: 'Can a business investigate a current employee in New York?', answer: 'Yes, where there is reasonable suspicion of misconduct. The investigation must comply with New York labor law and use lawful methods such as public surveillance, authorized document review, and interviews. A licensed investigator advises on the legal boundaries before starting.' },
+      { question: 'How do corporate investigators work with attorneys?', answer: 'Most corporate investigations are directed by counsel so the work can be conducted under attorney-client privilege or as work product, protecting the findings and aligning them with litigation strategy. Investigators in our network have extensive experience working with New York law firms.' },
+      { question: 'What do corporate investigations cost?', answer: 'The range is wide. A focused inquiry can be a few thousand dollars; complex fraud, IP, or M&A diligence with forensic elements commonly runs into the tens of thousands. The engagement is scoped to a defined objective with a budget so the business controls spend.' },
+    ],
+  },
+
+  // ─── H8. Asset searches and financial investigations ──────────────────────
+  {
+    slug: 'asset-searches-manhattan',
+    title: 'Asset Searches and Financial Investigations in Manhattan',
+    metaTitle: 'Asset Searches in Manhattan: How They Work | PIM',
+    metaDescription: 'How asset searches work in New York: locating real estate, business interests, and financial holdings for divorce, judgment recovery, and business disputes, and what is legal versus not.',
+    publishDate: '2026-02-13',
+    lastUpdated: '2026-04-20',
+    readingTimeMinutes: 11,
+    heroEyebrow: 'Asset and Financial',
+    heroDescription: 'An asset search establishes what someone actually owns. This guide explains how licensed investigators locate property and financial holdings, when an asset search is worth it, and the legal lines around financial information.',
+    intro: [
+      'An asset search is the disciplined process of identifying what a person or business owns and is owed. It is central to three situations: divorce, where one spouse may be hiding marital assets; judgment enforcement, where a creditor needs collectible property to recover on a win; and business disputes, where a party\'s real financial position determines strategy.',
+      'This guide explains the methods a licensed investigator uses, what is legal under New York and federal law, and when an asset search pays for itself. We match you with NYS-licensed investigators who conduct these searches lawfully; we do not perform them ourselves.',
+    ],
+    sections: [
+      {
+        id: 'what-found',
+        heading: 'What an Asset Search Can Locate',
+        content: [
+          { type: 'p', text: 'Through lawful database access, public records, and skip-tracing methods, a licensed investigator can locate a wide range of holdings. The reachable picture is broader than public records alone, though no legal search reaches everything.' },
+          { type: 'ul', items: [
+            'Real estate holdings and recorded mortgages and liens.',
+            'Business ownership, corporate officer positions, and UCC filings.',
+            'Vehicle, vessel, and aircraft registrations.',
+            'Publicly recorded financial instruments and judgments.',
+            'Professional licenses and regulatory filings.',
+          ] },
+          { type: 'p', text: 'For concealed or offshore assets, investigators work with forensic accountants and vetted international networks. They are transparent at the outset about what the search is likely to reveal given how well assets have been hidden.' },
+        ],
+      },
+      {
+        id: 'whats-legal',
+        heading: 'What Is Legal, and What Is Not',
+        content: [
+          { type: 'p', text: 'The hard line in financial investigation is pretexting for financial records. Federal law, the Gramm-Leach-Bliley Act, makes it illegal to obtain a person\'s bank or financial account information through false pretenses. A legitimate investigator does not call a bank pretending to be the account holder, and you should walk away from anyone who offers to.' },
+          { type: 'callout', variant: 'warning', heading: 'No pretexting', text: 'If an investigator promises to pull exact bank balances quickly, treat it as a red flag. Lawful asset work locates and documents ownership through legal channels. Account-level balances generally come through formal discovery, subpoena, or court process, not a phone call.' },
+          { type: 'p', text: 'What is lawful is substantial: public records across jurisdictions, proprietary databases, and analysis that connects a subject to entities and property. In litigation, the investigator\'s findings frequently guide where an attorney directs formal discovery.' },
+        ],
+      },
+      {
+        id: 'when-worth-it',
+        heading: 'When an Asset Search Is Worth It',
+        content: [
+          { type: 'p', text: 'Asset searches are most valuable in high-asset divorce where disclosure is incomplete, in judgment enforcement where you need to know whether a debtor has collectible property before spending on collection, and in due diligence before extending credit or entering a deal. Standard searches start in the low four figures; multi-jurisdiction or offshore work runs higher and is scoped individually.' },
+        ],
+      },
+    ],
+    relatedServices: ['asset-searches', 'corporate-investigations'],
+    relatedGuides: ['family-custody-investigations-manhattan', 'corporate-fraud-investigations-manhattan'],
+    faqs: [
+      { question: 'Can a private investigator find hidden bank accounts?', answer: 'A licensed investigator can lawfully locate evidence of banking relationships and many financial holdings through legal database and records work. They cannot obtain account balances by pretexting, which federal law prohibits. Exact balances generally come through formal discovery or subpoena in litigation.' },
+      { question: 'When is an asset search most useful?', answer: 'Most often in high-asset divorce to identify undisclosed marital assets, in judgment enforcement to find collectible property before spending on collection, and in due diligence before extending credit or entering a partnership.' },
+      { question: 'How much does an asset search cost?', answer: 'Standard searches start in the low four figures. Multi-jurisdiction or offshore searches, and matters involving forensic accounting, run higher and are scoped individually. A good investigator tells you what the search is likely to reveal before you commit.' },
+    ],
+  },
+
+  // ─── H9. Family, divorce and child custody investigations ─────────────────
+  {
+    slug: 'family-custody-investigations-manhattan',
+    title: 'Family, Divorce and Child Custody Investigations in Manhattan',
+    metaTitle: 'Child Custody and Divorce Investigations in Manhattan | PIM',
+    metaDescription: 'How investigators support divorce and custody cases in New York: what evidence family courts accept, proving cohabitation for alimony, and documenting parenting concerns lawfully.',
+    publishDate: '2026-02-16',
+    lastUpdated: '2026-04-20',
+    readingTimeMinutes: 11,
+    heroEyebrow: 'Family and Custody',
+    heroDescription: 'In divorce and custody matters, documented facts carry weight that accusations do not. This guide explains what a licensed investigator can lawfully gather, what New York family courts accept, and when an investigation helps.',
+    intro: [
+      'Family and custody investigations are about protecting children and securing a fair outcome with evidence rather than allegation. New York family courts decide custody on the best interests of the child, and a judge weighs documented facts far more heavily than one parent\'s word against the other\'s.',
+      'This guide explains what licensed investigators can lawfully document, what evidence New York courts accept, and the related issue of proving cohabitation in alimony disputes. We match you with NYS-licensed investigators experienced in family matters; we do not investigate ourselves.',
+    ],
+    sections: [
+      {
+        id: 'what-evidence',
+        heading: 'What Evidence Helps a Custody Case',
+        content: [
+          { type: 'p', text: 'Custody investigations are documentation-focused. Through lawful observation in public spaces, an investigator can document a parent\'s living environment, sobriety, supervision of the children, who the children are exposed to, and compliance with an existing custody order. The output is timestamped video and photography, a written log, and where relevant, witness interviews.' },
+          { type: 'p', text: 'The standard is the best interests of the child. Evidence that bears on a child\'s safety and welfare, a documented parenting-plan violation, or exposure to risk is the kind a court will consider. A reputable investigator will tell you honestly if your concern does not yet rise to the level where an investigation produces useful evidence.' },
+        ],
+      },
+      {
+        id: 'admissibility',
+        heading: 'What New York Family Courts Accept',
+        content: [
+          { type: 'p', text: 'Evidence gathered by a licensed investigator is regularly admitted in New York family court. Three conditions matter: it was gathered legally, it is documented with a clear chain of custody, and the investigator is prepared to testify to it. Material gathered through trespass, device access, or other unlawful means is both inadmissible and damaging to your credibility.' },
+          { type: 'callout', variant: 'note', heading: 'Lawful methods only', text: 'A custody investigation that cuts legal corners can backfire badly. Courts take a dim view of a parent who broke the law to gather evidence. Using a licensed investigator who works within New York law protects both the evidence and your standing in the case.' },
+        ],
+      },
+      {
+        id: 'divorce-cohabitation',
+        heading: 'Divorce and Cohabitation',
+        content: [
+          { type: 'p', text: 'Beyond custody, investigators support divorce in two common ways. The first is documenting cohabitation: under New York law and many separation agreements, a former spouse\'s maintenance (alimony) can be affected if they are cohabiting with a new partner, and that often must be proven with surveillance. The second is supporting asset work where one spouse suspects hidden marital property, which connects to a financial investigation.' },
+          { type: 'p', text: 'Investigators in our network coordinate with matrimonial attorneys so the evidence is gathered and packaged for the specific issue before the court.' },
+        ],
+      },
+    ],
+    relatedServices: ['child-custody-investigations', 'infidelity-investigation'],
+    relatedGuides: ['infidelity-investigations-manhattan', 'asset-searches-manhattan'],
+    faqs: [
+      { question: 'What evidence can a PI gather for a custody case in New York?', answer: 'Through lawful observation in public, an investigator can document a parent\'s living environment, sobriety, supervision of the children, who the children are exposed to, and compliance with a custody order, using timestamped video, photography, a written log, and witness interviews where relevant.' },
+      { question: 'Will custody evidence hold up in New York family court?', answer: 'Yes, when it was gathered legally, documented with a clear chain of custody, and the investigator is prepared to testify. Evidence obtained through trespass or device access is inadmissible and can damage your credibility, so lawful methods are essential.' },
+      { question: 'Can an investigator prove cohabitation for alimony?', answer: 'Yes. New York maintenance can be affected if a former spouse is cohabiting with a new partner, which often must be proven through surveillance. A licensed investigator documents the pattern and packages it for your matrimonial attorney.' },
+    ],
+  },
+
+  // ─── H10. Locating people: skip tracing and missing persons ───────────────
+  {
+    slug: 'skip-tracing-locating-people-manhattan',
+    title: 'Locating People: Skip Tracing and Missing Persons in Manhattan',
+    metaTitle: 'Skip Tracing and Locating People in Manhattan | PIM',
+    metaDescription: 'How investigators locate people in New York: skip tracing for service of process and judgment debtors, finding missing relatives, and what information speeds a search.',
+    publishDate: '2026-02-18',
+    lastUpdated: '2026-04-20',
+    readingTimeMinutes: 10,
+    heroEyebrow: 'Locating People',
+    heroDescription: 'Whether you need to serve a defendant, collect on a judgment, or reconnect with a relative, locating someone who is hard to find is a specialized skill. This guide explains how skip tracing and missing-persons work in New York.',
+    intro: [
+      'Locating people covers two related needs. Skip tracing is finding someone who is hard to locate on purpose or whose address history is unusually opaque: a defendant avoiding service, a judgment debtor, a witness, or a beneficiary. Missing-persons work is finding someone you have lost touch with: an estranged relative, a birth parent, an old friend, or a former business contact.',
+      'This guide explains how licensed investigators locate people, what information speeds a search, and the line between this work and an active-danger case that belongs with the police. We match you with NYS-licensed investigators; we do not run searches ourselves.',
+    ],
+    sections: [
+      {
+        id: 'skip-tracing',
+        heading: 'How Skip Tracing Works',
+        content: [
+          { type: 'p', text: 'Skip tracing combines proprietary investigative databases, public records across multiple jurisdictions, social-network analysis, and targeted source interviews to assemble a current location. Consumer people-search sites usually fail on a true skip case because the subject has taken steps to avoid conventional tracking, and the data those sites resell is stale.' },
+          { type: 'p', text: 'Manhattan attorneys use skip tracers most often for service of process on a defendant who moved without a forwarding address, judgment enforcement on a debtor who relocated, witness location for depositions or trial, and beneficiary location in estate matters. Under New York\'s CPLR, valid service depends on locating the right person at the right address, which is where this work directly supports a case.' },
+        ],
+      },
+      {
+        id: 'missing-persons',
+        heading: 'Finding a Missing Person',
+        content: [
+          { type: 'p', text: 'Missing-persons investigations range from straightforward to difficult. A person who is simply out of touch but not hiding can often be located in days. Someone deliberately avoiding contact, using alternate identities, or who has left the state takes longer, sometimes weeks. An investigator gives realistic expectations after the initial review.' },
+          { type: 'callout', variant: 'warning', heading: 'Active danger belongs with the police', text: 'If a person is in immediate danger, contact the NYPD first. Licensed investigators take cases where someone is not in active danger but standard methods have stalled: estranged family, birth parents or adoptees, old friends, debtors, witnesses, and cold trails.' },
+        ],
+      },
+      {
+        id: 'what-to-provide',
+        heading: 'What Speeds a Search',
+        content: [
+          { type: 'p', text: 'The more identifying information you provide at the outset, the faster and cheaper the search. Helpful inputs include full legal name and any aliases or maiden names, date of birth, last known addresses and employers, phone numbers and email addresses, names of relatives and associates, photographs, and the context of why the person is hard to find.' },
+          { type: 'p', text: 'Simple service-of-process or judgment-debtor locates are often billed as a flat fee and completed in days. Deliberate-avoidance or sealed-record cases are scoped individually.' },
+        ],
+      },
+    ],
+    relatedServices: ['skip-tracing', 'missing-persons'],
+    relatedGuides: ['corporate-fraud-investigations-manhattan', 'pi-licensing-new-york'],
+    faqs: [
+      { question: 'How is skip tracing different from an address search?', answer: 'Skip tracing targets people who are deliberately hard to find or whose address history is opaque. It combines proprietary databases, multi-jurisdiction public records, social-network analysis, and source interviews. Consumer people-search sites usually fail on these cases because the subject has avoided conventional tracking.' },
+      { question: 'When should I hire a PI for a missing person in Manhattan?', answer: 'When the person is not in immediate danger but standard methods have not worked: estranged relatives, birth parents or adoptees, old friends, debtors, or witnesses whose trail has gone cold. If someone is in active danger, contact the NYPD first.' },
+      { question: 'What information helps locate someone fastest?', answer: 'At minimum a full legal name, date of birth, and last known address or employer. Aliases, phone numbers, email addresses, relatives\' names, photographs, and the context of the search all speed the work and lower the cost.' },
+    ],
   },
 ];
 

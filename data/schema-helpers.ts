@@ -9,6 +9,41 @@
 import { siteConfig, TESTIMONIALS } from './site';
 
 // ---------------------------------------------------------------------------
+// Editorial author entity (PIM)
+// ---------------------------------------------------------------------------
+// Brand byline "PIM" (Private Investigator Manhattan), not an invented person
+// or investigator. Emitted on the About page and referenced by @id from guides
+// and blog spokes.
+export const AUTHOR_ID = `${siteConfig.url}/about/#author`;
+
+export function buildEditorialAuthor() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': AUTHOR_ID,
+    name: 'PIM',
+    alternateName: `${siteConfig.name} editorial team`,
+    url: `${siteConfig.url}/about/`,
+    parentOrganization: { '@id': `${siteConfig.url}#organization` },
+    description:
+      'Editorial team for Private Investigator Manhattan. Legal points are checked against New York General Business Law Article 7, NYS Department of State licensing rules, and FCRA/FTC guidance.',
+  };
+}
+
+export function buildBreadcrumbSchema(items: { name: string; url?: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((it, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: it.name,
+      ...(it.url ? { item: it.url } : {}),
+    })),
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Constants — the core entity identity and contact information for the site
 // ---------------------------------------------------------------------------
 
@@ -328,11 +363,7 @@ export function buildBlogPostSchema(p: BlogPostSchemaParams) {
     description: p.description,
     datePublished: p.publishDate,
     dateModified: p.updatedDate || p.publishDate,
-    author: {
-      '@type': 'Organization',
-      name: 'P.I. Manhattan Team',
-      url: siteConfig.url,
-    },
+    author: { '@id': AUTHOR_ID },
     publisher: {
       '@type': 'Organization',
       '@id': `${siteConfig.url}#organization`,
@@ -343,11 +374,7 @@ export function buildBlogPostSchema(p: BlogPostSchemaParams) {
         url: `${siteConfig.url}/android-chrome-512x512.png`,
       },
     },
-    reviewedBy: {
-      '@type': 'Organization',
-      '@id': `${siteConfig.url}#organization`,
-      name: `${siteConfig.name} editorial team`,
-    },
+    reviewedBy: { '@id': AUTHOR_ID },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteConfig.url}/blog/${p.slug}/`,
@@ -376,11 +403,7 @@ export function buildGuideSchema(p: GuideSchemaParams) {
     description: p.description,
     datePublished: p.publishDate,
     dateModified: p.updatedDate,
-    author: {
-      '@type': 'Organization',
-      name: 'P.I. Manhattan Team',
-      url: siteConfig.url,
-    },
+    author: { '@id': AUTHOR_ID },
     publisher: {
       '@type': 'Organization',
       '@id': `${siteConfig.url}#organization`,
@@ -394,11 +417,7 @@ export function buildGuideSchema(p: GuideSchemaParams) {
     // YMYL guide — explicit reviewer entity points back to the same
     // site Organization (no fabricated named reviewer with credentials,
     // per the fleet no-fabricated-authors rule).
-    reviewedBy: {
-      '@type': 'Organization',
-      '@id': `${siteConfig.url}#organization`,
-      name: `${siteConfig.name} editorial team`,
-    },
+    reviewedBy: { '@id': AUTHOR_ID },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteConfig.url}/guides/${p.slug}/`,

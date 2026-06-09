@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { blogArticles, getArticleBySlug } from '@/data/blog';
+import { getPublishedArticles, getArticleBySlug } from '@/data/blog';
 import { siteConfig } from '@/data/site';
 import { BlogArticleClient } from './BlogArticleClient';
 
 export function generateStaticParams() {
-  return blogArticles.map(a => ({ slug: a.slug }));
+  // Draft spokes are not pre-rendered; they 404 until the publisher flips them.
+  return getPublishedArticles().map(a => ({ slug: a.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const article = getArticleBySlug(params.slug);
-  if (!article) return { title: 'Article not found' };
+  if (!article || article.draft) return { title: 'Article not found' };
 
   const url = `${siteConfig.url}/blog/${article.slug}/`;
   const image = (article as { featuredImage?: string }).featuredImage;
@@ -40,6 +41,6 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
 export default function BlogArticlePage({ params }: { params: { slug: string } }) {
   const article = getArticleBySlug(params.slug);
-  if (!article) notFound();
+  if (!article || article.draft) notFound();
   return <BlogArticleClient article={article} />;
 }
