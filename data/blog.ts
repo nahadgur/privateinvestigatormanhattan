@@ -9653,6 +9653,159 @@ export const blogArticles: BlogArticle[] = [
             "text": "Private investigators in Manhattan are best suited for cases like infidelity surveillance, missing persons in a dense urban setting, executive protection, background checks for business deals, intellectual property theft, and litigation support, leveraging their knowledge of local laws, traffic patterns, and discreet operations in high-profile areas."
         }
     ]
+  },
+  {
+    slug: 'how-a-private-investigator-finds-hidden-assets-in-a-new-york-divorce',
+    hub: 'asset-searches-manhattan',
+    draft: true,
+    title: 'How a Private Investigator Finds Hidden Assets in a New York Divorce',
+    metaTitle: 'Hidden Asset Searches in a New York Divorce',
+    metaDescription: 'How a licensed asset search surfaces hidden accounts, real estate and business interests in a New York divorce, what stays legal, and how we match you with an investigator.',
+    category: 'Asset Searches',
+    publishDate: '2026-06-10',
+    dateModified: '2026-06-10',
+    featuredImage: '',
+    excerpt: 'A hidden asset search in a New York divorce uses public records, financial paper trails and licensed database access to surface accounts, real estate and business interests a spouse left off their sworn disclosure.',
+    content: [
+      {
+        "type": "p",
+        "text": "A hidden asset search in a New York divorce uses public records, financial paper trails and licensed database access to surface accounts, real estate and business interests a spouse left off their sworn disclosure. We are a matching service and do not investigate ourselves. We connect you with a New York State licensed investigator who runs the search using legal methods only."
+      },
+      {
+        "type": "h2",
+        "text": "What a Hidden Asset Search Looks For"
+      },
+      {
+        "type": "p",
+        "text": "When one spouse suspects the other is understating what they own, an asset search builds a picture from records that already exist in the public and commercial domain. The goal is not to seize anything. It is to document leads your attorney can pursue through formal discovery, so the marital estate is divided on the real numbers rather than the disclosed ones."
+      },
+      {
+        "type": "p",
+        "text": "A typical search in a Manhattan or wider New York City case tends to cover several asset classes. None of it relies on accessing private accounts directly, which would be illegal. Instead it follows the ownership trail through filings, registrations and recorded transactions."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Real estate held in a personal name, an LLC, or a relative's name across New York and other states.",
+          "Business interests, shell entities and ownership stakes recorded in corporate filings.",
+          "Vehicles, vessels and aircraft tied to title and registration records.",
+          "Liens, judgments and UCC filings that reveal lenders, accounts and collateral.",
+          "Lifestyle indicators that contradict a sworn Statement of Net Worth."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The output is an evidence summary with sources, not a conclusion. Your divorce attorney decides how to use it, whether through subpoenas, depositions or a forensic accountant. A licensed investigator works alongside that legal process rather than replacing it."
+      },
+      {
+        "type": "h2",
+        "text": "Why Assets Go Missing in a Divorce"
+      },
+      {
+        "type": "p",
+        "text": "New York is an equitable distribution state. Under the Domestic Relations Law, marital property is divided fairly between spouses based on a list of statutory factors, which is not the same as an automatic fifty-fifty split. Because the division turns on the full value of the marital estate, a spouse who wants to keep more has an incentive to make part of that estate hard to see."
+      },
+      {
+        "type": "p",
+        "text": "Concealment is rarely dramatic. More often it is quiet timing and paperwork. Common patterns include deferring a bonus or commission until after the case settles, moving money into a business account, buying titled property through an LLC, overpaying the tax authority to bank a future refund, or parking funds with a trusted family member to return later."
+      },
+      {
+        "type": "p",
+        "text": "These moves leave traces. A bonus deferral shows up against employment and industry norms. An LLC purchase appears in property and corporate records. The investigator's job is to find the trace and document it cleanly enough that it stands up when your attorney raises it."
+      },
+      {
+        "type": "h2",
+        "text": "How New York Financial Disclosure Works"
+      },
+      {
+        "type": "p",
+        "text": "Both spouses in a New York divorce are required to file a sworn Statement of Net Worth listing income, assets, debts and expenses, under the Domestic Relations Law disclosure rules. Because it is sworn, an omission is not just an oversight. It is a misstatement under oath that can carry consequences for credibility and for how a court weighs the rest of that spouse's testimony."
+      },
+      {
+        "type": "p",
+        "text": "An asset search is most useful when it is read against that statement. Where the records show ownership the statement does not, you and your attorney have a concrete, sourced discrepancy to put to the other side. That is far stronger than a suspicion, and it is the kind of material that moves negotiations and informs what a judge sees."
+      },
+      {
+        "type": "p",
+        "text": "Note that this is general information about how New York handles disclosure and distribution, not legal advice. How any discrepancy is used is a decision for your attorney based on the facts of your case."
+      },
+      {
+        "type": "h2",
+        "text": "What a Licensed Investigator Can and Cannot Do"
+      },
+      {
+        "type": "p",
+        "text": "The line that matters is the line between public records work and illegal access. A New York State licensed investigator, licensed through the Department of State under General Business Law Article 7, can search public filings, commercial databases available to licensed professionals, court records and recorded transactions. That covers the great majority of hidden asset work."
+      },
+      {
+        "type": "p",
+        "text": "What a legitimate investigator will not do is obtain financial information by pretext. Calling a bank and impersonating the account holder to extract balances is pretexting for financial information, which is prohibited under the federal Gramm-Leach-Bliley Act and treated as an unfair and deceptive practice by the Federal Trade Commission. Hacking an email account, planting tracking devices unlawfully, or pulling private account records without authority are all off limits."
+      },
+      {
+        "type": "p",
+        "text": "Insisting on legal methods is not a limitation to work around. Evidence gathered illegally can be excluded, can expose you to liability, and can hand the other side an argument that damages your case. A search worth having is one built entirely from sources that hold up."
+      },
+      {
+        "type": "h2",
+        "text": "When to Start and How Matching Works"
+      },
+      {
+        "type": "p",
+        "text": "The useful moment to start is when there is a real reason to doubt the disclosure and before key deadlines in the case close in. Earlier work gives your attorney room to fold findings into discovery and settlement strategy rather than racing the calendar. If you are weighing whether the disclosure adds up, it is worth a conversation about scope before committing to anything."
+      },
+      {
+        "type": "p",
+        "text": "Our role is to match, not to investigate. You tell us what the case involves, and we connect you with a New York State licensed investigator suited to financial and asset work in New York City. The initial consultation is confidential and carries no cost, and no investigator can promise a particular result. What a good one offers is a lawful, documented search and a clear account of what the records do and do not show."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Asset Search Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Is a hidden asset search legal in a New York divorce?"
+      },
+      {
+        "type": "p",
+        "text": "Yes, when it stays within public records, court filings and databases available to licensed professionals. A New York State licensed investigator works through these lawful sources. Methods such as pretexting a bank, hacking accounts or unlawful tracking are illegal and a legitimate investigator will refuse them."
+      },
+      {
+        "type": "h3",
+        "text": "Can an investigator pull my spouse's bank balances directly?"
+      },
+      {
+        "type": "p",
+        "text": "No. Obtaining account balances by impersonating the holder is pretexting for financial information, which is barred under the federal Gramm-Leach-Bliley Act. An investigator instead documents ownership trails through filings and records, and your attorney can compel account details through formal discovery."
+      },
+      {
+        "type": "h3",
+        "text": "What if my spouse left assets off their Statement of Net Worth?"
+      },
+      {
+        "type": "p",
+        "text": "The Statement of Net Worth is sworn under New York's Domestic Relations Law, so an omission is a misstatement under oath. A sourced asset search that shows ownership the statement does not gives your attorney a concrete discrepancy to raise in negotiation or before the court."
+      },
+      {
+        "type": "h3",
+        "text": "How much does an asset search cost?"
+      },
+      {
+        "type": "p",
+        "text": "It depends on scope, the number of asset classes and how far the ownership trails run across states and entities. Because cost tracks the work involved, the practical step is a confidential consultation to define scope first. We connect you with an investigator who will quote against a defined search rather than an open-ended one."
+      },
+      {
+        "type": "h3",
+        "text": "Do I need an attorney as well as an investigator?"
+      },
+      {
+        "type": "p",
+        "text": "In a divorce, yes. An investigator documents what the records show, but using that material through discovery, subpoenas or a forensic accountant is legal work your divorce attorney directs. The two roles complement each other, and the strongest cases coordinate them."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
