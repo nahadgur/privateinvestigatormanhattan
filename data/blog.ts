@@ -9806,6 +9806,151 @@ export const blogArticles: BlogArticle[] = [
         "text": "In a divorce, yes. An investigator documents what the records show, but using that material through discovery, subpoenas or a forensic accountant is legal work your divorce attorney directs. The two roles complement each other, and the strongest cases coordinate them."
       }
     ]
+  },
+  {
+    slug: 'locating-assets-enforce-money-judgment',
+    hub: 'asset-searches-manhattan',
+    draft: true,
+    title: 'How an Asset Search Helps You Enforce a Money Judgment in New York',
+    metaTitle: 'Asset Searches to Enforce a NY Money Judgment',
+    metaDescription: 'Winning a money judgment is only half the battle. Learn how a licensed asset search locates a debtor\'s collectible property in New York, what stays legal, and how we match you with an investigator.',
+    category: 'Asset Searches',
+    publishDate: '2026-06-10',
+    dateModified: '2026-06-10',
+    featuredImage: '',
+    excerpt: 'A money judgment is only a piece of paper until you find property to collect against. An asset search locates a debtor\'s real estate, business interests and other collectible holdings through legal records work, so you can enforce the judgment instead of carrying it.',
+    content: [
+      {
+        "type": "p",
+        "text": "A money judgment is only a piece of paper until you locate property to collect against. An asset search identifies a debtor's real estate, business interests, vehicles and other collectible holdings through lawful records work, so your attorney can enforce the judgment rather than carry it. We are a matching service and do not investigate ourselves. We connect you with a New York State licensed investigator who runs the search using legal methods only."
+      },
+      {
+        "type": "h2",
+        "text": "Why a Judgment Is Worth Less Than You Think Until You Locate Assets"
+      },
+      {
+        "type": "p",
+        "text": "New York courts do not collect a money judgment for you. Once a judge or jury awards you a sum, the burden shifts to you, the judgment creditor, to find the debtor's property and direct an enforcement officer to it. A debtor who does not want to pay rarely hands over a list of accounts and deeds. They go quiet, change addresses, and let the award sit."
+      },
+      {
+        "type": "p",
+        "text": "This is where an asset search earns its keep. Before you spend money on a marshal, a sheriff or a restraining notice, you want to know whether there is anything collectible behind the judgment. Spending enforcement costs against a debtor with no reachable property is how creditors turn one loss into two. A search tells you what is there first."
+      },
+      {
+        "type": "h2",
+        "text": "What an Asset Search Can Locate for Collection"
+      },
+      {
+        "type": "p",
+        "text": "A licensed investigator builds the collection picture from records that already exist in the public and commercial domain. The aim is to document property your attorney can reach through the enforcement tools New York provides, from real estate to bank relationships to business holdings."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Real estate held in the debtor's name, an LLC, or a relative's name across New York and other states.",
+          "Business ownership, officer positions and shell entities recorded in corporate and UCC filings.",
+          "Vehicles, vessels and aircraft tied to title and registration records.",
+          "Evidence of banking relationships and employers, which point to accounts and wages your attorney can reach.",
+          "Existing liens and competing judgments that tell you where you stand against other creditors."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The output is a sourced evidence summary, not a conclusion. It tells your attorney where to aim an information subpoena, a restraining notice or a property execution, so enforcement effort lands on assets that actually exist."
+      },
+      {
+        "type": "h2",
+        "text": "How the Search Feeds New York Enforcement"
+      },
+      {
+        "type": "p",
+        "text": "Judgment enforcement in New York runs through Article 52 of the Civil Practice Law and Rules, which gives creditors tools such as information subpoenas, restraining notices and executions against property. Those tools work only when they are pointed at the right target. An information subpoena sent to a bank is useful when you already have reason to believe the debtor holds an account there. A property execution works when you have identified collectible property and the enforcement officer who can levy it."
+      },
+      {
+        "type": "p",
+        "text": "An asset search supplies that targeting. It connects the debtor to specific banks, employers, entities and parcels of real estate so your attorney is not sending blind subpoenas across the financial system. The cleaner the records trail behind each target, the harder it is for a debtor to stall enforcement with claims that the property is not theirs."
+      },
+      {
+        "type": "p",
+        "text": "This is general information about how New York handles judgment enforcement, not legal advice. How and when to use any tool under Article 52 is a decision for your attorney based on the facts of your matter and the applicable deadlines."
+      },
+      {
+        "type": "h2",
+        "text": "What a Licensed Investigator Can and Cannot Do"
+      },
+      {
+        "type": "p",
+        "text": "The line that matters is the line between lawful records work and illegal access. A New York State licensed investigator, licensed through the Department of State under General Business Law Article 7, can search public filings, court records, recorded transactions and commercial databases available to licensed professionals. That covers most of what you need to locate collectible property."
+      },
+      {
+        "type": "p",
+        "text": "What a legitimate investigator will not do is obtain account information by pretext. Calling a bank and impersonating the account holder to extract balances is pretexting for financial information, which is prohibited under the federal Gramm-Leach-Bliley Act and treated as an unfair and deceptive practice by the Federal Trade Commission. An investigator documents the banking relationship through lawful means; the account-level details come later, through the information subpoena your attorney serves under Article 52."
+      },
+      {
+        "type": "p",
+        "text": "Insisting on legal methods protects your judgment. Evidence gathered unlawfully can be challenged, can expose you to liability, and can hand the debtor an argument that slows collection further. A search worth having is built entirely from sources that hold up."
+      },
+      {
+        "type": "h2",
+        "text": "When to Start and How Matching Works"
+      },
+      {
+        "type": "p",
+        "text": "The useful moment to start is early, while the judgment is fresh and before enforcement deadlines tighten. Locating assets up front lets your attorney move on collectible property before a debtor has time to move or encumber it. If you are weighing whether a debtor has anything worth pursuing, it is worth a conversation about scope before committing to anything."
+      },
+      {
+        "type": "p",
+        "text": "Our role is to match, not to investigate. You tell us what the judgment involves, and we connect you with a New York State licensed investigator suited to financial and asset work in New York City. The initial consultation is confidential and carries no cost, and no investigator can promise that a debtor has collectible property or that you will recover. What a good one offers is a lawful, documented search and a clear account of what the records do and do not show."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Asset Search Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Can an investigator tell me how much money is in my debtor's bank account?"
+      },
+      {
+        "type": "p",
+        "text": "No. Obtaining account balances by impersonating the holder is pretexting for financial information, which is barred under the federal Gramm-Leach-Bliley Act. A licensed investigator instead documents evidence of the banking relationship through lawful records work. The account-level detail comes through an information subpoena your attorney serves under New York's enforcement rules."
+      },
+      {
+        "type": "h3",
+        "text": "What is an information subpoena, and how does an asset search help?"
+      },
+      {
+        "type": "p",
+        "text": "An information subpoena is a tool under Article 52 of New York's Civil Practice Law and Rules that compels a person or institution to answer questions about a debtor's assets. It works best when aimed at a known target. An asset search identifies which banks, employers and entities to serve, so the subpoena lands somewhere productive rather than going out blind."
+      },
+      {
+        "type": "h3",
+        "text": "How long do I have to enforce a money judgment in New York?"
+      },
+      {
+        "type": "p",
+        "text": "As general information, a money judgment in New York is generally enforceable for twenty years, while a judgment lien on real property runs for a shorter fixed period before it must be renewed, under the Civil Practice Law and Rules. Deadlines and renewals are case specific, so confirm the timing that applies to your judgment with your attorney rather than relying on a general figure."
+      },
+      {
+        "type": "h3",
+        "text": "Is locating a debtor's assets legal?"
+      },
+      {
+        "type": "p",
+        "text": "Yes, when it stays within public records, court filings, recorded transactions and databases available to licensed professionals. A New York State licensed investigator works through these lawful sources. Methods such as pretexting a bank, accessing private accounts without authority or unlawful tracking are illegal, and a legitimate investigator will refuse them."
+      },
+      {
+        "type": "h3",
+        "text": "How much does a judgment-recovery asset search cost?"
+      },
+      {
+        "type": "p",
+        "text": "It depends on scope, the number of asset classes and how far the ownership trails run across states and entities. Because cost tracks the work involved, the practical step is a confidential consultation to define scope first. We connect you with an investigator who quotes against a defined search rather than an open-ended one."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
