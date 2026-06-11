@@ -7,6 +7,15 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { SpokeHero } from '@/components/SpokeHero';
+
+function estimateReadMins(blocks: { text?: string; items?: string[] }[]): number {
+  const words = blocks.reduce((n, b) => {
+    const t = (b.text || '') + ' ' + ((b.items || []).join(' '));
+    return n + t.trim().split(/\s+/).filter(Boolean).length;
+  }, 0);
+  return Math.max(3, Math.round(words / 200));
+}
 import { ServiceBanner } from '@/components/ServiceBanner';
 import { getArticlesByHub } from '@/data/blog';
 import { getGuideBySlug } from '@/data/guides';
@@ -162,32 +171,27 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main id="main-content" className="flex-grow">
         {/* Hero */}
-        <section className="bg-ink text-white relative overflow-hidden">
-          {article.featuredImage ? (
-            <div className="absolute inset-0">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={article.featuredImage} alt="" className="w-full h-full object-cover opacity-25" loading="eager" />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/85 to-ink/50" />
+        <section className="bg-white">
+          <div className="container-width pt-6">
+            <Breadcrumbs items={[{ label: 'Blog', href: '/blog/' }, { label: article.title }]} />
+          </div>
+          <div className="container-width pt-4 pb-8">
+            <SpokeHero
+              title={article.title}
+              hubName={hubGuide?.title ?? null}
+              hubSlug={article.hub}
+              readMins={estimateReadMins(article.content)}
+            />
+            <div className="mt-4 flex items-center gap-4 text-sm text-gray-500">
+              <span className="inline-flex items-center gap-1.5 text-primary font-semibold">
+                <Tag className="w-3.5 h-3.5" /> {article.category}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5" /> {article.publishDate}
+              </span>
             </div>
-          ) : (
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,55,41,0.3),transparent_60%)] pointer-events-none" />
-          )}
-          <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[{ label: 'Blog', href: '/blog/' }, { label: article.title }]} light />
-            <div className="max-w-3xl mt-4">
-              <div className="flex items-center gap-4 mb-4">
-                <span className="inline-flex items-center gap-1.5 text-[11px] text-primary font-bold uppercase tracking-widest">
-                  <Tag className="w-3 h-3" /> {article.category}
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[11px] text-white/70">
-                  <Calendar className="w-3 h-3" /> {article.publishDate}
-                </span>
-                <span className="inline-flex items-center gap-1.5 text-[11px] text-white/70">By PIM</span>
-              </div>
-              <h1 className="text-[1.8rem] md:text-[2.4rem] lg:text-[2.8rem] font-extrabold tracking-tight leading-[1.1]">
-                {article.title}
-              </h1>
-            </div>
+            {/* Real heading kept for SEO/a11y; the SVG above is decorative. */}
+            <h1 className="sr-only">{article.title}</h1>
           </div>
         </section>
 

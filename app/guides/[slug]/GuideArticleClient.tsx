@@ -9,6 +9,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { SpokeHero } from '@/components/SpokeHero';
 import { siteConfig } from '@/data/site';
 import { buildGuideSchema, buildBreadcrumbSchema, buildFAQSchema, buildEditorialAuthor } from '@/data/schema-helpers';
 
@@ -154,28 +155,29 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
       <div id="main-content" tabIndex={-1} />
 
       {/* Hero */}
-      <section className="bg-ink text-white py-12 md:py-16">
-        <div className="container-width">
-          <Breadcrumbs items={[{ label: 'Guides', href: '/guides/' }, { label: guide.title }]} light />
-          <div className="max-w-3xl mt-3">
-            <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-3">{guide.heroEyebrow}</div>
-            <h1 className="text-[32px] md:text-[42px] font-extrabold tracking-tight leading-[1.1] mb-5">{guide.title}</h1>
-            <p className="text-[16px] md:text-[18px] text-white/80 leading-[1.55] mb-6">{guide.heroDescription}</p>
-            <div className="flex flex-wrap gap-4 text-[12px] text-white/60">
-              <div className="flex items-center gap-1.5">
-                <Clock className="w-3.5 h-3.5" />
-                <span>{guide.readingTimeMinutes} min read</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5" />
-                <span>Updated {formatDate(guide.lastUpdated)}</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <CheckCircle className="w-3.5 h-3.5" />
-                <span>Reviewed by the Private Investigator Manhattan editorial team</span>
-              </div>
+      <section className="bg-white">
+        <div className="container-width pt-6">
+          <Breadcrumbs items={[{ label: 'Guides', href: '/guides/' }, { label: guide.title }]} />
+        </div>
+        <div className="container-width pt-4 pb-8">
+          <SpokeHero title={guide.title} hubName="Guide" hubSlug={guide.slug} readMins={guide.readingTimeMinutes} />
+          <div className="mt-4 flex flex-wrap gap-4 text-[12px] text-gray-500">
+            <div className="flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" />
+              <span>{guide.readingTimeMinutes} min read</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5" />
+              <span>Updated {formatDate(guide.lastUpdated)}</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <CheckCircle className="w-3.5 h-3.5" />
+              <span>Reviewed by the Private Investigator Manhattan editorial team</span>
             </div>
           </div>
+          {/* Real heading kept for SEO/a11y; the SVG above is decorative. */}
+          <h1 className="sr-only">{guide.title}</h1>
+          <p className="text-[16px] md:text-[18px] text-gray-600 leading-[1.55] mt-5 max-w-3xl">{guide.heroDescription}</p>
         </div>
       </section>
 
