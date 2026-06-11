@@ -94,12 +94,13 @@ Align each hub to its matching `/services/[serviceSlug]/` pillar.
 
 ## 7. Status tracker
 
-10 hubs (all built, commit f14ad9f). Spokes: 20 published + 2 drafts in buffer = 22
-total, target ~100 (~10/hub). Draft buffer (awaiting publisher): 2, both H8 asset
-searches (hidden-assets-in-divorce; judgment-enforcement). Thinnest hubs to fill
-first: H5 surveillance (1), H2 cost (1), H4 infidelity (2), H6 due diligence (2),
-H3 licensing (2), H10 locating (3), H7 corporate/fraud (3). H8 now has 2 drafts so
-deprioritize until a published spoke lands there.
+10 hubs (all built, commit f14ad9f). Spokes: 20 published + 3 drafts in buffer = 23
+total, target ~100 (~10/hub). Draft buffer (awaiting publisher): 3, two H8 asset
+searches (hidden-assets-in-divorce; judgment-enforcement) and one H5 surveillance
+(gps-tracking-laws-new-york-investigations). Thinnest hubs to fill first: H2 cost
+(1), H4 infidelity (2), H6 due diligence (2), H3 licensing (2), H5 surveillance (1
+published + 1 draft), H10 locating (3), H7 corporate/fraud (3). H8 now has 2 drafts
+so deprioritize until a published spoke lands there.
 ## Slug rules (writer: follow on every spoke)
 
 Kebab-case: lowercase, hyphens only, ASCII only, 3-6 words, under ~60 chars.

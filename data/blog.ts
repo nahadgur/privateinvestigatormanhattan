@@ -9951,6 +9951,154 @@ export const blogArticles: BlogArticle[] = [
         "text": "It depends on scope, the number of asset classes and how far the ownership trails run across states and entities. Because cost tracks the work involved, the practical step is a confidential consultation to define scope first. We connect you with an investigator who quotes against a defined search rather than an open-ended one."
       }
     ]
+  },
+  {
+    slug: 'gps-tracking-laws-new-york-investigations',
+    hub: 'surveillance-investigations-manhattan',
+    draft: true,
+    title: 'Is GPS Tracking Legal in New York Investigations',
+    metaTitle: 'GPS Tracking Laws for NY Investigations',
+    metaDescription: 'GPS tracking in New York investigations is limited by vehicle ownership and state law. Learn what is legal, what is not, and how we match you with a licensed PI.',
+    category: 'Private Investigator',
+    publishDate: '2026-06-11',
+    dateModified: '2026-06-11',
+    featuredImage: '',
+    excerpt: 'GPS tracking in a New York investigation is legal only in narrow circumstances, and it turns almost entirely on who owns the vehicle. A licensed investigator will not place a tracker on a car you do not own or control, and usually builds location evidence through lawful surveillance instead.',
+    content: [
+      {
+        "type": "p",
+        "text": "GPS tracking in a New York investigation is legal only in narrow circumstances, and it turns almost entirely on who owns the vehicle. A licensed investigator will not place a tracker on a car you do not own or control. We are a matching service and do not investigate ourselves. We connect you with a New York State licensed investigator who builds location evidence within the law."
+      },
+      {
+        "type": "h2",
+        "text": "Is GPS Tracking Even Allowed in a New York Investigation?"
+      },
+      {
+        "type": "p",
+        "text": "New York has no single statute that simply permits or bans private GPS tracking. Legality is built from several rules working at once: vehicle ownership, trespass to property, the state's prohibition on stalking and harassment, and the conduct standard that licensed investigators are held to. The result is a narrow lane. A tracker is defensible when the person placing it has a clear ownership or authority interest in the vehicle, and indefensible the moment it is attached to property the client does not control."
+      },
+      {
+        "type": "p",
+        "text": "New York courts have treated continuous location tracking as a serious intrusion. In addressing government GPS use, the state's highest court recognized that a sustained record of where a person goes reveals a remarkable amount about their life. That same sensitivity informs how a private case is judged, which is why a careful investigator starts from the assumption that tracking is restricted rather than open."
+      },
+      {
+        "type": "p",
+        "text": "This article is general information about how New York approaches location tracking, not legal advice. Whether tracking is lawful in your specific situation is a question for your attorney, based on the facts of your matter."
+      },
+      {
+        "type": "h2",
+        "text": "Why Vehicle Ownership Decides Almost Everything"
+      },
+      {
+        "type": "p",
+        "text": "The first question a licensed investigator asks is whose name is on the title. Your authority over a vehicle you jointly own is different from your authority over a car titled solely to your spouse, a relative, or an employer. Placing a device on a vehicle you have no ownership interest in can amount to a trespass to that property and can support a stalking or harassment claim, regardless of your reason for wanting the information."
+      },
+      {
+        "type": "list",
+        "items": [
+          "A car titled jointly in both spouses' names: stronger footing, though still fact specific.",
+          "A vehicle titled solely to the other party: off limits for a tracker placed without authority.",
+          "A company vehicle: the employer, not the employee, generally controls it, subject to policy and notice.",
+          "A leased or financed car: the title and lease terms control, not who happens to drive it most."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Because the answer changes with each of these, no investigator should promise tracking before reviewing the ownership facts. A reputable one treats unclear ownership as a reason to choose a different method, not a problem to work around."
+      },
+      {
+        "type": "h2",
+        "text": "How Licensed Investigators Build Location Evidence Lawfully"
+      },
+      {
+        "type": "p",
+        "text": "Most location evidence in a New York case does not come from a covert tracker at all. It comes from lawful surveillance: trained investigators observing and documenting where a subject goes in public. In a dense environment like Manhattan, that usually means foot surveillance teams rather than a single device, producing time stamped video and a written log of movements that a court can weigh."
+      },
+      {
+        "type": "p",
+        "text": "Public observation is powerful precisely because it avoids the legal exposure of a tracker. Anything a person does in public view can generally be documented. The investigator records the pattern of movement directly, rather than relying on a device whose placement could later be challenged and could taint the evidence it produced."
+      },
+      {
+        "type": "p",
+        "text": "Investigators are licensed by the New York State Department of State under General Business Law Article 7, and that license is a standard of conduct as much as a credential. An investigator who would risk it by tracking unlawfully is not one you want on your case. Verify any investigator's license before work begins."
+      },
+      {
+        "type": "h2",
+        "text": "What Counts as Illegal Tracking"
+      },
+      {
+        "type": "p",
+        "text": "The clearest violations are easy to state. Attaching a GPS device to a vehicle you have no ownership or authority over, installing spyware or a tracking app on a phone that is not yours, or monitoring someone in a way that would alarm a reasonable person can each cross into criminal territory under New York's stalking and related statutes. None of these is something a licensed investigator will do."
+      },
+      {
+        "type": "p",
+        "text": "Illegal methods also tend to backfire on the client. Evidence gathered through unlawful tracking can be excluded, can expose you to civil liability or a criminal complaint, and can hand the other side an argument that distracts from the facts you wanted to prove. In a custody or divorce matter, that can do real damage. Lawful methods protect both the evidence and the person who commissioned it."
+      },
+      {
+        "type": "p",
+        "text": "The line between lawful surveillance and unlawful tracking is fact specific, and the consequences of getting it wrong are serious. Confirm the approach with your attorney before any tracking is considered."
+      },
+      {
+        "type": "h2",
+        "text": "When to Start and How Matching Works"
+      },
+      {
+        "type": "p",
+        "text": "Our role is to match, not to investigate. You tell us what you are trying to establish and the basic facts, including who owns any vehicle involved, and we connect you with a New York State licensed investigator suited to surveillance work in New York City. The initial consultation is confidential and carries no cost. No investigator can promise a particular result or that tracking will be available in your case."
+      },
+      {
+        "type": "p",
+        "text": "Starting early helps, because it gives the investigator time to choose a lawful method that fits the facts rather than improvising under pressure. If you are weighing whether location evidence is even obtainable in your situation, it is worth a short conversation about scope and legality first."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Surveillance Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Can I put a GPS tracker on my spouse's car in New York?"
+      },
+      {
+        "type": "p",
+        "text": "It depends on ownership. If the car is titled solely to your spouse, placing a tracker on it without authority can amount to trespass and can support a stalking claim, and a licensed investigator will not do it. If the vehicle is jointly owned, the footing is different but still fact specific. Confirm your situation with your attorney before considering any tracking."
+      },
+      {
+        "type": "h3",
+        "text": "Will a private investigator place a tracker on a car for me?"
+      },
+      {
+        "type": "p",
+        "text": "Only when ownership clearly supports it, and many will prefer lawful surveillance instead. A reputable New York investigator reviews who holds title before agreeing to any device, and treats unclear ownership as a reason to use a different, defensible method rather than risk the case and the license."
+      },
+      {
+        "type": "h3",
+        "text": "Is GPS evidence admissible in a New York court?"
+      },
+      {
+        "type": "p",
+        "text": "As general information, location evidence is more likely to hold up when it was gathered lawfully and documented properly, and more likely to be challenged when the tracking method itself was questionable. That is part of why investigators favor lawful surveillance. Whether any specific evidence is admissible is for the court and your attorney to determine."
+      },
+      {
+        "type": "h3",
+        "text": "What can an investigator legally do instead of GPS tracking?"
+      },
+      {
+        "type": "p",
+        "text": "A licensed investigator can conduct surveillance of a subject in public, document movements with time stamped video and a written log, and establish location patterns through direct observation rather than a device. In Manhattan this usually means a foot surveillance team. These methods avoid the legal exposure that a covert tracker carries."
+      },
+      {
+        "type": "h3",
+        "text": "How do I confirm an investigator is licensed in New York?"
+      },
+      {
+        "type": "p",
+        "text": "Investigators are licensed by the New York State Department of State under General Business Law Article 7. Ask for the license and verify it with the Department of State before any work begins. A legitimate investigator expects this and will refuse any method, including tracking, that would put that license at risk."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {

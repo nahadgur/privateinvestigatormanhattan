@@ -3,6 +3,48 @@
 Build handoffs from the `pim-investigator-writer` scheduled task to Claude Code.
 Newest first. Clear an item with a one-line DONE note once built.
 
+## 2026-06-11 — Writer run: 1 spoke drafted (H5 surveillance, GPS tracking angle)
+
+Pre-flight PASSED (10 hubs live; draft gate confirmed: draft spokes 404 via
+`notFound`; `/blog` index, hub grids and sitemap all go through
+`getPublishedArticles`/`getArticlesByHub`, which filter drafts).
+
+- site: privateinvestigatormanhattan
+- slug: `gps-tracking-laws-new-york-investigations`
+- hub: `surveillance-investigations-manhattan` (H5), draft: true
+- title: Is GPS Tracking Legal in New York Investigations
+- pillar link: ServiceBanner auto-wired to `/services/surveillance/` via
+  `categoryServiceMap['Private Investigator'] = 'surveillance'`. category: 'Private Investigator'.
+- up-link: auto hub link to `/guides/surveillance-investigations-manhattan/`. CTA block present.
+- siblings: one published H5 spoke exists
+  (`what-to-know-before-hiring-a-surveillance-investigator-in-manhattan`), so the
+  sidebar related list now populates for this hub.
+- schema: Article + BreadcrumbList + FAQPage auto-emitted by client; PIM author @id;
+  datePublished + dateModified = 2026-06-11.
+- legal: matching framing kept; NYS DOS licensing under GBL Article 7 named; NY
+  stalking/harassment + trespass and the state high court's view that continuous GPS
+  tracking is a serious intrusion referenced as general info, not legal advice, all
+  claims attributed; no pretexting or illegal tracking endorsed; no guarantees of
+  outcome; no fabricated investigators/reviews.
+- words: ~1,192. 6 sections + 5 FAQs.
+- tsc: clean. link gate (`scripts/check-links.mjs`): 0 broken across 33 slugs.
+- INCIDENT: the file-tool Edit truncated `data/blog.ts` mid-write (Linux-mount
+  desync: the working file reported the original byte size but its tail was truncated
+  at `publishDate`, giving an unterminated-string tsc error). Recovered by restoring
+  the committed blob (`git show HEAD:data/blog.ts`) and re-inserting the entry
+  Linux-side (heredoc + python splice + `cp` to the mount), which wrote the full
+  651,391 bytes cleanly. Lesson: append large blog entries Linux-side, not via the
+  Edit tool, on this mount.
+- git: NOT COMMITTED this run. A stale `.git/index.lock` (0-byte, owned by the
+  sandbox user, timestamped during this run) could not be unlinked from the sandbox
+  (`Operation not permitted`, retried 5x), so `safe-commit.sh` could neither stage
+  nor commit. The work is saved in the working tree only, 4 files modified and
+  verified: `.gitignore` (added `.next-dev.log`), `data/blog.ts`, `docs/SILO-PLAN.md`,
+  `docs/HANDOFF-QUEUE.md`. tsc clean, link gate 0 broken across 33 slugs.
+  **ACTION FOR CLAUDE CODE (native):** delete `.git/index.lock`, then
+  `git add -A && git commit -m "Add H5 surveillance spoke (draft): GPS tracking and NY law"`
+  and `git push origin main`.
+
 ## 2026-06-10 (run 2) — Writer run: 1 spoke drafted (H8 asset searches, judgment angle)
 
 Pre-flight PASSED (10 hubs live; draft gate confirmed: draft spokes 404 via
@@ -26,8 +68,13 @@ go through `getPublishedArticles`/`getArticlesByHub`, which filter drafts).
   no fabricated investigators/reviews.
 - words: ~1,150. 6 sections + 5 FAQs.
 - tsc: clean (after a rename round-trip; the Linux mount lagged a file-tool write).
-- git: committed to `main` this run; see hash in run report. Pushed if remote
-  reachable, otherwise noted.
+- git: committed to `main` as `c6554ba` (3 files: data/blog.ts, docs/SILO-PLAN.md,
+  docs/HANDOFF-QUEUE.md). NOT PUSHED: the sandbox has no GitHub credentials
+  (`could not read Username for 'https://github.com'`). **ACTION FOR CLAUDE CODE
+  (native):** `git push origin main`. Also delete the stale `.git/index.lock` the
+  sandbox left behind (`Operation not permitted` on unlink); `git fsck` is otherwise
+  clean (the dangling commit/tree are harmless). Working tree clean apart from the
+  ignored `.next-dev.log`.
 - NOTE: H8 now holds 2 parked drafts and 0 published. Publisher should flip one H8
   draft live so the hub stops being orphaned; writer is deprioritizing H8 next.
 
