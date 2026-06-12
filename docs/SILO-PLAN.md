@@ -106,4 +106,9 @@ Thinnest hubs to fill first: H6 due diligence (2), H3 licensing (2), H10 locatin
 (3), H7 corporate/fraud (3). H4 infidelity now 2 published + 1 draft, H2 cost 1
 published + 1 draft, H5 surveillance 1 published + 2 drafts, H8 2 drafts, so
 deprioritize those until a published spoke lands there; favor H6/H3 next.
-## Slug rules (writer: follow on every spoke
+## Slug rules (writer: follow on every spoke)
+
+Kebab-case: lowercase, hyphens only, ASCII only, 3-6 words, under ~60 chars.
+Do NOT: include a year/date; reuse or near-duplicate an existing slug; use a
+reserved head term or the parent hub's head term; keyword-stuff or repeat a word;
+use stop words (a/the/to/for). Never rename or reuse a published slug.

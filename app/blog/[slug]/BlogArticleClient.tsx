@@ -271,4 +271,9 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
               <ArrowLeft className="w-3.5 h-3.5" /> Back to All Articles
             </Link>
           </div>
-  
+        </div>
+      </main>
+      <Footer />
+    </>
+  );
+}

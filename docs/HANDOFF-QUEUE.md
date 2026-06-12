@@ -204,3 +204,34 @@ writer pre-flight will pass and it can start dripping `draft:true` spokes into t
 thin hubs (priority: H8, H5, H4, H10, H7).
 
 git: nothing committed by the writer this run. tsc: not run (no writer change).
+
+---
+
+## 2026-06-12 — writer run (pim-investigator-writer)
+
+- Site: privateinvestigatormanhattan
+- Spoke added: `investigator-retainer-billing-new-york`
+- Hub: `investigator-costs-manhattan` (H2 cost, the thinnest published hub: 1 -> now 1 published + 1 draft)
+- Title: How Private Investigator Retainers and Billing Work in New York
+- draft: true (parked for the publisher)
+- Framing: matching service, US English, NYS DOS / GBL Article 7 cited and attributed, no fabricated investigators/reviews, no outcome guarantees, methods-must-be-legal caveat. ~1250 words, 5 H2 sections + 5 FAQs, Article+Breadcrumb+FAQPage schema via the page component.
+- Links: auto-rendered UP-link to /guides/investigator-costs-manhattan/, ServiceBanner pillar link, same-hub sibling (how-much-does-a-private-investigator-cost-in-manhattan), matching CTA block.
+- tsc: clean (rename round-trip used to clear stale incremental cache). Link gate: 35 slugs, 0 broken.
+- git: committed local 365cad6. Push FAILED (no GitHub credentials in the sandbox) — repo is ahead 1, needs a manual push from a credentialed environment.
+- Buffer: 5 drafts (H8 x2, H5 x2, H2 x1). Total toward 100: 25 spokes (20 published + 5 drafts).
+- Next: favor H4 infidelity (2), H6 due diligence (2), H3 licensing (2) per SILO-PLAN section 7.
+
+## 2026-06-12 08:58 — pim-investigator-writer (privateinvestigatormanhattan)
+- Sites: privateinvestigatormanhattan: one new H4 infidelity draft spoke
+- Spoke added: `infidelity-investigator-legal-limits-new-york`
+- Hub: `infidelity-investigations-manhattan` (H4: 2 published -> 2 published + 1 draft)
+- Title: What an Infidelity Investigator Can and Cannot Legally Do in New York
+- draft: true (parked for the publisher)
+- Framing: matching service, US English, NYS DOS / GBL Article 7, CFAA, NY eavesdropping (one-party consent) and no-fault DRL all attributed as general information; no fabricated investigators/reviews, no outcome guarantees, methods-must-be-legal throughout. ~1250 words, 5 H2 sections + 5 FAQs, schema via the page component.
+- Code delta: added 'Infidelity Investigations' -> 'infidelity-investigation' to categoryServiceMap in app/blog/[slug]/BlogArticleClient.tsx so the pillar link hits the right service (new category; old fallback was surveillance).
+- Staged files: data/blog.ts, app/blog/[slug]/BlogArticleClient.tsx, docs/SILO-PLAN.md
+- Live flips this run: none
+- tsc: pass. Link gate: 36 slugs, 0 broken.
+- Commit prompt / git state: committed local 1caf735; push FAILED (no GitHub credentials in sandbox), repo ahead 2 (365cad6 + 1caf735), needs manual push. NOTE: sandbox cannot delete files in .git, so stale git locks were renamed to *.stale-20260612* instead of removed; safe to delete from Windows.
+- Buffer: 6 drafts (H8 x2, H5 x2, H2 x1, H4 x1). Total toward 100: 26 spokes (20 published + 6 drafts).
+- Status: PENDING PUSH
