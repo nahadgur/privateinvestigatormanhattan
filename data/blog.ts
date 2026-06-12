@@ -10402,6 +10402,157 @@ export const blogArticles: BlogArticle[] = [
         "text": "Investigators are licensed by the New York State Department of State under General Business Law Article 7. Ask for the license number, verify it with the Department of State, and make sure the rate, retainer, and expense terms are in writing before any money changes hands. A legitimate investigator expects this and will not be offended by the request."
       }
     ]
+  },
+  {
+    slug: 'infidelity-investigator-legal-limits-new-york',
+    hub: 'infidelity-investigations-manhattan',
+    draft: true,
+    title: 'What an Infidelity Investigator Can and Cannot Legally Do in New York',
+    metaTitle: 'What an Infidelity PI Can and Cannot Do in NY',
+    metaDescription: 'Learn which methods a licensed infidelity investigator can legally use in New York, which ones cross the line, and how we match you with one who stays inside them.',
+    category: 'Infidelity Investigations',
+    publishDate: '2026-06-12',
+    dateModified: '2026-06-12',
+    featuredImage: '',
+    excerpt: 'A licensed New York investigator can follow and photograph a spouse in public, document patterns over time, and run lawful records work. They cannot hack a phone, plant a tracker on a car you do not own, or record private conversations. Knowing the line protects your case.',
+    content: [
+      {
+        "type": "p",
+        "text": "A New York State licensed investigator can follow and photograph a spouse in public, document patterns of movement over time, and run lawful records work. They cannot access a phone or email account, plant a GPS tracker on a vehicle the client does not own, or record private conversations they are not part of. We are a matching service and do not investigate ourselves. We connect you with a licensed investigator who works inside those lines, because that is the only kind of evidence worth paying for."
+      },
+      {
+        "type": "h2",
+        "text": "What a Licensed Investigator Can Do Legally"
+      },
+      {
+        "type": "p",
+        "text": "Private investigators in New York are licensed by the New York State Department of State under General Business Law Article 7. That license covers a real toolkit, and in an infidelity case most of it comes down to patient, lawful observation. Anything a member of the public could see from a public place, an investigator can see, photograph and document professionally."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Following a spouse through public streets, restaurants, hotels lobbies and other places open to the public, on foot or by vehicle.",
+          "Photographing and filming what is visible in public, including who your spouse meets, where, and for how long.",
+          "Documenting patterns over days or weeks, such as repeated visits to the same address that does not match the stated schedule.",
+          "Lawful records work, including property records, business filings and other public sources that put context around what surveillance shows.",
+          "Producing a dated, organized report with supporting images that your attorney can actually use."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The discipline matters as much as the access. A professional logs time, location and circumstances for every observation, which is what separates evidence from an anecdote when the account is challenged later."
+      },
+      {
+        "type": "h2",
+        "text": "What an Infidelity Investigator Cannot Do"
+      },
+      {
+        "type": "p",
+        "text": "The methods that feel most tempting in an infidelity case are usually the illegal ones. A legitimate investigator will refuse them, and you should treat any investigator who offers them as a warning sign rather than a shortcut."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Accessing a spouse's phone, email, social media or cloud accounts without authorization. Unauthorized access can violate federal law, including the Computer Fraud and Abuse Act, as well as New York's computer trespass statutes.",
+          "Recording conversations the investigator is not a party to. New York's eavesdropping law in the Penal Law makes it a crime to record a conversation without the consent of at least one participant.",
+          "Placing a GPS tracker on a vehicle the client does not own or co-own. Depending on the facts, covert tracking can fall under New York's stalking and unlawful surveillance provisions.",
+          "Filming inside a home, bedroom, bathroom or anywhere a person has a reasonable expectation of privacy.",
+          "Trespassing on private property to get a photograph, or impersonating someone to extract information by pretext."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "These limits are statements of New York and federal law as general information, not legal advice. The point for you as a client is simple. If a method requires deception, intrusion or unauthorized access, a licensed professional will not use it, and you should not ask for it."
+      },
+      {
+        "type": "h2",
+        "text": "Recording and Photography Under New York Privacy Law"
+      },
+      {
+        "type": "p",
+        "text": "New York is a one-party consent state for recording conversations. That means you may lawfully record a conversation you are personally part of, but nobody, including an investigator you hire, may record a conversation between two other people without a participant's consent. An investigator watching your spouse at dinner can document who was there and what was visible. They cannot plant a microphone at the table."
+      },
+      {
+        "type": "p",
+        "text": "Photography follows the expectation of privacy. A kiss on a public sidewalk or in a hotel bar is fair game for a camera, because no one has a reasonable expectation of privacy in what they do in open public view. The same conduct behind the closed door of an apartment is off limits, and New York's unlawful surveillance law treats covert imaging in private spaces as a serious crime. Good investigators build cases from the public side of that line, and the public side is usually enough."
+      },
+      {
+        "type": "h2",
+        "text": "Why Illegally Gathered Evidence Backfires in a Divorce"
+      },
+      {
+        "type": "p",
+        "text": "New York has allowed no-fault divorce since 2010 under the Domestic Relations Law, so you do not need to prove adultery to end a marriage. Where infidelity evidence still matters is around the edges of a case, such as how marital money was spent on an affair, questions of credibility, and occasionally custody-related conduct. Your attorney decides how to use any of it, which is one more reason the evidence has to be clean."
+      },
+      {
+        "type": "p",
+        "text": "Evidence gathered illegally is worse than useless. It can be challenged and excluded, it can expose you and the investigator to criminal and civil liability, and it can hand your spouse's attorney a story in which you become the wrongdoer. A hacked text message thread does not just risk getting tossed. It can poison the lawful evidence sitting next to it and shift the court's attention from the affair to the hacking."
+      },
+      {
+        "type": "p",
+        "text": "Hiring a licensed professional is how you keep that risk off your case. The investigator carries the legal knowledge of where the line sits, and their report is built to survive scrutiny rather than crumble at the first objection."
+      },
+      {
+        "type": "h2",
+        "text": "How to Make Sure Your Investigator Stays Inside the Lines"
+      },
+      {
+        "type": "p",
+        "text": "Ask three things before anyone starts work. First, ask for the New York State license number and verify it with the Department of State. Second, ask how they handle phones, trackers and recordings, and listen for a clear refusal of anything unauthorized. Third, ask what the report will contain and how observations are logged. Clear answers to all three are the mark of a professional."
+      },
+      {
+        "type": "p",
+        "text": "Our role is to match, not to investigate. You tell us what is going on in confidence, and we connect you with a New York State licensed investigator experienced in discreet infidelity work in Manhattan. The initial consultation is confidential and free, and no investigator can promise what the surveillance will show. What a good one offers is lawful, documented observation and an honest account of what was found, whichever way it points."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Infidelity Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Can a private investigator read my spouse's texts or email?"
+      },
+      {
+        "type": "p",
+        "text": "No. Accessing someone's phone, email or online accounts without authorization can violate federal law, including the Computer Fraud and Abuse Act, along with New York computer trespass statutes. A legitimate licensed investigator will refuse, and any investigator who offers this is signaling that your evidence, and you, will be exposed later."
+      },
+      {
+        "type": "h3",
+        "text": "Can an investigator put a GPS tracker on my spouse's car?"
+      },
+      {
+        "type": "p",
+        "text": "Only in narrow circumstances, and ownership is the usual dividing line. Covertly tracking a vehicle the client does not own or co-own can fall under New York's stalking and unlawful surveillance laws depending on the facts. A careful investigator evaluates the specific situation and declines when the tracking would not be lawful."
+      },
+      {
+        "type": "h3",
+        "text": "Is it legal to have my spouse followed in New York?"
+      },
+      {
+        "type": "p",
+        "text": "Yes. Observing and photographing a person's public movements is lawful, and it is the core of professional infidelity surveillance. The investigator must stay in public spaces, avoid trespass and harassment, and document rather than interfere. Done by a New York State licensed professional, following is the legal backbone of the case."
+      },
+      {
+        "type": "h3",
+        "text": "Do I need proof of adultery to get divorced in New York?"
+      },
+      {
+        "type": "p",
+        "text": "No. New York has permitted no-fault divorce since 2010 under the Domestic Relations Law, so the marriage can end without proving fault. Infidelity evidence can still matter on questions like marital funds spent on an affair or credibility disputes. Whether and how to use it is a judgment call for your attorney."
+      },
+      {
+        "type": "h3",
+        "text": "What happens if my evidence was gathered illegally?"
+      },
+      {
+        "type": "p",
+        "text": "It can be challenged and excluded, and it can create criminal and civil exposure for whoever gathered it and whoever directed them. It also gives the other side a counter-narrative that shifts attention from the conduct you documented to the way you documented it. Lawful collection by a licensed investigator avoids the whole problem."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {

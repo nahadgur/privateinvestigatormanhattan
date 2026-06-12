@@ -48,6 +48,7 @@ function extractFaqs(content: ContentBlock[]): { question: string; answer: strin
 const categoryServiceMap: Record<string, string> = {
   'Private Investigator': 'surveillance',
   'Asset Searches': 'asset-searches',
+  'Infidelity Investigations': 'infidelity-investigation',
 };
 
 function renderBlock(block: ContentBlock, index: number) {
@@ -270,9 +271,4 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
               <ArrowLeft className="w-3.5 h-3.5" /> Back to All Articles
             </Link>
           </div>
-        </div>
-      </main>
-      <Footer />
-    </>
-  );
-}
+  
