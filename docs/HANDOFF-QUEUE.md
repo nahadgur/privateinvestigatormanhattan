@@ -3,6 +3,53 @@
 Build handoffs from the `pim-investigator-writer` scheduled task to Claude Code.
 Newest first. Clear an item with a one-line DONE note once built.
 
+## 2026-06-11 (run 2) — Writer run: 1 spoke drafted (H5 surveillance, covert vs overt)
+
+Pre-flight PASSED (10 hubs live; draft gate confirmed: draft spokes 404 via
+`notFound`; `/blog` index, hub grids and sitemap all route through
+`getPublishedArticles`/`getArticlesByHub`, which filter drafts).
+
+- site: privateinvestigatormanhattan
+- slug: `covert-overt-surveillance-methods`
+- hub: `surveillance-investigations-manhattan` (H5), draft: true
+- title: Covert vs Overt Surveillance and When Investigators Use Each
+- pillar link: ServiceBanner auto-wired to `/services/surveillance/` via
+  `categoryServiceMap['Private Investigator'] = 'surveillance'`. category: 'Private Investigator'.
+- up-link: auto hub link to `/guides/surveillance-investigations-manhattan/`. CTA block present.
+- siblings: published H5 spoke
+  (`what-to-know-before-hiring-a-surveillance-investigator-in-manhattan`) populates
+  the sidebar related list. The other H5 entry (`gps-tracking-...`) is still draft, so
+  it does not appear (correct).
+- local substance: Midtown / Financial District foot-surveillance framing; distinct
+  from the GPS-tracking spoke (this one is method choice, not tracking legality).
+- schema: Article + BreadcrumbList + FAQPage auto-emitted by client; PIM author @id;
+  datePublished + dateModified = 2026-06-11.
+- legal: matching framing kept; NYS DOS licensing under GBL Article 7 named; trespass,
+  stalking/harassment, spyware and vehicle-tracking limits referenced as general info,
+  not legal advice, all claims attributed; no pretexting/illegal access endorsed; no
+  guarantees of outcome; no fabricated investigators/reviews.
+- words: ~1,150. 6 sections + 5 distinct FAQs.
+- tsc: clean. link gate (`scripts/check-links.mjs`): 0 broken across 34 slugs.
+- INCIDENT (recurring, same as 2026-06-11 run 1): the file-tool Edit truncated
+  `data/blog.ts` mid-write (Linux-mount desync; the working file kept the original
+  651,391-byte size but its tail was truncated at `publishDate`, an unterminated-string
+  tsc error). Same desync had also left `BlogArticleClient.tsx` NUL-padded and
+  `GuideArticleClient.tsx` truncated from an earlier session. Recovered by restoring the
+  committed blobs (`git show HEAD:<path>`) and re-inserting the spoke Linux-side
+  (heredoc snippet + python splice), which wrote the full ~662,581 bytes cleanly. tsc
+  clean and link gate 0/34 after recovery. Lesson stands: append large blog entries
+  Linux-side, never via the Edit tool on this mount.
+- git: NOT COMMITTED this run. The stale `.git/index.lock` (0-byte, Jun 11 02:09)
+  cannot be cleared from the sandbox: `rm`, `find -delete` and `mv` all return
+  `Operation not permitted` / `No such file or directory` and the mount returns
+  inconsistent stat vs ls for it, so `git add`/`safe-commit.sh` both fail with
+  "Unable to create index.lock: File exists". (Note: the shared `safe-commit.sh` also
+  reads back truncated on this mount, line 32 EOF.) Work saved in the working tree only,
+  verified: `data/blog.ts`, `docs/SILO-PLAN.md` (section 7 counts), `docs/HANDOFF-QUEUE.md`.
+  **ACTION FOR CLAUDE CODE (native):** delete `.git/index.lock`, then
+  `git add -A && git commit -m "Add H5 surveillance spoke (draft): covert vs overt surveillance methods"`
+  and `git push origin main`.
+
 ## 2026-06-11 — Writer run: 1 spoke drafted (H5 surveillance, GPS tracking angle)
 
 Pre-flight PASSED (10 hubs live; draft gate confirmed: draft spokes 404 via

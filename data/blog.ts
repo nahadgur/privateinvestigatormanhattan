@@ -10099,6 +10099,309 @@ export const blogArticles: BlogArticle[] = [
         "text": "Investigators are licensed by the New York State Department of State under General Business Law Article 7. Ask for the license and verify it with the Department of State before any work begins. A legitimate investigator expects this and will refuse any method, including tracking, that would put that license at risk."
       }
     ]
+  },
+  {
+    slug: 'covert-overt-surveillance-methods',
+    hub: 'surveillance-investigations-manhattan',
+    draft: true,
+    title: 'Covert vs Overt Surveillance and When Investigators Use Each',
+    metaTitle: 'Covert vs Overt Surveillance in NY Cases',
+    metaDescription: 'Covert and overt surveillance serve different goals in a New York case. Learn how a licensed investigator chooses, and how we match you with the right one.',
+    category: 'Private Investigator',
+    publishDate: '2026-06-11',
+    dateModified: '2026-06-11',
+    featuredImage: '',
+    excerpt: 'Covert surveillance keeps the investigator unseen so a subject behaves naturally, while overt surveillance is visible and meant to be noticed. Most Manhattan cases that need documented proof rely on covert work, but the right choice depends on your goal.',
+    content: [
+      {
+        "type": "p",
+        "text": "Covert surveillance keeps the investigator unseen so a subject behaves naturally, while overt surveillance is visible and meant to be noticed. Most Manhattan cases that need documented proof use covert work. We are a matching service and do not investigate ourselves. We connect you with a New York State licensed investigator who chooses the approach that fits your goal."
+      },
+      {
+        "type": "h2",
+        "text": "Covert and Overt Surveillance Are Not the Same Tactic"
+      },
+      {
+        "type": "p",
+        "text": "The difference comes down to whether the subject is aware of being watched. Covert surveillance is discreet by design. The investigator blends into the foot traffic of a block in Midtown or the Financial District, keeps a working distance, and documents movements without the subject ever realizing it. The aim is an honest record of ordinary behavior, captured with time stamped video and a written log."
+      },
+      {
+        "type": "p",
+        "text": "Overt surveillance is the opposite. The presence of an investigator is visible and deliberate, and the point is the effect that visibility has. A uniformed or clearly stationed observer can deter activity, reassure a client, or signal to another party that conduct is being recorded. Overt work trades the natural behavior you get from covert observation for a different kind of value: presence and prevention rather than quiet documentation."
+      },
+      {
+        "type": "p",
+        "text": "Neither method is inherently better. They answer different questions. Covert surveillance asks what someone actually does when they think no one is looking. Overt surveillance asks how behavior changes when someone knows they are being watched. A good investigator starts by clarifying which of those you really need."
+      },
+      {
+        "type": "h2",
+        "text": "When a Manhattan Case Calls for Covert Surveillance"
+      },
+      {
+        "type": "p",
+        "text": "Covert surveillance is the standard choice when the goal is evidence of what a subject does on their own. Matters tied to a divorce or child custody dispute usually fall here, because the value of the footage depends entirely on the subject behaving as they normally would. The moment a person knows they are being observed, the record stops reflecting real conduct, and its usefulness drops."
+      },
+      {
+        "type": "p",
+        "text": "In a dense environment like Manhattan, covert work often means a foot surveillance team rather than a single investigator in a parked car. Crowded sidewalks, building lobbies, and subway entrances make a solo tail easy to lose and easy to spot. A small team can rotate the lead, hold positions at likely exits, and keep continuous coverage without any one face becoming familiar to the subject."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Documenting a pattern of movement or routine for a family court matter.",
+          "Verifying whether someone is working while claiming they cannot.",
+          "Establishing where a subject goes and who they meet, in public view.",
+          "Building a timeline that an attorney can weigh alongside other evidence."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The strength of covert evidence is that it shows behavior the subject did not stage. That is also why it takes patience. A reputable investigator will not promise a particular result or a fixed number of useful clips, because what the surveillance captures depends on what the subject actually does."
+      },
+      {
+        "type": "h2",
+        "text": "When Overt Surveillance Is the Better Choice"
+      },
+      {
+        "type": "p",
+        "text": "Overt surveillance earns its place when the goal is to change behavior rather than to capture it secretly. A business worried about theft or safety at a Manhattan location may want a visible deterrent that signals activity is being monitored. A client facing harassment may feel safer knowing a presence is openly stationed nearby. In these situations, being seen is the entire point."
+      },
+      {
+        "type": "p",
+        "text": "Overt work can also be a deliberate signal to another party that conduct is being documented, which sometimes resolves a dispute without further escalation. The trade off is honesty of behavior: once a subject knows they are watched, you no longer learn what they do unobserved. That is why an investigator will rarely use overt methods when the underlying question is what someone is hiding."
+      },
+      {
+        "type": "p",
+        "text": "Some assignments blend both. An investigator might run covert surveillance to establish a baseline, then shift to a visible presence once enough has been documented. The sequence matters, and reversing it usually wastes the covert phase."
+      },
+      {
+        "type": "h2",
+        "text": "How a Licensed Investigator Decides Between the Two"
+      },
+      {
+        "type": "p",
+        "text": "The choice flows from your objective, not from preference. The first question is what you need to be true at the end: a documented record of unaware behavior, or a deterrent effect that changes what happens next. From there the investigator weighs the setting, the risk of being recognized, the time available, and how the resulting evidence might be used by your attorney."
+      },
+      {
+        "type": "p",
+        "text": "Cost and duration differ too. Covert surveillance in Manhattan often requires more personnel and more hours to produce a usable record, while a visible presence can be staffed more simply but yields a different kind of result. A careful investigator explains this tradeoff during the initial consultation rather than defaulting to one method for every case."
+      },
+      {
+        "type": "h2",
+        "text": "Staying Within the Law Either Way"
+      },
+      {
+        "type": "p",
+        "text": "Both methods rely on the same legal foundation: an investigator may observe and document what a person does in public view, but may not trespass, place a tracker on a vehicle the client does not control, install spyware on a device that is not the client's, or behave in a way that would alarm a reasonable person. Crossing those lines can expose a client to civil or criminal liability and can taint the evidence the surveillance was meant to produce."
+      },
+      {
+        "type": "p",
+        "text": "Investigators in New York are licensed by the New York State Department of State under General Business Law Article 7, and that license is a standard of conduct as well as a credential. An investigator who would risk it with unlawful methods is not one you want on your case. This article is general information, not legal advice, and whether a specific method is lawful in your situation is a question for your attorney based on the facts of your matter."
+      },
+      {
+        "type": "h2",
+        "text": "How Matching Works"
+      },
+      {
+        "type": "p",
+        "text": "Our role is to match, not to investigate. You tell us what you are trying to establish and the basic facts, and we connect you with a New York State licensed investigator suited to surveillance work in New York City. The initial consultation is confidential and carries no cost. No investigator can guarantee a particular outcome, but the right one will tell you honestly whether covert or overt surveillance fits what you actually need."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Surveillance Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "What is the difference between covert and overt surveillance?"
+      },
+      {
+        "type": "p",
+        "text": "Covert surveillance is conducted without the subject's knowledge so they behave naturally, and it produces a record of unaware conduct. Overt surveillance is visible and intended to be noticed, and it is used to deter behavior or signal that activity is being documented. The right choice depends on whether your goal is to capture behavior or to change it."
+      },
+      {
+        "type": "h3",
+        "text": "Which approach does a Manhattan infidelity or custody case usually need?"
+      },
+      {
+        "type": "p",
+        "text": "These matters almost always call for covert surveillance, because the value of the evidence depends on the subject acting as they normally would. If a person knows they are being watched, the footage no longer reflects real behavior. A licensed investigator typically uses a discreet foot surveillance team in Manhattan's crowded settings rather than a single visible observer."
+      },
+      {
+        "type": "h3",
+        "text": "Will the subject know they are being watched?"
+      },
+      {
+        "type": "p",
+        "text": "Not during covert surveillance, which is designed so the subject never realizes an investigator is present. During overt surveillance the opposite is true: the presence is meant to be seen. Which one is used is decided up front based on your objective, and a reputable investigator explains the tradeoff before any work begins."
+      },
+      {
+        "type": "h3",
+        "text": "Is following someone in public legal in New York?"
+      },
+      {
+        "type": "p",
+        "text": "As general information, a licensed investigator may observe and document what a person does in public view, but may not trespass, track a vehicle the client does not control, or act in a way that would alarm a reasonable person. The line is fact specific, so confirm the approach with your attorney before surveillance begins."
+      },
+      {
+        "type": "h3",
+        "text": "Does covert surveillance produce stronger evidence?"
+      },
+      {
+        "type": "p",
+        "text": "Often, because it captures behavior the subject did not stage, which is usually what a court or attorney wants to weigh. Overt surveillance serves a different purpose, deterrence rather than documentation. Whether any evidence is admissible is for the court and your attorney to determine, and no investigator can promise a particular result."
+      }
+    ]
+  },
+  {
+    slug: 'investigator-retainer-billing-new-york',
+    hub: 'investigator-costs-manhattan',
+    draft: true,
+    title: 'How Private Investigator Retainers and Billing Work in New York',
+    metaTitle: 'How PI Retainers and Billing Work in New York',
+    metaDescription: 'A private investigator retainer is an upfront deposit billed against by the hour. Learn how New York investigators structure fees, expenses, and engagement letters.',
+    category: 'Private Investigator',
+    publishDate: '2026-06-12',
+    dateModified: '2026-06-12',
+    featuredImage: '',
+    excerpt: 'A private investigator retainer is an advance deposit you pay before work begins, and most New York investigators bill against it by the hour until the balance runs low. We are a matching service and do not investigate ourselves. We connect you with a licensed investigator who explains the billing before you commit.',
+    content: [
+      {
+        "type": "p",
+        "text": "A private investigator retainer is an advance deposit you pay before work begins, and most New York investigators bill against it by the hour until the balance runs low. We are a matching service and do not investigate ourselves. We connect you with a New York State licensed investigator who explains the billing in plain terms before you commit a dollar."
+      },
+      {
+        "type": "h2",
+        "text": "What a Retainer Is and Why Investigators Ask for One"
+      },
+      {
+        "type": "p",
+        "text": "A retainer is money you pay up front that the investigator holds and draws down as they work. It is not an extra fee on top of the case cost. It is a deposit against the hours and expenses the case will use, and the investigator bills against it rather than chasing payment after the fact. For surveillance, infidelity, and corporate matters, where the workload is hard to predict at the outset, a retainer is the standard way reputable investigators in New York City take on a case."
+      },
+      {
+        "type": "p",
+        "text": "The size of the retainer usually tracks the expected scope. A focused background check or a single day of observation sits at the low end, while a multi day surveillance assignment or a corporate matter sits much higher because it commits the investigator's time and equipment in advance. Asking what the retainer is based on, and what happens if the case wraps up under that figure, tells you a lot about how transparent an investigator will be."
+      },
+      {
+        "type": "h2",
+        "text": "How New York Investigators Structure Their Billing"
+      },
+      {
+        "type": "p",
+        "text": "Most engagements use one of three billing structures, and many combine them. Understanding which one you are agreeing to is the single most useful thing you can do before signing, because it determines how a case that runs long or wraps early affects what you pay."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Hourly billing: you pay a set rate for each hour worked, commonly with a daily or per assignment minimum. This fits flexible, open ended work like surveillance.",
+          "Flat fee: a single price for a clearly defined task such as a standard background check, where the scope is predictable and unlikely to drift.",
+          "Retainer plus hourly: an upfront deposit that the investigator bills hourly against, replenished if the case continues past the initial balance. This is the most common arrangement for complex cases.",
+          "Expenses: mileage, equipment, database access, and report preparation are usually billed on top of the hourly rate, so ask how they are handled."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A flat fee gives you certainty but can cost more if the work turns out simpler than expected, while hourly billing rewards an efficient investigator but leaves the total open until the case closes. Neither is automatically better. The right structure depends on how well defined your case is at the start, which is exactly the kind of thing a good investigator will talk through with you."
+      },
+      {
+        "type": "h2",
+        "text": "What a Retainer Typically Covers and When It Replenishes"
+      },
+      {
+        "type": "p",
+        "text": "A retainer generally covers the investigator's working hours and, in many agreements, the case expenses as well. As those hours and costs accrue, the balance falls. When it drops below an agreed threshold, the investigator pauses to ask whether you want to add funds and continue. That checkpoint is a feature, not a nuisance, because it stops a case from quietly running up a bill you did not approve."
+      },
+      {
+        "type": "p",
+        "text": "Just as important is what happens to money you do not use. Ask whether unused retainer funds are refundable, and get the answer in writing. A straightforward investigator will tell you plainly whether the deposit is fully earned, partly refundable, or returned in full if the case closes early. Vague answers on this point are a reason to keep looking."
+      },
+      {
+        "type": "h2",
+        "text": "Reading the Engagement Letter Before You Sign"
+      },
+      {
+        "type": "p",
+        "text": "The engagement letter is where the billing becomes real, so read it before you pay anything. New York investigators are licensed by the New York State Department of State under General Business Law Article 7, and a legitimate one will state their license number and put the financial terms in writing without being pushed. Verify that license with the Department of State before any retainer changes hands."
+      },
+      {
+        "type": "list",
+        "items": [
+          "The hourly rate and any daily or per assignment minimum.",
+          "The retainer amount, what it covers, and the replenishment threshold.",
+          "How expenses such as mileage, equipment, and report writing are billed.",
+          "Whether unused retainer funds are refundable.",
+          "The scope of work, so you are not billed for tasks you did not request.",
+          "The reporting cadence and the form your final report will take."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of this is legal advice, and the terms that matter most can vary with your situation. If your matter is headed for divorce, custody, or other litigation, it is worth having your attorney glance at the engagement letter so the billing and the evidence plan line up."
+      },
+      {
+        "type": "h2",
+        "text": "How Matching Works and When to Start"
+      },
+      {
+        "type": "p",
+        "text": "Our role is to match, not to investigate. You tell us what you are trying to establish and the basic facts of your situation, and we connect you with a New York State licensed investigator suited to the work, whether that is surveillance in Manhattan or a records based inquiry. The initial consultation is confidential and carries no cost, and a reputable investigator will walk you through the retainer and billing structure during it. No investigator can promise a particular result, and any methods used must stay within the law."
+      },
+      {
+        "type": "p",
+        "text": "Starting the conversation early helps, because it gives you time to compare how different investigators structure their fees rather than agreeing to the first number you hear under pressure. If you are weighing whether a case is worth commissioning at all, a short discussion about likely scope and cost is a sensible first step."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Manhattan Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "How much is a typical private investigator retainer in New York?"
+      },
+      {
+        "type": "p",
+        "text": "It depends on the case. A focused background check or a single day of observation commonly carries a smaller retainer, while a multi day surveillance assignment or a corporate matter runs much higher because it commits the investigator's time and equipment in advance. The retainer should track the expected scope, so ask what figure your case is based on and what happens if the work comes in under it."
+      },
+      {
+        "type": "h3",
+        "text": "Is a private investigator retainer refundable?"
+      },
+      {
+        "type": "p",
+        "text": "That varies by investigator, which is why you should ask before you pay and get the answer in writing. Some agreements treat the deposit as fully earned, others refund whatever hours and expenses you do not use. A straightforward investigator will state plainly how unused funds are handled, and a vague answer on this point is a reason to keep looking."
+      },
+      {
+        "type": "h3",
+        "text": "Do New York investigators bill hourly or by flat fee?"
+      },
+      {
+        "type": "p",
+        "text": "Both are common, and many combine them. Flexible, open ended work like surveillance is usually billed hourly, often against a retainer, while a clearly defined task such as a standard background check may be offered as a flat fee. Which one fits depends on how well defined your case is at the start, and a good investigator will explain the trade off rather than push one option."
+      },
+      {
+        "type": "h3",
+        "text": "What expenses are added on top of the retainer?"
+      },
+      {
+        "type": "p",
+        "text": "Expenses such as mileage, equipment, database access, and report preparation are usually billed in addition to the hourly rate, though some agreements fold them into the retainer. Because these can add up, ask how expenses are handled and whether they are itemized, so the final invoice holds no surprises."
+      },
+      {
+        "type": "h3",
+        "text": "How do I verify a New York investigator before paying a retainer?"
+      },
+      {
+        "type": "p",
+        "text": "Investigators are licensed by the New York State Department of State under General Business Law Article 7. Ask for the license number, verify it with the Department of State, and make sure the rate, retainer, and expense terms are in writing before any money changes hands. A legitimate investigator expects this and will not be offended by the request."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {

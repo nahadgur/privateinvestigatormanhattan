@@ -94,16 +94,17 @@ Align each hub to its matching `/services/[serviceSlug]/` pillar.
 
 ## 7. Status tracker
 
-10 hubs (all built, commit f14ad9f). Spokes: 20 published + 3 drafts in buffer = 23
-total, target ~100 (~10/hub). Draft buffer (awaiting publisher): 3, two H8 asset
-searches (hidden-assets-in-divorce; judgment-enforcement) and one H5 surveillance
-(gps-tracking-laws-new-york-investigations). Thinnest hubs to fill first: H2 cost
-(1), H4 infidelity (2), H6 due diligence (2), H3 licensing (2), H5 surveillance (1
-published + 1 draft), H10 locating (3), H7 corporate/fraud (3). H8 now has 2 drafts
-so deprioritize until a published spoke lands there.
+10 hubs (all built, commit f14ad9f). Spokes: 20 published + 5 drafts in buffer = 25
+total, target ~100 (~10/hub). Draft buffer (awaiting publisher): 5, two H8 asset
+searches (hidden-assets-in-divorce; judgment-enforcement), two H5 surveillance
+(gps-tracking-laws-new-york-investigations; covert-overt-surveillance-methods),
+and one H2 cost (investigator-retainer-billing-new-york, added 2026-06-12).
+Thinnest hubs to fill first: H4 infidelity (2), H6 due diligence (2), H3 licensing
+(2), H10 locating (3), H7 corporate/fraud (3). H2 cost now 1 published + 1 draft,
+H5 surveillance 1 published + 2 drafts, H8 2 drafts, so deprioritize those until a
+published spoke lands there; favor H4/H6/H3 next.
 ## Slug rules (writer: follow on every spoke)
 
 Kebab-case: lowercase, hyphens only, ASCII only, 3-6 words, under ~60 chars.
 Do NOT: include a year/date; reuse or near-duplicate an existing slug; use a
-reserved head term or the parent hub's head term; keyword-stuff or repeat a word;
-use stop words (a/the/to/for). Never rename or reuse a published slug.
+reserved head term or the parent hub's head term; keyword-stuff or repe
