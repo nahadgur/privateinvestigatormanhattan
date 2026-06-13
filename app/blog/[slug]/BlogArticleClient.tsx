@@ -49,6 +49,7 @@ const categoryServiceMap: Record<string, string> = {
   'Private Investigator': 'surveillance',
   'Asset Searches': 'asset-searches',
   'Infidelity Investigations': 'infidelity-investigation',
+  'Background Checks': 'background-checks',
 };
 
 function renderBlock(block: ContentBlock, index: number) {

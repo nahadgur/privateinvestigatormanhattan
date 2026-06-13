@@ -10553,6 +10553,167 @@ export const blogArticles: BlogArticle[] = [
         "text": "It can be challenged and excluded, and it can create criminal and civil exposure for whoever gathered it and whoever directed them. It also gives the other side a counter-narrative that shifts attention from the conduct you documented to the way you documented it. Lawful collection by a licensed investigator avoids the whole problem."
       }
     ]
+  },
+  {
+    slug: 'pre-employment-background-check-rules-nyc',
+    hub: 'background-checks-due-diligence-manhattan',
+    draft: true,
+    title: 'Pre-Employment Background Check Rules for NYC Employers',
+    metaTitle: 'Pre-Employment Background Check Rules in NYC',
+    metaDescription: 'What NYC employers can legally check before hiring, how the FCRA and the NYC Fair Chance Act shape the process, and where a licensed investigator fits in.',
+    category: 'Background Checks',
+    publishDate: '2026-06-13',
+    dateModified: '2026-06-13',
+    featuredImage: '',
+    excerpt: 'NYC employers can verify identity, employment, education, licenses and, after a conditional offer, criminal history. The FCRA requires written consent and a two-step adverse action process, and the NYC Fair Chance Act controls when criminal history can enter the picture. Getting the order wrong creates real liability.',
+    content: [
+      {
+        "type": "p",
+        "text": "A New York City employer can verify a candidate's identity, employment history, education, professional licenses and, after a conditional offer, criminal history. The Fair Credit Reporting Act requires written consent and a two-step adverse action process, and the NYC Fair Chance Act controls when criminal history can be considered. We are a matching service, not an investigative agency, and we connect employers with New York State licensed investigators who run screening the lawful way."
+      },
+      {
+        "type": "h2",
+        "text": "What a Pre-Employment Background Check Can Include"
+      },
+      {
+        "type": "p",
+        "text": "A lawful pre-employment check in New York is broader than most candidates expect and narrower than most employers assume. The verifiable core covers the claims on the resume and the public record that is legally open to an employer at the right stage of the process."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Identity and Social Security number verification, confirming the candidate is who the application says they are.",
+          "Employment history verification with past employers, including dates, titles and, where former employers will discuss it, eligibility for rehire.",
+          "Education and credential verification directly with schools, licensing boards and certifying bodies rather than relying on a scanned certificate.",
+          "Professional license checks, such as confirming a license is active and undisciplined with the issuing New York State agency.",
+          "Criminal record checks, but in New York City only after a conditional offer of employment has been made.",
+          "Civil litigation history, judgments and liens from public court records, where relevant to the role and used within legal limits."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The order matters as much as the list. New York City law splits the process into a pre-offer stage, where criminal history is off the table, and a post-offer stage, where it can be reviewed under strict rules."
+      },
+      {
+        "type": "h2",
+        "text": "The FCRA: Consent, Disclosure and Adverse Action"
+      },
+      {
+        "type": "p",
+        "text": "When an employer hires an outside company to compile background information, the federal Fair Credit Reporting Act applies, and the Federal Trade Commission treats employment screening as one of its core enforcement areas. The FCRA is a process statute. It does not say much about what you may look at, but it is exacting about how you must do it."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Before the check, the employer must give the candidate a clear, standalone written disclosure and obtain written authorization. Burying the disclosure inside the application or an employment agreement violates the statute.",
+          "Before rejecting a candidate based on the report, the employer must send a pre-adverse action notice with a copy of the report and the federal Summary of Rights, giving the candidate a real chance to dispute errors.",
+          "After the decision, a final adverse action notice must identify the screening company and explain the candidate's right to dispute the report's accuracy.",
+          "For most roles, the FCRA limits how far back a consumer report can reach for adverse items such as civil suits and judgments, generally seven years, though criminal convictions can be reported indefinitely under federal law."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "FCRA claims are attractive to plaintiffs' attorneys because the statute allows statutory damages for technical violations even when the underlying hiring decision was sound. A screening process that skips the standalone disclosure or the pre-adverse action step is exposed regardless of what the report found."
+      },
+      {
+        "type": "h2",
+        "text": "New York City Rules: the Fair Chance Act and Article 23-A"
+      },
+      {
+        "type": "p",
+        "text": "New York City layers its own rules on top of the federal floor, and they are stricter. Under the NYC Fair Chance Act, enforced by the New York City Commission on Human Rights, most employers may not ask about criminal history, run a criminal check, or even state that a background check is required, until after extending a conditional offer of employment."
+      },
+      {
+        "type": "p",
+        "text": "Once the offer is made and a conviction surfaces, the employer cannot simply withdraw it. New York Correction Law Article 23-A requires an individualized analysis of factors such as the bearing of the offense on the specific job, the time elapsed, the candidate's age at the time, and evidence of rehabilitation. The Fair Chance process requires the employer to share that written analysis with the candidate and hold the position open for at least five business days so the candidate can respond. Skipping the analysis, or treating it as a formality with a predetermined outcome, is itself a violation."
+      },
+      {
+        "type": "p",
+        "text": "These are statements of federal, state and city law as general information, not legal advice. Employers with edge cases, such as roles covered by industry-specific screening mandates, should run the specifics past an employment attorney."
+      },
+      {
+        "type": "h2",
+        "text": "What NYC Employers Cannot Check or Use"
+      },
+      {
+        "type": "p",
+        "text": "Several categories of information are off-limits in New York regardless of how easy they are to find, and a screening process that touches them creates liability rather than insight."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Arrests that did not lead to conviction, and sealed or youthful offender records. New York law generally bars employers from asking about or acting on them.",
+          "Credit history for most positions. The NYC Stop Credit Discrimination in Employment Act prohibits most employers from using consumer credit history in hiring, with narrow exemptions for specific roles.",
+          "Salary history. New York City employers may not ask candidates what they earned in previous jobs.",
+          "Off-duty lawful conduct, such as legal recreational activities and political activities protected under New York Labor Law.",
+          "Protected characteristics surfaced by a search, such as age, religion or family status, which cannot lawfully factor into the decision however the employer learned them."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The pattern across all of these is the same. Information being available does not make it usable, and a screening file that contains unusable information is a problem in itself, because it invites the inference that the employer relied on it."
+      },
+      {
+        "type": "h2",
+        "text": "Where a Licensed Investigator Fits In"
+      },
+      {
+        "type": "p",
+        "text": "Database screening services are cheap, fast and shallow. They mismatch common names, miss records filed under variations, and return raw data with no judgment about what is legally usable. A New York State licensed investigator approaches the same question differently, verifying records at the source, resolving identity conflicts before they become a false red flag, and structuring findings so the employer only sees what it can lawfully consider at that stage."
+      },
+      {
+        "type": "p",
+        "text": "That is the kind of screening worth paying for when the role carries real exposure, such as financial responsibility, access to client funds, work inside customers' homes, or a senior hire whose resume claims deserve direct verification. Our role is to match, not to investigate. Tell us what the role involves and we connect you with a licensed investigator experienced in employment-related due diligence in Manhattan, working only through lawful methods. No legitimate investigator will pull sealed records, pretext a former employer, or promise to get around the Fair Chance Act, and any provider who offers to is the wrong one to hire."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Background Check Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Can an NYC employer run a criminal check before making a job offer?"
+      },
+      {
+        "type": "p",
+        "text": "No. Under the NYC Fair Chance Act, most employers must wait until after a conditional offer of employment to ask about or check criminal history. Even job postings cannot state that a clean record is required. After the offer, a conviction can only be weighed through the individualized analysis required by New York Correction Law Article 23-A."
+      },
+      {
+        "type": "h3",
+        "text": "Does a candidate have to consent to a background check?"
+      },
+      {
+        "type": "p",
+        "text": "Yes, when the check is run through a third-party screening company or investigator, the Fair Credit Reporting Act requires a standalone written disclosure and the candidate's written authorization before the report is prepared. A candidate can refuse, and the employer can generally decline to proceed with the application, but running the check without authorization violates federal law."
+      },
+      {
+        "type": "h3",
+        "text": "How far back can a pre-employment background check go?"
+      },
+      {
+        "type": "p",
+        "text": "Under the FCRA, most adverse items such as civil suits, judgments and paid tax liens are limited to seven years for typical roles. Criminal convictions can be reported indefinitely under federal law, although New York's rules on sealed records and the Article 23-A analysis still control what an employer can actually do with an older conviction."
+      },
+      {
+        "type": "h3",
+        "text": "Can employers in NYC check a candidate's credit history?"
+      },
+      {
+        "type": "p",
+        "text": "Mostly no. The NYC Stop Credit Discrimination in Employment Act bars most employers from requesting or using consumer credit history in hiring decisions. Narrow exemptions exist, including certain roles with signatory authority over significant assets and positions where state or federal law requires a credit check, but the default in New York City is that credit is off-limits."
+      },
+      {
+        "type": "h3",
+        "text": "What happens if a background check turns up a record that belongs to someone else?"
+      },
+      {
+        "type": "p",
+        "text": "This is exactly what the FCRA's pre-adverse action step exists for. The candidate must receive a copy of the report and a chance to dispute it before the employer finalizes a rejection. Mistaken-identity records are common with frequent names, which is one reason source-level verification by a licensed investigator beats raw database output for decisions that matter."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
