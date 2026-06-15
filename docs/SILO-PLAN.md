@@ -94,21 +94,22 @@ Align each hub to its matching `/services/[serviceSlug]/` pillar.
 
 ## 7. Status tracker
 
-10 hubs (all built, commit f14ad9f). Spokes: 20 published + 6 drafts in buffer = 26
-total, target ~100 (~10/hub). Draft buffer (awaiting publisher): 6, two H8 asset
+10 hubs (all built, commit f14ad9f). Spokes: 20 published + 7 drafts in buffer = 27
+total, target ~100 (~10/hub). Draft buffer (awaiting publisher): 7, two H8 asset
 searches (hidden-assets-in-divorce; judgment-enforcement), two H5 surveillance
 (gps-tracking-laws-new-york-investigations; covert-overt-surveillance-methods),
-one H2 cost (investigator-retainer-billing-new-york, added 2026-06-12), and one
+one H2 cost (investigator-retainer-billing-new-york, added 2026-06-12), one
 H4 infidelity (infidelity-investigator-legal-limits-new-york, added 2026-06-12;
 new category 'Infidelity Investigations' mapped to the infidelity-investigation
-pillar in BlogArticleClient categoryServiceMap).
-Thinnest hubs to fill first: H6 due diligence (2), H3 licensing (2), H10 locating
-(3), H7 corporate/fraud (3). H4 infidelity now 2 published + 1 draft, H2 cost 1
-published + 1 draft, H5 surveillance 1 published + 2 drafts, H8 2 drafts, so
-deprioritize those until a published spoke lands there; favor H6/H3 next.
+pillar in BlogArticleClient categoryServiceMap), and one H6 background/due
+diligence (pre-employment-background-check-rules-nyc, added 2026-06-13; new
+category 'Background Checks' mapped to the background-checks pillar in
+BlogArticleClient categoryServiceMap).
+Thinnest hubs to fill first: H3 licensing (2), H10 locating (3), H7
+corporate/fraud (3), H6 due diligence (2 published + 1 draft). H4 infidelity now 2
+published + 1 draft, H2 cost 1 published + 1 draft, H5 surveillance 1 published +
+2 drafts, H8 2 drafts, so deprioritize those until a published spoke lands there;
+favor H3/H10/H7 next.
 ## Slug rules (writer: follow on every spoke)
 
-Kebab-case: lowercase, hyphens only, ASCII only, 3-6 words, under ~60 chars.
-Do NOT: include a year/date; reuse or near-duplicate an existing slug; use a
-reserved head term or the parent hub's head term; keyword-stuff or repeat a word;
-use stop words (a/the/to/for). Never rename or reuse a published slug.
+Kebab-case: lowercase, hyphens only, ASCII only, 3-6 words, under ~60 chars

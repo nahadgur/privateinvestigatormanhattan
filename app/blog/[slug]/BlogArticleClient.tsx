@@ -50,6 +50,8 @@ const categoryServiceMap: Record<string, string> = {
   'Asset Searches': 'asset-searches',
   'Infidelity Investigations': 'infidelity-investigation',
   'Background Checks': 'background-checks',
+  'Skip Tracing': 'skip-tracing',
+  'Corporate Investigations': 'corporate-investigations',
 };
 
 function renderBlock(block: ContentBlock, index: number) {

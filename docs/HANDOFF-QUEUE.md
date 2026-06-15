@@ -235,3 +235,11 @@ git: nothing committed by the writer this run. tsc: not run (no writer change).
 - Commit prompt / git state: committed local 1caf735; push FAILED (no GitHub credentials in sandbox), repo ahead 2 (365cad6 + 1caf735), needs manual push. NOTE: sandbox cannot delete files in .git, so stale git locks were renamed to *.stale-20260612* instead of removed; safe to delete from Windows.
 - Buffer: 6 drafts (H8 x2, H5 x2, H2 x1, H4 x1). Total toward 100: 26 spokes (20 published + 6 drafts).
 - Status: PENDING PUSH
+
+## 2026-06-13 14:30 — pim-investigator-writer (privateinvestigatormanhattan)
+- Sites: privateinvestigatormanhattan — wrote 1 draft spoke under H6 background/due diligence (thinnest published hub)
+- Staged files: data/blog.ts (new entry pre-employment-background-check-rules-nyc), app/blog/[slug]/BlogArticleClient.tsx (added 'Background Checks' -> 'background-checks' to categoryServiceMap)
+- Live flips this run: none (writer; draft:true)
+- tsc: pass
+- Commit prompt / git state: committed 0abc010, push failed (no GitHub credentials in sandbox) — needs drain
+- Status: PENDING PUSH

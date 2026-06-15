@@ -10714,6 +10714,300 @@ export const blogArticles: BlogArticle[] = [
         "text": "This is exactly what the FCRA's pre-adverse action step exists for. The candidate must receive a copy of the report and a chance to dispute it before the employer finalizes a rejection. Mistaken-identity records are common with frequent names, which is one reason source-level verification by a licensed investigator beats raw database output for decisions that matter."
       }
     ]
+  },
+  {
+    slug: 'locate-defendant-service-process-nyc',
+    hub: 'skip-tracing-locating-people-manhattan',
+    draft: true,
+    title: 'Locating a Defendant for Service of Process in NYC',
+    metaTitle: 'Locating a Defendant for Service of Process in NYC',
+    metaDescription: 'How investigators locate a defendant who cannot be found in New York, the skip-tracing methods used, and how documented attempts support alternative service.',
+    category: 'Skip Tracing',
+    publishDate: '2026-06-13',
+    dateModified: '2026-06-13',
+    featuredImage: '',
+    excerpt: 'You can move a New York case forward even when the defendant cannot be found, but only after a current address is confirmed and lawful service is completed. Locating an evasive defendant combines skip tracing with documented due diligence that supports alternative service under the CPLR. We match you with a licensed investigator who does this work the lawful way.',
+    content: [
+      {
+        "type": "p",
+        "text": "You can move a New York case forward even when the defendant cannot be found, but only after a current address is confirmed and lawful service is completed. Locating an evasive defendant combines skip tracing with documented due diligence. We are a matching service, not an investigative agency, and we connect litigants and attorneys with New York State licensed investigators who locate people through lawful methods."
+      },
+      {
+        "type": "h2",
+        "text": "Why Service Depends on Finding the Right Person"
+      },
+      {
+        "type": "p",
+        "text": "Service of process is the step that gives a New York court authority over a defendant. The methods are set out in Article 3 of the Civil Practice Law and Rules, and almost all of them depend on one thing the plaintiff does not always have, which is a current and correct address for the person being sued. A complaint cannot proceed to a default or a judgment if the defendant was never properly served, and a defendant served at a stale address can later move to vacate the result."
+      },
+      {
+        "type": "p",
+        "text": "Defendants who do not want to be found make this harder on purpose. They sublet without a lease on record, use a relative's address for mail, rely on a commercial mailbox, or move between short-term rentals. None of that defeats a case, but it does mean the locate has to happen before a server can do their job."
+      },
+      {
+        "type": "h2",
+        "text": "How an Investigator Locates a Defendant"
+      },
+      {
+        "type": "p",
+        "text": "Skip tracing for service is a research exercise before it is a field exercise. A licensed investigator starts with the identifiers you already have and expands outward across data the public cannot easily reach."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Proprietary investigative databases that aggregate utility connections, credit-header data, and address histories that consumer people-search sites do not carry or keep current.",
+          "Public records across multiple jurisdictions, including property records, business filings, voter and motor-vehicle records where lawfully accessible, and recent court filings that reveal an address.",
+          "Social-network and association analysis, mapping relatives, former coworkers, and associates whose own records point back to the subject's current location.",
+          "Targeted source interviews conducted lawfully, without misrepresenting the investigator's identity in ways the law prohibits."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "On a clean case the result can be a confirmed address within days. A subject who is actively avoiding service, using alternate names, or who has left the state takes longer, and a good investigator will say so after the initial review rather than promise a timeline they cannot meet."
+      },
+      {
+        "type": "h2",
+        "text": "Documenting Due Diligence for Alternative Service"
+      },
+      {
+        "type": "p",
+        "text": "New York does not leave a plaintiff stuck when a defendant is evasive, but the alternatives all require proof of effort. Under CPLR 308, personal delivery is the first choice. When repeated attempts at personal and substituted service fail, the affix-and-mail method, often called nail and mail, becomes available only after the server has exercised due diligence in trying the earlier methods. When service is impracticable by any of the listed methods, CPLR 308(5) lets a plaintiff ask the court to direct an alternative, such as service by email or publication."
+      },
+      {
+        "type": "p",
+        "text": "Each of those paths turns on the same question a judge will ask, which is whether genuine, documented effort was made to find and reach the defendant. An investigator's dated log of database work, attempted addresses, and the reasoning behind each step gives your attorney the factual record to support that motion. This is general information about New York procedure, not legal advice, and your attorney should decide which method fits the case."
+      },
+      {
+        "type": "h2",
+        "text": "A Process Server and an Investigator Do Different Jobs"
+      },
+      {
+        "type": "p",
+        "text": "These two roles are often confused. A process server delivers the papers. In New York City, process servers who handle more than a handful of jobs a year are licensed and regulated by the Department of Consumer and Worker Protection, and they must keep a log of each service. Locating a defendant who is hard to find is a separate task. Under Article 7 of the General Business Law, investigating someone's whereabouts for a fee is investigative work that requires a New York State private investigator license."
+      },
+      {
+        "type": "p",
+        "text": "In practice the two functions coordinate. The investigator confirms where the defendant actually is, and the licensed server completes and documents the delivery. Hiring someone who is licensed for the part they are actually doing keeps both the locate and the service defensible if the defendant later challenges them."
+      },
+      {
+        "type": "h2",
+        "text": "What Speeds a Locate, and What Stays Off-Limits"
+      },
+      {
+        "type": "p",
+        "text": "The more identifying detail you provide at the outset, the faster and cheaper the work tends to be."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Full legal name, plus any prior names, maiden names, or known aliases.",
+          "Date of birth or approximate age, which separates the subject from other people with the same name.",
+          "Last known addresses, employers, and phone numbers, even if they are out of date.",
+          "Names of relatives, business partners, and close associates.",
+          "The case context, including any docket number and the deadline you are working toward."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Lawful method is not optional. No legitimate investigator will obtain bank or phone records by pretending to be the account holder, a practice known as pretexting that the federal Gramm-Leach-Bliley Act makes illegal, and none will access private accounts, install a tracker on a vehicle they have no right to, or trespass to confirm an address. Addresses or evidence gathered illegally can taint the service and the case. Any provider who offers shortcuts like these is the wrong one to hire."
+      },
+      {
+        "type": "h2",
+        "text": "Where We Fit In"
+      },
+      {
+        "type": "p",
+        "text": "We do not locate defendants or serve papers ourselves. We connect litigants, creditors, and attorneys with New York State licensed investigators who locate hard-to-find people for service of process and who work only through lawful methods. Tell us what you know about the person and the deadline you face, and we match you with an investigator experienced in this work in Manhattan and the surrounding boroughs."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Skip Tracing Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Can a process server find someone who is deliberately hiding?"
+      },
+      {
+        "type": "p",
+        "text": "Sometimes, but locating an evasive defendant is investigative work rather than delivery. Many cases are handled by an investigator who confirms the current address and a licensed process server who completes the delivery. In New York City, process servers are licensed by the Department of Consumer and Worker Protection, and locating a hard-to-find subject for a fee generally requires a private investigator license under Article 7 of the General Business Law."
+      },
+      {
+        "type": "h3",
+        "text": "What does due diligence mean for alternative service in New York?"
+      },
+      {
+        "type": "p",
+        "text": "It means documented, genuine effort to reach the defendant by the methods the law prefers before a court will allow another route. Under CPLR 308, the affix-and-mail method is only available after diligent attempts at personal and substituted service, and CPLR 308(5) lets a court direct an alternative when service is otherwise impracticable. A dated record of the locate work and the service attempts supports that showing. This is general information, not legal advice."
+      },
+      {
+        "type": "h3",
+        "text": "How long does it take to locate a defendant?"
+      },
+      {
+        "type": "p",
+        "text": "A subject who is simply hard to reach but not hiding can often be confirmed within a few days. Someone actively avoiding service, using alternate names, or who has moved out of state can take longer, sometimes weeks. A licensed investigator should give you a realistic estimate after reviewing the identifiers you already have rather than promising a fixed timeline upfront."
+      },
+      {
+        "type": "h3",
+        "text": "Is it legal to hire someone to find a defendant?"
+      },
+      {
+        "type": "p",
+        "text": "Yes. Locating a person for a lawful purpose such as service of process is legitimate investigative work when it is done by a licensed investigator using lawful methods. What is not legal is obtaining protected records by pretexting, accessing private accounts, or tracking and trespassing without authorization. Addresses or evidence gathered that way can undermine the service and the underlying case."
+      },
+      {
+        "type": "h3",
+        "text": "What information should I bring to speed the search?"
+      },
+      {
+        "type": "p",
+        "text": "At minimum a full legal name and a date of birth or last known address. Prior names, phone numbers, former employers, and the names of relatives and associates all help, as does the case context and your filing deadline. The more you can provide at the start, the faster and less expensive the locate tends to be."
+      }
+    ]
+  },
+  {
+    "slug": "trade-secret-theft-investigations-nyc",
+    "hub": "corporate-fraud-investigations-manhattan",
+    "draft": false,
+    "title": "Investigating Trade Secret Theft by a Departing Employee",
+    "metaTitle": "Trade Secret Theft Investigations in NYC",
+    "metaDescription": "How a licensed investigator documents trade secret and IP theft by a departing employee in New York, the lawful methods used, and how evidence supports a case.",
+    "category": "Corporate Investigations",
+    "publishDate": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "featuredImage": "",
+    "excerpt": "When a departing employee leaves with client lists, source code, or pricing data, you can act, but only with evidence gathered lawfully. A trade secret theft investigation documents what was taken, how, and by whom. We match New York businesses and their attorneys with licensed investigators who do this work the lawful way.",
+    "content": [
+      {
+        "type": "p",
+        "text": "When a departing employee leaves with client lists, source code, or pricing data, you can act, but only with evidence that was gathered lawfully. A trade secret theft investigation documents what was taken, how, and by whom, in a form that holds up if the dispute reaches court. We are a matching service, not an investigative agency, and we connect New York businesses and their attorneys with New York State licensed investigators who do this work the lawful way."
+      },
+      {
+        "type": "h2",
+        "text": "What Trade Secret and IP Theft Looks Like Inside a Company"
+      },
+      {
+        "type": "p",
+        "text": "Most corporate IP theft is not dramatic. It happens in the two or three weeks around a resignation, when an employee who is already planning their exit forwards files to a personal email account, copies folders to a USB drive, downloads the customer database, or syncs a work account to a personal device. The information taken is rarely a single secret formula. It is the accumulated, confidential material that gives a business its edge: client and prospect lists, pricing and margin data, proprietary methods, product roadmaps, source code, and supplier terms."
+      },
+      {
+        "type": "p",
+        "text": "Not everything an employee knows is a trade secret. The general skills and experience a person builds during a job belong to them and travel with them. A trade secret is confidential business information that has independent economic value because it is not publicly known, and that the company has taken reasonable steps to keep secret, such as access controls, confidentiality agreements, and need-to-know handling. Where the line falls in a specific case is a legal question for your attorney, and the description here is general information rather than legal advice."
+      },
+      {
+        "type": "p",
+        "text": "Manhattan concentrates exactly the businesses that depend on this kind of information. Financial firms, law firms, advertising and media companies, and technology startups all run on proprietary data, and a competitor is often a short subway ride away. That density is part of why departing-employee IP disputes are a steady source of corporate investigation work in New York."
+      },
+      {
+        "type": "h2",
+        "text": "How a Licensed Investigator Documents the Theft"
+      },
+      {
+        "type": "p",
+        "text": "A trade secret investigation is a forensic and research exercise before it is anything else. The strongest evidence usually already sits inside systems the company owns and is authorized to examine, and the investigator's job is to surface it cleanly and preserve it properly."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Digital forensics on company-owned devices and accounts the employer controls, recovering deleted files, USB connection records, and email-forwarding rules that show data leaving the building.",
+          "Review of access, download, and print logs from the company's own systems to establish exactly what was touched and when, relative to the resignation date.",
+          "Open-source and public-records research on the new employer or any newly formed competing entity, including corporate filings and business registrations that show where the person landed.",
+          "Lawful association analysis connecting the departing employee to a competitor, a co-conspirator, or a venture that suddenly appears with a suspiciously familiar product or client base."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Good investigators do this in coordination with the company's own IT staff and outside counsel rather than around them. The employer controls the systems, counsel sets the legal strategy, and the investigator gathers and documents the facts. Keeping those roles clear is what makes the resulting evidence defensible."
+      },
+      {
+        "type": "h2",
+        "text": "Building Evidence a Court Will Accept"
+      },
+      {
+        "type": "p",
+        "text": "Documenting the theft for your own peace of mind is one thing. Documenting it so it survives a challenge in litigation is another, and it is where licensed, experienced investigators earn their fee. That means forensic images captured with a verifiable chain of custody, timestamped records, and reports structured so the investigator can testify to what was found and how."
+      },
+      {
+        "type": "p",
+        "text": "Those facts then feed the legal claims your attorney may bring. The federal Defend Trade Secrets Act, enacted in 2016, gives trade secret owners a federal civil cause of action for misappropriation, and New York recognizes common-law misappropriation and related claims as well. Which claims fit your situation is for counsel to decide. The investigator's role is narrower and concrete: establish what was taken, by whom, and how, with evidence that stands up."
+      },
+      {
+        "type": "p",
+        "text": "Licensing matters here. New York licenses private investigators through the Department of State under Article 7 of the General Business Law, and evidence gathered by a licensed investigator working within that framework is more readily defensible than work product from an unlicensed operator. A licensed investigator can also appear as a witness to their findings if the case is litigated."
+      },
+      {
+        "type": "h2",
+        "text": "What an Investigator Cannot Do"
+      },
+      {
+        "type": "p",
+        "text": "The fastest way to wreck a strong trade secret case is to gather evidence the wrong way. A legitimate investigator will not access the former employee's personal email, phone, or cloud accounts, will not obtain protected records by pretexting, which the federal Gramm-Leach-Bliley Act prohibits, and will not place a tracker on a private vehicle or trespass to gather information."
+      },
+      {
+        "type": "p",
+        "text": "The federal Computer Fraud and Abuse Act makes unauthorized access to computer systems illegal, which cuts two ways in these cases. It constrains how the investigation itself may be conducted, and it is often part of why the employee's own conduct was unlawful when they reached into systems or accounts they no longer had the right to use. Evidence obtained through illegal methods can be excluded and can expose your company to its own liability. Any provider who offers shortcuts like these is the wrong one to hire. This is general information and not legal advice."
+      },
+      {
+        "type": "h2",
+        "text": "Where We Fit In"
+      },
+      {
+        "type": "p",
+        "text": "We do not investigate trade secret theft ourselves and we do not give legal advice. We connect New York businesses, in-house teams, and the attorneys who represent them with New York State licensed investigators who handle departing-employee IP cases and who work only through lawful methods. Tell us what happened and what you are trying to protect, and we match you with an investigator experienced in corporate work in Manhattan and the surrounding boroughs. There are no guarantees of a particular outcome, only experienced, lawful investigative work."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Corporate Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "How do we prove an employee took our trade secrets?"
+      },
+      {
+        "type": "p",
+        "text": "The clearest proof usually comes from your own systems. Forensic review of company devices and accounts can show files copied to external drives, emails forwarded to personal addresses, and large downloads in the days before a resignation. A licensed investigator preserves those records properly and ties them to a timeline, which is far more persuasive than the suspicion that someone left with your client list."
+      },
+      {
+        "type": "h3",
+        "text": "Is the information we want to protect actually a trade secret?"
+      },
+      {
+        "type": "p",
+        "text": "It depends on whether the information has economic value because it is not publicly known, and on whether your company took reasonable steps to keep it confidential, such as access restrictions and confidentiality agreements. General skills and knowledge an employee gains on the job are not trade secrets. Whether your specific information qualifies is a legal question for your attorney. This is general information, not legal advice."
+      },
+      {
+        "type": "h3",
+        "text": "Can an investigator access the former employee's personal devices or accounts?"
+      },
+      {
+        "type": "p",
+        "text": "No. A legitimate investigator will not access someone's private email, phone, or cloud accounts, and will not use pretexting to obtain protected records. Unauthorized access to private computer systems is illegal under federal law, and evidence collected that way can be thrown out and can create liability for your company. Lawful work focuses on systems the employer owns and on public and proprietary records the investigator is authorized to use."
+      },
+      {
+        "type": "h3",
+        "text": "Should we involve our attorney before starting an investigation?"
+      },
+      {
+        "type": "p",
+        "text": "In most cases, yes. Trade secret matters move quickly toward litigation, and involving counsel early helps protect privilege, shape what evidence is gathered, and align the investigation with the legal strategy. Many corporate investigations in New York are run in coordination with outside counsel for exactly that reason. Your attorney also decides which claims, if any, to bring."
+      },
+      {
+        "type": "h3",
+        "text": "How fast can an investigation produce usable evidence?"
+      },
+      {
+        "type": "p",
+        "text": "The most time-sensitive step is preservation. Company logs, email records, and device data should be preserved as soon as theft is suspected, because routine retention settings can overwrite them. Once data is preserved, an investigator can often establish the basic facts of what left the company within days, while tracing where it went and who else was involved can take longer. A licensed investigator should give you a realistic estimate after reviewing what you already have."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
