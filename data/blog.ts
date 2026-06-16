@@ -11008,6 +11008,283 @@ export const blogArticles: BlogArticle[] = [
         "text": "The most time-sensitive step is preservation. Company logs, email records, and device data should be preserved as soon as theft is suspected, because routine retention settings can overwrite them. Once data is preserved, an investigator can often establish the basic facts of what left the company within days, while tracing where it went and who else was involved can take longer. A licensed investigator should give you a realistic estimate after reviewing what you already have."
       }
     ]
+  },
+  {
+    "slug": "pi-evidence-admissible-new-york-court",
+    "hub": "pi-licensing-new-york",
+    "draft": true,
+    "title": "Is a Private Investigator's Evidence Admissible in New York Court?",
+    "metaTitle": "Is PI Evidence Admissible in New York Court?",
+    "metaDescription": "What makes a private investigator's evidence admissible in a New York court: lawful collection, authentication, chain of custody, and the investigator's testimony.",
+    "category": "Private Investigator",
+    "publishDate": "2026-06-15",
+    "dateModified": "2026-06-15",
+    "featuredImage": "",
+    "excerpt": "A private investigator's evidence can be admissible in a New York court, but it is never automatic. Admissibility turns on how the evidence was gathered, whether the methods were lawful, and whether it can be authenticated. We are a matching service, not an investigative agency, and we connect you with New York State licensed investigators who work the lawful way.",
+    "content": [
+      {
+        "type": "p",
+        "text": "A private investigator's evidence can be admissible in a New York court, but admissibility is never automatic. It depends on how the evidence was gathered, whether the methods were lawful, and whether it can be authenticated and tied to the facts of your case. We are a matching service, not an investigative agency, and we connect litigants and their attorneys with New York State licensed investigators who gather evidence through lawful methods."
+      },
+      {
+        "type": "h2",
+        "text": "What Admissibility Actually Means"
+      },
+      {
+        "type": "p",
+        "text": "Admissible evidence is evidence a judge will allow into the record so it can be considered by the court or a jury. New York courts evaluate evidence under the state's rules of evidence and the Civil Practice Law and Rules, and several separate questions have to be answered before a photograph, a video, or a report can be used. The evidence has to be relevant to a fact in dispute. It has to be authentic, meaning someone can establish that it is what it claims to be and was not altered. And it has to have been obtained lawfully, because evidence gathered through illegal conduct can be challenged and excluded."
+      },
+      {
+        "type": "p",
+        "text": "A licensed investigator does not change those rules, but good investigative work is built around them. The point of hiring a professional rather than gathering evidence yourself is that the professional documents observations in a way that survives a challenge, and can come to court and explain how the evidence was collected. Whether any specific piece of evidence is admitted is ultimately for the judge to decide, and this article is general information rather than legal advice. Your attorney is the right person to advise on your case."
+      },
+      {
+        "type": "h2",
+        "text": "Why Lawful Collection Decides So Much"
+      },
+      {
+        "type": "p",
+        "text": "The fastest way to lose otherwise strong evidence is to gather it the wrong way. Investigators in New York operate under essentially the same legal limits as any private citizen. The license issued under Article 7 of the General Business Law allows them to do investigative work for hire, but it does not grant law enforcement powers or a right to intrude where a citizen could not."
+      },
+      {
+        "type": "p",
+        "text": "That means a legitimate investigator does not trespass onto private property to get a photograph, does not access private email or phone accounts, and does not obtain bank or other protected records by pretexting, which means posing as the account holder. Pretexting to get financial records is prohibited under the federal Gramm-Leach-Bliley Act. Evidence produced through any of these methods can be excluded, and it can expose the person who commissioned the work to civil or even criminal liability. Any provider who offers shortcuts like these is the wrong one to hire."
+      },
+      {
+        "type": "h2",
+        "text": "Recording, Photos, and New York's Consent Rule"
+      },
+      {
+        "type": "p",
+        "text": "Recordings are one of the most common pieces of evidence, and they are also where people most often go wrong. New York is a one-party consent state under the eavesdropping provisions of the Penal Law. A person who is a party to a conversation can generally record it, but secretly recording a conversation between other people, when you are not a part of it and no participant has consented, is illegal eavesdropping. A recording made that way is not only inadmissible, it is a crime to have made."
+      },
+      {
+        "type": "p",
+        "text": "Video and photography follow a different but related logic. Documenting what happens in public view, on a street, a sidewalk, in a restaurant, or a building lobby, where the subject has no reasonable expectation of privacy, is generally permissible. Using a camera to capture inside a private home or another space where privacy is expected is not. A surveillance investigator works within those lines precisely so the footage can be used later, which is part of why the work that produces court-ready evidence costs more than casual observation."
+      },
+      {
+        "type": "h2",
+        "text": "Chain of Custody and the Investigator's Testimony"
+      },
+      {
+        "type": "p",
+        "text": "Two pieces of footage can show the same thing, and only one of them gets admitted, because of how it was handled. Court-ready work means timestamped documentation, files preserved with a verifiable chain of custody so it is clear they were not edited, and reports written so the investigator can later testify to what they saw and did. Authentication is usually the step that decides whether evidence comes in, and it depends on this kind of careful handling."
+      },
+      {
+        "type": "p",
+        "text": "This is where licensing carries practical weight. A New York State licensed investigator can appear as a witness and testify to their own observations and methods, which helps establish that a recording or photograph is genuine. Evidence gathered by an unlicensed operator is more easily attacked, both because the gathering itself may have been unlawful and because the operator's credibility and methods are harder to defend. Licensing does not guarantee admission, but it removes a category of objection that can sink unlicensed work."
+      },
+      {
+        "type": "h2",
+        "text": "What Can Get Evidence Thrown Out"
+      },
+      {
+        "type": "p",
+        "text": "Most exclusion problems trace back to a short list of avoidable mistakes."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Illegal recording, such as capturing a conversation between other people without any participant's consent, which violates New York's eavesdropping law.",
+          "Trespass onto private property, or surveillance into spaces where the subject had a reasonable expectation of privacy.",
+          "Protected records obtained by pretexting or unauthorized access, including bank, phone, or account records, which federal and state law prohibit.",
+          "A tracker placed on a vehicle the investigator and client have no right to access, which can be unlawful and can taint the resulting evidence.",
+          "Poor handling, where footage or files cannot be authenticated because there is no reliable record of how they were captured and kept."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "None of these is a question of the evidence being unhelpful. They are questions of the evidence being unusable, no matter how clearly it shows what you suspected. That is the core reason to use a licensed professional who builds the case to evidentiary standards from the start."
+      },
+      {
+        "type": "h2",
+        "text": "Where We Fit In"
+      },
+      {
+        "type": "p",
+        "text": "We do not gather evidence ourselves and we do not give legal advice. We connect individuals, businesses, and the attorneys who represent them with New York State licensed investigators who work matrimonial, custody, corporate, and other matters in Manhattan and the surrounding boroughs, and who document their findings the lawful way. There are no guarantees of a particular outcome, and no honest investigator promises one. What a good investigator offers is experienced, lawful work that gives evidence the best chance of standing up. Tell us about your situation and we will match you with an investigator suited to it."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed New York Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Does hiring a licensed investigator guarantee my evidence will be accepted?"
+      },
+      {
+        "type": "p",
+        "text": "No. Using a New York State licensed investigator removes some of the most common objections, because the work is more likely to have been lawful and the investigator can testify to it. But admissibility still depends on relevance, authentication, and lawful collection, and the judge decides. A licensed professional improves the odds; nobody can promise a specific ruling. This is general information, not legal advice."
+      },
+      {
+        "type": "h3",
+        "text": "Can I record my spouse or another person as evidence in New York?"
+      },
+      {
+        "type": "p",
+        "text": "New York is a one-party consent state, so you can generally record a conversation you are a part of. Secretly recording a conversation between other people, when you are not a participant and none of them has consented, is illegal eavesdropping under the Penal Law, and that recording would be both inadmissible and a crime to make. If recordings might matter in your case, ask your attorney before you make them."
+      },
+      {
+        "type": "h3",
+        "text": "Is GPS tracking evidence admissible?"
+      },
+      {
+        "type": "p",
+        "text": "It depends entirely on how the tracking was done. Placing a tracker on a vehicle that you or the investigator have no legal right to access can be unlawful and can taint the evidence it produces. A legitimate investigator will not put a device on a vehicle without the authority to do so. Because the law here is fact-specific, your attorney should weigh in before any tracking is considered."
+      },
+      {
+        "type": "h3",
+        "text": "Can evidence from an unlicensed investigator be used in court?"
+      },
+      {
+        "type": "p",
+        "text": "It can be challenged on more fronts. Investigating someone's whereabouts or conduct for a fee in New York generally requires a license under Article 7 of the General Business Law, and an unlicensed operator's methods and credibility are easier for the other side to attack. The gathering itself may also have been unlawful. Verifying the license before you hire is part of protecting the evidence."
+      },
+      {
+        "type": "h3",
+        "text": "Will the investigator have to testify about the evidence?"
+      },
+      {
+        "type": "p",
+        "text": "Often, yes. To get a photograph, a video, or a report admitted, someone usually has to authenticate it, meaning explain what it is and how it was captured and preserved. A licensed investigator can appear as a witness and provide that testimony, which is one reason careful documentation and chain of custody matter from the first day of the work."
+      }
+    ]
+  },
+  {
+    slug: 'prove-cohabitation-alimony-new-york',
+    hub: 'family-custody-investigations-manhattan',
+    draft: true,
+    title: 'Proving Cohabitation to Reduce Alimony in New York',
+    metaTitle: 'Proving Cohabitation to Reduce Alimony in New York',
+    metaDescription: 'How a licensed investigator documents cohabitation in New York to support a motion to reduce or end spousal maintenance, the legal test, and lawful limits.',
+    category: 'Private Investigator',
+    publishDate: '2026-06-16',
+    dateModified: '2026-06-16',
+    featuredImage: '',
+    excerpt: 'If your former spouse is living with a new partner, New York law may let you ask the court to reduce or end spousal maintenance, but you usually have to prove it. A licensed investigator documents the cohabitation lawfully, and we connect you with one.',
+    content: [
+      {
+        "type": "p",
+        "text": "If your former spouse is living with a new partner, New York law may let you ask the court to reduce or end spousal maintenance, but you usually have to prove it. A licensed investigator documents that cohabitation lawfully. We are a matching service, not an investigative agency, and we connect spouses and matrimonial attorneys with New York State licensed investigators."
+      },
+      {
+        "type": "h2",
+        "text": "When Cohabitation Affects Spousal Maintenance in New York"
+      },
+      {
+        "type": "p",
+        "text": "New York gives two main routes to revisit maintenance when the recipient has moved in with someone new, and they work differently. The first is statutory. Under Section 248 of the Domestic Relations Law, a court may modify or end maintenance where the recipient is habitually living with another person and holding themselves out as that person's spouse. The holding-out requirement is a real hurdle, because living together is not automatically enough. Courts look for the couple presenting themselves publicly as a married couple, not just sharing an address."
+      },
+      {
+        "type": "p",
+        "text": "The second route is your own agreement. Many New York separation and settlement agreements contain a cohabitation clause that suspends or ends maintenance on its own terms, often with a broader definition than the statute. When an agreement uses the word cohabitation without defining it, New York courts read it in light of the factors the Court of Appeals discussed in Graev v. Graev, such as sharing a residence, the length of the relationship, intermingled finances, and shared household duties. Which route applies, and what you must prove, is a question for your matrimonial attorney. This is general information about New York procedure, not legal advice."
+      },
+      {
+        "type": "h2",
+        "text": "What an Investigator Documents"
+      },
+      {
+        "type": "p",
+        "text": "Proving cohabitation is about a pattern, not a single night. A licensed investigator builds a documented record over time through lawful observation in public places and from public vantage points."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Overnight and daily presence at the same residence, recorded with timestamped photography and video that shows a consistent pattern rather than an occasional visit.",
+          "Shared daily life in public view, such as arriving and leaving together, running errands, walking a dog, or receiving deliveries as one household.",
+          "Signs of a shared home, such as both names on a buzzer or mailbox, two vehicles regularly parked together, or mail addressed to the partner at that address.",
+          "Public conduct that shows the couple holding themselves out together, which speaks directly to the statutory standard under Section 248."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The deliverable is a dated surveillance log, the supporting photographs and video, and a written report your attorney can use. No investigator can promise a particular finding, and a reputable one will tell you after an initial review whether the pattern you describe is likely to be documentable at all."
+      },
+      {
+        "type": "h2",
+        "text": "How the Evidence Reaches the Court"
+      },
+      {
+        "type": "p",
+        "text": "Documentation only helps if it is admissible and credible. Three things matter: the evidence was gathered legally, it is preserved with a clear chain of custody, and the investigator is prepared to testify to how each photograph, video, and log entry was captured. A licensed investigator authenticates the material as a witness, which is often what allows it into evidence on a motion to modify or terminate maintenance."
+      },
+      {
+        "type": "p",
+        "text": "Because the case turns on a legal standard, the investigation works best in coordination with your matrimonial attorney. The attorney decides which standard applies and what the evidence needs to show, while the investigator gathers and packages the facts for that specific issue. This is general information, not legal advice, and your attorney should direct how the work is used."
+      },
+      {
+        "type": "h2",
+        "text": "Lawful Methods Only"
+      },
+      {
+        "type": "p",
+        "text": "The same evidence that helps you can hurt you if it was gathered the wrong way. A licensed investigator works entirely within the law, and any provider who offers shortcuts is the wrong one to hire."
+      },
+      {
+        "type": "p",
+        "text": "That means no trespassing onto private property to observe inside a home, no placing a tracker on a vehicle the investigator has no right to access, and no reading private messages or accounts. It also means no pretexting, the practice of impersonating someone to pull bank or phone records, which the federal Gramm-Leach-Bliley Act makes illegal. Investigating a person's whereabouts and conduct for a fee in New York requires a license under Article 7 of the General Business Law, and evidence gathered unlawfully can be excluded and can damage your credibility with the court."
+      },
+      {
+        "type": "h2",
+        "text": "Where We Fit In"
+      },
+      {
+        "type": "p",
+        "text": "We do not conduct surveillance or gather evidence ourselves. We connect spouses and matrimonial attorneys with New York State licensed investigators who document cohabitation through lawful methods and who understand how the evidence is used on a maintenance motion. Tell us about your situation and your agreement, and we match you with an investigator experienced in this work in Manhattan and the surrounding boroughs."
+      },
+      {
+        "type": "cta",
+        "text": "Get Matched With a Licensed Investigator"
+      },
+      {
+        "type": "h2",
+        "text": "Frequently Asked Questions"
+      },
+      {
+        "type": "h3",
+        "text": "Does cohabitation automatically end alimony in New York?"
+      },
+      {
+        "type": "p",
+        "text": "No. Under Section 248 of the Domestic Relations Law a court may modify or end maintenance only where the recipient is habitually living with another person and holding themselves out as that person's spouse, so living together alone is usually not enough. If your settlement agreement has its own cohabitation clause, its wording controls instead, which is why the answer depends on the statute, your agreement, and the facts. Confirm with your matrimonial attorney."
+      },
+      {
+        "type": "h3",
+        "text": "What evidence proves cohabitation?"
+      },
+      {
+        "type": "p",
+        "text": "A documented pattern rather than a single incident. That typically includes timestamped surveillance showing consistent overnight and daily presence at one residence, the couple coming and going together and sharing daily routines in public, and indicators of a shared home such as shared mail, vehicles, or a name on the buzzer. A dated log, photographs, video, and a written report tie it together."
+      },
+      {
+        "type": "h3",
+        "text": "Can an investigator check my ex's bank records or get inside the apartment?"
+      },
+      {
+        "type": "p",
+        "text": "No. A licensed investigator cannot trespass to observe inside a home, place a tracker on a vehicle they have no right to, read private accounts, or obtain bank or phone records by pretexting, which the Gramm-Leach-Bliley Act prohibits. Evidence collected that way is usually inadmissible and can undermine your case. Lawful observation in public is the proper approach."
+      },
+      {
+        "type": "h3",
+        "text": "How long does a cohabitation investigation take?"
+      },
+      {
+        "type": "p",
+        "text": "It depends on the pattern you need to establish. Because the goal is to show consistency, the work often spans intermittent days or weeks rather than a single session. An investigator should give you a realistic estimate after reviewing what you already know rather than promising a fixed timeline or a guaranteed result."
+      },
+      {
+        "type": "h3",
+        "text": "Will the surveillance hold up in a New York court?"
+      },
+      {
+        "type": "p",
+        "text": "It can, when it was gathered legally, preserved with a clear chain of custody, and the investigator is available to authenticate it as a witness. Coordinating with your matrimonial attorney helps ensure the evidence matches the legal standard that applies to your motion. This is general information, not legal advice."
+      }
+    ]
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
