@@ -110,12 +110,14 @@ Tracing' mapped to the skip-tracing pillar in BlogArticleClient
 categoryServiceMap), and one H3 licensing
 (pi-evidence-admissible-new-york-court, added 2026-06-15; category 'Private
 Investigator' which already maps to the surveillance pillar, no client change
-needed).
-Thinnest hubs to fill first: H3 licensing now holds 1 parked draft (2 published +
-1 draft as of 2026-06-15). Only H1 (4 published) and H9 (2 published) now have no
-parked draft; every other hub holds at least one. Favor H9 next (the thinner of
-the two), then wait for the publisher to drain the buffer before adding more drafts
-to H2/H3/H4/H5/H6/H7/H8/H10.
+needed), and one H9 family/custody (prove-cohabitation-alimony-new-york, added
+2026-06-16; category 'Private Investigator' which already maps to the surveillance
+pillar, no client change needed; topic = proving cohabitation to reduce/end spousal
+maintenance, distinct from the two existing H9 spokes).
+Thinnest hubs to fill first: H9 family/custody now holds 1 parked draft (2 published
++ 1 draft as of 2026-06-16). Only H1 (4 published) now has no parked draft; every
+other hub holds at least one. Favor H1 next, then wait for the publisher to drain
+the buffer before adding more drafts to H2/H3/H4/H5/H6/H7/H8/H9/H10.
 ## Slug rules (writer: follow on every spoke)
 
 Kebab-case: lowercase, hyphens only, ASCII only, 3-6 words, under ~60 chars.
