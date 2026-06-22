@@ -203,12 +203,6 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Article body */}
             <article className="lg:col-span-2 max-w-none">
-              {hubGuide && (
-                <p className="text-[13px] text-gray-dark mb-6">
-                  Part of our guide:{' '}
-                  <Link href={`/guides/${hubGuide.slug}/`} className="text-primary font-semibold hover:underline">{hubGuide.title}</Link>
-                </p>
-              )}
               {(() => {
                 const serviceSlug = categoryServiceMap[article.category] || 'surveillance';
                 const matchedService = getServiceBySlug(serviceSlug) || services[0];
