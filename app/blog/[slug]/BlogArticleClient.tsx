@@ -54,12 +54,38 @@ const categoryServiceMap: Record<string, string> = {
   'Corporate Investigations': 'corporate-investigations',
 };
 
+// Render a paragraph that may contain {{0}}, {{1}}, ... placeholders mapped to
+// `links`. Internal hrefs render as next/link; external hrefs open in a new tab.
+function renderTextWithLinks(text: string, links?: { label: string; href: string }[]) {
+  if (!links || links.length === 0 || !text.includes('{{')) return text;
+  const parts = text.split(/(\{\{\d+\}\})/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^\{\{(\d+)\}\}$/);
+    if (!match) return <span key={i}>{part}</span>;
+    const link = links[Number(match[1])];
+    if (!link) return null;
+    const label = link.label;
+    if (link.href.startsWith('/')) {
+      return (
+        <Link key={i} href={link.href} className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
+          {label}
+        </Link>
+      );
+    }
+    return (
+      <a key={i} href={link.href} target="_blank" rel="noopener noreferrer" className="text-primary font-medium underline underline-offset-2 hover:text-primary/80">
+        {label}
+      </a>
+    );
+  });
+}
+
 function renderBlock(block: ContentBlock, index: number) {
   switch (block.type) {
     case 'p':
       return (
         <p key={index} className="text-gray-dark text-[14px] leading-[1.7] mb-5">
-          {block.text || ''}
+          {renderTextWithLinks(block.text || '', block.links)}
         </p>
       );
     case 'h2':

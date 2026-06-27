@@ -2,6 +2,10 @@
 export interface ContentBlock {
   type: string; text?: string; src?: string; alt?: string;
   items?: string[]; articles?: { slug: string; title: string; image?: string }[];
+  // Inline links for a 'p' block via token substitution: put {{0}}, {{1}}, ... in
+  // `text` and map each to an entry here. Internal hrefs ('/path/') render as a
+  // next/link; external ('https://...') open in a new tab.
+  links?: { label: string; href: string }[];
 }
 export interface BlogArticle {
   slug: string; title: string; metaTitle: string; metaDescription: string;
@@ -11285,6 +11289,127 @@ export const blogArticles: BlogArticle[] = [
         "text": "It can, when it was gathered legally, preserved with a clear chain of custody, and the investigator is available to authenticate it as a witness. Coordinating with your matrimonial attorney helps ensure the evidence matches the legal standard that applies to your motion. This is general information, not legal advice."
       }
     ]
+  },
+  {
+    slug: 'what-a-private-investigator-cannot-legally-do-in-new-york',
+    hub: 'pi-licensing-new-york',
+    draft: false,
+    title: 'What a private investigator cannot legally do in New York',
+    metaTitle: 'What a Private Investigator Cannot Do in New York',
+    metaDescription: 'A licensed New York private investigator has real legal limits. Here is what a PI cannot do in Manhattan, from wiretapping and trespass to GPS trackers and pretexting for records, and why those lines protect your case.',
+    category: 'Private Investigator',
+    publishDate: '2026-06-27',
+    featuredImage: '',
+    excerpt: 'A licensed investigator has real power, but the law draws firm lines around it. Knowing what a New York PI cannot legally do tells you whether a quote is honest and whether the evidence will survive in court.',
+    content: [
+      {
+        type: 'p',
+        text: 'A New York private investigator can do a great deal that most people cannot. They can sit on a public street for days, run public records and database checks, interview witnesses, and document a pattern of behavior in a way that holds up in court. What they cannot do is just as important, because the limits are what keep the evidence usable and keep you clear of liability. If an investigator offers to do something on this list, that is a signal to walk away.',
+      },
+      {
+        type: 'p',
+        text: 'The boundaries come from a mix of state and federal law: the licensing rules under General Business Law Article 7, the eavesdropping and trespass provisions of the Penal Law, Fourth Amendment principles applied to physical tracking, and federal statutes that govern financial and phone records. A licensed investigator works inside all of them at once.',
+      },
+      {
+        type: 'h2',
+        text: 'A PI cannot record private conversations they are not part of',
+      },
+      {
+        type: 'p',
+        text: 'New York is a one-party consent state for recording conversations, which means a recording is lawful only when at least one person taking part agrees to it. An investigator cannot plant a recorder to capture a conversation between two other people, and they cannot tap a phone line. Doing so is eavesdropping under Penal Law section 250.05, a Class E felony, and anything captured that way is generally inadmissible.',
+      },
+      {
+        type: 'p',
+        text: 'This is one of the most common misconceptions clients bring to a first call. You may be able to record a call you are personally on, but you cannot hand an investigator a key to a spouse\'s apartment and ask them to leave a device running. A reputable investigator will explain that limit rather than quietly work around it.',
+      },
+      {
+        type: 'h2',
+        text: 'A PI cannot trespass or surveil inside a private space',
+      },
+      {
+        type: 'p',
+        text: 'Lawful surveillance happens from places the public is allowed to be: a sidewalk, a parked car, a shared lobby a tenant would normally enter. An investigator cannot enter a home, climb a fence, or position a camera to see into a private interior that a person reasonably expects to keep private. Trespass and unlawful surveillance both carry criminal exposure, and footage obtained from inside that line tends to be thrown out.',
+      },
+      {
+        type: 'p',
+        text: 'This is why a skilled investigator spends so much effort on vantage points and timing. The discipline is not about cutting corners faster, it is about gathering the same proof from a position the law allows. The moment surveillance reaches into a protected space it stops being evidence and starts being a problem.',
+      },
+      {
+        type: 'h2',
+        text: 'A PI cannot put a GPS tracker on a vehicle they have no right to',
+      },
+      {
+        type: 'p',
+        text: 'Physical tracking is one of the sharpest lines in New York investigative work. An investigator cannot attach a GPS device to a car the client does not own or jointly control. Courts treat warrantless GPS tracking of someone else\'s vehicle as an unreasonable search, and a private investigator has no warrant authority. The {{0}} are specific enough that an honest investigator will ask who actually owns and titles the vehicle before the subject ever comes up.',
+        links: [
+          { label: 'GPS tracking laws that apply to New York investigations', href: '/blog/gps-tracking-laws-new-york-investigations/' },
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Joint ownership changes the picture, but it is not a blanket permission slip, and the safest investigators document the basis for any tracking before they rely on it. If a quote promises a tracker on a vehicle the client clearly does not own, the resulting data is unlikely to help and may well hurt.',
+      },
+      {
+        type: 'h2',
+        text: 'A PI cannot pretext for bank, phone, or other protected records',
+      },
+      {
+        type: 'p',
+        text: 'Some of the most tempting requests involve records an investigator simply cannot lawfully obtain by deception. Calling a bank and pretending to be the account holder to pull statements is barred by the Gramm-Leach-Bliley Act, and pretexting for telephone records is prohibited under federal law as well. An investigator who advertises that they can hand you a target\'s bank balances or call logs is describing a crime, not a service.',
+      },
+      {
+        type: 'p',
+        text: 'Legitimate financial work looks different. It relies on public filings, court records, property and lien databases, and other lawful sources, which is the same foundation behind {{0}}. The result is slower and less cinematic than a leaked statement, but it survives a challenge, which is the entire point.',
+        links: [
+          { label: 'the evidence a private investigator can legally collect in Manhattan', href: '/blog/what-kind-of-evidence-can-a-private-investigator-collect-in-manhattan/' },
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'A PI cannot impersonate police or carry credentials they do not have',
+      },
+      {
+        type: 'p',
+        text: 'A licensed investigator is a private citizen with no police powers. They cannot detain a person, make an arrest beyond an ordinary citizen\'s, carry a badge that suggests law enforcement authority, or claim to be a government officer to extract information. Impersonating a police officer is a crime in New York, and it taints any statement obtained that way. Investigators may use pretext interviews within limits, but those limits stop well short of claiming official authority.',
+      },
+      {
+        type: 'p',
+        text: 'The licensing framework itself reinforces this. The qualifications, bonding, and conduct standards an investigator must meet are set out in the {{0}}, and they exist precisely so the public can tell a regulated professional from someone improvising. Verifying a license through the {{1}} is the simplest way to confirm you are dealing with the former.',
+        links: [
+          { label: 'New York PI licensing rules', href: '/guides/pi-licensing-new-york/' },
+          { label: 'New York Department of State Division of Licensing Services', href: 'https://dos.ny.gov/private-investigator' },
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'Why the limits work in your favor',
+      },
+      {
+        type: 'p',
+        text: 'It is easy to read this list as a set of frustrating obstacles, but every line on it protects the client. Evidence gathered inside the law is evidence a judge can use. Evidence gathered outside it is a liability that can be excluded, can expose you to a counterclaim, and can hand the other side a story about misconduct. The statutes themselves, including the eavesdropping provisions, are public and readable through the {{0}}.',
+        links: [
+          { label: 'New York State Senate\'s online consolidated laws', href: 'https://www.nysenate.gov/legislation/laws/PEN/250.05' },
+        ],
+      },
+      {
+        type: 'p',
+        text: 'A good investigator treats these boundaries as the craft, not the constraint. When you interview one, ask directly how they handle recording consent, vehicle tracking, and records you suspect are off limits. The honest answer is rarely the most dramatic, and that is exactly why it is the one worth paying for. This is general information about New York law, not legal advice for your specific situation.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can a private investigator in New York record a conversation for me?',
+        answer: 'Only if at least one participant in the conversation consents, since New York is a one-party consent state. An investigator cannot secretly record a conversation between two other people or tap a phone line, which would be eavesdropping under Penal Law section 250.05.',
+      },
+      {
+        question: 'Can a PI put a GPS tracker on my spouse\'s car?',
+        answer: 'Not on a vehicle the client does not own or jointly control. Warrantless GPS tracking of someone else\'s vehicle is treated as an unreasonable search, and a private investigator has no warrant authority. Ownership and titling determine what is permissible.',
+      },
+      {
+        question: 'Can an investigator get bank statements or phone records?',
+        answer: 'Not by pretexting or deception. Obtaining financial records under false pretenses is barred by the Gramm-Leach-Bliley Act and pretexting for phone records is prohibited by federal law. Legitimate work relies on public filings, court records, and lawful databases instead.',
+      },
+    ],
   }
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
