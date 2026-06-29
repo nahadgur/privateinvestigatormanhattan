@@ -11323,6 +11323,10 @@ export const blogArticles: BlogArticle[] = [
         text: 'This is one of the most common misconceptions clients bring to a first call. You may be able to record a call you are personally on, but you cannot hand an investigator a key to a spouse\'s apartment and ask them to leave a device running. A reputable investigator will explain that limit rather than quietly work around it.',
       },
       {
+        type: 'p',
+        text: 'The line gets blurry around shared devices and shared spaces, and that is exactly where people get into trouble. A nanny cam you own and place in your own living room is generally fine for video, but the audio it captures of a private conversation you are not part of can still cross the eavesdropping line. The same caution applies to a child\'s phone, a partner\'s laptop, or a recorder left in a car. Ownership of the device is not the same as consent to the conversation, and a careful investigator keeps those two questions separate before any recording is relied on.',
+      },
+      {
         type: 'h2',
         text: 'A PI cannot trespass or surveil inside a private space',
       },
@@ -11333,6 +11337,13 @@ export const blogArticles: BlogArticle[] = [
       {
         type: 'p',
         text: 'This is why a skilled investigator spends so much effort on vantage points and timing. The discipline is not about cutting corners faster, it is about gathering the same proof from a position the law allows. The moment surveillance reaches into a protected space it stops being evidence and starts being a problem.',
+      },
+      {
+        type: 'p',
+        text: 'Manhattan makes that discipline harder than most places. Doormen, key fobs, security cameras, and tightly packed buildings mean a subject crosses from public to private space within a few steps, and the lawful vantage point can change block to block. Reputable {{0}} is planned around that reality, mapping where a person can be observed from a sidewalk or a public lobby before anyone is in the field, rather than improvising a position that a court could later question.',
+        links: [
+          { label: 'covert surveillance work in Manhattan', href: '/services/surveillance/' },
+        ],
       },
       {
         type: 'h2',
@@ -11350,12 +11361,16 @@ export const blogArticles: BlogArticle[] = [
         text: 'Joint ownership changes the picture, but it is not a blanket permission slip, and the safest investigators document the basis for any tracking before they rely on it. If a quote promises a tracker on a vehicle the client clearly does not own, the resulting data is unlikely to help and may well hurt.',
       },
       {
+        type: 'p',
+        text: 'There is a practical reason this comes up so often in divorce and custody matters. A client may genuinely believe a car is shared because the household uses it, while the title and registration tell a different story. The honest answer is to confirm who legally owns the vehicle first, then build the surveillance plan around what the law allows. Lawful vehicle surveillance from public roads achieves much of what people hope a tracker would, without handing the other side a misconduct argument that can sink an otherwise strong case.',
+      },
+      {
         type: 'h2',
         text: 'A PI cannot pretext for bank, phone, or other protected records',
       },
       {
         type: 'p',
-        text: 'Some of the most tempting requests involve records an investigator simply cannot lawfully obtain by deception. Calling a bank and pretending to be the account holder to pull statements is barred by the Gramm-Leach-Bliley Act, and pretexting for telephone records is prohibited under federal law as well. An investigator who advertises that they can hand you a target\'s bank balances or call logs is describing a crime, not a service.',
+        text: 'Some of the most tempting requests involve records an investigator simply cannot lawfully obtain by deception. Calling a bank and pretending to be the account holder to pull statements is barred by the Gramm-Leach-Bliley Act, and pretexting for telephone records is prohibited under federal law as well. An investigator who advertises that they can hand you a target\'s bank balances or call logs is describing a crime, not a service. Worse, records obtained that way poison the case they were meant to help, because the other side can use the method to attack everything the investigator produced.',
       },
       {
         type: 'p',
@@ -11379,6 +11394,40 @@ export const blogArticles: BlogArticle[] = [
           { label: 'New York PI licensing rules', href: '/guides/pi-licensing-new-york/' },
           { label: 'New York Department of State Division of Licensing Services', href: 'https://dos.ny.gov/private-investigator' },
         ],
+      },
+      {
+        type: 'h2',
+        text: 'What a licensed investigator can do instead',
+      },
+      {
+        type: 'p',
+        text: 'Reframing the list helps, because almost every forbidden shortcut has a lawful path that reaches the same goal. Instead of a tap, an investigator documents who comes and goes, when, and for how long, building a timeline that speaks for itself. Instead of a tracker on a stranger\'s car, they run rolling surveillance from public roads. Instead of pretexting a bank, they pull property records, business filings, court dockets, and lien searches that show the shape of someone\'s finances through public sources.',
+      },
+      {
+        type: 'p',
+        text: 'These methods are slower and they cost more in hours, which is part of why an honest quote can look higher than a suspiciously cheap one that hints at shortcuts. The trade is worth it. Lawfully gathered evidence is the kind a New York judge will actually weigh, and it does not expose the client to a counterclaim. When you compare investigators, the depth of the lawful toolkit matters far more than any promise to get something fast.',
+      },
+      {
+        type: 'h3',
+        text: 'Questions worth asking before you hire',
+      },
+      {
+        type: 'p',
+        text: 'A short set of direct questions tells you most of what you need to know about whether an investigator works inside the law. The answers should be specific and calm, not evasive or grandiose.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Are you currently licensed in New York, and what is your license number so I can verify it?',
+          'How do you handle recording consent, given that New York is a one-party consent state?',
+          'Under what circumstances will or will not you place a GPS tracker, and how do you confirm vehicle ownership first?',
+          'How do you obtain financial or records information without pretexting a bank or phone company?',
+          'Will the evidence you gather be documented in a form my attorney can actually use in court?',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Indicative pricing in Manhattan tends to run as an hourly rate for surveillance plus expenses, often with a retainer up front, and the total depends heavily on how many hours a case realistically needs. Treat any flat promise to deliver protected records, or a quote that is far below the rest of the market, as a warning rather than a bargain.',
       },
       {
         type: 'h2',
@@ -11408,6 +11457,10 @@ export const blogArticles: BlogArticle[] = [
       {
         question: 'Can an investigator get bank statements or phone records?',
         answer: 'Not by pretexting or deception. Obtaining financial records under false pretenses is barred by the Gramm-Leach-Bliley Act and pretexting for phone records is prohibited by federal law. Legitimate work relies on public filings, court records, and lawful databases instead.',
+      },
+      {
+        question: 'How can I tell if a New York private investigator is working within the law?',
+        answer: 'Ask for the license number and verify it through the New York Department of State, then ask how they handle recording consent, GPS tracking, and protected records. Honest answers are specific and unglamorous. Be wary of anyone who promises bank balances, call logs, or a tracker on a vehicle the client does not own.',
       },
     ],
   }

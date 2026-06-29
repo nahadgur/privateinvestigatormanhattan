@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Tag } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Tag } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
@@ -16,10 +16,7 @@ function estimateReadMins(blocks: { text?: string; items?: string[] }[]): number
   }, 0);
   return Math.max(3, Math.round(words / 200));
 }
-import { ServiceBanner } from '@/components/ServiceBanner';
-import { getArticlesByHub } from '@/data/blog';
 import { getGuideBySlug } from '@/data/guides';
-import { services, getServiceBySlug } from '@/data/services';
 import { siteConfig } from '@/data/site';
 import { buildBlogPostSchema, buildBreadcrumbSchema, buildFAQSchema, buildEditorialAuthor } from '@/data/schema-helpers';
 import type { BlogArticle, ContentBlock } from '@/data/blog';
@@ -45,14 +42,31 @@ function extractFaqs(content: ContentBlock[]): { question: string; answer: strin
   return [];
 }
 
-const categoryServiceMap: Record<string, string> = {
-  'Private Investigator': 'surveillance',
-  'Asset Searches': 'asset-searches',
-  'Infidelity Investigations': 'infidelity-investigation',
-  'Background Checks': 'background-checks',
-  'Skip Tracing': 'skip-tracing',
-  'Corporate Investigations': 'corporate-investigations',
-};
+// Contained brand-band lead-capture banner. Opens the existing pop-up lead modal.
+function CtaBanner({ eyebrow, heading, subtext, buttonText, onOpen }: {
+  eyebrow: string; heading: string; subtext: string; buttonText: string; onOpen: () => void;
+}) {
+  return (
+    <div className="not-prose my-10 rounded-tile bg-ink text-white px-6 py-6 md:px-10 md:py-7 shadow-lg overflow-hidden relative">
+      <div className="absolute top-0 right-0 w-48 h-48 bg-primary/15 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+      <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+        <div className="flex-1 min-w-0">
+          <p className="text-primary text-[10px] font-extrabold uppercase tracking-widest mb-1.5">{eyebrow}</p>
+          <h3 className="text-[18px] md:text-[22px] font-extrabold text-white mb-2 leading-snug tracking-tight">{heading}</h3>
+          <p className="text-white/75 text-[13px] leading-relaxed">{subtext}</p>
+        </div>
+        <div className="flex-shrink-0">
+          <button
+            onClick={onOpen}
+            className="inline-flex items-center gap-2 bg-primary text-white font-bold text-[12px] uppercase tracking-widest py-3 px-5 rounded-chip hover:bg-white hover:text-ink transition-colors shadow-md whitespace-nowrap"
+          >
+            {buttonText} <ArrowRight className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 // Render a paragraph that may contain {{0}}, {{1}}, ... placeholders mapped to
 // `links`. Internal hrefs render as next/link; external hrefs open in a new tab.
@@ -166,11 +180,8 @@ function renderBlock(block: ContentBlock, index: number) {
 export function BlogArticleClient({ article }: { article: BlogArticle }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Related = live spokes in the same hub (tighter than category).
+  // Hub guide drives the spoke hero eyebrow.
   const hubGuide = getGuideBySlug(article.hub);
-  const relatedArticles = getArticlesByHub(article.hub)
-    .filter((a) => a.slug !== article.slug)
-    .slice(0, 3);
 
   const url = `${siteConfig.url}/blog/${article.slug}/`;
   const faqs = article.faqs && article.faqs.length > 0 ? article.faqs : extractFaqs(article.content);
@@ -226,64 +237,45 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
         </section>
 
         <div className="container-width py-10 md:py-14">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {/* Article body */}
-            <article className="lg:col-span-2 max-w-none">
-              {(() => {
-                const serviceSlug = categoryServiceMap[article.category] || 'surveillance';
-                const matchedService = getServiceBySlug(serviceSlug) || services[0];
-                let h2Count = 0;
-                let secondH2Index = -1;
-                for (let i = 0; i < article.content.length; i++) {
-                  if (article.content[i].type === 'h2') {
-                    h2Count++;
-                    if (h2Count === 2) {
-                      secondH2Index = i;
-                      break;
-                    }
+          {/* Article body, full content width (no sidebar) */}
+          <article className="max-w-none">
+            {(() => {
+              let h2Count = 0;
+              let secondH2Index = -1;
+              for (let i = 0; i < article.content.length; i++) {
+                if (article.content[i].type === 'h2') {
+                  h2Count++;
+                  if (h2Count === 2) {
+                    secondH2Index = i;
+                    break;
                   }
                 }
-                return article.content.map((block, i) => (
-                  <div key={i}>
-                    {i === secondH2Index && <ServiceBanner service={matchedService} />}
-                    {renderBlock(block, i)}
-                  </div>
-                ));
-              })()}
-            </article>
-
-            {/* Sidebar */}
-            <aside className="lg:col-span-1">
-              <div className="sticky top-24 space-y-5">
-                <div className="bg-paper p-6 rounded-tile shadow-card border border-gray-light">
-                  <h3 className="text-[15px] font-extrabold tracking-tight text-ink mb-2">Get Matched With a PI</h3>
-                  <p className="text-gray-dark text-[12px] mb-5 leading-[1.5]">
-                    Ready to get started? We will connect you with a licensed Manhattan investigator at no cost for the initial consultation.
-                  </p>
-                  <button onClick={() => setIsModalOpen(true)} className="btn-primary w-full">
-                    Find an Investigator
-                  </button>
+              }
+              return article.content.map((block, i) => (
+                <div key={i}>
+                  {i === secondH2Index && (
+                    <CtaBanner
+                      eyebrow="Free Confidential Consultation"
+                      heading="Talk to a licensed Manhattan investigator"
+                      subtext="Tell us about your situation and we will match you with a vetted New York PI who works strictly within the law."
+                      buttonText="Find an Investigator"
+                      onOpen={() => setIsModalOpen(true)}
+                    />
+                  )}
+                  {renderBlock(block, i)}
                 </div>
+              ));
+            })()}
+          </article>
 
-                {relatedArticles.length > 0 && (
-                  <div className="bg-paper p-5 rounded-tile border border-gray-light">
-                    <h3 className="text-[11px] font-extrabold text-ink uppercase tracking-widest mb-3">More Articles</h3>
-                    <div className="space-y-3">
-                      {relatedArticles.map((rel) => (
-                        <Link
-                          key={rel.slug}
-                          href={`/blog/${rel.slug}/`}
-                          className="block text-[12px] text-gray-dark hover:text-primary transition-colors font-medium leading-[1.4]"
-                        >
-                          {rel.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </aside>
-          </div>
+          {/* End-of-article lead capture */}
+          <CtaBanner
+            eyebrow="No Obligation, Strictly Confidential"
+            heading="Get matched with the right PI for your case"
+            subtext="Share a few details and we will connect you with a licensed Manhattan investigator at no cost for the initial consultation."
+            buttonText="Request Consultation"
+            onOpen={() => setIsModalOpen(true)}
+          />
 
           {/* Back to blog */}
           <div className="mt-12 pt-8 border-t border-gray-light">
