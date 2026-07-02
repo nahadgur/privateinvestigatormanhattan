@@ -11463,7 +11463,154 @@ export const blogArticles: BlogArticle[] = [
         answer: 'Ask for the license number and verify it through the New York Department of State, then ask how they handle recording consent, GPS tracking, and protected records. Honest answers are specific and unglamorous. Be wary of anyone who promises bank balances, call logs, or a tracker on a vehicle the client does not own.',
       },
     ],
+  },
+  {
+    slug: 'how-long-a-private-investigation-takes-in-manhattan',
+    hub: 'hire-a-pi-manhattan',
+    draft: true,
+    title: 'How long a private investigation takes in Manhattan',
+    metaTitle: 'How Long a PI Investigation Takes in Manhattan',
+    metaDescription: 'How long a private investigation really takes in Manhattan, from a same-week background check to weeks of surveillance. What drives the timeline, what you can do to speed it up, and why a realistic estimate is a good sign.',
+    category: 'Private Investigator',
+    publishDate: '2026-07-02',
+    featuredImage: '',
+    excerpt: 'A background check can come back in days, while surveillance can run for weeks. Knowing what sets the clock on a Manhattan investigation helps you plan and tells you whether a quote is honest.',
+    content: [
+      {
+        type: 'p',
+        text: 'One of the first questions people ask after price is how long the whole thing will take, and it is a fair one. You may have a court date, a deal closing, or simply the strain of not knowing, and the timeline shapes every decision around it. The honest answer is that it depends far more on the type of work than on the investigator, which is why a good one gives you a range and the reasons behind it rather than a single confident number.',
+      },
+      {
+        type: 'p',
+        text: 'A records-based background check and a multi-week surveillance operation are barely the same activity, and they run on completely different clocks. Understanding what sets the pace on each lets you plan realistically and, in some cases, actually move things along. It also gives you a quiet test of whether an investigator is being straight with you, because a wildly short promise usually hides either a thin scope or a shortcut you do not want.',
+      },
+      {
+        type: 'h2',
+        text: 'Records work moves in days, surveillance moves in weeks',
+      },
+      {
+        type: 'p',
+        text: 'The single biggest divide is between desk work and field work. A background check, an asset search built on public filings, or a skip trace to find an address are mostly database and records tasks, and they tend to come back in days rather than weeks. A standard background check on one subject often lands within three to seven business days, and a simple locate can be faster still when the person is not deliberately hiding.',
+      },
+      {
+        type: 'p',
+        text: 'Surveillance is the opposite. It runs on the subject\'s life, not on the investigator\'s calendar, and you only capture what happens while someone is watching. If the behavior you need to document occurs twice a week, no amount of budget makes it happen daily. That is why a typical infidelity or custody surveillance engagement is measured in days of active fieldwork spread across a longer window, and complex matters can stretch to two or three weeks before the pattern is clear.',
+      },
+      {
+        type: 'p',
+        text: 'Cost tracks time closely for exactly this reason, since most Manhattan field work is billed by the hour. When you look at how {{0}}, you are really looking at how many hours a case realistically needs, and the same drivers that push the price also push the calendar.',
+        links: [
+          { label: 'the cost of a private investigator in Manhattan is built up', href: '/blog/how-much-does-a-private-investigator-cost-in-manhattan/' },
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'What actually sets the clock',
+      },
+      {
+        type: 'p',
+        text: 'Within either category, a handful of factors do most of the work in deciding how long you wait. Scope is the first: one subject and one question resolves faster than several people, several addresses, or a moving target across jurisdictions. The subject\'s own routine is the second, and in surveillance it is often decisive, because a person with a predictable schedule is documented far quicker than one who rarely leaves a pattern to catch.',
+      },
+      {
+        type: 'p',
+        text: 'The quality of your starting information matters more than most people expect. A full legal name, a date of birth, a last known address, and a photograph can turn a multi-day locate into a same-day one. Gaps and guesses do the reverse. The venue plays a part too, since records held by different agencies release on different timelines, and international or multi-state work waits on the slowest source in the chain.',
+      },
+      {
+        type: 'p',
+        text: 'Manhattan itself changes the math for field work. The density that makes the city hard to hide in also makes it hard to follow someone through, because a subject can vanish into a subway, a doorman building, or a crowd within a block. Effective coverage in that environment usually means more than one agent, and the planning that goes into lawful {{0}} adds time up front that pays off in cleaner results later.',
+        links: [
+          { label: 'covert surveillance across Manhattan', href: '/services/surveillance/' },
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'A realistic timeline by case type',
+      },
+      {
+        type: 'p',
+        text: 'The ranges below are indicative and assume a cooperative starting point. Every case is scoped individually, and an investigator should give you a specific estimate after reviewing what you already know rather than quoting from a table.',
+      },
+      {
+        type: 'list',
+        items: [
+          'Standard background check on one subject: often three to seven business days, faster when expedited.',
+          'Skip trace or basic locate: hours to a few days when the person is not deliberately hidden, longer when they are.',
+          'Asset search from public filings: usually one to two weeks, more across multiple jurisdictions.',
+          'Infidelity or custody surveillance: several days of active fieldwork spread across a window of weeks, driven by the subject\'s routine.',
+          'Complex corporate or fraud investigation: several weeks and up, especially where forensic accounting or source interviews are involved.',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'The wide spread inside some of these is not vagueness. It reflects the real difference between an easy version of a case and a hard one, and a good investigator will tell you which end of the range yours is likely to sit at once they understand it. Before hiring, the same instinct that helps you read a fair quote helps you read a fair timeline, and the traits worth checking are the ones that separate a careful {{0}} from a salesperson.',
+        links: [
+          { label: 'trustworthy Manhattan private investigator', href: '/blog/what-to-look-for-in-a-manhattan-private-investigator/' },
+        ],
+      },
+      {
+        type: 'h3',
+        text: 'Where the courts set the pace instead',
+      },
+      {
+        type: 'p',
+        text: 'Sometimes the investigation is not the slow part at all. If you need evidence for a divorce, a custody dispute, or a civil claim, the litigation calendar can matter more than the fieldwork, and gathering proof too early can leave it stale by the time a hearing arrives. Coordinating with your attorney so the work lands when the case needs it is often the difference between useful evidence and wasted hours. Anyone can confirm they are dealing with a genuinely licensed professional first through the {{0}}, whose licensing standards for investigators are set out in {{1}}.',
+        links: [
+          { label: 'New York Department of State Division of Licensing Services', href: 'https://dos.ny.gov/private-investigator' },
+          { label: 'General Business Law Article 7', href: 'https://www.nysenate.gov/legislation/laws/GBS/A7' },
+        ],
+      },
+      {
+        type: 'h2',
+        text: 'How to make an investigation move faster',
+      },
+      {
+        type: 'p',
+        text: 'You have more influence over the clock than you might think, and almost all of it happens at the start. The most valuable thing you can do is arrive at the first consultation with everything you already know written down: names and aliases, dates, addresses, phone numbers, employers, vehicles, photographs, and the specific question you need answered. Every gap you fill is a search the investigator does not have to run blind.',
+      },
+      {
+        type: 'p',
+        text: 'Being precise about the goal helps just as much as the raw facts. Asking for proof of a specific behavior at a specific place is a tighter, faster assignment than asking someone to watch a person generally. It also keeps the hours focused, which controls both time and cost. Deciding what you actually need before you begin is part of choosing the right approach, and the framework for weighing options carries straight over from how you {{0}} in the first place.',
+        links: [
+          { label: 'hire a private investigator in Manhattan', href: '/guides/hire-a-pi-manhattan/' },
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Finally, resist the urge to demand speed for its own sake. Pushing surveillance to compress a natural pattern, or leaning on an investigator to skip the vantage-point planning that keeps evidence lawful, trades a few days now for a weaker case later. The investigations that hold up are paced to the facts, not to the client\'s impatience, and a professional who explains that trade honestly is worth waiting for.',
+      },
+      {
+        type: 'h2',
+        text: 'Why a longer honest estimate beats a short one',
+      },
+      {
+        type: 'p',
+        text: 'It is tempting to hire whoever promises the quickest result, but in investigative work the fast promise is often the warning sign. A locate that supposedly resolves in an hour, or surveillance guaranteed to deliver by the weekend, usually means either the scope is thinner than you were told or the method cuts a corner that will not survive scrutiny. Evidence gathered under pressure to hit a deadline is the kind most likely to fall apart when it matters.',
+      },
+      {
+        type: 'p',
+        text: 'A realistic estimate, with the reasons behind it, is a sign you are dealing with someone who has actually done the work. The timeline should flex with the facts as the case develops, and your investigator should keep you updated rather than going quiet until a report appears. Treat the pace as part of the quality, not an obstacle to it. This is general information about how Manhattan investigations tend to run, not a guarantee of any outcome or duration in your specific case.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How long does a background check take in Manhattan?',
+        answer: 'A standard background check on a single subject is often completed within three to seven business days, and expedited turnarounds are available for urgent hiring or a closing deal. Complex due diligence covering multiple jurisdictions or international records takes longer and is scoped individually.',
+      },
+      {
+        question: 'How many days of surveillance does an infidelity case usually need?',
+        answer: 'It varies with the subject\'s routine, but many cases involve several days of active fieldwork spread across a window of a week or two. A predictable schedule shortens it, while a subject who rarely leaves a pattern to catch can push a case toward two or three weeks.',
+      },
+      {
+        question: 'Can I speed up a private investigation?',
+        answer: 'To a point. Providing complete starting information, being precise about the exact question you need answered, and coordinating with your attorney on timing all help. What you cannot safely rush is the subject\'s own behavior in a surveillance case, or the lawful planning that keeps evidence admissible.',
+      },
+      {
+        question: 'Is a fast turnaround promise a red flag?',
+        answer: 'It can be. An unusually short guarantee often signals a thin scope or a shortcut that undermines the evidence. A realistic estimate with clear reasons behind it, and an investigator who updates you as the case develops, is a better sign than the quickest promise.',
+      },
+    ],
   }
+
 ];
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
   return blogArticles.find(a => a.slug === slug);
