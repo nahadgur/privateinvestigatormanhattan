@@ -11556,7 +11556,7 @@ export const blogArticles: BlogArticle[] = [
         text: 'Sometimes the investigation is not the slow part at all. If you need evidence for a divorce, a custody dispute, or a civil claim, the litigation calendar can matter more than the fieldwork, and gathering proof too early can leave it stale by the time a hearing arrives. Coordinating with your attorney so the work lands when the case needs it is often the difference between useful evidence and wasted hours. Anyone can confirm they are dealing with a genuinely licensed professional first through the {{0}}, whose licensing standards for investigators are set out in {{1}}.',
         links: [
           { label: 'New York Department of State Division of Licensing Services', href: 'https://dos.ny.gov/private-investigator' },
-          { label: 'General Business Law Article 7', href: 'https://www.nysenate.gov/legislation/laws/GBS/A7' },
+          { label: 'General Business Law Article 7', href: 'https://law.justia.com/codes/new-york/gbs/article-7/' },
         ],
       },
       {
