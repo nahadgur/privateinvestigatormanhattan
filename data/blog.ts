@@ -11467,7 +11467,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'how-long-a-private-investigation-takes-in-manhattan',
     hub: 'hire-a-pi-manhattan',
-    draft: true,
+    draft: false,
     title: 'How long a private investigation takes in Manhattan',
     metaTitle: 'How Long a PI Investigation Takes in Manhattan',
     metaDescription: 'How long a private investigation really takes in Manhattan, from a same-week background check to weeks of surveillance. What drives the timeline, what you can do to speed it up, and why a realistic estimate is a good sign.',
