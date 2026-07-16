@@ -68,7 +68,7 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-chip border border-gray-mid bg-gray-light text-ink placeholder-gray-dark text-[14px] focus:outline-none focus:ring-2 focus:ring-ink focus:border-transparent transition";
+    "w-full px-4 py-3 rounded-chip border border-gray-mid bg-gray-light text-ink placeholder-gray-dark text-base focus:outline-none focus:ring-2 focus:ring-ink focus:border-transparent transition";
 
   if (isSuccess) {
     return (
