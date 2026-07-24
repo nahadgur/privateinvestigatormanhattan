@@ -14,7 +14,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!article || article.draft) return { title: 'Article not found' };
 
   const url = `${siteConfig.url}/blog/${article.slug}/`;
-  const image = (article as { featuredImage?: string }).featuredImage;
+  const image = article.featuredImage;
+  const imageAlt = article.featuredImageAlt || article.title;
 
   return {
     title: article.metaTitle,
@@ -27,7 +28,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       title: article.metaTitle,
       description: article.metaDescription,
       locale: 'en_US',
-      images: image ? [{ url: image }] : undefined,
+      images: image ? [{ url: image, width: 1536, height: 1024, alt: imageAlt }] : undefined,
     },
     twitter: {
       card: 'summary_large_image',

@@ -42,7 +42,7 @@ export function ServicesIndexClient() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={service.image}
-                      alt={service.title}
+                      alt={service.imageAlt || service.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />

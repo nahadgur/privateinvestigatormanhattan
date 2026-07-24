@@ -15,6 +15,7 @@ export function generateMetadata({ params }: { params: { serviceSlug: string } }
   const title = `${service.title} in Manhattan | NYS-Licensed Investigators`;
   const description = service.description;
   const url = `${siteConfig.url}/services/${service.slug}/`;
+  const imageAlt = service.imageAlt || service.title;
 
   return {
     title,
@@ -27,8 +28,9 @@ export function generateMetadata({ params }: { params: { serviceSlug: string } }
       title,
       description,
       locale: 'en_US',
+      images: [{ url: service.image, width: 1536, height: 1024, alt: imageAlt }],
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: [service.image] },
     robots: { index: true, follow: true },
   };
 }

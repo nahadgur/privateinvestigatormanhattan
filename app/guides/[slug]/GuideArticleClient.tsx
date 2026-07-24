@@ -141,6 +141,7 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
       slug: guide.slug,
       publishDate: guide.publishDate,
       updatedDate: guide.lastUpdated,
+      imageUrl: guide.featuredImage ? `${siteConfig.url}${guide.featuredImage}` : undefined,
     }),
   ];
   if (guide.faqs && guide.faqs.length > 0) schemas.push(buildFAQSchema(guide.faqs));
@@ -178,6 +179,17 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
           {/* Real heading kept for SEO/a11y; the SVG above is decorative. */}
           <h1 className="sr-only">{guide.title}</h1>
           <p className="text-[16px] md:text-[18px] text-gray-600 leading-[1.55] mt-5 max-w-3xl">{guide.heroDescription}</p>
+          {guide.featuredImage && (
+            <div className="mt-7 aspect-[3/2] md:aspect-[21/9] overflow-hidden rounded-tile border border-gray-light bg-gray-light shadow-card">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={guide.featuredImage}
+                alt={guide.featuredImageAlt || guide.title}
+                className="h-full w-full object-cover"
+                loading="eager"
+              />
+            </div>
+          )}
         </div>
       </section>
 

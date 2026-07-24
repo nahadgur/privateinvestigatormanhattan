@@ -1,7 +1,9 @@
 // data/services.ts
+import { serviceFeaturedImages } from './featuredImages';
+
 export interface FAQ { question: string; answer: string; }
-export interface Service { id: string; title: string; slug: string; description: string; image: string; icon: string; color: string; faqs: FAQ[]; }
-export const services: Service[] = [
+export interface Service { id: string; title: string; slug: string; description: string; image: string; imageAlt?: string; icon: string; color: string; faqs: FAQ[]; }
+const serviceEntries: Service[] = [
   { "id": "infidelity-investigation", "title": "Infidelity Investigation", "slug": "infidelity-investigation", "description": "Discreet, documented infidelity investigations for Manhattan residents. Licensed investigators who deliver court-admissible evidence and handle one of the most emotionally sensitive assignments in private investigation with professionalism and care.", "faqs": [
     { "question": "How does a cheating spouse investigation work in Manhattan?", "answer": "Your investigator establishes a surveillance plan based on known patterns — workplace, gym, regular locations. Manhattan's density requires multi-agent foot surveillance in many cases. Evidence is documented with time-stamped photography and video, GPS records where legally applicable, and a written report structured for potential legal proceedings." },
     { "question": "Is it legal to investigate a spouse in New York?", "answer": "Yes. Surveillance in public spaces is fully legal in New York. Investigators cannot trespass, intercept communications, or access private accounts — but they can document everything that occurs in public view, which is typically sufficient to establish the facts of a case." },
@@ -43,5 +45,14 @@ export const services: Service[] = [
     { "question": "What information do skip tracers need to start?", "answer": "At minimum: full name, date of birth, and last known address or employer. Additional helpful information includes social security number if legally available, phone numbers, email addresses, relatives' names, and any identifiers from the subject's recent financial or social-media activity. Your investigator will advise on what is most useful given the specific case." }
   ], "image": "/images/skip-tracing.png", "icon": "Shield", "color": "brand" }
 ];
+
+export const services: Service[] = serviceEntries.map(service => {
+  const featuredImage = serviceFeaturedImages[service.slug];
+
+  return featuredImage
+    ? { ...service, image: featuredImage.src, imageAlt: featuredImage.alt }
+    : service;
+});
+
 export const getAllServiceSlugs = (): string[] => services.map(s => s.slug);
 export const getServiceBySlug = (slug: string): Service | undefined => services.find(s => s.slug === slug);

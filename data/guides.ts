@@ -1,4 +1,5 @@
 // data/guides.ts
+import { guideFeaturedImages } from './featuredImages';
 //
 // Pillar guide data model. Each guide is a long-form article targeting a head-term
 // search query. Guides are structured with a TOC that renders from the sections array.
@@ -31,6 +32,8 @@ export interface Guide {
   publishDate: string;       // ISO date
   lastUpdated: string;       // ISO date
   readingTimeMinutes: number;
+  featuredImage?: string;
+  featuredImageAlt?: string;
   heroEyebrow: string;       // short category label above H1
   heroDescription: string;   // ~30-50 word lead paragraph shown in hero
   intro: string[];           // intro paragraphs shown above TOC
@@ -40,7 +43,7 @@ export interface Guide {
   relatedGuides?: string[];  // sideways links to adjacent hub slugs
 }
 
-export const guides: Guide[] = [
+const guideEntries: Guide[] = [
   {
     slug: 'investigator-costs-manhattan',
     title: 'How Much Does a Private Investigator Cost in Manhattan?',
@@ -964,6 +967,14 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+export const guides: Guide[] = guideEntries.map(guide => {
+  const featuredImage = guideFeaturedImages[guide.slug];
+
+  return featuredImage
+    ? { ...guide, featuredImage: featuredImage.src, featuredImageAlt: featuredImage.alt }
+    : guide;
+});
 
 export function getGuideBySlug(slug: string): Guide | undefined {
   return guides.find(g => g.slug === slug);

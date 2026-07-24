@@ -45,22 +45,35 @@ export function GuidesIndexClient() {
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}/`}
-                className="group block bg-paper border border-gray-mid rounded-tile p-6 hover:border-primary hover:shadow-card transition-all"
+                className="group block bg-paper border border-gray-mid rounded-tile overflow-hidden hover:border-primary hover:shadow-card transition-all"
               >
-                <div className="text-[10px] font-extrabold uppercase tracking-widest text-primary mb-3">{guide.heroEyebrow}</div>
-                <h2 className="text-[18px] md:text-[20px] font-extrabold text-ink leading-tight mb-3 group-hover:text-primary transition-colors">
-                  {guide.title}
-                </h2>
-                <p className="text-[13px] text-gray-dark leading-[1.6] mb-5">{guide.heroDescription}</p>
-                <div className="flex items-center justify-between text-[11px] text-gray-dark">
-                  <div className="flex items-center gap-3">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
-                      {guide.readingTimeMinutes} min
-                    </span>
-                    <span>Updated {formatDate(guide.lastUpdated)}</span>
+                {guide.featuredImage && (
+                  <div className="aspect-[3/2] overflow-hidden bg-gray-light">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={guide.featuredImage}
+                      alt={guide.featuredImageAlt || guide.title}
+                      className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
                   </div>
-                  <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                )}
+                <div className="p-6">
+                  <div className="text-[10px] font-extrabold uppercase tracking-widest text-primary mb-3">{guide.heroEyebrow}</div>
+                  <h2 className="text-[18px] md:text-[20px] font-extrabold text-ink leading-tight mb-3 group-hover:text-primary transition-colors">
+                    {guide.title}
+                  </h2>
+                  <p className="text-[13px] text-gray-dark leading-[1.6] mb-5">{guide.heroDescription}</p>
+                  <div className="flex items-center justify-between text-[11px] text-gray-dark">
+                    <div className="flex items-center gap-3">
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-3 h-3" />
+                        {guide.readingTimeMinutes} min
+                      </span>
+                      <span>Updated {formatDate(guide.lastUpdated)}</span>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-primary group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </Link>
             ))}

@@ -13,6 +13,8 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!guide || !isGuidePublished(guide)) return { title: 'Guide not found' };
 
   const url = `${siteConfig.url}/guides/${guide.slug}/`;
+  const image = guide.featuredImage;
+  const imageAlt = guide.featuredImageAlt || guide.title;
 
   return {
     title: guide.metaTitle,
@@ -27,8 +29,14 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
       locale: 'en_US',
       publishedTime: guide.publishDate,
       modifiedTime: guide.lastUpdated,
+      images: image ? [{ url: image, width: 1536, height: 1024, alt: imageAlt }] : undefined,
     },
-    twitter: { card: 'summary_large_image', title: guide.metaTitle, description: guide.metaDescription },
+    twitter: {
+      card: 'summary_large_image',
+      title: guide.metaTitle,
+      description: guide.metaDescription,
+      images: image ? [image] : undefined,
+    },
     robots: { index: true, follow: true },
   };
 }

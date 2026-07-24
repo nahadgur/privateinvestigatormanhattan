@@ -210,6 +210,7 @@ interface ServicePageSchemaParams {
   serviceSlug: string;
   description: string;
   faqs: { question: string; answer: string }[];
+  imageUrl?: string;
 }
 
 /**
@@ -226,6 +227,7 @@ export function buildServicePageSchema(p: ServicePageSchemaParams) {
     name: p.serviceName,
     url: `${siteConfig.url}/services/${p.serviceSlug}/`,
     description: p.description,
+    ...(p.imageUrl ? { image: p.imageUrl } : {}),
     serviceType: p.serviceName,
     category: 'Private Investigation',
     provider: {
@@ -393,6 +395,7 @@ interface GuideSchemaParams {
   slug: string;
   publishDate: string;
   updatedDate: string;
+  imageUrl?: string;
 }
 
 export function buildGuideSchema(p: GuideSchemaParams) {
@@ -403,6 +406,7 @@ export function buildGuideSchema(p: GuideSchemaParams) {
     description: p.description,
     datePublished: p.publishDate,
     dateModified: p.updatedDate,
+    ...(p.imageUrl ? { image: p.imageUrl } : {}),
     author: { '@id': AUTHOR_ID },
     publisher: {
       '@type': 'Organization',

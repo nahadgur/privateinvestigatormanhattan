@@ -1,4 +1,5 @@
 // data/blog.ts - Private Investigator Manhattan
+import { blogFeaturedImages } from './featuredImages';
 export interface ContentBlock {
   type: string; text?: string; src?: string; alt?: string;
   items?: string[]; articles?: { slug: string; title: string; image?: string }[];
@@ -9,14 +10,14 @@ export interface ContentBlock {
 }
 export interface BlogArticle {
   slug: string; title: string; metaTitle: string; metaDescription: string;
-  category: string; publishDate: string; featuredImage: string; excerpt: string;
+  category: string; publishDate: string; featuredImage: string; featuredImageAlt?: string; excerpt: string;
   hub: string;
   draft: boolean;
   dateModified?: string;
   faqs?: { question: string; answer: string }[];
   content: ContentBlock[];
 }
-export const blogArticles: BlogArticle[] = [
+const blogArticleEntries: BlogArticle[] = [
   {
     slug: 'what-does-a-private-investigator-in-manhattan-actually-do',
     hub: 'hire-a-pi-manhattan',
@@ -11748,6 +11749,20 @@ export const blogArticles: BlogArticle[] = [
     ]
   }
 ];
+
+export const blogArticles: BlogArticle[] = blogArticleEntries.map(article => {
+  const featuredImage = blogFeaturedImages[article.slug];
+
+  return featuredImage
+    ? {
+        ...article,
+        featuredImage: featuredImage.src,
+        featuredImageAlt: featuredImage.alt,
+        content: article.content.filter(block => block.type !== 'image'),
+      }
+    : article;
+});
+
 export function getArticleBySlug(slug: string): BlogArticle | undefined {
   return blogArticles.find(a => a.slug === slug);
 }

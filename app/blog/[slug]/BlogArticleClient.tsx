@@ -198,7 +198,9 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
       slug: article.slug,
       publishDate: article.publishDate,
       updatedDate: article.dateModified || article.publishDate,
-      imageUrl: article.featuredImage || undefined,
+      imageUrl: article.featuredImage
+        ? (article.featuredImage.startsWith('http') ? article.featuredImage : `${siteConfig.url}${article.featuredImage}`)
+        : undefined,
     }),
   ];
   if (faqs.length > 0) schemas.push(buildFAQSchema(faqs));
@@ -233,6 +235,17 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
             </div>
             {/* Real heading kept for SEO/a11y; the SVG above is decorative. */}
             <h1 className="sr-only">{article.title}</h1>
+            {article.featuredImage && (
+              <div className="mt-7 aspect-[3/2] md:aspect-[21/9] overflow-hidden rounded-tile border border-gray-light bg-gray-light shadow-card">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={article.featuredImage}
+                  alt={article.featuredImageAlt || article.title}
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                />
+              </div>
+            )}
           </div>
         </section>
 

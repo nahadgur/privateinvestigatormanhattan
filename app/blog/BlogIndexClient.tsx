@@ -88,7 +88,7 @@ export function BlogIndexClient() {
                           /* eslint-disable-next-line @next/next/no-img-element */
                           <img
                             src={article.featuredImage}
-                            alt={article.title}
+                            alt={article.featuredImageAlt || article.title}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             loading="lazy"
                           />

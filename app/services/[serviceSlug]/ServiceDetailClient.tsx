@@ -45,6 +45,7 @@ export function ServiceDetailClient({ service }: { service: Service }) {
     serviceSlug: service.slug,
     description: service.description,
     faqs: combinedFaqs,
+    imageUrl: `${siteConfig.url}${service.image}`,
   });
 
   const faqSchema = buildFAQSchema(combinedFaqs);
@@ -57,13 +58,8 @@ export function ServiceDetailClient({ service }: { service: Service }) {
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main id="main-content" className="flex-grow">
         {/* Hero */}
-        <section className="bg-ink text-white relative overflow-hidden">
-          <div className="absolute inset-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={service.image} alt="" className="w-full h-full object-cover opacity-35" loading="eager" />
-            <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
-          </div>
-          <div className="container-width py-12 md:py-20 relative z-10">
+        <section className="bg-ink text-white overflow-hidden">
+          <div className="container-width py-12 md:py-20">
             <Breadcrumbs items={[{ label: 'Services', href: '/services/' }, { label: service.title }]} light />
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-6">
               <div>
@@ -74,6 +70,15 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                   {service.title}
                 </h1>
                 <p className="text-[16px] text-white/80 mb-7 leading-[1.55]">{service.description}</p>
+                <div className="aspect-[3/2] overflow-hidden rounded-tile border border-white/10 bg-white/5 shadow-lg mb-7">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={service.image}
+                    alt={service.imageAlt || service.title}
+                    className="h-full w-full object-cover"
+                    loading="eager"
+                  />
+                </div>
                 <div className="space-y-2.5">
                   {['Free confidential consultation', 'Every investigator NYS-licensed', 'Manhattan + NYC coverage'].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
