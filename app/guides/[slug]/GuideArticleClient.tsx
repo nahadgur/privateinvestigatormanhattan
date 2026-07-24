@@ -9,7 +9,6 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
-import { SpokeHero } from '@/components/SpokeHero';
 import { siteConfig } from '@/data/site';
 import { buildGuideSchema, buildBreadcrumbSchema, buildFAQSchema, buildEditorialAuthor } from '@/data/schema-helpers';
 
@@ -161,35 +160,47 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
           <Breadcrumbs items={[{ label: 'Guides', href: '/guides/' }, { label: guide.title }]} />
         </div>
         <div className="container-width pt-4 pb-8">
-          <SpokeHero title={guide.title} hubName="Guide" hubSlug={guide.slug} readMins={guide.readingTimeMinutes} />
-          <div className="mt-4 flex flex-wrap gap-4 text-[12px] text-gray-500">
-            <div className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5" />
-              <span>{guide.readingTimeMinutes} min read</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5" />
-              <span>Updated {formatDate(guide.lastUpdated)}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <CheckCircle className="w-3.5 h-3.5" />
-              <span>Reviewed by the Private Investigator Manhattan editorial team</span>
+          <div className="relative flex min-h-[360px] md:min-h-[430px] items-end overflow-hidden rounded-tile bg-ink shadow-card">
+            {guide.featuredImage && (
+              <>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={guide.featuredImage}
+                  alt={guide.featuredImageAlt || guide.title}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  loading="eager"
+                />
+              </>
+            )}
+            <div className="absolute inset-0 bg-black/25" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
+            <div className="relative z-10 w-full max-w-4xl px-6 py-8 md:px-12 md:py-11">
+              <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/85 md:text-[12px]">
+                Private Investigator Manhattan
+                <span className="mx-2 text-primary">•</span>
+                Guide
+              </p>
+              <h1 className="max-w-3xl text-[2rem] font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-sm md:text-[2.75rem] lg:text-[3.15rem]">
+                {guide.title}
+              </h1>
+              <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[12px] font-medium text-white/85 md:text-[13px]">
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5 text-primary" />
+                  {guide.readingTimeMinutes} min read
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5 text-primary" />
+                  Updated {formatDate(guide.lastUpdated)}
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle className="h-3.5 w-3.5 text-primary" />
+                  Editorially reviewed
+                </span>
+              </div>
             </div>
           </div>
-          {/* Real heading kept for SEO/a11y; the SVG above is decorative. */}
-          <h1 className="sr-only">{guide.title}</h1>
-          <p className="text-[16px] md:text-[18px] text-gray-600 leading-[1.55] mt-5 max-w-3xl">{guide.heroDescription}</p>
-          {guide.featuredImage && (
-            <div className="mt-7 aspect-[3/2] md:aspect-[21/9] overflow-hidden rounded-tile border border-gray-light bg-gray-light shadow-card">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={guide.featuredImage}
-                alt={guide.featuredImageAlt || guide.title}
-                className="h-full w-full object-cover"
-                loading="eager"
-              />
-            </div>
-          )}
+          <p className="mt-6 max-w-3xl text-[16px] leading-[1.55] text-gray-600 md:text-[18px]">{guide.heroDescription}</p>
         </div>
       </section>
 
