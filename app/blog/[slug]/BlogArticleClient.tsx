@@ -230,28 +230,28 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
                   />
                 </>
               )}
-              <div className="absolute inset-0 bg-black/25" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/65 to-black/20" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/15" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
               <div className="relative z-10 w-full max-w-4xl px-6 py-8 md:px-12 md:py-11">
-                <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/85 md:text-[12px]">
-                  Private Investigator Manhattan
-                  <span className="mx-2 text-primary">•</span>
-                  {hubGuide?.title ?? article.category}
-                </p>
-                <h1 className="max-w-3xl text-[2rem] font-extrabold leading-[1.08] tracking-tight text-white drop-shadow-sm md:text-[2.75rem] lg:text-[3.15rem]">
-                  {article.title}
-                </h1>
-                <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] font-medium text-white/85 md:text-[13px]">
-                  <span className="inline-flex items-center gap-1.5">
-                    <Tag className="h-3.5 w-3.5 text-primary" /> {article.category}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Calendar className="h-3.5 w-3.5 text-primary" /> {article.publishDate}
-                  </span>
-                  <span className="inline-flex items-center gap-1.5">
-                    <Clock className="h-3.5 w-3.5 text-primary" /> {estimateReadMins(article.content)} min read
-                  </span>
+                <div className="max-w-3xl rounded-tile border border-white/10 bg-black/60 p-5 shadow-lg backdrop-blur-[2px] md:p-7">
+                  <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/85 md:text-[12px]">
+                    Private Investigator Manhattan
+                    <span className="mx-2 text-primary">•</span>
+                    {hubGuide?.title ?? article.category}
+                  </p>
+                  <h1 className="text-[2rem] font-extrabold leading-[1.08] tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8)] md:text-[2.75rem] lg:text-[3.15rem]">
+                    {article.title}
+                  </h1>
+                  <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-[12px] font-medium text-white/85 md:text-[13px]">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Tag className="h-3.5 w-3.5 text-primary" /> {article.category}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <Calendar className="h-3.5 w-3.5 text-primary" /> {article.publishDate}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5">
+                      <Clock className="h-3.5 w-3.5 text-primary" /> {estimateReadMins(article.content)} min read
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
