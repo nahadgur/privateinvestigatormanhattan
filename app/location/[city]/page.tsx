@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { LOCATIONS, toSlug, getCityBySlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
+import { locationDirectoryFeaturedImage, locationFeaturedImages } from '@/data/featuredImages';
 import { CityPageClient } from './CityPageClient';
 
 export function generateStaticParams() {
@@ -16,6 +17,7 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
   const title = `Private Investigators in ${cityName} | Licensed NYC Investigators`;
   const description = `Licensed private investigators serving ${cityName}. Surveillance, infidelity, background checks, corporate cases, asset searches, and child custody investigations. Free confidential consultation, no obligation.`;
   const url = `${siteConfig.url}/location/${params.city}/`;
+  const image = locationFeaturedImages[params.city] ?? locationDirectoryFeaturedImage;
 
   return {
     title,
@@ -28,8 +30,9 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
       title,
       description,
       locale: 'en_US',
+      images: [{ url: image.src, width: 1536, height: 1024, alt: image.alt }],
     },
-    twitter: { card: 'summary_large_image', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: [image.src] },
     robots: { index: true, follow: true },
   };
 }

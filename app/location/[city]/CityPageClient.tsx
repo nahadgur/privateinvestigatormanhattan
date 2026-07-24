@@ -14,6 +14,7 @@ import { PricingSection } from '@/components/PricingSection';
 import { NearbyAreasGrid } from '@/components/NearbyAreasGrid';
 import { siteConfig } from '@/data/site';
 import { cityPageContent } from '@/data/cityContent';
+import { locationDirectoryFeaturedImage, locationFeaturedImages } from '@/data/featuredImages';
 import { buildLocationPageSchema, buildFAQSchema } from '@/data/schema-helpers';
 
 export function CityPageClient({ cityName, citySlug }: { cityName: string; citySlug: string }) {
@@ -22,11 +23,13 @@ export function CityPageClient({ cityName, citySlug }: { cityName: string; cityS
   const cityFaqs = cityPageContent.faqs(cityName);
   const whyCards = cityPageContent.matchingCards(cityName);
   const introParagraphs = cityPageContent.introParagraphs(cityName);
+  const locationImage = locationFeaturedImages[citySlug] ?? locationDirectoryFeaturedImage;
 
   const localBusinessSchema = buildLocationPageSchema({
     cityName,
     citySlug,
     description: `Find licensed private investigators in ${cityName}. Free confidential consultation, no obligation.`,
+    imageUrl: `${siteConfig.url}${locationImage.src}`,
   });
 
   const faqSchema = buildFAQSchema(cityFaqs);
@@ -39,19 +42,28 @@ export function CityPageClient({ cityName, citySlug }: { cityName: string; cityS
       <Header onOpenModal={() => setIsModalOpen(true)} />
       <main id="main-content" className="flex-grow">
         {/* Hero */}
-        <section className="bg-ink text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(185,55,41,0.25),transparent_60%)] pointer-events-none" />
-          <div className="container-width py-12 md:py-20 relative z-10">
-            <Breadcrumbs items={[{ label: 'Locations', href: '/location/' }, { label: cityName }]} light />
+        <section className="relative overflow-hidden bg-ink text-white">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={locationImage.src}
+            alt={locationImage.alt}
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="eager"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+          <div className="container-width relative z-10 py-12 md:py-20">
+            <div className="inline-flex rounded-chip bg-black/60 px-3 py-2 backdrop-blur-[2px]">
+              <Breadcrumbs items={[{ label: 'Locations', href: '/location/' }, { label: cityName }]} light />
+            </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mt-6">
-              <div>
+              <div className="rounded-tile border border-white/10 bg-black/60 p-6 shadow-lg backdrop-blur-[2px] md:p-8">
                 <div className="inline-flex items-center gap-2 bg-primary/20 text-primary px-3 py-1 rounded-chip text-[11px] font-extrabold uppercase tracking-widest mb-5 border border-primary/30">
                   <MapPin className="w-3.5 h-3.5" /> Private Investigators in {cityName}
                 </div>
-                <h1 className="text-[2rem] md:text-[2.6rem] lg:text-[3rem] font-extrabold tracking-tight leading-[1.05] mb-5">
+                <h1 className="text-[2rem] md:text-[2.6rem] lg:text-[3rem] font-extrabold tracking-tight leading-[1.05] mb-5 [text-shadow:0_2px_10px_rgba(0,0,0,0.8)]">
                   Private Investigators in <span className="text-primary">{cityName}</span>
                 </h1>
-                <p className="text-[16px] text-white/80 leading-[1.55]">
+                <p className="text-[16px] text-white/90 leading-[1.55]">
                   Find licensed private investigators in {cityName}. Free confidential consultation, no obligation to proceed.
                 </p>
               </div>
@@ -91,7 +103,7 @@ export function CityPageClient({ cityName, citySlug }: { cityName: string; cityS
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
                           src={service.image}
-                          alt={service.title}
+                          alt={service.imageAlt || service.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           loading="lazy"
                         />

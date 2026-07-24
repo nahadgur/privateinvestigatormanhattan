@@ -308,6 +308,7 @@ interface LocationPageSchemaParams {
   cityName: string;
   citySlug: string;
   description: string;
+  imageUrl?: string;
 }
 
 /**
@@ -323,6 +324,7 @@ export function buildLocationPageSchema(p: LocationPageSchemaParams) {
     name: `${siteConfig.name} in ${p.cityName}`,
     url: `${siteConfig.url}/location/${p.citySlug}/`,
     description: p.description,
+    ...(p.imageUrl ? { image: p.imageUrl } : {}),
     priceRange: PRICE_RANGE,
     parentOrganization: {
       '@type': 'Organization',

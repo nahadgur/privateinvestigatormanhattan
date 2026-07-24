@@ -179,3 +179,51 @@ export const serviceFeaturedImages: Record<string, FeaturedImage> = {
     alt: 'Skip tracing investigator checking address records in a Manhattan apartment lobby',
   },
 };
+
+export const locationDirectoryFeaturedImage: FeaturedImage = {
+  src: '/images/blog/what-does-a-private-investigator-in-manhattan-actually-do.webp',
+  alt: 'Private investigator reviewing case notes while serving clients across Manhattan',
+};
+
+export const locationFeaturedImages: Record<string, FeaturedImage> = {
+  'midtown-east': {
+    src: '/images/blog/what-does-a-private-investigator-in-manhattan-actually-do.webp',
+    alt: 'Private investigator reviewing case notes for a Midtown East Manhattan client',
+  },
+  'midtown-west': {
+    src: '/images/blog/what-to-know-before-hiring-a-surveillance-investigator-in-manhattan.webp',
+    alt: 'Licensed investigator conducting lawful surveillance for a Midtown West case',
+  },
+  'financial-district': {
+    src: '/images/blog/when-businesses-in-manhattan-hire-private-investigators.webp',
+    alt: 'Corporate investigator meeting business clients serving Manhattan’s Financial District',
+  },
+  tribeca: {
+    src: '/images/blog/how-due-diligence-investigations-help-individuals-and-businesses-in-manhattan.webp',
+    alt: 'Business team reviewing due diligence findings for a Tribeca investigation',
+  },
+  soho: {
+    src: '/images/blog/how-to-choose-the-right-private-investigator-in-manhattan.webp',
+    alt: 'Client interviewing a licensed private investigator serving SoHo',
+  },
+  'greenwich-village': {
+    src: '/images/blog/can-a-private-investigator-find-a-missing-person-in-new-york.webp',
+    alt: 'Investigator and family member reviewing a missing-person case in Greenwich Village',
+  },
+  chelsea: {
+    src: '/images/blog/how-to-hire-a-private-investigator-in-manhattan.webp',
+    alt: 'Client having a confidential consultation with a private investigator serving Chelsea',
+  },
+  'upper-east-side': {
+    src: '/images/blog/how-background-checks-work-with-a-private-investigator-in-manhattan.webp',
+    alt: 'Investigator verifying background records for an Upper East Side client',
+  },
+  'upper-west-side': {
+    src: '/images/blog/can-a-private-investigator-help-with-a-child-custody-case-in-manhattan.webp',
+    alt: 'Parent and investigator reviewing a custody case in the Upper West Side',
+  },
+  harlem: {
+    src: '/images/blog/what-skip-tracing-means-and-when-you-might-need-it.webp',
+    alt: 'Skip tracing investigator reviewing address records for a Harlem case',
+  },
+};
