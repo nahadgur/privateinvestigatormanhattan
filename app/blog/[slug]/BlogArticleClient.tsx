@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { ArticleCtaBanner } from '@/components/ArticleCtaBanner';
 
 function estimateReadMins(blocks: { text?: string; items?: string[] }[]): number {
   const words = blocks.reduce((n, b) => {
@@ -39,32 +40,6 @@ function extractFaqs(content: ContentBlock[]): { question: string; answer: strin
     }
   }
   return [];
-}
-
-// Contained brand-band lead-capture banner. Opens the existing pop-up lead modal.
-function CtaBanner({ eyebrow, heading, subtext, buttonText, onOpen }: {
-  eyebrow: string; heading: string; subtext: string; buttonText: string; onOpen: () => void;
-}) {
-  return (
-    <div className="not-prose my-10 rounded-tile bg-ink text-white px-6 py-6 md:px-10 md:py-7 shadow-lg overflow-hidden relative">
-      <div className="absolute top-0 right-0 w-48 h-48 bg-primary/15 rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-      <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
-        <div className="flex-1 min-w-0">
-          <p className="text-primary text-[10px] font-extrabold uppercase tracking-widest mb-1.5">{eyebrow}</p>
-          <h3 className="text-[18px] md:text-[22px] font-extrabold text-white mb-2 leading-snug tracking-tight">{heading}</h3>
-          <p className="text-white/75 text-[13px] leading-relaxed">{subtext}</p>
-        </div>
-        <div className="flex-shrink-0">
-          <button
-            onClick={onOpen}
-            className="inline-flex items-center gap-2 bg-primary text-white font-bold text-[12px] uppercase tracking-widest py-3 px-5 rounded-chip hover:bg-white hover:text-ink transition-colors shadow-md whitespace-nowrap"
-          >
-            {buttonText} <ArrowRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 // Render a paragraph that may contain {{0}}, {{1}}, ... placeholders mapped to
@@ -262,21 +237,38 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
           {/* Article body, full content width (no sidebar) */}
           <article className="max-w-none">
             {(() => {
+              // Articles open with a short summary paragraph before the first h2.
+              // firstH2Index marks the end of that summary; secondH2Index is the
+              // existing mid-article slot.
               let h2Count = 0;
+              let firstH2Index = -1;
               let secondH2Index = -1;
               for (let i = 0; i < article.content.length; i++) {
                 if (article.content[i].type === 'h2') {
                   h2Count++;
+                  if (h2Count === 1) firstH2Index = i;
                   if (h2Count === 2) {
                     secondH2Index = i;
                     break;
                   }
                 }
               }
+              // Only place the summary CTA if there is an actual summary above the
+              // first h2, and keep it clear of the mid-article banner.
+              const summaryCtaIndex = firstH2Index > 0 && firstH2Index !== secondH2Index ? firstH2Index : -1;
               return article.content.map((block, i) => (
                 <div key={i}>
+                  {i === summaryCtaIndex && (
+                    <ArticleCtaBanner
+                      eyebrow="Free Confidential Consultation"
+                      heading="Need this handled, not just explained?"
+                      subtext="Tell us what you are dealing with and we will match you with a licensed Manhattan investigator who takes cases like yours. No cost for the first conversation."
+                      buttonText="Request a Consultation"
+                      onOpen={() => setIsModalOpen(true)}
+                    />
+                  )}
                   {i === secondH2Index && (
-                    <CtaBanner
+                    <ArticleCtaBanner
                       eyebrow="Free Confidential Consultation"
                       heading="Talk to a licensed Manhattan investigator"
                       subtext="Tell us about your situation and we will match you with a vetted New York PI who works strictly within the law."
@@ -291,7 +283,7 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
           </article>
 
           {/* End-of-article lead capture */}
-          <CtaBanner
+          <ArticleCtaBanner
             eyebrow="No Obligation, Strictly Confidential"
             heading="Get matched with the right PI for your case"
             subtext="Share a few details and we will connect you with a licensed Manhattan investigator at no cost for the initial consultation."

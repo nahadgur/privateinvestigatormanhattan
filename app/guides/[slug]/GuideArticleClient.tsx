@@ -9,6 +9,7 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { Breadcrumbs } from '@/components/Breadcrumbs';
+import { ArticleCtaBanner } from '@/components/ArticleCtaBanner';
 import { siteConfig } from '@/data/site';
 import { buildGuideSchema, buildBreadcrumbSchema, buildFAQSchema, buildEditorialAuthor } from '@/data/schema-helpers';
 
@@ -240,6 +241,15 @@ export function GuideArticleClient({ guide }: { guide: Guide }) {
                   <p key={i} className={i === 0 ? 'text-[16px] font-medium text-ink' : ''}>{p}</p>
                 ))}
               </div>
+
+              {/* Lead capture straight after the summary, before the long-form sections */}
+              <ArticleCtaBanner
+                eyebrow="Free Confidential Consultation"
+                heading="Need this handled, not just explained?"
+                subtext="Tell us what you are dealing with and we will match you with a licensed Manhattan investigator who takes cases like yours. No cost for the first conversation."
+                buttonText="Request a Consultation"
+                onOpen={() => setIsModalOpen(true)}
+              />
 
               {/* Sections */}
               {guide.sections.map(section => (
