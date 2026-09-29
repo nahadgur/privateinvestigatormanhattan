@@ -211,7 +211,14 @@ export function BlogArticleClient({ article }: { article: BlogArticle }) {
                   <p className="mb-4 text-[11px] font-extrabold uppercase tracking-[0.14em] text-white/85 md:text-[12px]">
                     Private Investigator Manhattan
                     <span className="mx-2 text-primary">•</span>
-                    {hubGuide?.title ?? article.category}
+                    {hubGuide ? (
+                      <Link
+                        href={`/guides/${hubGuide.slug}/`}
+                        className="underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                      >
+                        {hubGuide.title}
+                      </Link>
+                    ) : article.category}
                   </p>
                   <h1 className="text-[2rem] font-extrabold leading-[1.08] tracking-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.8)] md:text-[2.75rem] lg:text-[3.15rem]">
                     {article.title}

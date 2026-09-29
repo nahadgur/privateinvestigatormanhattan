@@ -22,6 +22,14 @@ function Block({ block }: { block: GuideBlock }) {
   switch (block.type) {
     case 'p':
       return <p className="text-gray-dark text-[14px] leading-[1.75] mb-4">{block.text}</p>;
+    case 'resource-link':
+      return (
+        <p className="text-[14px] leading-[1.75] mb-4">
+          <Link href={block.href} className="text-primary font-medium underline underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">
+            {block.text}
+          </Link>
+        </p>
+      );
     case 'h3':
       return <h3 className="text-[17px] md:text-[19px] font-extrabold text-ink mt-6 mb-3 tracking-tight">{block.text}</h3>;
     case 'ul':
