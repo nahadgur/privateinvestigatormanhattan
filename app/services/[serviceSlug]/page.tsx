@@ -12,13 +12,13 @@ export function generateMetadata({ params }: { params: { serviceSlug: string } }
   const service = getServiceBySlug(params.serviceSlug);
   if (!service) return { title: 'Service not found' };
 
-  const title = `${service.title} in Manhattan | NYS-Licensed Investigators`;
+  const title = `${service.title} in Manhattan | Find a PI`;
   const description = service.description;
   const url = `${siteConfig.url}/services/${service.slug}/`;
   const imageAlt = service.imageAlt || service.title;
 
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: { canonical: `/services/${service.slug}/` },
     openGraph: {

@@ -9,7 +9,7 @@ import { Footer } from '@/components/Footer';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { services } from '@/data/services';
 import { toSlug } from '@/data/locations';
-import { siteConfig, FAQS_HOME } from '@/data/site';
+import { FAQS_HOME } from '@/data/site';
 import { topAreas } from '@/data/homepage';
 
 const itemVariants = {
@@ -18,10 +18,10 @@ const itemVariants = {
 };
 
 const trustPoints = [
-  { title: 'Rigorous Vetting', desc: 'Only investigators with proven track records and active New York State licenses.' },
-  { title: 'Absolute Privacy', desc: 'Your identity remains shielded until you choose to move forward with an introduction.' },
-  { title: 'Local Expertise', desc: 'Investigators intimately familiar with Manhattan neighborhoods and surveillance logistics.' },
-  { title: 'No Direct Fees', desc: 'Our referral coordination ensures you reach the right specialist the first time.' },
+  { title: 'License Check', desc: 'Check the agency name and current license with the New York Department of State before hiring.' },
+  { title: 'Relevant Experience', desc: 'Ask about comparable cases, Manhattan logistics, insurance and who will perform the work.' },
+  { title: 'Written Scope', desc: 'Agree on lawful methods, staffing, spending limits and the circumstances for stopping work.' },
+  { title: 'Clear Deliverables', desc: 'Specify the report, supporting records, updates and any additional charges before signing.' },
 ];
 
 export function HomePageClient() {
@@ -42,7 +42,7 @@ export function HomePageClient() {
           className="bg-primary text-white rounded-tile p-4 lg:p-8 shadow-card flex flex-col lg:col-span-4 lg:row-span-2"
         >
           <div className="text-[11px] sm:text-[12px] font-extrabold uppercase text-white/80 mb-3 flex items-center w-full tracking-wider">
-            Premier Referral Network
+            Private Investigator Matching
             <div className="flex-grow h-[1px] bg-white/30 ml-3" />
           </div>
           <motion.h1
@@ -51,7 +51,7 @@ export function HomePageClient() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-[1.5rem] sm:text-[2.2rem] font-extrabold leading-[1.1] mb-2 sm:mb-3 tracking-tight"
           >
-            Discreet Access to Manhattan&apos;s Licensed Investigators.
+            Find a Private Investigator in Manhattan
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -59,12 +59,12 @@ export function HomePageClient() {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-[0.9rem] sm:text-[0.95rem] opacity-90 mb-4 sm:mb-8 leading-[1.3] sm:leading-[1.4]"
           >
-            {siteConfig.name} connects you with vetted, NYS-licensed private investigators who specialize in Manhattan&apos;s complex urban landscape.
+            Request an introduction for infidelity, surveillance, background checks or asset research. We are a matching service; you choose and engage the independent investigator who will carry out the work.
           </motion.p>
 
           <div id="consultation" className="bg-white/10 p-3.5 sm:p-4 rounded-tile mt-auto">
             <h3 className="text-[9px] sm:text-[10px] font-bold mb-2 sm:mb-3 uppercase tracking-wider text-white">
-              Secure Consultation Request
+              Request an Introduction
             </h3>
             <button
               onClick={() => setIsModalOpen(true)}
@@ -73,7 +73,7 @@ export function HomePageClient() {
               Request Private Consultation
             </button>
             <p className="text-[9px] sm:text-[10px] text-white/70 text-center flex items-center justify-center gap-1 mt-2">
-              <Lock className="w-2.5 h-2.5" /> No obligation. Strictly confidential.
+              <Lock className="w-2.5 h-2.5" /> An inquiry does not authorize an investigation.
             </p>
           </div>
         </motion.section>
@@ -89,7 +89,7 @@ export function HomePageClient() {
         >
           <SectionTitle>Investigative Specializations</SectionTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4 flex-grow">
-            {services.slice(0, 6).map((service) => (
+            {services.map((service) => (
               <ServiceCard
                 key={service.id}
                 href={`/services/${service.slug}/`}
@@ -109,7 +109,7 @@ export function HomePageClient() {
           viewport={{ once: true, amount: 0.05 }}
           className="bg-paper rounded-tile p-5 sm:p-6 shadow-card lg:col-span-3 h-full flex flex-col"
         >
-          <SectionTitle>Why Choose Our Network</SectionTitle>
+          <SectionTitle>Before You Hire</SectionTitle>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:flex lg:flex-col gap-5 sm:gap-4 mt-4 flex-grow justify-around">
             {trustPoints.map((point) => (
               <motion.div key={point.title} whileHover={{ x: 2 }} className="transition-transform">
@@ -136,9 +136,9 @@ export function HomePageClient() {
           <SectionTitle>Referral Process</SectionTitle>
           <div className="flex flex-col sm:flex-row justify-between gap-6 sm:gap-4 mt-6 sm:mt-4">
             {[
-              ['01', 'Confidential Inquiry', 'Share your case details through our secure consultation request.'],
-              ['02', 'Expert Matching', 'We identify the vetted investigators best suited to your case type.'],
-              ['03', 'Direct Connection', 'Review options and engage the agency that fits your budget and timeline.'],
+              ['01', 'Send an Inquiry', 'Provide contact details and your Manhattan area to request an introduction.'],
+              ['02', 'Discuss the Fit', 'Ask a prospective investigator about licensing, relevant experience and availability.'],
+              ['03', 'Agree Before Work', 'Choose an agency and approve its scope, price and reporting terms in writing.'],
             ].map(([num, title, copy]) => (
               <motion.div
                 key={num}
@@ -167,7 +167,7 @@ export function HomePageClient() {
           <SectionTitle>Common Questions</SectionTitle>
           <div className="mt-4 space-y-3 overflow-y-auto pr-2 custom-scrollbar flex-grow min-h-[150px]">
             {FAQS_HOME.slice(0, 3).map((faq) => (
-              <FaqItem key={faq.question} question={faq.question} answer={shortFaq(faq.answer)} />
+              <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </motion.section>
@@ -183,7 +183,7 @@ export function HomePageClient() {
           <div className="w-full sm:w-2/3">
             <SectionTitle>Manhattan Coverage Area</SectionTitle>
             <p className="text-[13px] text-gray-dark leading-[1.5] mb-5 mt-4">
-              Manhattan is a dense, vertical environment. Surveillance and investigative work here require local knowledge that out-of-town agencies do not possess.
+              Tell a prospective investigator where the work may take place. Subway travel, building access and movement between neighborhoods can affect staffing, timing and costs.
             </p>
             <div className="flex flex-wrap gap-x-5 gap-y-3 text-[11px] font-bold uppercase text-ink tracking-wider">
               {topAreas.slice(0, 6).map((area) => (
@@ -223,7 +223,7 @@ export function HomePageClient() {
         >
           <h2 className="text-[22px] font-extrabold leading-[1.2] mb-3">Ready to find answers?</h2>
           <p className="text-[13px] text-gray-mid mb-6 px-4 font-medium opacity-80 leading-[1.4]">
-            Let us match you with a trusted, licensed Manhattan investigator.
+            Start with your question, then discuss the scope and budget with a prospective investigator.
           </p>
           <motion.button
             onClick={() => setIsModalOpen(true)}
@@ -234,6 +234,24 @@ export function HomePageClient() {
             Start Free Consultation
           </motion.button>
         </motion.section>
+        <section className="bg-paper rounded-tile p-6 shadow-card lg:col-span-12">
+          <h2 className="text-xl font-extrabold text-ink mb-3">Plan the work before you hire</h2>
+          <p className="text-sm text-gray-dark leading-relaxed mb-5">A useful quote identifies the question to answer, lawful methods, investigator hours, expenses and the report you will receive. A retainer is an advance toward agreed charges, not necessarily the total price.</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              ['hire-a-pi-manhattan', 'Hiring checklist', 'Prepare your brief and compare investigators.'],
+              ['investigator-costs-manhattan', 'Costs and quote comparison', 'Check minimum hours, staffing, expenses and billing.'],
+              ['background-checks-due-diligence-manhattan', 'Background checks', 'Understand the scope and limits of due diligence.'],
+              ['asset-searches-manhattan', 'Asset research', 'Separate record leads from ownership and recoverable value.'],
+            ].map(([slug, title, description]) => (
+              <Link key={slug} href={`/guides/${slug}/`} className="border border-gray-light rounded-chip p-4 hover:border-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">
+                <h3 className="font-bold text-sm text-ink mb-2">{title}</h3>
+                <p className="text-xs text-gray-dark leading-relaxed">{description}</p>
+              </Link>
+            ))}
+          </div>
+          <p className="text-sm text-gray-dark mt-5">Before engaging an agency, use the <a href="https://dos.ny.gov/private-investigator" className="text-primary underline">New York Department of State licensing information</a> and our <Link href="/guides/pi-licensing-new-york/" className="text-primary underline">license-checking guide</Link>.</p>
+        </section>
       </main>
 
       <Footer />
@@ -288,9 +306,4 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 function shortDesc(desc: string): string {
   const first = desc.split(/\.\s/)[0];
   return first.length > 95 ? first.slice(0, 92) + '...' : first + '.';
-}
-
-function shortFaq(answer: string): string {
-  const first = answer.split(/\.\s/)[0];
-  return first.length > 110 ? first.slice(0, 107) + '...' : first + '.';
 }

@@ -4,32 +4,55 @@ export const serviceContent: Record<string, {
   candidateIntro: string; candidates: string[]; process: { title: string; desc: string }[];
 }> = {
   "infidelity-investigation": {
-    intro: [
-      "Infidelity investigations are the most emotionally charged work in private investigation — and the most consequential. Whether you need documented proof to support a divorce filing, to make a decision about your relationship, or simply to know the truth, the evidence needs to be gathered legally and structured to withstand scrutiny. In Manhattan, that requires specific expertise.",
-      "Urban surveillance in New York City is fundamentally different from suburban investigation. Subjects move on foot, use the subway, and operate in densely populated environments where single-agent surveillance is easily detected. Our matched investigators deploy the multi-agent techniques Manhattan requires, maintaining observation without compromising the case or alerting the subject.",
-      "Every infidelity investigation we facilitate is conducted by a NYS-licensed investigator, documented with time-stamped HD photography and video, and delivered in a written report that your attorney can use if proceedings follow. Discretion is absolute — the subject never knows they are under investigation."
-    ],
-    benefits: [
-      { "title": "Legally Admissible Evidence", "desc": "Evidence gathered by a licensed New York investigator can be used in divorce and family court proceedings. Everything is documented with chain of custody, timestamps, and a written report structured for legal use — not just personal knowledge." },
-      { "title": "Manhattan Urban Surveillance Expertise", "desc": "Multi-agent foot surveillance teams who know Manhattan's neighborhoods, transit systems, and environments. No burned operations from a car parked outside an apartment building — these investigators work the city the way the city requires." },
-      { "title": "Complete Discretion", "desc": "Your case and your identity are protected throughout. Investigators are trained to conduct surveillance without alerting subjects, and your engagement with our service is held in strict confidence from initial inquiry through delivery of evidence." },
-      { "title": "Honest Case Assessment", "desc": "A good investigator will tell you upfront what surveillance is likely to reveal and what it won't. No inflated promises about what can be achieved. If the situation doesn't warrant investigation, they'll tell you that too." }
-    ],
-    candidateIntro: "An infidelity investigation is appropriate in these situations:",
-    candidates: [
-      "Spouses or partners with consistent, specific suspicions who need documented evidence rather than conjecture",
-      "Individuals preparing for divorce proceedings in New York who need evidence of infidelity for equitable distribution arguments",
-      "People who need to make a major life decision and require factual certainty rather than continuing uncertainty",
-      "Individuals whose attorney has recommended gathering evidence before filing divorce papers",
-      "Partners who have confronted a spouse without resolution and need objective documented evidence"
-    ],
-    process: [
-      { "title": "Confidential Consultation", "desc": "You share what you know — patterns of behavior, known locations, vehicles, workplace, schedule anomalies. The investigator assesses what surveillance approach is most likely to be productive and provides a transparent cost estimate." },
-      { "title": "Surveillance Planning", "desc": "Your investigator develops a surveillance schedule based on the patterns you've described. Manhattan operations are planned around foot surveillance teams, transit routes, and the subject's known activity windows." },
-      { "title": "Active Investigation", "desc": "Surveillance is conducted over an agreed period with regular check-ins. Evidence is documented in real time with timestamps, HD footage, and GPS records where legally applicable." },
-      { "title": "Evidence Report", "desc": "A comprehensive written report is delivered with all documentation. The report is structured for attorney use if proceedings follow. The investigator is available to testify in New York court proceedings if required." }
-    ],
-  },
+  "intro": [
+    "Private Investigator Manhattan helps you request an introduction for an infidelity investigation. We do not conduct the investigation. You decide whether to engage an independent provider after discussing your question, the proposed methods, and a written quote.",
+    "A change in a partner’s behavior is not proof of an affair. Define what you need to establish and what decision the answer would support. If the purpose is a divorce or custody case, ask your attorney whether the proposed research is relevant before paying for surveillance.",
+    "An investigator may propose lawful observation and records research, with a report of what they observed and any gaps. Staffing and timing depend on the assignment. No provider can guarantee evidence of infidelity, undetected surveillance, or a court outcome."
+  ],
+  "benefits": [
+    {
+      "title": "A defined question",
+      "desc": "Discuss the uncertainty you need resolved and whether the proposed work can address it within your budget."
+    },
+    {
+      "title": "A written scope",
+      "desc": "Agree on methods, hours, staffing, permitted expenses, and approval before additional work."
+    },
+    {
+      "title": "Factual reporting",
+      "desc": "Ask for dated observations, available media, and clear separation between what was seen and what was inferred."
+    },
+    {
+      "title": "Attorney coordination",
+      "desc": "If litigation is involved, agree how the investigator and your attorney will communicate and handle records."
+    }
+  ],
+  "candidateIntro": "An initial discussion may help you assess work such as:",
+  "candidates": [
+    "Documenting activity relevant to a specific relationship question through lawful observation.",
+    "Clarifying a factual issue that your matrimonial attorney has identified.",
+    "Assessing whether a records-based inquiry would be more useful than surveillance.",
+    "Planning a limited first phase with a clear budget and review point."
+  ],
+  "process": [
+    {
+      "title": "Describe your question",
+      "desc": "Provide the case type, Manhattan locations, relevant timing, and preferred contact method. Keep the initial inquiry brief."
+    },
+    {
+      "title": "Discuss provider fit",
+      "desc": "Before engaging anyone, ask about their New York license, relevant experience, staffing, insurance, and availability."
+    },
+    {
+      "title": "Agree on the work",
+      "desc": "Review the written scope, price, cancellation terms, reporting arrangements, and approval limit. An introduction does not start an investigation."
+    },
+    {
+      "title": "Review the findings",
+      "desc": "Compare the report with the agreed question. Discuss inconclusive results and any proposed extension before authorizing further work."
+    }
+  ]
+},
   "surveillance": {
     intro: [
       "Professional surveillance is both the most fundamental and most technically demanding service in private investigation. In Manhattan, where subjects move through one of the world's densest urban environments, effective surveillance requires trained teams, proper equipment, and specific knowledge of how the city actually operates.",
@@ -112,32 +135,55 @@ export const serviceContent: Record<string, {
     ],
   },
   "asset-searches": {
-    intro: [
-      "Asset searches in the context of Manhattan divorce proceedings, civil judgments, and business disputes require more than running a public records search. Hidden assets — real estate held through LLCs, financial accounts in different names, business interests obscured through holding companies — require the investigative databases and methodologies that licensed professionals apply.",
-      "New York is one of the most asset-rich jurisdictions in the country, and also one of the most sophisticated when it comes to concealing wealth. Manhattan divorces frequently involve complex financial structures that are deliberately difficult to unravel. Civil judgment debtors use corporate structures to insulate assets. Our matched investigators have experience tracing assets through the specific structures common in New York's financial and real estate environments.",
-      "Asset search results are delivered in a structured report that your attorney can use to support formal discovery motions, challenge financial affidavits, or inform settlement strategy. The investigation identifies what exists — your attorney then determines how to use it within the legal framework."
-    ],
-    benefits: [
-      { "title": "Beyond Public Records", "desc": "Professional investigators access databases that surface corporate affiliations, registered agent histories, beneficial ownership, UCC filings, and other records that reveal assets not visible in basic public record searches." },
-      { "title": "New York Real Estate Expertise", "desc": "Manhattan real estate is among the most valuable and most frequently hidden in the country. Investigators trace ownership through LLCs, trusts, and nominee arrangements — the common structures used to obscure New York property ownership." },
-      { "title": "Financial Instrument Identification", "desc": "Bank relationships, brokerage accounts, and financial instruments can often be identified through legal investigative methods without requiring a subpoena — giving attorneys a roadmap for formal discovery that they would otherwise not have." },
-      { "title": "Attorney-Ready Reporting", "desc": "Reports are structured for immediate use by New York matrimonial and litigation attorneys. Findings are documented with source citations and formatted to support formal discovery motions, deposition questions, and settlement negotiations." }
-    ],
-    candidateIntro: "Asset search investigations are most valuable in these New York situations:",
-    candidates: [
-      "Spouses in high-net-worth Manhattan divorces where full financial disclosure is disputed or suspect",
-      "Judgment creditors seeking to identify collectible assets before pursuing enforcement proceedings",
-      "Business partners in disputes where the other party's actual financial position needs to be established",
-      "Attorneys preparing for deposition or discovery who need a roadmap of a party's likely financial holdings",
-      "Individuals considering litigation who need to know whether a potential defendant has collectible assets before investing in legal proceedings"
-    ],
-    process: [
-      { "title": "Subject Profile Development", "desc": "All known information about the subject is gathered — known addresses, business names, social security number if available, known associates, and any financial information already available through disclosure or public knowledge." },
-      { "title": "Database Investigation", "desc": "Comprehensive search across real estate records, corporate filings, UCC databases, court records, professional license registrations, and investigative databases covering New York and relevant additional jurisdictions." },
-      { "title": "Verification and Expansion", "desc": "Initial findings are developed further — corporate structures are traced to beneficial ownership, real estate holdings are valued, and financial instruments are identified with as much specificity as legal methods allow." },
-      { "title": "Report Delivery", "desc": "Comprehensive asset report delivered with all findings documented by source and organized by asset category. Your attorney receives a roadmap for formal discovery and an evidence base to support challenge of any financial affidavits in dispute." }
-    ],
-  },
+  "intro": [
+    "An asset-search investigator can research lawful records for property and business leads. Private Investigator Manhattan provides introductions; independent investigators conduct the work you agree to commission.",
+    "Define whether the question concerns divorce disclosure, an unpaid judgment, or a business decision. A record match needs verification. Identifying a property interest does not prove concealment, current equity, or availability for collection.",
+    "Ask the provider to explain the sources, jurisdictions, dates, and limits of the proposed search. A PI license does not authorize unrestricted access to bank accounts or other protected records."
+  ],
+  "benefits": [
+    {
+      "title": "Focused records research",
+      "desc": "Agree on the subject, identifiers, jurisdictions, and factual question before work starts."
+    },
+    {
+      "title": "Source-based reporting",
+      "desc": "Request references and dates for findings, with uncertainty and coverage limits stated."
+    },
+    {
+      "title": "Useful legal follow-up",
+      "desc": "Your attorney can evaluate leads for disclosure or enforcement without treating a search report as an ownership ruling."
+    },
+    {
+      "title": "Controlled scope",
+      "desc": "Set an initial budget and require approval before research expands into new entities or jurisdictions."
+    }
+  ],
+  "candidateIntro": "Asset research can support questions such as:",
+  "candidates": [
+    "A possible discrepancy in divorce financial disclosure.",
+    "Whether an unpaid judgment merits further collection research.",
+    "Property or entity connections that need independent verification.",
+    "A business matter requiring a defined public-records inquiry."
+  ],
+  "process": [
+    {
+      "title": "Define the decision",
+      "desc": "Explain what you need to establish and any legal deadlines. Discuss the scope with counsel if proceedings are involved."
+    },
+    {
+      "title": "Agree on sources and cost",
+      "desc": "Review subject identifiers, jurisdictions, lawful access, estimated fees, and the first-phase spending limit."
+    },
+    {
+      "title": "Review record matches",
+      "desc": "The investigator checks sources and distinguishes corroborated findings from leads requiring further work."
+    },
+    {
+      "title": "Choose the next step",
+      "desc": "Use the report with your adviser to decide whether further research, disclosure, or enforcement is appropriate. Recovery is not guaranteed."
+    }
+  ]
+},
   "child-custody-investigations": {
     intro: [
       "Child custody investigations are among the most consequential cases a private investigator handles — the evidence gathered can directly affect a child's living situation and a parent's access to their children. It is also one of the most legally sensitive areas, where evidence must meet specific New York family court standards to be useful.",

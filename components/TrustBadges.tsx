@@ -3,23 +3,23 @@ import { Award, ShieldCheck, UserCheck, Lock } from 'lucide-react';
 const badges = [
   {
     icon: Award,
-    title: 'NYS Licensed',
-    desc: 'Every investigator in our network holds a current New York State license under Article 7.',
+    title: 'Verify the License',
+    desc: 'Check the agency name and current New York State license before engaging an investigator.',
   },
   {
     icon: ShieldCheck,
-    title: 'Fully Insured',
-    desc: 'All investigators carry comprehensive liability insurance and are bonded for professional standards.',
+    title: 'Ask About Insurance',
+    desc: 'Ask the agency to explain its insurance coverage and provide evidence relevant to the proposed work.',
   },
   {
     icon: UserCheck,
-    title: 'Former Law Enforcement',
-    desc: 'Our network includes investigators with NYPD, FBI, and federal agency backgrounds.',
+    title: 'Check Relevant Experience',
+    desc: 'Discuss similar assignments, who will do the work and how the investigator will report findings.',
   },
   {
     icon: Lock,
-    title: 'Strict Confidentiality',
-    desc: 'All consultations are confidential. Your information is never shared with third parties.',
+    title: 'Agree on Information Handling',
+    desc: 'Ask who receives your details, how records are stored and what confidentiality terms apply.',
   },
 ];
 

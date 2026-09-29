@@ -14,6 +14,8 @@ import { Breadcrumbs } from '@/components/Breadcrumbs';
 import { LeadFormModal } from '@/components/LeadFormModal';
 import { HeroLeadForm } from '@/components/HeroLeadForm';
 import { PricingSection } from '@/components/PricingSection';
+import { ServicePlanning } from '@/components/ServicePlanning';
+import { serviceResources } from '@/data/serviceResources';
 import { serviceContent } from '@/data/serviceContent';
 import { siteConfig } from '@/data/site';
 import { buildServicePageSchema, buildFAQSchema } from '@/data/schema-helpers';
@@ -67,7 +69,7 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                   <Shield className="w-3.5 h-3.5" /> NYS-Licensed Investigators
                 </div>
                 <h1 className="text-[2rem] md:text-[2.6rem] lg:text-[3rem] font-extrabold tracking-tight leading-[1.05] mb-5">
-                  {service.title}
+                  {service.title} in Manhattan
                 </h1>
                 <p className="text-[16px] text-white/80 mb-7 leading-[1.55]">{service.description}</p>
                 <div className="aspect-[3/2] overflow-hidden rounded-tile border border-white/10 bg-white/5 shadow-lg mb-7">
@@ -80,7 +82,7 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                   />
                 </div>
                 <div className="space-y-2.5">
-                  {['Free confidential consultation', 'Every investigator NYS-licensed', 'Manhattan + NYC coverage'].map((item, i) => (
+                  {['Request an introduction', 'Verify the agency license before hiring', 'Agree on scope and fees before work'].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
                       <span className="text-[14px] text-white/90">{item}</span>
@@ -217,7 +219,7 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                   </ul>
                 </div>
                 <p className="text-gray-dark text-[12px] mt-4 leading-[1.6]">
-                  Our matched investigators offer a free confidential consultation to assess your case and provide a transparent cost estimate before any work begins.
+                  Use an initial discussion to decide whether the proposed work can answer your question. Ask the investigator for written terms before authorizing any charges.
                 </p>
               </section>
 
@@ -238,7 +240,18 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                 </div>
               </section>
 
-              <PricingSection serviceId={service.id} serviceName={service.title} />
+              {service.id === 'infidelity-investigation' || service.id === 'asset-searches'
+                ? <ServicePlanning kind={service.id} />
+                : <PricingSection serviceId={service.id} serviceName={service.title} />}
+
+              <section className="mb-12 p-6 bg-paper rounded-tile border border-gray-light">
+                <h2 className="text-xl font-extrabold text-ink mb-3">Prepare for your consultation</h2>
+                <ul className="space-y-3">
+                  {(serviceResources[service.id] || []).map(({ href, label }) => (
+                    <li key={href}><Link href={href} className="text-primary underline text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary">{label}</Link></li>
+                  ))}
+                </ul>
+              </section>
 
               <div className="mb-12">
                 <FAQ faqs={combinedFaqs} title={`${service.title} FAQs`} />
@@ -253,16 +266,16 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                     Get Matched for {service.title}
                   </h3>
                   <p className="text-gray-dark text-[12px] mb-5 leading-[1.5]">
-                    Free confidential consultation with a licensed Manhattan PI.
+                    Request an introduction and discuss your question, timing and budget.
                   </p>
                   <button onClick={() => setIsModalOpen(true)} className="btn-primary w-full">
                     Request Consultation
                   </button>
                   <div className="mt-5 pt-5 border-t border-gray-light space-y-3">
                     {[
-                      { icon: <Clock className="w-3.5 h-3.5 text-primary" />, text: 'Response within 24 hours' },
-                      { icon: <Shield className="w-3.5 h-3.5 text-primary" />, text: 'NYS-licensed investigators' },
-                      { icon: <Star className="w-3.5 h-3.5 text-primary" />, text: 'Strictly confidential' },
+                      { icon: <Clock className="w-3.5 h-3.5 text-primary" />, text: 'Confirm availability directly' },
+                      { icon: <Shield className="w-3.5 h-3.5 text-primary" />, text: 'Check the agency license' },
+                      { icon: <Star className="w-3.5 h-3.5 text-primary" />, text: 'Agree on reporting and privacy terms' },
                     ].map((item, i) => (
                       <div key={i} className="flex items-center gap-3">
                         <div className="bg-primary/10 p-1.5 rounded-full">{item.icon}</div>
@@ -273,10 +286,10 @@ export function ServiceDetailClient({ service }: { service: Service }) {
                 </div>
 
                 <div className="bg-ink text-white p-6 rounded-tile">
-                  <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-2">Starting Retainer</div>
-                  <h3 className="text-[24px] font-extrabold tracking-tight mb-2">From $1,500</h3>
+                  <div className="text-[11px] font-extrabold uppercase tracking-widest text-primary mb-2">Plan Your Budget</div>
+                  <h3 className="text-[24px] font-extrabold tracking-tight mb-2">Request a written quote</h3>
                   <p className="text-white/70 text-[12px] mb-4 leading-[1.5]">
-                    Confidential consultations. Flexible retainer arrangements for Manhattan investigations.
+                    Ask about minimum hours, staffing, expenses, report preparation and any applicable tax. The investigator sets the price.
                   </p>
                   <button
                     onClick={() => setIsModalOpen(true)}

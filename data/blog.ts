@@ -9106,303 +9106,417 @@ const blogArticleEntries: BlogArticle[] = [
     ]
   },
   {
-    slug: 'how-a-private-investigator-finds-hidden-assets-in-a-new-york-divorce',
-    hub: 'asset-searches-manhattan',
-    draft: true,
-    title: 'How a Private Investigator Finds Hidden Assets in a New York Divorce',
-    metaTitle: 'Hidden Asset Searches in a New York Divorce',
-    metaDescription: 'How a licensed asset search surfaces hidden accounts, real estate and business interests in a New York divorce, what stays legal, and how we match you with an investigator.',
-    category: 'Asset Searches',
-    publishDate: '2026-06-10',
-    dateModified: '2026-06-10',
-    featuredImage: '',
-    excerpt: 'A hidden asset search in a New York divorce uses public records, financial paper trails and licensed database access to surface accounts, real estate and business interests a spouse left off their sworn disclosure.',
-    content: [
-      {
-        "type": "p",
-        "text": "A hidden asset search in a New York divorce uses public records, financial paper trails and licensed database access to surface accounts, real estate and business interests a spouse left off their sworn disclosure. We are a matching service and do not investigate ourselves. We connect you with a New York State licensed investigator who runs the search using legal methods only."
-      },
-      {
-        "type": "h2",
-        "text": "What a Hidden Asset Search Looks For"
-      },
-      {
-        "type": "p",
-        "text": "When one spouse suspects the other is understating what they own, an asset search builds a picture from records that already exist in the public and commercial domain. The goal is not to seize anything. It is to document leads your attorney can pursue through formal discovery, so the marital estate is divided on the real numbers rather than the disclosed ones."
-      },
-      {
-        "type": "p",
-        "text": "A typical search in a Manhattan or wider New York City case tends to cover several asset classes. None of it relies on accessing private accounts directly, which would be illegal. Instead it follows the ownership trail through filings, registrations and recorded transactions."
-      },
-      {
-        "type": "list",
-        "items": [
-          "Real estate held in a personal name, an LLC, or a relative's name across New York and other states.",
-          "Business interests, shell entities and ownership stakes recorded in corporate filings.",
-          "Vehicles, vessels and aircraft tied to title and registration records.",
-          "Liens, judgments and UCC filings that reveal lenders, accounts and collateral.",
-          "Lifestyle indicators that contradict a sworn Statement of Net Worth."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "The output is an evidence summary with sources, not a conclusion. Your divorce attorney decides how to use it, whether through subpoenas, depositions or a forensic accountant. A licensed investigator works alongside that legal process rather than replacing it."
-      },
-      {
-        "type": "h2",
-        "text": "Why Assets Go Missing in a Divorce"
-      },
-      {
-        "type": "p",
-        "text": "New York is an equitable distribution state. Under the Domestic Relations Law, marital property is divided fairly between spouses based on a list of statutory factors, which is not the same as an automatic fifty-fifty split. Because the division turns on the full value of the marital estate, a spouse who wants to keep more has an incentive to make part of that estate hard to see."
-      },
-      {
-        "type": "p",
-        "text": "Concealment is rarely dramatic. More often it is quiet timing and paperwork. Common patterns include deferring a bonus or commission until after the case settles, moving money into a business account, buying titled property through an LLC, overpaying the tax authority to bank a future refund, or parking funds with a trusted family member to return later."
-      },
-      {
-        "type": "p",
-        "text": "These moves leave traces. A bonus deferral shows up against employment and industry norms. An LLC purchase appears in property and corporate records. The investigator's job is to find the trace and document it cleanly enough that it stands up when your attorney raises it."
-      },
-      {
-        "type": "h2",
-        "text": "How New York Financial Disclosure Works"
-      },
-      {
-        "type": "p",
-        "text": "Both spouses in a New York divorce are required to file a sworn Statement of Net Worth listing income, assets, debts and expenses, under the Domestic Relations Law disclosure rules. Because it is sworn, an omission is not just an oversight. It is a misstatement under oath that can carry consequences for credibility and for how a court weighs the rest of that spouse's testimony."
-      },
-      {
-        "type": "p",
-        "text": "An asset search is most useful when it is read against that statement. Where the records show ownership the statement does not, you and your attorney have a concrete, sourced discrepancy to put to the other side. That is far stronger than a suspicion, and it is the kind of material that moves negotiations and informs what a judge sees."
-      },
-      {
-        "type": "p",
-        "text": "Note that this is general information about how New York handles disclosure and distribution, not legal advice. How any discrepancy is used is a decision for your attorney based on the facts of your case."
-      },
-      {
-        "type": "h2",
-        "text": "What a Licensed Investigator Can and Cannot Do"
-      },
-      {
-        "type": "p",
-        "text": "The line that matters is the line between public records work and illegal access. A New York State licensed investigator, licensed through the Department of State under General Business Law Article 7, can search public filings, commercial databases available to licensed professionals, court records and recorded transactions. That covers the great majority of hidden asset work."
-      },
-      {
-        "type": "p",
-        "text": "What a legitimate investigator will not do is obtain financial information by pretext. Calling a bank and impersonating the account holder to extract balances is pretexting for financial information, which is prohibited under the federal Gramm-Leach-Bliley Act and treated as an unfair and deceptive practice by the Federal Trade Commission. Hacking an email account, planting tracking devices unlawfully, or pulling private account records without authority are all off limits."
-      },
-      {
-        "type": "p",
-        "text": "Insisting on legal methods is not a limitation to work around. Evidence gathered illegally can be excluded, can expose you to liability, and can hand the other side an argument that damages your case. A search worth having is one built entirely from sources that hold up."
-      },
-      {
-        "type": "h2",
-        "text": "When to Start and How Matching Works"
-      },
-      {
-        "type": "p",
-        "text": "The useful moment to start is when there is a real reason to doubt the disclosure and before key deadlines in the case close in. Earlier work gives your attorney room to fold findings into discovery and settlement strategy rather than racing the calendar. If you are weighing whether the disclosure adds up, it is worth a conversation about scope before committing to anything."
-      },
-      {
-        "type": "p",
-        "text": "Our role is to match, not to investigate. You tell us what the case involves, and we connect you with a New York State licensed investigator suited to financial and asset work in New York City. The initial consultation is confidential and carries no cost, and no investigator can promise a particular result. What a good one offers is a lawful, documented search and a clear account of what the records do and do not show."
-      },
-      {
-        "type": "cta",
-        "text": "Get Matched With a Licensed Asset Search Investigator"
-      },
-      {
-        "type": "h2",
-        "text": "Frequently Asked Questions"
-      },
-      {
-        "type": "h3",
-        "text": "Is a hidden asset search legal in a New York divorce?"
-      },
-      {
-        "type": "p",
-        "text": "Yes, when it stays within public records, court filings and databases available to licensed professionals. A New York State licensed investigator works through these lawful sources. Methods such as pretexting a bank, hacking accounts or unlawful tracking are illegal and a legitimate investigator will refuse them."
-      },
-      {
-        "type": "h3",
-        "text": "Can an investigator pull my spouse's bank balances directly?"
-      },
-      {
-        "type": "p",
-        "text": "No. Obtaining account balances by impersonating the holder is pretexting for financial information, which is barred under the federal Gramm-Leach-Bliley Act. An investigator instead documents ownership trails through filings and records, and your attorney can compel account details through formal discovery."
-      },
-      {
-        "type": "h3",
-        "text": "What if my spouse left assets off their Statement of Net Worth?"
-      },
-      {
-        "type": "p",
-        "text": "The Statement of Net Worth is sworn under New York's Domestic Relations Law, so an omission is a misstatement under oath. A sourced asset search that shows ownership the statement does not gives your attorney a concrete discrepancy to raise in negotiation or before the court."
-      },
-      {
-        "type": "h3",
-        "text": "How much does an asset search cost?"
-      },
-      {
-        "type": "p",
-        "text": "It depends on scope, the number of asset classes and how far the ownership trails run across states and entities. Because cost tracks the work involved, the practical step is a confidential consultation to define scope first. We connect you with an investigator who will quote against a defined search rather than an open-ended one."
-      },
-      {
-        "type": "h3",
-        "text": "Do I need an attorney as well as an investigator?"
-      },
-      {
-        "type": "p",
-        "text": "In a divorce, yes. An investigator documents what the records show, but using that material through discovery, subpoenas or a forensic accountant is legal work your divorce attorney directs. The two roles complement each other, and the strongest cases coordinate them."
-      }
-    ]
-  },
+  "slug": "how-a-private-investigator-finds-hidden-assets-in-a-new-york-divorce",
+  "hub": "asset-searches-manhattan",
+  "draft": false,
+  "title": "How a Private Investigator Finds Hidden Assets in a New York Divorce",
+  "metaTitle": "Hidden Asset Searches in a New York Divorce",
+  "metaDescription": "Learn how lawful records research can help identify financial-disclosure questions in a New York divorce, what it cannot prove, and how to prepare an asset-search brief.",
+  "category": "Asset Searches",
+  "publishDate": "2026-09-29",
+  "dateModified": "2026-09-29",
+  "featuredImage": "",
+  "excerpt": "An asset search can document property and business leads for a divorce attorney to investigate. Learn how to compare records with disclosure and separate a lead from proof.",
+  "content": [
+    {
+      "type": "p",
+      "text": "An asset search can help you identify property records, business connections, or transactions that need an explanation in a New York divorce. It does not provide unrestricted access to a spouse’s finances or prove concealment from a name match. Start with a specific discrepancy and discuss it with your matrimonial attorney before commissioning work."
+    },
+    {
+      "type": "p",
+      "text": "Private Investigator Manhattan is a referral and matching service. An independent investigator performs the research you agree to commission. Our {{0}} explains the wider service; this article focuses on financial disclosure in a divorce.",
+      "links": [
+        {
+          "label": "asset-search guide",
+          "href": "/guides/asset-searches-manhattan/"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Start with the disclosure question"
+    },
+    {
+      "type": "p",
+      "text": "New York’s {{0}} distinguishes marital and separate property and sets out equitable-distribution factors. An investigator can research factual leads, but deciding how property should be classified or divided requires a legal assessment. Property acquired in one name is not, by that fact alone, outside the marital estate.",
+      "links": [
+        {
+          "label": "Domestic Relations Law section 236",
+          "href": "https://www.nysenate.gov/legislation/laws/DOM/236"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The courts’ {{0}} includes the Statement of Net Worth and financial-disclosure steps. Ask your attorney which documents, valuation dates, and deadlines apply to your case. Describe a possible mismatch without assuming it was deliberate: a filing might be historical, incomplete, or about someone with a similar name.",
+      "links": [
+        {
+          "label": "contested-divorce information and forms",
+          "href": "https://www.nycourts.gov/divorce-resources/contested-divorce-information-and-forms"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "An address or property transaction appears in records but has not been explained in the financial disclosure.",
+        "A business name on documents you can lawfully access needs to be matched to an entity and relevant dates.",
+        "A disclosed interest has records that raise questions about ownership, debt, or transfers.",
+        "Your attorney has identified a gap that public-records research could help narrow."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Manhattan records that can provide leads"
+    },
+    {
+      "type": "p",
+      "text": "NYC’s {{0}} lets you search recorded property documents for Manhattan and several other boroughs. Deeds and mortgages can help establish a recorded transaction history. A recorded mortgage is not a current payoff statement, and a deed alone does not establish today’s equity or the source of purchase funds.",
+      "links": [
+        {
+          "label": "Automated City Register Information System (ACRIS)",
+          "href": "https://www.nyc.gov/site/finance/property/acris.page"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The {{0}} offers corporate and other entity records. Check the exact entity, filing dates, and identifiers. A service address or filing contact does not by itself prove beneficial ownership. The Department warns that it cannot guarantee the completeness or accuracy of information supplied to it.",
+      "links": [
+        {
+          "label": "New York Department of State entity database",
+          "href": "https://dos.ny.gov/corporation-and-business-entity-search-database"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Other public court filings or documents supplied with permission may add context. Ask the investigator to identify each source, the date checked, and the reason for associating a record with the subject. Commercial databases can provide leads, but the provider must have a lawful basis for access and use; a PI license is not permission to retrieve every protected record."
+    },
+    {
+      "type": "h2",
+      "text": "Illustration: a company name in a property record"
+    },
+    {
+      "type": "p",
+      "text": "Suppose a lawfully obtained document mentions a company associated with an apartment purchase. The investigator checks the entity’s exact name and the recorded deed, then lists any corroborating facts and unresolved identity questions. The finding is a lead for your attorney to examine, not proof that your spouse owns the apartment or concealed it. This is a hypothetical example, not a client case."
+    },
+    {
+      "type": "h2",
+      "text": "Private financial records require authority"
+    },
+    {
+      "type": "p",
+      "text": "Do not ask an investigator to impersonate an account holder to obtain bank information. The {{0}} explains the federal prohibition on obtaining consumers’ financial information through false pretenses, known as pretexting. Ask your attorney about consent, disclosure, or other lawful procedures for records that are not public.",
+      "links": [
+        {
+          "label": "Federal Trade Commission",
+          "href": "https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/financial-privacy"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "An investigator should not promise a secret database of current bank balances. Nor should you provide passwords, enter an account without authorization, or take confidential documents merely because they might help a search. If you are unsure whether you may use a document, resolve that question with counsel before sharing it."
+    },
+    {
+      "type": "h2",
+      "text": "Prepare a focused brief"
+    },
+    {
+      "type": "list",
+      "items": [
+        "State the discrepancy and the decision the research would support.",
+        "Provide names, relevant dates, addresses, and entity identifiers you are entitled to share.",
+        "Separate documents you possess lawfully from records you still need your attorney to obtain.",
+        "Identify the jurisdictions, date range, deadline, and first-phase budget.",
+        "Ask how the investigator will record uncertainty and preserve copies or references to the sources."
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Share sensitive documents through a channel agreed with the investigator and your attorney. An initial matching inquiry can describe the problem without uploading bank statements, account credentials, or identification documents."
+    },
+    {
+      "type": "h2",
+      "text": "Agree on the report, cost, and next step"
+    },
+    {
+      "type": "p",
+      "text": "Request a report that separates confirmed record matches, possible associations, and unresolved questions. It should identify searched jurisdictions, dates, sources, and coverage limits. A search with no relevant finding does not prove that no undisclosed property exists."
+    },
+    {
+      "type": "p",
+      "text": "Ask for a written quote by scope: subjects, jurisdictions, records, analyst time, and reporting. Set an approval point before additional work. The {{0}} helps you compare proposals. Your attorney may decide that disclosure or a forensic accountant would answer the question more directly.",
+      "links": [
+        {
+          "label": "cost and quote-comparison guide",
+          "href": "/guides/investigator-costs-manhattan/"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Our {{0}} describes how to request an introduction. If you already hold an unpaid money judgment, read the separate {{1}}: locating possible property and collecting it involve different questions.",
+      "links": [
+        {
+          "label": "asset-search service page",
+          "href": "/services/asset-searches/"
+        },
+        {
+          "label": "judgment-enforcement article",
+          "href": "/blog/locating-assets-enforce-money-judgment/"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "type": "h3",
+      "text": "Does an asset search prove that my spouse hid money?"
+    },
+    {
+      "type": "p",
+      "text": "No. Records can reveal discrepancies or leads that need an explanation. Identity, ownership, dates, and the legal significance of a finding need to be checked before alleging concealment."
+    },
+    {
+      "type": "h3",
+      "text": "Can a private investigator get current bank balances?"
+    },
+    {
+      "type": "p",
+      "text": "A license does not create unrestricted access to private bank records. Lawful access depends on the circumstances and authority. Discuss consent or formal disclosure with your attorney; obtaining information by impersonation is not an acceptable shortcut."
+    },
+    {
+      "type": "h3",
+      "text": "Does an LLC filing prove my spouse owns its property?"
+    },
+    {
+      "type": "p",
+      "text": "No. An entity filing may help identify a company, but a name, contact, or address match alone does not establish who benefits from its property. Ask for corroboration and legal review."
+    },
+    {
+      "type": "h3",
+      "text": "Do I have to hire an investigator before my divorce attorney?"
+    },
+    {
+      "type": "p",
+      "text": "No. Discuss the disclosure problem with an attorney first when possible. The attorney can help determine whether records research, formal discovery, or accounting work is appropriate."
+    },
+    {
+      "type": "p",
+      "text": "Sources checked September 29, 2026. General information only; a New York attorney can advise on your disclosure obligations, proposed methods, and proceedings."
+    }
+  ]
+},
   {
-    slug: 'locating-assets-enforce-money-judgment',
-    hub: 'asset-searches-manhattan',
-    draft: true,
-    title: 'How an Asset Search Helps You Enforce a Money Judgment in New York',
-    metaTitle: 'Asset Searches to Enforce a NY Money Judgment',
-    metaDescription: 'Winning a money judgment is only half the battle. Learn how a licensed asset search locates a debtor\'s collectible property in New York, what stays legal, and how we match you with an investigator.',
-    category: 'Asset Searches',
-    publishDate: '2026-06-10',
-    dateModified: '2026-06-10',
-    featuredImage: '',
-    excerpt: 'A money judgment is only a piece of paper until you find property to collect against. An asset search locates a debtor\'s real estate, business interests and other collectible holdings through legal records work, so you can enforce the judgment instead of carrying it.',
-    content: [
-      {
-        "type": "p",
-        "text": "A money judgment is only a piece of paper until you locate property to collect against. An asset search identifies a debtor's real estate, business interests, vehicles and other collectible holdings through lawful records work, so your attorney can enforce the judgment rather than carry it. We are a matching service and do not investigate ourselves. We connect you with a New York State licensed investigator who runs the search using legal methods only."
-      },
-      {
-        "type": "h2",
-        "text": "Why a Judgment Is Worth Less Than You Think Until You Locate Assets"
-      },
-      {
-        "type": "p",
-        "text": "New York courts do not collect a money judgment for you. Once a judge or jury awards you a sum, the burden shifts to you, the judgment creditor, to find the debtor's property and direct an enforcement officer to it. A debtor who does not want to pay rarely hands over a list of accounts and deeds. They go quiet, change addresses, and let the award sit."
-      },
-      {
-        "type": "p",
-        "text": "This is where an asset search earns its keep. Before you spend money on a marshal, a sheriff or a restraining notice, you want to know whether there is anything collectible behind the judgment. Spending enforcement costs against a debtor with no reachable property is how creditors turn one loss into two. A search tells you what is there first."
-      },
-      {
-        "type": "h2",
-        "text": "What an Asset Search Can Locate for Collection"
-      },
-      {
-        "type": "p",
-        "text": "A licensed investigator builds the collection picture from records that already exist in the public and commercial domain. The aim is to document property your attorney can reach through the enforcement tools New York provides, from real estate to bank relationships to business holdings."
-      },
-      {
-        "type": "list",
-        "items": [
-          "Real estate held in the debtor's name, an LLC, or a relative's name across New York and other states.",
-          "Business ownership, officer positions and shell entities recorded in corporate and UCC filings.",
-          "Vehicles, vessels and aircraft tied to title and registration records.",
-          "Evidence of banking relationships and employers, which point to accounts and wages your attorney can reach.",
-          "Existing liens and competing judgments that tell you where you stand against other creditors."
-        ]
-      },
-      {
-        "type": "p",
-        "text": "The output is a sourced evidence summary, not a conclusion. It tells your attorney where to aim an information subpoena, a restraining notice or a property execution, so enforcement effort lands on assets that actually exist."
-      },
-      {
-        "type": "h2",
-        "text": "How the Search Feeds New York Enforcement"
-      },
-      {
-        "type": "p",
-        "text": "Judgment enforcement in New York runs through Article 52 of the Civil Practice Law and Rules, which gives creditors tools such as information subpoenas, restraining notices and executions against property. Those tools work only when they are pointed at the right target. An information subpoena sent to a bank is useful when you already have reason to believe the debtor holds an account there. A property execution works when you have identified collectible property and the enforcement officer who can levy it."
-      },
-      {
-        "type": "p",
-        "text": "An asset search supplies that targeting. It connects the debtor to specific banks, employers, entities and parcels of real estate so your attorney is not sending blind subpoenas across the financial system. The cleaner the records trail behind each target, the harder it is for a debtor to stall enforcement with claims that the property is not theirs."
-      },
-      {
-        "type": "p",
-        "text": "This is general information about how New York handles judgment enforcement, not legal advice. How and when to use any tool under Article 52 is a decision for your attorney based on the facts of your matter and the applicable deadlines."
-      },
-      {
-        "type": "h2",
-        "text": "What a Licensed Investigator Can and Cannot Do"
-      },
-      {
-        "type": "p",
-        "text": "The line that matters is the line between lawful records work and illegal access. A New York State licensed investigator, licensed through the Department of State under General Business Law Article 7, can search public filings, court records, recorded transactions and commercial databases available to licensed professionals. That covers most of what you need to locate collectible property."
-      },
-      {
-        "type": "p",
-        "text": "What a legitimate investigator will not do is obtain account information by pretext. Calling a bank and impersonating the account holder to extract balances is pretexting for financial information, which is prohibited under the federal Gramm-Leach-Bliley Act and treated as an unfair and deceptive practice by the Federal Trade Commission. An investigator documents the banking relationship through lawful means; the account-level details come later, through the information subpoena your attorney serves under Article 52."
-      },
-      {
-        "type": "p",
-        "text": "Insisting on legal methods protects your judgment. Evidence gathered unlawfully can be challenged, can expose you to liability, and can hand the debtor an argument that slows collection further. A search worth having is built entirely from sources that hold up."
-      },
-      {
-        "type": "h2",
-        "text": "When to Start and How Matching Works"
-      },
-      {
-        "type": "p",
-        "text": "The useful moment to start is early, while the judgment is fresh and before enforcement deadlines tighten. Locating assets up front lets your attorney move on collectible property before a debtor has time to move or encumber it. If you are weighing whether a debtor has anything worth pursuing, it is worth a conversation about scope before committing to anything."
-      },
-      {
-        "type": "p",
-        "text": "Our role is to match, not to investigate. You tell us what the judgment involves, and we connect you with a New York State licensed investigator suited to financial and asset work in New York City. The initial consultation is confidential and carries no cost, and no investigator can promise that a debtor has collectible property or that you will recover. What a good one offers is a lawful, documented search and a clear account of what the records do and do not show."
-      },
-      {
-        "type": "cta",
-        "text": "Get Matched With a Licensed Asset Search Investigator"
-      },
-      {
-        "type": "h2",
-        "text": "Frequently Asked Questions"
-      },
-      {
-        "type": "h3",
-        "text": "Can an investigator tell me how much money is in my debtor's bank account?"
-      },
-      {
-        "type": "p",
-        "text": "No. Obtaining account balances by impersonating the holder is pretexting for financial information, which is barred under the federal Gramm-Leach-Bliley Act. A licensed investigator instead documents evidence of the banking relationship through lawful records work. The account-level detail comes through an information subpoena your attorney serves under New York's enforcement rules."
-      },
-      {
-        "type": "h3",
-        "text": "What is an information subpoena, and how does an asset search help?"
-      },
-      {
-        "type": "p",
-        "text": "An information subpoena is a tool under Article 52 of New York's Civil Practice Law and Rules that compels a person or institution to answer questions about a debtor's assets. It works best when aimed at a known target. An asset search identifies which banks, employers and entities to serve, so the subpoena lands somewhere productive rather than going out blind."
-      },
-      {
-        "type": "h3",
-        "text": "How long do I have to enforce a money judgment in New York?"
-      },
-      {
-        "type": "p",
-        "text": "As general information, a money judgment in New York is generally enforceable for twenty years, while a judgment lien on real property runs for a shorter fixed period before it must be renewed, under the Civil Practice Law and Rules. Deadlines and renewals are case specific, so confirm the timing that applies to your judgment with your attorney rather than relying on a general figure."
-      },
-      {
-        "type": "h3",
-        "text": "Is locating a debtor's assets legal?"
-      },
-      {
-        "type": "p",
-        "text": "Yes, when it stays within public records, court filings, recorded transactions and databases available to licensed professionals. A New York State licensed investigator works through these lawful sources. Methods such as pretexting a bank, accessing private accounts without authority or unlawful tracking are illegal, and a legitimate investigator will refuse them."
-      },
-      {
-        "type": "h3",
-        "text": "How much does a judgment-recovery asset search cost?"
-      },
-      {
-        "type": "p",
-        "text": "It depends on scope, the number of asset classes and how far the ownership trails run across states and entities. Because cost tracks the work involved, the practical step is a confidential consultation to define scope first. We connect you with an investigator who quotes against a defined search rather than an open-ended one."
-      }
-    ]
-  },
+  "slug": "locating-assets-enforce-money-judgment",
+  "hub": "asset-searches-manhattan",
+  "draft": false,
+  "title": "How an Asset Search Helps You Enforce a Money Judgment in New York",
+  "metaTitle": "Asset Searches to Enforce a NY Money Judgment",
+  "metaDescription": "Understand how an asset search can support New York judgment enforcement, including records, information subpoenas, exemptions and the limits of a recovery assessment.",
+  "category": "Asset Searches",
+  "publishDate": "2026-09-29",
+  "dateModified": "2026-09-29",
+  "featuredImage": "",
+  "excerpt": "An unpaid judgment does not show what a debtor owns or what you can collect. Learn how records research supports an enforcement assessment and which questions need legal review.",
+  "content": [
+    {
+      "type": "p",
+      "text": "An asset search can help identify property or business leads when a New York judgment remains unpaid. Finding a record does not establish that the debtor still owns an asset, that it has available value, or that the law allows collection from it. Define the search with those limits in mind before spending more on enforcement."
+    },
+    {
+      "type": "p",
+      "text": "The {{0}} distinguishes winning a judgment, finding a debtor’s property, and taking collection steps. An investigator researches facts; an attorney can advise on legal remedies, and authorized enforcement officers carry out applicable collection procedures.",
+      "links": [
+        {
+          "label": "New York courts’ collection guidance",
+          "href": "https://www.nycourts.gov/help/after-case-over/collecting-judgment"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Confirm the judgment and the debtor’s identity"
+    },
+    {
+      "type": "p",
+      "text": "Provide the entered judgment, the exact debtor name, the outstanding amount as calculated by the appropriate professional, known addresses, and any relevant orders. Ask counsel about a stay, satisfaction, bankruptcy, deadlines, or other restrictions before taking enforcement action. Do not assume that a judgment against a company permits collection from its owner personally."
+    },
+    {
+      "type": "p",
+      "text": "An investigator should distinguish the named debtor from similarly named people or businesses. A matching name is a starting point. Dates, addresses, entity identifiers, and corroborating records help reduce the risk of attributing another person’s property to the debtor."
+    },
+    {
+      "type": "h2",
+      "text": "Search for leads that answer a collection question"
+    },
+    {
+      "type": "p",
+      "text": "For Manhattan real estate, {{0}} provides recorded documents that can help trace transactions and identify recorded liens or mortgages. Ask the investigator to distinguish the record found from any assumption about current ownership or available equity.",
+      "links": [
+        {
+          "label": "ACRIS",
+          "href": "https://www.nyc.gov/site/finance/property/acris.page"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "The {{0}} can help identify entities and filing details. Corporate records are not a complete inventory of a person’s assets. Neither a business address nor a named contact proves that the business’s funds belong to the judgment debtor.",
+      "links": [
+        {
+          "label": "New York business-entity database",
+          "href": "https://dos.ny.gov/corporation-and-business-entity-search-database"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "items": [
+        "Property records: identify the document, parties, recording date, and limitations.",
+        "Business records: confirm the entity and record the evidence for any association.",
+        "Public litigation records: note relevant references, competing claims, or matters for counsel to review.",
+        "Unresolved leads: distinguish likely matches from items that need further authority or records."
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Use information subpoenas through the proper process"
+    },
+    {
+      "type": "p",
+      "text": "New York’s {{0}} describes information subpoenas as a way to obtain answers about a debtor’s money or property. The statute, {{1}}, sets procedural requirements and requires a reasonable basis and certification for certain subpoenas to third parties. An investigator’s lead can help counsel assess a target; it does not authorize sending speculative demands to every bank.",
+      "links": [
+        {
+          "label": "court guidance",
+          "href": "https://www.nycourts.gov/help/after-case-over/information-subpoena"
+        },
+        {
+          "label": "CPLR 5224",
+          "href": "https://www.nysenate.gov/legislation/laws/CVP/5224"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "An investigator does not acquire subpoena powers by holding a PI license. If you are self-represented, consult the issuing court’s guidance about available forms and procedures. A contested response or a proposed enforcement measure may require legal advice."
+    },
+    {
+      "type": "h2",
+      "text": "Separate property found from money you can recover"
+    },
+    {
+      "type": "p",
+      "text": "New York law protects certain property from judgment enforcement. {{0}} addresses personal-property exemptions, while {{1}} addresses real-property exemptions. Other restrictions, competing claims, liens, ownership questions, and bankruptcy rules may also matter. An attorney should assess the applicable protections and current amounts before you treat an asset as available for collection.",
+      "links": [
+        {
+          "label": "CPLR 5205",
+          "href": "https://www.nysenate.gov/legislation/laws/CVP/5205"
+        },
+        {
+          "label": "CPLR 5206",
+          "href": "https://www.nysenate.gov/legislation/laws/CVP/5206"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "For example, a recorded property interest may have substantial debt against it or may not belong to the named debtor. A search report should flag those questions. It should not convert a property listing or old transaction value into a promise about recovery. This is an illustration, not a case result."
+    },
+    {
+      "type": "h2",
+      "text": "Keep the investigation lawful"
+    },
+    {
+      "type": "p",
+      "text": "A judgment does not authorize hacking, impersonating the debtor, or obtaining financial information by deception. The {{0}} describes the prohibition on financial pretexting. Ask the investigator to explain the sources and access authority behind any proposed financial search.",
+      "links": [
+        {
+          "label": "FTC’s financial-privacy guidance",
+          "href": "https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/financial-privacy"
+        }
+      ]
+    },
+    {
+      "type": "p",
+      "text": "Account-level information may require consent or legal process. Public-records research can inform that process, but it cannot guarantee that an institution holds funds or that a creditor can reach them."
+    },
+    {
+      "type": "h2",
+      "text": "Set a first-phase budget and a stopping point"
+    },
+    {
+      "type": "p",
+      "text": "Compare the proposed research with the amount at stake and the uncertainty about recovery. Ask for the jurisdictions, subject identifiers, record types, deliverables, expenses, and approval threshold in writing. An advance retainer is not a guarantee that useful assets will be found."
+    },
+    {
+      "type": "p",
+      "text": "Request a report listing sources, dates, identity matches, known limitations, and questions for counsel. Decide whether the next step is further research, formal disclosure, legal enforcement, or stopping because the expected benefit does not justify the cost."
+    },
+    {
+      "type": "p",
+      "text": "Our {{0}} explains the broader research process, and the {{1}} describes how to request an introduction. A divorce disclosure dispute has a different purpose; see the {{2}} if there is no judgment to enforce.",
+      "links": [
+        {
+          "label": "asset-search guide",
+          "href": "/guides/asset-searches-manhattan/"
+        },
+        {
+          "label": "asset-search service",
+          "href": "/services/asset-searches/"
+        },
+        {
+          "label": "divorce asset-search article",
+          "href": "/blog/how-a-private-investigator-finds-hidden-assets-in-a-new-york-divorce/"
+        }
+      ]
+    },
+    {
+      "type": "h2",
+      "text": "Frequently Asked Questions"
+    },
+    {
+      "type": "h3",
+      "text": "Will an asset search guarantee payment of my judgment?"
+    },
+    {
+      "type": "p",
+      "text": "No. A debtor may have no reachable assets, and identified property can be subject to exemptions, liens, competing interests, or other restrictions. Research helps assess the options; it does not guarantee recovery."
+    },
+    {
+      "type": "h3",
+      "text": "Can the investigator seize property or freeze an account?"
+    },
+    {
+      "type": "p",
+      "text": "Research alone does not authorize those actions. Enforcement requires the appropriate legal process and, where applicable, an authorized enforcement officer. Ask an attorney about the remedy available for your judgment."
+    },
+    {
+      "type": "h3",
+      "text": "Can I collect from a company owner for the company’s debt?"
+    },
+    {
+      "type": "p",
+      "text": "Do not assume so. The judgment debtor’s identity and the legal basis for reaching another person’s property matter. Obtain legal advice before treating an owner’s personal property as available."
+    },
+    {
+      "type": "h3",
+      "text": "How long can I enforce the judgment?"
+    },
+    {
+      "type": "p",
+      "text": "Deadlines and the duration of particular liens or remedies can differ. Ask counsel to check your judgment, any renewals, stays, and other applicable rules before relying on a general time limit."
+    },
+    {
+      "type": "p",
+      "text": "Sources checked September 29, 2026. General information only; obtain advice about your judgment, protected property, and proposed enforcement steps."
+    }
+  ]
+},
   {
     slug: 'gps-tracking-laws-new-york-investigations',
     hub: 'surveillance-investigations-manhattan',

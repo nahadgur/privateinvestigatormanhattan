@@ -25,15 +25,32 @@ export const TRUST_BADGES = [
   { "icon": "DollarSign", "title": "Confidential Consultation", "description": "All initial consultations are strictly confidential. We discuss your situation and match you with the right investigator before any commitment is required." }
 ];
 export const FAQS_HOME = [
-  { "question": "How does the Private Investigator Manhattan matching service work?", "answer": "Tell us about your case — the type of investigation, what you know, and your objective. We connect you with licensed investigators from our vetted Manhattan network who have handled similar cases. The consultation is confidential and there's no obligation until you choose to proceed." },
-  { "question": "How quickly can I be matched with a private investigator in Manhattan?", "answer": "Most clients receive an introduction within 24 hours. For urgent cases — such as active surveillance needs or imminent legal deadlines — we can arrange same-day contact with an available investigator." },
-  { "question": "Is my inquiry kept completely confidential?", "answer": "Absolutely. All information you share is held in strict confidence. Investigators in our network operate under professional confidentiality obligations, and we never share your information with any third party." }
+  {
+    "question": "Does this website conduct investigations?",
+    "answer": "No. Private Investigator Manhattan is a referral and matching service. An independent provider discusses the scope and price with you, and you decide whether to engage them."
+  },
+  {
+    "question": "How do I assess an investigator before hiring?",
+    "answer": "Ask for their New York license details, experience with your case type, insurance information, proposed methods, and written terms. Verify the license through the Department of State and review the scope before paying."
+  },
+  {
+    "question": "What affects the cost?",
+    "answer": "The provider sets the price for the agreed work. Compare billable hours, staffing, minimum bookings, expenses, reporting, and applicable tax. An initial inquiry is not authorization to begin an investigation."
+  }
 ];
 export const FAQS_SERVICES = [
-  { "question": "Are private investigators legal in New York State?", "answer": "Yes. Private investigation is a licensed profession in New York under Article 7 of the General Business Law. Licensed PIs can legally conduct surveillance in public spaces, run background checks, locate assets, and gather evidence for legal proceedings. All investigators in our network hold current NYS licenses." },
-  { "question": "Can evidence gathered by a private investigator be used in court?", "answer": "Yes, provided it is collected legally. Evidence must be gathered in compliance with New York privacy law and the Federal Wiretapping Act. Our network investigators understand these standards — everything they collect is documented with chain of custody and structured for admissibility." },
-  { "question": "What does a private investigator in Manhattan typically charge?", "answer": "Rates in Manhattan typically range from $95 to $250 per hour depending on the investigator's experience and the nature of the work. Most cases require a retainer of $1,500 to $5,000. Corporate and complex asset cases command higher rates. We'll give you a realistic cost estimate before any introduction." },
-  { "question": "What's the difference between hiring a solo PI and a PI agency?", "answer": "Solo investigators offer direct access and lower overhead costs. Agencies bring team capability — essential for multi-agent surveillance in Manhattan's dense environment — plus backup coverage and broader resource networks. We match based on your case type: personal matters often suit individual investigators, while corporate and complex cases benefit from agency resources." }
+  {
+    "question": "How do I verify a New York private investigator?",
+    "answer": "Use the New York Department of State’s official license search and match the individual or agency details to the provider you would engage. Ask about relevant experience, insurance, and who will perform the work."
+  },
+  {
+    "question": "Will an investigator’s report be admissible in court?",
+    "answer": "Admissibility depends on the evidence and the applicable rules. Discuss the intended use with your attorney; a license or a paid report does not guarantee admission or a particular outcome."
+  },
+  {
+    "question": "How should I compare prices?",
+    "answer": "Request the same scope from each provider and compare staffing, minimum hours, expenses, reporting, tax, and payment terms. Confirm whether an hourly quote is per investigator or for the whole team."
+  }
 ];
 export const FAQS_LOCATION = [
   { "question": "Do you cover all Manhattan neighborhoods?", "answer": "Yes — from the Financial District and Tribeca to Midtown, the Upper East and West Sides, Harlem, and Washington Heights. Our investigators know Manhattan's geography intimately, which matters significantly for urban surveillance operations." },

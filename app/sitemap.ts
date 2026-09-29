@@ -12,7 +12,6 @@
 
 import type { MetadataRoute } from 'next';
 import { execSync } from 'node:child_process';
-import path from 'node:path';
 import { services } from '@/data/services';
 import { LOCATIONS, toSlug } from '@/data/locations';
 import { siteConfig } from '@/data/site';
@@ -94,10 +93,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const blogPages: MetadataRoute.Sitemap = blogArticles.map(article => {
-    const a = article as { slug: string; publishDate?: string; lastUpdated?: string };
     return {
-      url: `${base}/blog/${a.slug}/`,
-      lastModified: a.lastUpdated || a.publishDate || FALLBACK,
+      url: `${base}/blog/${article.slug}/`,
+      lastModified: article.dateModified || article.publishDate || FALLBACK,
       changeFrequency: 'yearly' as const,
       priority: 0.6,
     };

@@ -78,7 +78,7 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         </div>
         <h3 className="text-2xl font-extrabold tracking-tight">Request Received.</h3>
         <p className="text-gray-dark text-[13px] leading-[1.5]">
-          We&apos;ve matched you with a licensed private investigator{city ? ` in ${city}` : ''}. Check your email for next steps.
+          Your inquiry has been received. An introduction and any investigation still need to be arranged; this request does not authorize paid work.
         </p>
       </div>
     );
@@ -94,7 +94,7 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
           Get Matched{city ? ` in ${city}` : ''}
         </h3>
         <p className="text-gray-dark text-[12px] mt-1">
-          A licensed investigator will contact you within 24 hours.
+          Request an introduction, then confirm availability, fees and scope with the investigator.
         </p>
       </div>
 
@@ -136,7 +136,7 @@ export function HeroLeadForm({ city, service }: HeroLeadFormProps) {
         </button>
 
         <div className="flex items-center justify-center gap-4 pt-1">
-          {['100% Free', 'No Spam', '24hr Response'].map(item => (
+          {['Free Matching', 'No Obligation', 'Agree Before Work'].map(item => (
             <span key={item} className="flex items-center gap-1 text-xs text-green-600 font-medium">
               <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
               {item}

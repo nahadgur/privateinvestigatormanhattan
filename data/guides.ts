@@ -886,60 +886,143 @@ const guideEntries: Guide[] = [
 
   // ─── H8. Asset searches and financial investigations ──────────────────────
   {
-    slug: 'asset-searches-manhattan',
-    title: 'Asset Searches and Financial Investigations in Manhattan',
-    metaTitle: 'Asset Searches in Manhattan: How They Work | PIM',
-    metaDescription: 'How asset searches work in New York: locating real estate, business interests, and financial holdings for divorce, judgment recovery, and business disputes, and what is legal versus not.',
-    publishDate: '2026-02-13',
-    lastUpdated: '2026-04-20',
-    readingTimeMinutes: 11,
-    heroEyebrow: 'Asset and Financial',
-    heroDescription: 'An asset search establishes what someone actually owns. This guide explains how licensed investigators locate property and financial holdings, when an asset search is worth it, and the legal lines around financial information.',
-    intro: [
-      'An asset search is the disciplined process of identifying what a person or business owns and is owed. It is central to three situations: divorce, where one spouse may be hiding marital assets; judgment enforcement, where a creditor needs collectible property to recover on a win; and business disputes, where a party\'s real financial position determines strategy.',
-      'This guide explains the methods a licensed investigator uses, what is legal under New York and federal law, and when an asset search pays for itself. We match you with NYS-licensed investigators who conduct these searches lawfully; we do not perform them ourselves.',
-    ],
-    sections: [
-      {
-        id: 'what-found',
-        heading: 'What an Asset Search Can Locate',
-        content: [
-          { type: 'p', text: 'Through lawful database access, public records, and skip-tracing methods, a licensed investigator can locate a wide range of holdings. The reachable picture is broader than public records alone, though no legal search reaches everything.' },
-          { type: 'ul', items: [
-            'Real estate holdings and recorded mortgages and liens.',
-            'Business ownership, corporate officer positions, and UCC filings.',
-            'Vehicle, vessel, and aircraft registrations.',
-            'Publicly recorded financial instruments and judgments.',
-            'Professional licenses and regulatory filings.',
-          ] },
-          { type: 'p', text: 'For concealed or offshore assets, investigators work with forensic accountants and vetted international networks. They are transparent at the outset about what the search is likely to reveal given how well assets have been hidden.' },
-        ],
-      },
-      {
-        id: 'whats-legal',
-        heading: 'What Is Legal, and What Is Not',
-        content: [
-          { type: 'p', text: 'The hard line in financial investigation is pretexting for financial records. Federal law, the Gramm-Leach-Bliley Act, makes it illegal to obtain a person\'s bank or financial account information through false pretenses. A legitimate investigator does not call a bank pretending to be the account holder, and you should walk away from anyone who offers to.' },
-          { type: 'callout', variant: 'warning', heading: 'No pretexting', text: 'If an investigator promises to pull exact bank balances quickly, treat it as a red flag. Lawful asset work locates and documents ownership through legal channels. Account-level balances generally come through formal discovery, subpoena, or court process, not a phone call.' },
-          { type: 'p', text: 'What is lawful is substantial: public records across jurisdictions, proprietary databases, and analysis that connects a subject to entities and property. In litigation, the investigator\'s findings frequently guide where an attorney directs formal discovery.' },
-        ],
-      },
-      {
-        id: 'when-worth-it',
-        heading: 'When an Asset Search Is Worth It',
-        content: [
-          { type: 'p', text: 'Asset searches are most valuable in high-asset divorce where disclosure is incomplete, in judgment enforcement where you need to know whether a debtor has collectible property before spending on collection, and in due diligence before extending credit or entering a deal. Standard searches start in the low four figures; multi-jurisdiction or offshore work runs higher and is scoped individually.' },
-        ],
-      },
-    ],
-    relatedServices: ['asset-searches', 'corporate-investigations'],
-    relatedGuides: ['family-custody-investigations-manhattan', 'corporate-fraud-investigations-manhattan'],
-    faqs: [
-      { question: 'Can a private investigator find hidden bank accounts?', answer: 'A licensed investigator can lawfully locate evidence of banking relationships and many financial holdings through legal database and records work. They cannot obtain account balances by pretexting, which federal law prohibits. Exact balances generally come through formal discovery or subpoena in litigation.' },
-      { question: 'When is an asset search most useful?', answer: 'Most often in high-asset divorce to identify undisclosed marital assets, in judgment enforcement to find collectible property before spending on collection, and in due diligence before extending credit or entering a partnership.' },
-      { question: 'How much does an asset search cost?', answer: 'Standard searches start in the low four figures. Multi-jurisdiction or offshore searches, and matters involving forensic accounting, run higher and are scoped individually. A good investigator tells you what the search is likely to reveal before you commit.' },
-    ],
-  },
+  "slug": "asset-searches-manhattan",
+  "title": "Asset Searches and Financial Investigations in Manhattan",
+  "metaTitle": "Asset Searches in Manhattan: How They Work | PIM",
+  "metaDescription": "Understand lawful asset research in Manhattan: property and entity records, divorce disclosure, judgment enforcement, limits, reports and questions for a written quote.",
+  "publishDate": "2026-02-13",
+  "lastUpdated": "2026-09-29",
+  "readingTimeMinutes": 6,
+  "heroEyebrow": "Asset and Financial",
+  "heroDescription": "Learn what a lawful asset search can document, how to evaluate uncertain matches, and how the research can support a divorce or judgment-enforcement decision.",
+  "intro": [
+    "An asset search can identify records and leads about property, business interests, and financial relationships. It cannot guarantee a complete account of someone’s wealth or establish that identified property is available for collection.",
+    "Private Investigator Manhattan is a referral and matching service. Independent investigators conduct the work you commission. Start with the decision you need to make, then agree on the lawful sources, scope, and report."
+  ],
+  "sections": [
+    {
+      "id": "what-found",
+      "heading": "What the records can establish",
+      "content": [
+        {
+          "type": "p",
+          "text": "For Manhattan property, ACRIS provides recorded documents such as deeds and mortgages. Entity records can help identify businesses and filing details. Read each record in context: a name match needs corroboration, and recorded debt does not reveal a current payoff balance."
+        },
+        {
+          "type": "resource-link",
+          "text": "Search information from NYC’s official ACRIS service",
+          "href": "https://www.nyc.gov/site/finance/property/acris.page"
+        },
+        {
+          "type": "resource-link",
+          "text": "New York’s corporation and business entity database",
+          "href": "https://dos.ny.gov/corporation-and-business-entity-search-database"
+        },
+        {
+          "type": "p",
+          "text": "Ask the investigator to identify which jurisdictions and dates the search covers. Commercial database access must also have a lawful basis. A license does not remove restrictions on protected records, and an absence of results does not prove an absence of assets."
+        }
+      ]
+    },
+    {
+      "id": "whats-legal",
+      "heading": "Financial privacy and authority",
+      "content": [
+        {
+          "type": "p",
+          "text": "The FTC explains that federal law prohibits obtaining consumers’ financial information through false pretenses. An investigator should not impersonate an account holder or promise unrestricted access to private balances. Ask counsel about consent or legal process for nonpublic records."
+        },
+        {
+          "type": "resource-link",
+          "text": "FTC guidance on financial privacy and pretexting",
+          "href": "https://www.ftc.gov/news-events/topics/protecting-consumer-privacy-security/financial-privacy"
+        },
+        {
+          "type": "p",
+          "text": "An investigator documents factual leads. Your attorney evaluates disclosure obligations, ownership, exemptions, remedies, and how a report could be used in proceedings. A report does not itself compel disclosure or authorize collection."
+        }
+      ]
+    },
+    {
+      "id": "when-worth-it",
+      "heading": "Choose the resource for your situation",
+      "content": [
+        {
+          "type": "p",
+          "text": "A divorce search examines financial-disclosure questions; a judgment search supports an assessment of possible collection. The records may overlap, but the legal questions and next steps differ."
+        },
+        {
+          "type": "resource-link",
+          "text": "Asset searches and financial disclosure in a New York divorce",
+          "href": "/blog/how-a-private-investigator-finds-hidden-assets-in-a-new-york-divorce/"
+        },
+        {
+          "type": "resource-link",
+          "text": "Finding asset leads for an unpaid New York judgment",
+          "href": "/blog/locating-assets-enforce-money-judgment/"
+        },
+        {
+          "type": "p",
+          "text": "For a business decision, define the subject, permitted purpose, and research depth before commissioning work. Clarify whether you need records research, accounting, or legal advice."
+        }
+      ]
+    },
+    {
+      "id": "brief-and-report",
+      "heading": "Prepare the brief and evaluate the report",
+      "content": [
+        {
+          "type": "ul",
+          "items": [
+            "State the specific question and relevant dates, jurisdictions, and identifiers.",
+            "Provide only documents you are entitled to share.",
+            "Set a first-phase budget, reporting deadline, and approval point for extra work.",
+            "Ask the investigator to separate confirmed records from possible associations.",
+            "Request source references, search dates, coverage limits, and unresolved questions."
+          ]
+        },
+        {
+          "type": "p",
+          "text": "The price depends on the work agreed, not a guaranteed discovery. Compare subjects, jurisdictions, source costs, analysis, and reporting. Ask what you receive if the search is inconclusive."
+        },
+        {
+          "type": "resource-link",
+          "text": "Use the investigator quote-comparison checklist",
+          "href": "/guides/investigator-costs-manhattan/"
+        },
+        {
+          "type": "resource-link",
+          "text": "Request an introduction for an asset search",
+          "href": "/services/asset-searches/"
+        }
+      ]
+    }
+  ],
+  "relatedServices": [
+    "asset-searches",
+    "corporate-investigations"
+  ],
+  "relatedGuides": [
+    "family-custody-investigations-manhattan",
+    "corporate-fraud-investigations-manhattan"
+  ],
+  "faqs": [
+    {
+      "question": "Can an investigator produce a complete list of someone’s assets?",
+      "answer": "No search can guarantee completeness. Public and lawfully available records have coverage limits, and identity or ownership matches may need further evidence."
+    },
+    {
+      "question": "Does finding property mean I can collect from it?",
+      "answer": "No. Ownership, available value, exemptions, liens, and the applicable enforcement process require separate assessment. An attorney can advise on those issues."
+    },
+    {
+      "question": "How is an asset search priced?",
+      "answer": "Ask for a written scope covering subjects, jurisdictions, sources, analysis, reporting, and expenses. Agree on an initial budget and approval before further work."
+    }
+  ],
+  "featuredImage": "/images/guides/asset-searches-manhattan.webp",
+  "featuredImageAlt": "Investigator reviewing Manhattan property maps and public ownership records"
+},
 
   // ─── H9. Family, divorce and child custody investigations ─────────────────
   {

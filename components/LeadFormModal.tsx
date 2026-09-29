@@ -115,7 +115,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
                 <CheckCircle className="w-10 h-10" />
               </div>
               <h2 className="text-2xl font-extrabold tracking-tight text-ink">Request Received.</h2>
-              <p className="text-gray-dark text-[13px]">We&apos;ve matched you with a licensed private investigator. Check your email for next steps.</p>
+              <p className="text-gray-dark text-[13px]">Your inquiry has been received. This request does not confirm a match or authorize paid investigative work.</p>
             </div>
           ) : (
             <>
@@ -124,7 +124,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
                   Free Matching Service
                 </span>
                 <h2 className="text-2xl font-extrabold tracking-tight text-ink">Find Your Investigator</h2>
-                <p className="text-gray-dark text-[12px] mt-1">Share your details and we will connect you with vetted specialists.</p>
+                <p className="text-gray-dark text-[12px] mt-1">Provide your contact details and area to request an introduction. Confirm scope and fees before hiring.</p>
               </div>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-3">
@@ -151,7 +151,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
                 </button>
 
                 <p className="text-center text-[11px] text-gray-dark mt-1">
-                  Free service. No obligation. Strictly confidential.
+                  No obligation to hire. Do not include sensitive case documents in this initial inquiry.
                 </p>
               </form>
             </>

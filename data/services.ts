@@ -4,11 +4,30 @@ import { serviceFeaturedImages } from './featuredImages';
 export interface FAQ { question: string; answer: string; }
 export interface Service { id: string; title: string; slug: string; description: string; image: string; imageAlt?: string; icon: string; color: string; faqs: FAQ[]; }
 const serviceEntries: Service[] = [
-  { "id": "infidelity-investigation", "title": "Infidelity Investigation", "slug": "infidelity-investigation", "description": "Discreet, documented infidelity investigations for Manhattan residents. Licensed investigators who deliver court-admissible evidence and handle one of the most emotionally sensitive assignments in private investigation with professionalism and care.", "faqs": [
-    { "question": "How does a cheating spouse investigation work in Manhattan?", "answer": "Your investigator establishes a surveillance plan based on known patterns — workplace, gym, regular locations. Manhattan's density requires multi-agent foot surveillance in many cases. Evidence is documented with time-stamped photography and video, GPS records where legally applicable, and a written report structured for potential legal proceedings." },
-    { "question": "Is it legal to investigate a spouse in New York?", "answer": "Yes. Surveillance in public spaces is fully legal in New York. Investigators cannot trespass, intercept communications, or access private accounts — but they can document everything that occurs in public view, which is typically sufficient to establish the facts of a case." },
-    { "question": "How long does an infidelity investigation typically take?", "answer": "Most cases require between one and three weeks of active surveillance, depending on how frequently the subject is active and how quickly patterns are established. Your investigator will give you a realistic timeline estimate after reviewing what you already know about the situation." }
-  ], "image": "/images/infidelity-investigation.png", "icon": "Shield", "color": "brand" },
+  {
+  "id": "infidelity-investigation",
+  "title": "Infidelity Investigation",
+  "slug": "infidelity-investigation",
+  "description": "Request an introduction for an infidelity investigation in Manhattan. Discuss lawful methods, a written scope, costs and reporting with an independent investigator.",
+  "faqs": [
+    {
+      "question": "What can an infidelity investigation establish?",
+      "answer": "An investigator can document observations and lawful records within an agreed scope. Findings may support a decision, but behavior alone does not prove an affair and an investigation can be inconclusive."
+    },
+    {
+      "question": "Is surveillance always permitted in New York?",
+      "answer": "No. The proposed conduct, location, permissions, privacy rules, and any court orders matter. Discuss lawful methods with the investigator and obtain legal advice for your circumstances."
+    },
+    {
+      "question": "How long does the work take?",
+      "answer": "Agree on an initial work period and review point. Timing depends on the question, available information, staffing, and activity during the observation window; there is no guaranteed completion time."
+    }
+  ],
+  "image": "/images/services/infidelity-investigation.webp",
+  "icon": "Shield",
+  "color": "brand",
+  "imageAlt": "Camera and observation notebook inside a parked car near a Manhattan restaurant"
+},
   { "id": "surveillance", "title": "Surveillance", "slug": "surveillance", "description": "Professional covert surveillance for personal and corporate cases throughout Manhattan. HD video documentation, multi-agent operations for complex urban environments, and court-ready evidence packages.", "faqs": [
     { "question": "What surveillance methods are used in Manhattan?", "answer": "Manhattan's density and vertical geography require foot surveillance teams rather than vehicle-based operations in most cases. Investigators use HD cameras capable of clear capture from distance, GPS tracking where legally authorized, and rotating agent teams to prevent detection during extended operations." },
     { "question": "How many investigators are needed for Manhattan surveillance?", "answer": "Most Manhattan surveillance requires a minimum of two agents for effective coverage — one can be burned while the other maintains observation. Complex cases in Midtown or busy commercial areas may require three or four agents to maintain a seamless coverage bubble without detection." },
@@ -24,11 +43,30 @@ const serviceEntries: Service[] = [
     { "question": "Can a PI investigate a current employee?", "answer": "Yes. Employers have legitimate grounds to investigate employee conduct where there is reasonable suspicion of misconduct. Investigations must comply with New York labor law and cannot involve illegal surveillance — but they can include surveillance of public activities, document review with proper authorization, and interviews. Your investigator will advise on the legal framework before beginning." },
     { "question": "How do corporate investigators work with attorneys?", "answer": "Most Manhattan corporate investigations are conducted in coordination with legal counsel to ensure evidence is gathered within a privileged framework where appropriate, structured for admissibility, and aligned with the litigation strategy. Investigators in our network have extensive experience working alongside New York law firms and understand courtroom evidence standards." }
   ], "image": "/images/corporate-investigations.png", "icon": "Shield", "color": "brand" },
-  { "id": "asset-searches", "title": "Asset Searches", "slug": "asset-searches", "description": "Professional asset searches for divorce proceedings, civil judgments, and business disputes in Manhattan. Locate hidden bank accounts, real estate, business interests, and financial holdings through licensed investigative methods.", "faqs": [
-    { "question": "What assets can a private investigator locate in New York?", "answer": "Licensed investigators can locate real estate holdings, business ownership and interests, vehicle registrations, publicly recorded financial instruments, corporate officer positions, professional licenses, and in many cases banking relationships through legal skip-tracing and database methods. For hidden offshore assets, investigators work with forensic accountants and international networks." },
-    { "question": "When is an asset search most useful?", "answer": "Asset searches are most commonly used in divorce proceedings to identify undisclosed marital assets, in civil judgment enforcement to locate collectible property, in business disputes to assess a counterparty's actual financial position, and in due diligence before signing contracts or entering partnerships with individuals or companies." },
-    { "question": "How accurate are asset search results?", "answer": "Professional asset searches through licensed investigators are significantly more comprehensive than public records alone. Results accuracy depends on how well assets have been concealed and across how many jurisdictions. Investigators will be transparent about what the search is likely to reveal before you commit, and will note limitations where they exist." }
-  ], "image": "/images/asset-searches.png", "icon": "Shield", "color": "brand" },
+  {
+  "id": "asset-searches",
+  "title": "Asset Searches",
+  "slug": "asset-searches",
+  "description": "Request an introduction for lawful asset research in Manhattan. Explore property and business leads for divorce disclosure, unpaid judgments or a defined business question.",
+  "faqs": [
+    {
+      "question": "Can an asset search guarantee recovery?",
+      "answer": "No. Identified property may not belong to the subject or may be unavailable for collection. Ownership, value, exemptions, and enforcement require separate assessment."
+    },
+    {
+      "question": "Can an investigator obtain private bank records without authority?",
+      "answer": "A license does not grant unrestricted access. Ask about lawful sources and authority. Consent or legal process may be needed, and impersonation is not an acceptable method."
+    },
+    {
+      "question": "What should an asset-search report include?",
+      "answer": "Ask for source references, search dates, corroborated identity matches, unresolved leads, and coverage limits. Agree on the deliverable and cost before engaging the provider."
+    }
+  ],
+  "image": "/images/services/asset-searches.webp",
+  "icon": "Shield",
+  "color": "brand",
+  "imageAlt": "Investigator reviewing Manhattan property maps and ownership records"
+},
   { "id": "child-custody-investigations", "title": "Child Custody Investigations", "slug": "child-custody-investigations", "description": "Documented investigations for child custody proceedings in Manhattan. Evidence of parental fitness, lifestyle documentation, substance abuse, neglect, or parenting plan violations — gathered legally and structured for New York family court.", "faqs": [
     { "question": "What evidence can a PI gather for a custody case in New York?", "answer": "Investigators can document a parent's living environment, social activities, sobriety, parenting behaviors, and compliance with existing custody orders through lawful surveillance and observation. This includes timestamped video and photography in public spaces, witness interviews, background investigations, and documentation of who the children are being exposed to." },
     { "question": "How does custody investigation evidence hold up in New York family court?", "answer": "Evidence gathered by licensed investigators is regularly admitted in New York family court proceedings. The key requirements are that it was gathered legally, is properly documented with chain of custody, and is presented through an investigator prepared to testify if required. Investigators in our network understand New York family court standards specifically." },
