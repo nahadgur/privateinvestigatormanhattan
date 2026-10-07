@@ -147,7 +147,7 @@ export function buildWebsiteSchema() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: siteConfig.name,
-    alternateName: siteConfig.tagline,
+    alternateName: ['PrivateInvestigatorManhattan'],
     url: siteConfig.url,
     description: siteConfig.description,
     potentialAction: {
